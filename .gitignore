@@ -5,9 +5,16 @@
 !.gitignore
 !READWE.md
 
-# ...even if they are in subdirectories
-#!*/
-
-# if the files to be tracked are in subdirectories
-#!*/a/b/file1.txt
-#!*/a/b/c/*
+# the .config dir
+!.config/
+.config/*
+!.config/dunst/
+!.config/fontconfig/
+!.config/gtk-2.0/
+!.config/gtk-3.0/
+!.config/htop/
+!.config/lf/
+!.config/mpd/
+!.config/mpv/
+!.config/ncmcpp/
+!.config/newsboat/
