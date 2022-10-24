@@ -1,32 +1,38 @@
-# Ignore everything
-#*
+# ignore everything
+/*
 
-# the .config dir
-#.config/
-#config/*
-#.config/dunst/
-#.config/fontconfig/
-#.config/gtk-2.0/
-#.config/gtk-3.0/
-#.config/htop/
-#.config/lf/
-#.config/mpd/
-#.config/mpv/
-#.config/ncmcpp/
-#.config/newsboat/
-
-# Ignore all directories, and all sub-directories, and it's contents:
-*/*
-
-#Now ignore all files in the current directory
-#(This fails to ignore files without a ".", for example
-#'file.txt' works, but
-#'file' doesn't):
-*.*
-
-# But not these files...
-!.gitignore
+# except
 !README.md
+!.gitignore
+!.gitmodules
 
-#Only Include these specific directories and subdirectories:
-!test/
+!.config/
+.config/*
+!.config/dunst
+!.config/fontconfig
+!.config/gtk-2.0
+!.config/gtk-3.0
+!.config/htop
+!.config/lf
+!.config/mpd
+!.config/mpv
+!.config/ncmpcpp
+!.config/newsboat
+!.config/npm
+!.config/nvim
+#!.config/nvim-space
+!.config/pinentry
+!.config/pipe-viewer
+!.config/pipwire
+!.config/pulse
+!.config/python
+!.config/shell
+!.config/steam-tui
+!.config/sxiv
+!.config/wal
+!.config/wget
+!.config/x11
+!.config/zathura
+!.config/zsh
+!.config/mimeapps.list
+!.config/user-dirs.dirs
