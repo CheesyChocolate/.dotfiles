@@ -20,6 +20,7 @@
 !.config/newsboat/
 !.config/npm/
 !.config/nvim/
+!.config/nvim-pro/
 !.config/pinentry/
 !.config/pipe-viewer/
 !.config/pipwire/

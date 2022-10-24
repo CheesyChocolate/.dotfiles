@@ -14,9 +14,9 @@ lazyg() {
 	git push
 }
 
-# SpaceVim alias
+# programming Vim alias
 alias \
-	svi="nvim -u /home/suren/.config/nvim-space/init.vim"
+	pvi="nvim -u /home/suren/.config/nvim-pro/init.vim"
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
