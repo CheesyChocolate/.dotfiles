@@ -1,11 +1,7 @@
 # Ignore everything
-/*
+#*
 
-# But not these files...
-!.gitignore
-!README.md
 # the .config dir
-!/test
 #.config/
 #config/*
 #.config/dunst/
@@ -18,3 +14,19 @@
 #.config/mpv/
 #.config/ncmcpp/
 #.config/newsboat/
+
+# Ignore all directories, and all sub-directories, and it's contents:
+*/*
+
+#Now ignore all files in the current directory
+#(This fails to ignore files without a ".", for example
+#'file.txt' works, but
+#'file' doesn't):
+*.*
+
+# But not these files...
+!.gitignore
+!README.md
+
+#Only Include these specific directories and subdirectories:
+!test/
