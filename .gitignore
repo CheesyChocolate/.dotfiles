@@ -43,7 +43,6 @@
 !.local/share/
 .local/share/*
 !.local/share/larbs/
-!.local/share/lf/
 !.local/share/nvim/
 .local/share/nvim/*
 !.local/share/nvim/site/
@@ -51,17 +50,4 @@
 !.local/share/wallpapers/
 !.local/src/
 .local/src/*
-!.local/src/dmenu/
-.local/src/dmenu/*
-!.local/src/dmenu/config.h
-!.local/src/dwm/
-.local/src/dwm/*
-!.local/src/dwm/config.h
-!.local/src/dwmblocks/
-.local/src/dwmblocks/*
-!.local/src/dwmblocks/config.h
-!.local/src/st/
-.local/src/st/*
-!.local/src/st/config.h
-!.local/src/st/st-copyout
-!.local/src/st/st-urlhandler
+!.local/src/dwmConfigs/

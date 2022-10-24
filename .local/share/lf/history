@@ -7,3 +7,6 @@
 : delete
 : delete
 : delete
+: mkdir dwmConfigs
+: delete
+: delete
