@@ -23,6 +23,10 @@
 !.config/nvim-pro/
 !.config/pinentry/
 !.config/pipe-viewer/
+.config/pipe-viewer/*
+!.config/pipe-viewer/gtk-pipe-viewer.conf
+!.config/pipe-viewer/pipe-viewer.conf
+
 !.config/pipwire/
 !.config/pulse/
 !.config/python/

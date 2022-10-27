@@ -7,7 +7,7 @@ set icons
 set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set ratios 1:2:3
-set cleaner ~/.local/bin/lf-cleaner
+set cleaner '~/.local/bin/lf-cleaner'
 set previewer '~/.config/lf/scope'
 
 # Vars that depend on environmental variables
@@ -25,7 +25,7 @@ cmd open ${{
 	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" | setsid -f sxiv -aio 2>/dev/null | lf-select & ;;
 	audio/*) mpv --audio-display=no $f ;;
 	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-	application/vnd.oasis.opendocument.text|application/vnd.openxmlformats-*|application/msword) setsid -f zaread $fx ;;
+	application/vnd.oasis.opendocument.text|application/vnd.openxmlformats-*|application/msword) setsid -f zaread $fx >/dev/null 2>&1 ;;
 	application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
 	application/pgp-encrypted) $EDITOR $fx ;;
         *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
