@@ -7,20 +7,24 @@ if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autolo
 	autocmd VimEnter * PlugInstall
 endif
 
+map ,, :keepp /<++><CR>ca<
+imap ,, <esc>:keepp /<++><CR>ca<
+
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'jreybert/vimagit'
-Plug 'lukesmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
 call plug#end()
 
 set title
-set bg=light
+set bg=dark
 set go=a
 set mouse=a
 set nohlsearch
@@ -29,6 +33,11 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
+
+" Providers Path
+	let g:python3_host_prog = '/usr/bin/python3'
+	let g:ruby_host_prog = '/usr/bin/neovim-ruby-host'
+	let g:node_host_prog = '/bin/neovim-node-host'
 
 " Some basics:
 	nnoremap c "_c
@@ -60,11 +69,11 @@ set noshowcmd
     endif
 
 " vimling:
-	nm <leader><leader>d :call ToggleDeadKeys()<CR>
-	imap <leader><leader>d <esc>:call ToggleDeadKeys()<CR>a
-	nm <leader><leader>i :call ToggleIPA()<CR>
-	imap <leader><leader>i <esc>:call ToggleIPA()<CR>a
-	nm <leader><leader>q :call ToggleProse()<CR>
+	nm <leader>d :call ToggleDeadKeys()<CR>
+	imap <leader>d <esc>:call ToggleDeadKeys()<CR>a
+	nm <leader>i :call ToggleIPA()<CR>
+	imap <leader>i <esc>:call ToggleIPA()<CR>a
+	nm <leader>q :call ToggleProse()<CR>
 
 " Shortcutting split navigation, saving a keypress:
 	map <C-h> <C-w>h
@@ -86,13 +95,41 @@ set noshowcmd
 	nnoremap S :%s//g<Left><Left>
 
 " Compile document, be it groff/LaTeX/markdown/etc.
-	map <leader>c :w! \| !compiler "<c-r>%"<CR>
+	map <leader>c :w! \| !compiler "%:p"<CR>
 
 " Open corresponding .pdf/.html or preview
-	map <leader>p :!opout <c-r>%<CR><CR>
+	map <leader>p :!opout "%:p"<CR>
 
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 	autocmd VimLeave *.tex !texclear %
+
+" Use CTRL-J to call copilot accept.
+	imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+        let g:copilot_no_tab_map = v:true
+
+" Use CTR-K to call coc complitation confirm
+	inoremap <silent><expr> <C-K> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Run the Code Lens action on the current line.
+nmap <leader>cl  <Plug>(coc-codelens-action)
 
 " Ensure files are read as what I want:
 	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
@@ -103,7 +140,7 @@ set noshowcmd
 	autocmd BufRead,BufNewFile *.tex set filetype=tex
 
 " Save file as sudo on files that require root permission
-	cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+	cabbrev w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " Enable Goyo by default for mutt writing
 	autocmd BufRead,BufNewFile /tmp/neomutt* let g:goyo_width=80
@@ -149,3 +186,8 @@ function! ToggleHiddenAll()
     endif
 endfunction
 nnoremap <leader>h :call ToggleHiddenAll()<CR>
+" Load command shortcuts generated from bm-dirs and bm-files via shortcuts script.
+" Here leader is ";".
+" So ":vs ;cfz" will expand into ":vs /home/<user>/.config/zsh/.zshrc"
+" if typed fast without the timeout.
+source ~/.config/nvim/shortcuts.vim

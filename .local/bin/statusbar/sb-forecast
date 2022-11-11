@@ -6,9 +6,8 @@
 # If we have internet, get a weather report from wttr.in and store it locally.
 # You could set up a shell alias to view the full file in a pager in the
 # terminal if desired. This function will only be run once a day when needed.
-weatherreport="${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport"
-getforecast() { curl -sf "wttr.in/istanbul" > "$weatherreport" || exit 1 ;}
-#getforecast() { curl -sf "wttr.in/$LOCATION" > "$weatherreport" || exit 1 ;}
+weatherreport="${XDG_CACHE_HOME:-$HOME/.cache}/weatherreport"
+getforecast() { curl -sf "wttr.in/$LOCATION" > "$weatherreport" || exit 1 ;}
 
 # Some very particular and terse stream manipulation. We get the maximum
 # precipitation chance and the daily high and low from the downloaded file and
@@ -30,7 +29,7 @@ esac
 
 # The test if our forcecast is updated to the day. If it isn't download a new
 # weather report from wttr.in with the above function.
-[ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] ||
+[ -s "$weatherreport" ] && [ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] ||
 	getforecast
 
 showweather

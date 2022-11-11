@@ -16,43 +16,44 @@ unsetopt PROMPT_SP
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="librewolf"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
-export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
+export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
-export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
-export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch-config"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export LESSHISTFILE="-"
-export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
-export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 #export ALSA_CONFIG_PATH="$XDG_CONFIG_HOME/alsa/asoundrc"
-export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
-export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
-export KODI_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/kodi"
-export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+export KODI_DATA="$XDG_DATA_HOME/kodi"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
-export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
-export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
-export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
-export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
-export UNISON="${XDG_DATA_HOME:-$HOME/.local/share}/unison"
-export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
-export WEECHAT_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/weechat"
-export MBSYNCRC="${XDG_CONFIG_HOME:-$HOME/.config}/mbsync/config"
-export ELECTRUMDIR="${XDG_DATA_HOME:-$HOME/.local/share}/electrum"
-export DOOM="${XDG_DATA_HOME:-$HOME/.local/share}/doom"
-export IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
-export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java"
-export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
-export STEAM_APP_DIR="${XDG_DATA_HOME}/Steam/steamapps/common"
-export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
+export CARGO_HOME="$XDG_DATA_HOME:/cargo"
+export GOPATH="$XDG_DATA_HOME/go"
+export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
+export UNISON="$XDG_DATA_HOME/unison"
+export HISTFILE="$XDG_DATA_HOME/history"
+export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
+export MBSYNCRC="$XDG_CONFIG_HOME/mbsync/config"
+export ELECTRUMDIR="$XDG_DATA_HOME/electrum"
+export DOOM="$XDG_DATA_HOME/doom"
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
+export STEAM_APP_DIR="$XDG_DATA_HOME/Steam/steamapps/common"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
@@ -71,28 +72,11 @@ export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
 export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
-eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib=${XDG_DATA_HOME:-$HOME/.local/share}/perl5)	#perl local module
 
-[ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && shortcuts >/dev/null 2>&1 &
+[ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && setsid shortcuts >/dev/null 2>&1
 
-if pacman -Qs libxft-bgra >/dev/null 2>&1; then
-	# Start graphical server on user's current tty if not already running.
-	[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
-else
-	echo "\033[31mIMPORTANT\033[0m: Note that \033[32m\`libxft-bgra\`\033[0m must be installed for this build of dwm.
-Please run:
-	\033[32myay -S libxft-bgra-git\033[0m
-and replace \`libxft\`. Afterwards, you may start the graphical server by running \`startx\`."
-fi
+# Start graphical server on user's current tty if not already running.
+[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
 
 # Switch escape and caps if tty and no passwd required:
 sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/null
-
-#if [ -f "${HOME}/.gpg-agent-info" ]; then
-#     source "${HOME}/.gpg-agent-info"
-#       export GPG_AGENT_INFO
-#       export SSH_AUTH_SOCK
-#       export SSH_AGENT_PID
-#else
-#    eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
-#fi
