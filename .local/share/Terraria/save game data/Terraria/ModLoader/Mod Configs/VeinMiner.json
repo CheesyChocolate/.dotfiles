@@ -1,0 +1,50 @@
+{
+  "OreTypes": {
+    "$type": "System.UInt16[], mscorlib",
+    "$values": [
+      7,
+      166,
+      6,
+      167,
+      9,
+      168,
+      8,
+      169,
+      407,
+      37,
+      22,
+      204,
+      56,
+      58,
+      107,
+      221,
+      108,
+      222,
+      111,
+      223,
+      211,
+      408,
+      178,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      123,
+      224,
+      404
+    ]
+  },
+  "ModOreNames": {
+    "$type": "System.String[], mscorlib",
+    "$values": []
+  },
+  "OresOnly": true,
+  "MaxAmountOfBlocks": 1000,
+  "DelayBetweenMiningBlocks": 5,
+  "InvertVeinmineHotkey": false,
+  "ToggleVeinmineHotkey": false,
+  "PerformDistanceCheck": true,
+  "ModifyingWhitelistOnMultiplayer": false
+}

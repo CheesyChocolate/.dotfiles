@@ -1,0 +1,25 @@
+{
+  "players": [],
+  "groups": [
+    {
+      "ID": 0,
+      "name": "Default",
+      "permissions": [
+        "ModifyTerrain"
+      ]
+    }
+  ],
+  "worlds": [
+    {
+      "worldID": 0,
+      "name": "nederfall",
+      "BanDestructiveExplosives": false,
+      "TimePaused": false,
+      "TimePausedTime": 0.0,
+      "GraveStonesDisabled": false,
+      "NPCSpawnsDiabled": true,
+      "regions": [],
+      "waypoints": []
+    }
+  ]
+}

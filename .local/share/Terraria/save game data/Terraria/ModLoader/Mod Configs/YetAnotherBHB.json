@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "ShowBossHealthBars": true,
+  "SmallHealthBars": false,
+  "HealthBarDrawDistance": 5000,
+  "HealthBarUIScreenOffset": 16,
+  "HealthBarUIStackOffset": 6,
+  "HealthBarUIDefaultAlpha": 1.0,
+  "HealthBarUIMaxStackSize": 0.15,
+  "HealthBarUIScreenLength": 0.5,
+  "HealthBarUIFadeTime": 30,
+  "HealthBarUIFadeHover": 0.25,
+  "HealthBarFXFillUp": false,
+  "HealthBarFXShake": false,
+  "HealthBarFXShakeHorizontal": false,
+  "HealthBarFXShakeIntensity": 2,
+  "HealthBarFXChip": true,
+  "HealthBarFXChipWaitTime": 60,
+  "HealthBarFXChipSpeed": 0.5,
+  "HealthBarFXChipNumbers": false,
+  "SlimeRainBar": false
+}
