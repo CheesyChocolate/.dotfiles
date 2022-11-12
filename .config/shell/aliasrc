@@ -13,6 +13,11 @@ lazyg() {
 	git commit -m "$1"
 	git push
 }
+gitignore_fix() {
+	git rm -r --cached .
+	git add -A
+	git commit -am "fixed untracked files"
+}
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
