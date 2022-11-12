@@ -52,10 +52,5 @@
 !.local/share/
 .local/share/*
 !.local/share/larbs/
-!.local/share/nvim/
-.local/share/nvim/*
-!.local/share/nvim/site/
-!.local/share/nvim/.netrwhist
-!.local/share/nvim/rplugin.vim
 !.local/share/Teraria/
 !.local/share/wallpapers/
