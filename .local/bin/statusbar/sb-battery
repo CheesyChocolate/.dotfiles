@@ -5,6 +5,7 @@
 
 case $BLOCK_BUTTON in
 	1) nightlight ;;
+	2) xbacklight -set 1 ;;
 	3) notify-send "🔋 Battery module" "🔋: discharging
 🛑: not charging
 ♻: stagnant charge
@@ -13,7 +14,8 @@ case $BLOCK_BUTTON in
 ❗: battery very low!
 🌙: Night Light enabled
 - Scroll to change adjust xbacklight.
-- Click to activate Night Light." ;;
+- Click to activate Night Light.
+- Middle click to set backlight to minimum." ;;
 	4) xbacklight -inc 10 ;;
 	5) xbacklight -dec 10 ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
