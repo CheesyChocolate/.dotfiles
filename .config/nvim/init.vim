@@ -21,6 +21,7 @@ Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'github/copilot.vim'
+Plug 'mbbill/undotree'
 call plug#end()
 
 set title
@@ -130,6 +131,23 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Run the Code Lens action on the current line.
 nmap <leader>cl  <Plug>(coc-codelens-action)
+
+" undotree toggle
+	map <leader>u :UndotreeToggle<CR>
+
+" undotree file directory
+if has("persistent_undo")
+   let target_path = expand('$XDG_CACHE_HOME/nvim/undodir')
+
+    " create the directory and any parent directories
+    " if the location does not exist.
+    if !isdirectory(target_path)
+        call mkdir(target_path, "p", 0700)
+    endif
+
+    let &undodir=target_path
+    set undofile
+endif
 
 " Ensure files are read as what I want:
 	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
