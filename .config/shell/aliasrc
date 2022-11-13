@@ -63,7 +63,7 @@ alias \
 	trem="transmission-remote" \
 	YT="pipe-viewer" \
 	sdn="shutdown -h now" \
-	e="vie" \
+	e="$EDITOR" \
 	v="$EDITOR" \
 	p="pacman" \
 	xi="sudo xbps-install" \
