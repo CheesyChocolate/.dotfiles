@@ -132,8 +132,9 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 " Run the Code Lens action on the current line.
 nmap <leader>cl  <Plug>(coc-codelens-action)
 
-" undotree toggle
+" undotree
 	map <leader>u :UndotreeToggle<CR>
+	let g:undotree_WindowLayout = 4
 
 " undotree file directory
 if has("persistent_undo")
