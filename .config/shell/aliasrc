@@ -3,22 +3,6 @@
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
 
-# easy git
-gcom() {
-	git add .
-	git commit -m "$1"
-	}
-lazyg() {
-	git add .
-	git commit -m "$1"
-	git push
-}
-gitignore_fix() {
-	git rm -r --cached .
-	git add -A
-	git commit -am "fixed untracked files"
-}
-
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
 
@@ -74,9 +58,30 @@ alias \
 	passgen="openssl rand -base64 32" \
 	pacmanfix="sudo rm -R /var/lib/pacman/sync" \
 	streamit="streamlink --twitch-low-latency -p mpv -a '--cache=yes --demuxer-max-bytes=750k'" \
-	topdf="lowriter --headless --convert-to pdf *.docx && lowriter --headless --convert-to pdf *.pptx && rm -i *.docx *.pptx" \
 	download="xargs -n 1 curl -LO < ./downloadList.txt"
 
+# function aliases
+gcom() {
+	git add .
+	git commit -m "$1"
+	}
+lazyg() {
+	git add .
+	git commit -m "$1"
+	git push
+}
+gitignore_fix() {
+	git rm -r --cached .
+	git add -A
+	git commit -am "fixed untracked files"
+}
+tojpg() {
+	convert "$1" "${1%.*}.jpg"
+}
+topdf() {
+	lowwriter --headless --convert-to pdf "$1"
+	rm -i "$1"
+}
 
 alias \
 	lf="lfub" \
