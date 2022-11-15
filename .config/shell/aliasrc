@@ -78,6 +78,7 @@ gitignore_fix() {
 }
 tojpg() {
 	convert "$1" "${1%.*}.jpg"
+	rm "$1"
 }
 topdf() {
 	lowwriter --headless --convert-to pdf "$1"
