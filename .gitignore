@@ -37,9 +37,6 @@
 !.config/wal/
 !.config/wget/
 !.config/x11/
-!.config/xournalpp/
-.config/xournalpp/*
-!.config/xournalpp/settings.xml
 !.config/yay/
 !.config/zathura/
 !.config/zsh/
