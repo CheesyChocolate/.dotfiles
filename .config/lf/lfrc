@@ -19,7 +19,7 @@ cmd open ${{
         text/*|application/json|inode/x-empty) $EDITOR $fx;;
 	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
 	image/svg+xml) display -- $f ;;
-	application/gzip) setsid -f xournalpp &fx >/dev/null 2>$1 ;;
+	application/gzip) setsid -f xournalpp $fx >/dev/null 2>&1 ;;
 	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" |
 		setsid -f sxiv -aio 2>/dev/null | while read -r file; do
 			[ -z "$file" ] && continue
