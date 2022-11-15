@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="1.00000000"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Xournal++"/>
-  <property name="lastSavePath" value="/home/suren/Public/Unversity/CP-3/Digital Logic"/>
+  <property name="lastSavePath" value="/home/suren/Public/University/moodle/CMP205 Introduction to Digital Logic 2022 Güz/7 Kasım - 13 Kasım/HW3"/>
   <property name="lastOpenPath" value="/home/suren/Public"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20.00000000"/>
@@ -14,12 +14,12 @@
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="1036"/>
+  <property name="mainWndWidth" value="1894"/>
   <property name="mainWndHeight" value="1043"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
-  <property name="showSidebar" value="true"/>
-  <property name="sidebarWidth" value="150"/>
+  <property name="showSidebar" value="false"/>
+  <property name="sidebarWidth" value="50"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
   <property name="menubarVisible" value="true"/>
@@ -198,7 +198,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="highlighter">
-      <attribute name="color" type="hex" value="ffffff"/>
+      <attribute name="color" type="hex" value="ff0000"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
@@ -208,7 +208,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ffffff"/>
+      <attribute name="color" type="hex" value="ff0000"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>

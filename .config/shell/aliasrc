@@ -16,7 +16,8 @@ se() { cd ~/.local/bin; $EDITOR $(fzf) ;}
 # ~/ Clean-up:
 alias \
 	monerod="monerod --data-dir ${XDG_DATA_HOME}/bitmonero" \
-	yarn="yarn --use-yarnrc ${XDG_CONFIG_HOME}/yarn/config"
+	yarn="yarn --use-yarnrc ${XDG_CONFIG_HOME}/yarn/config" \
+	dosbox="dosbox -conf ${XDG_CONFIG_HOME}/dosbox/dosbox.conf"
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
