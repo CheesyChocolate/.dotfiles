@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Making Package list...
+Exec = /usr/share/libalpm/scripts/pkglist.sh
+When = PostTransaction

@@ -1,4 +1,5 @@
-peration = Upgrade
+[Trigger]
+Operation = Upgrade
 Type = Package
 Target = *
 
@@ -9,4 +10,3 @@ When = PostTransaction
 Depends = diffutils
 Depends = git-delta
 Depends = pacman-contrib
-

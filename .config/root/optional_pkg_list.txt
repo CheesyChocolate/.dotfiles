@@ -1,0 +1,4 @@
+bash-completion
+npm
+python-matplotlib
+python-pytest
