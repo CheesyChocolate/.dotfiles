@@ -17,7 +17,9 @@ se() { cd ~/.local/bin; $EDITOR $(fzf) ;}
 alias \
 	monerod="monerod --data-dir ${XDG_DATA_HOME}/bitmonero" \
 	yarn="yarn --use-yarnrc ${XDG_CONFIG_HOME}/yarn/config" \
-	dosbox="dosbox -conf ${XDG_CONFIG_HOME}/dosbox/dosbox.conf"
+	dosbox="dosbox -conf ${XDG_CONFIG_HOME}/dosbox/dosbox.conf" \
+	monerod="monerod --data-dir $XDG_DATA_HOME/Monero" \
+	monero-wallet-gui="monero-wallet-gui --log-file=$XDG_DATA_HOME/Monero/monero-wallet-gui.log"
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
