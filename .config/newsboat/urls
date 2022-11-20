@@ -3,6 +3,7 @@ https://landchad.net/rss.xml \"~linux\"
 https://artixlinux.org/feed.php "tech" \"~linux\"
 https://www.archlinux.org/feeds/news/ "tech" \"~linux\"
 https://suckless.org/atom.xml \"~linux\"
+https://forum.artixlinux.org/index.php?action=.xml;type=rss2
 https://github.com/CheesyChocolate.private.atom?token=AMX32E7IUJVEOJLYOCJB5H6BPUL6I \"~github\"
 https://mediagoblin.org/news/index.xml \"~software\"
 https://morss.it/https://www.anandtech.com/rss/ \"~tech\"
