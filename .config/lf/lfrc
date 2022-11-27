@@ -55,6 +55,20 @@ cmd extract ${{
 	[ $ans = "y" ] && aunpack $fx
 }}
 
+cmd archive ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "archive to: "
+	read ans
+	printf "archive type?[tar.gz]"
+	read type
+	mkdir $ans
+	cp -r $fx $ans
+	apack $ans.$type $ans
+	rm -rf $ans
+}}
+
 cmd delete ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
@@ -115,6 +129,7 @@ map gh
 map g top
 map D delete
 map E extract
+map r archive
 map C copyto
 map M moveto
 map P :link
