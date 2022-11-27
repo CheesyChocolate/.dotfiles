@@ -86,6 +86,25 @@ cmd copyto ${{
 	notify-send "📋 File(s) copied." "File(s) copies to $dest."
 }}
 
+# d (select for cut) and P to paste hard-link
+cmd link %{{
+    set -- $(cat ~/.local/share/lf/files)
+    mode="$1"
+    shift
+    if [ "$#" -lt 1 ]; then
+        lf -remote "send $id echo no files to link"
+        exit 0
+    fi
+    case "$mode" in
+        # symbolically copy mode is indicating a soft link
+        copy) ln -sr -t . -- "$@";;
+        # while a move mode is indicating a hard link
+        move) ln -t . -- "$@";;
+    esac
+    rm ~/.local/share/lf/files
+    lf -remote "send clear"
+}}
+
 cmd setbg "$1"
 cmd bulkrename $vidir
 
@@ -98,6 +117,7 @@ map D delete
 map E extract
 map C copyto
 map M moveto
+map P :link
 map <c-n> push :mkdir<space>
 map <c-r> reload
 map <c-s> set hidden!
