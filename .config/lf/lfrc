@@ -43,8 +43,6 @@ cmd open ${{
 
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 
-cmd touch $touch "$(echo $* | tr ' ' '\ ')"
-
 # Share any file 256MiB limit
 cmd share $curl -F"file=@$fx" https://0x0.st | xclip -selection c
 
