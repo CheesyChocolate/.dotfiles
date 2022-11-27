@@ -44,6 +44,8 @@ cmd open ${{
 
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 
+cmd touch $touch "$(echo $* | tr ' ' '\ ')"
+
 cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
