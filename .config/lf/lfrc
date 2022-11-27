@@ -12,13 +12,13 @@ set autoquit on
 
 # cmds/functions
 cmd open ${{
+    # open mime types
     case $(file --mime-type "$(readlink -f $f)" -b) in
 	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) sc-im $fx ;;
 	image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
         text/*|application/json|inode/x-empty) $EDITOR $fx;;
 	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
 	image/svg+xml) display -- $f ;;
-	application/gzip) setsid -f xournalpp $fx >/dev/null 2>&1 ;;
 	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" |
 		setsid -f sxiv -aio 2>/dev/null | while read -r file; do
 			[ -z "$file" ] && continue
@@ -37,8 +37,14 @@ cmd open ${{
 	application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template) setsid -f lodraw $fx >/dev/null 2>&1 ;;
 	application/vnd.oasis.opendocument.formula) setsid -f lomath $fx >/dev/null 2>&1 ;;
 	application/vnd.oasis.opendocument.database) setsid -f lobase $fx >/dev/null 2>&1 ;;
+	application/gzip) ;; # ignore
         *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
     esac
+
+   # open file extensions
+   case $f in
+	*.xopp) setsid -f xournalpp $fx >/dev/null 2>&1 ;;
+   esac
 }}
 
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
