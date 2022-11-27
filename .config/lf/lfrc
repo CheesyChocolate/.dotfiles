@@ -1,4 +1,5 @@
 # Basic vars
+#set shell zsh
 set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
@@ -8,8 +9,6 @@ set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 set autoquit on
-#set ratios 1:2:3
-#set shell bash
 
 # cmds/functions
 cmd open ${{
