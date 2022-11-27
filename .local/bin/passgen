@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Generate a random password
+# if no argument is given, generate a 32 character password
+# if an argument is given, generate a password of that length
+# generated password is piped to clipboard
+
+if [ $# -eq 0 ]; then
+    LENGTH=32
+else
+    LENGTH=$1
+fi
+
+openssl rand -base64 48 | cut -c1-"$LENGTH" | xclip -selection clipboard

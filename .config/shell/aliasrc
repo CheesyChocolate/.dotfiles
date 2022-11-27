@@ -56,7 +56,6 @@ alias \
 	z="zathura" \
 	za="zaread" \
 	sd="setsid -f samedir" \
-	passgen="openssl rand -base64 32" \
 	pacmanfix="sudo rm -R /var/lib/pacman/sync" \
 	streamit="streamlink --twitch-low-latency -p mpv -a '--cache=yes --demuxer-max-bytes=750k'" \
 	download="xargs -n 1 curl -LO < ./downloadList.txt"
