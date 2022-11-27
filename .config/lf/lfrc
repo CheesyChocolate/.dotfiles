@@ -44,7 +44,7 @@ cmd open ${{
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 
 # Share any file 256MiB limit
-cmd share $curl -F"file=@$fx" https://0x0.st | xclip -selection c
+cmd share $curl -F"file=@$fx" https://0x0.st | xclip -selection clipboard
 
 cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
