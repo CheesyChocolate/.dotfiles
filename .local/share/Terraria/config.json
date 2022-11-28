@@ -16,23 +16,25 @@
   "VolumeMusic": 1.0,
   "UnlockMusicSwap": false,
   "UseExperimentalFeatures": false,
+  "KeyFavoriteModifier": "LeftAlt",
   "Fullscreen": true,
   "WindowMaximized": false,
   "WindowBorderless": true,
-  "DisplayWidth": 1024,
-  "DisplayHeight": 768,
+  "DisplayWidth": 1280,
+  "DisplayHeight": 720,
   "GraphicsQuality": 3,
   "BackgroundEnabled": false,
   "FrameSkipMode": 1,
   "LightingMode": 3,
   "BackgroundParallax": 60,
   "ShowItemText": true,
-  "LastLaunchedVersion": 248,
+  "LastLaunchedVersion": 279,
   "ClientUUID": "32daf7be-4898-4d9a-9959-d0bc092ff15b",
   "UseSmartCursorForCommonBlocks": false,
   "UseSmartAxeAfterSmartPickaxe": false,
   "SmartCursorHoldCanReleaseMidUse": false,
   "DisableLeftShiftTrashCan": true,
+  "DisableQuickTrash": false,
   "HighlightNewItems": true,
   "HidePasswords": false,
   "ReverseUpDownForArmorSetBonuses": false,
@@ -47,6 +49,7 @@
   "SettingsEnabled_OpaqueBoxBehindTooltips": true,
   "SettingDontScaleMainMenuUp": false,
   "SettingsEnabled_TilesSwayInWind": false,
+  "SettingsEnabled_AutoReuseAllItems": false,
   "UseStormEffect": false,
   "UseHeatDistortion": false,
   "WaveQuality": 2,
@@ -66,18 +69,6 @@
   "Zoom": 1.0,
   "UIScale": 0.5,
   "MapScale": 1.0,
-  "ResourcePacks": [
-    {
-      "FileName": "2434616874",
-      "Enabled": false,
-      "SortingOrder": 0
-    },
-    {
-      "FileName": "2434613351",
-      "Enabled": false,
-      "SortingOrder": 0
-    }
-  ],
   "FlashIconForEvents": "All",
   "Display": "",
   "DisplayScreen": "",
@@ -86,11 +77,9 @@
   "HoverControlMode": 0,
   "WaterfallDrawLimit": 1000,
   "DisableIntenseVisualEffects": false,
-  "CloudSavingDefault": false,
-  "PlayerResourcesSet": "New",
   "MinimapFrame": "Default",
-  "FilterLimit": 16,
-  "FilterPriorityThreshold": "VeryLow",
+  "ShowBossBarHealthText": true,
+  "PlayerResourcesSet": "New",
   "RGBUpdatesPerSecond": 45.0,
   "UseRazerRGB": true,
   "RazerColorProfile": {
@@ -243,5 +232,20 @@
       "G": 1.0,
       "B": 1.0
     }
-  }
+  },
+  "FilterLimit": 16,
+  "FilterPriorityThreshold": "VeryLow",
+  "CloudSavingDefault": false,
+  "ResourcePacks": [
+    {
+      "FileName": "2434616874",
+      "Enabled": false,
+      "SortingOrder": 0
+    },
+    {
+      "FileName": "2434613351",
+      "Enabled": false,
+      "SortingOrder": 0
+    }
+  ]
 }
