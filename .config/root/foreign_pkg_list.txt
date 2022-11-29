@@ -15,7 +15,9 @@ mkinitcpio-firmware
 moodle-dl
 mutt-wizard-git
 nodejs-neovim
+pacman-static
 pipe-viewer-git
+proton-ge-custom-bin
 python-pip-search
 python-pipdate
 python-spotdl
