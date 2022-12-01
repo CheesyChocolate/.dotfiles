@@ -16,6 +16,7 @@
 !.config/gtk-3.0/
 !.config/htop/
 !.config/lf/
+!.config/lynx/
 !.config/mpd/
 !.config/mpv/
 !.config/ncmpcpp/
