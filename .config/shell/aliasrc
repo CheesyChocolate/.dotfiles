@@ -65,15 +65,6 @@ alias \
 	download="xargs -n 1 curl -LO < ./downloadList.txt"
 
 # function aliases
-gcom() {
-	git add .
-	git commit -m "$1"
-	}
-lazyg() {
-	git add .
-	git commit -m "$1"
-	git push
-}
 gitignore_fix() {
 	git rm -r --cached .
 	git add -A
