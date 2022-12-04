@@ -51,7 +51,7 @@ export DOOM="$XDG_DATA_HOME/doom"
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
-export STEAM_APP_DIR="$XDG_DATA_HOME/Steam/steamapps/common"
+#export STEAM_APP_DIR="$XDG_DATA_HOME/Steam/steamapps/common"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 
