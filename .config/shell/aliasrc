@@ -21,6 +21,10 @@ alias \
 	monerod="monerod --data-dir $XDG_DATA_HOME/Monero" \
 	monero-wallet-gui="monero-wallet-gui --log-file=$XDG_DATA_HOME/Monero/monero-wallet-gui.log"
 
+# breakin the habit
+alias \
+	which="echo use this command instead @ type"
+
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
 	cp="cp -iv" \
