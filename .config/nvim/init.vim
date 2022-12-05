@@ -22,6 +22,7 @@ Plug 'ap/vim-css-color'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'github/copilot.vim'
 Plug 'mbbill/undotree'
+Plug 'LukeSmithxyz/vimling'
 call plug#end()
 
 set title
