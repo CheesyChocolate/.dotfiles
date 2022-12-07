@@ -107,6 +107,7 @@ cmd copyto ${{
 }}
 
 # d (select for cut) and P to paste hard-link
+# y (select for yank) and p to paste soft-link
 cmd link %{{
 	set -- $(cat ~/.local/share/lf/files)
 	mode="$1"
@@ -116,10 +117,10 @@ cmd link %{{
 		exit 0
 	fi
 	case "$mode" in
-		# symbolically copy mode is indicating a soft link
-		copy) ln -sr -t . -- "$@";;
-		# while a move mode is indicating a hard link
-		move) ln -t . -- "$@";;
+	    # symbolically copy mode is indicating a soft link
+	    copy) ln -sr -t . -- "$@";;
+	    # while a move mode is indicating a hard link
+	    move) ln -t . -- "$@";;
 	esac
 	rm ~/.local/share/lf/files
 	lf -remote "send clear"
