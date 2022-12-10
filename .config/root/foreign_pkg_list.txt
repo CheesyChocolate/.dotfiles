@@ -18,6 +18,7 @@ nodejs-neovim
 pacman-static
 pipe-viewer-git
 proton-ge-custom-bin
+python-bs4
 python-pip-search
 python-pipdate
 python-spotdl
@@ -26,7 +27,6 @@ samrewritten-git
 sc-im
 sherlock-git
 simple-mtpfs
-steam-tui
 task-spooler
 trackma-git
 tremc

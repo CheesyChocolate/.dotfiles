@@ -97,6 +97,7 @@ lib32-openal
 lib32-pipewire
 lib32-v4l-utils
 lib32-vkd3d
+libdecor
 libgphoto2
 libibus
 libjxl
@@ -151,6 +152,7 @@ pacman
 pacman-contrib
 pacutils
 pamixer
+pandoc-bin
 patch
 pipewire-pulse
 pkgconf
@@ -159,12 +161,12 @@ poppler
 powertop
 progress
 pulsemixer
+pwndbg
 python-evdev
 python-geoip
 python-pip
 python-pydbus
 python-pynvim
-python-pywal
 python-qdarkstyle
 python-urwid
 qemu-emulators-full
@@ -178,6 +180,7 @@ samba
 sed
 shellcheck
 slock
+smartmontools
 socat
 steam
 streamlink
@@ -188,6 +191,7 @@ syslog-ng
 syslog-ng-runit
 termshark
 texinfo
+texlive-core
 timeshift
 tk
 tldr
