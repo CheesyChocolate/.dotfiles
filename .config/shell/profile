@@ -54,6 +54,7 @@ export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 #export STEAM_APP_DIR="$XDG_DATA_HOME/Steam/steamapps/common"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
+export DEBUGINFOD_URLS="https://debuginfod.artixlinux.org"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
