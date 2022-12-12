@@ -2,6 +2,7 @@ abook
 ani-cli-git
 bluetuith-bin
 broadcom-bt-firmware
+dashbinsh
 digital
 dxvk-bin
 firefox-tridactyl-native-bin
