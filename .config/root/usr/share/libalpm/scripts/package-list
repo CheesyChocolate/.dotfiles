@@ -7,3 +7,5 @@
 /usr/bin/pacman -Qqem > "$XDG_CONFIG_HOME/root/foreign_pkg_list.txt"
 
 /usr/bin/comm -13 <(pacman -Qqdt | sort) <(/usr/bin/pacman -Qqdtt | sort) > "$XDG_CONFIG_HOME/root/optional_pkg_list.txt"
+
+echo "Package list generated"
