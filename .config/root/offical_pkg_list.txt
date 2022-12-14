@@ -17,6 +17,7 @@ bluez-utils
 broadcom-wl
 btrfs-progs
 calibre
+checkbashisms
 cpio
 cronie-runit
 cups-runit
