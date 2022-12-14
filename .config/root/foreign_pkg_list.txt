@@ -31,8 +31,8 @@ simple-mtpfs
 task-spooler
 trackma-git
 tremc
-twitch-curses
 wordlists
+wtwitch
 xinput-toggle
 xsct
 yay-bin

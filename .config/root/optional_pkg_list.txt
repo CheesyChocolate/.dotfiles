@@ -1,4 +1,5 @@
 bash-completion
 npm
 python-matplotlib
+python-pycurl
 python-pytest
