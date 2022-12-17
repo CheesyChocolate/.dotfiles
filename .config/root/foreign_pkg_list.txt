@@ -11,6 +11,7 @@ ledger-live-bin
 lf-git
 linux-steam-integration
 lutris-git
+mangal-bin
 mkinitcpio-firmware
 moodle-dl
 mutt-wizard-git
