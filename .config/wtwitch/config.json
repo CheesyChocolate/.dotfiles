@@ -1,0 +1,23 @@
+{
+  "player": "mpv",
+  "quality": "720p60",
+  "colors": "true",
+  "printOfflineSubscriptions": "true",
+  "subscriptions": [
+    {
+      "streamer": "kuruhs"
+    },
+    {
+      "streamer": "asmongold"
+    },
+    {
+      "streamer": "rwxrob"
+    },
+    {
+      "streamer": "christitustech"
+    }
+  ],
+  "apiToken": "laq2xr859yxgd20apb61u8smyy9ja7",
+  "apiTokenExpiry": "1671129682",
+  "lastSubscriptionUpdate": "1671044441"
+}

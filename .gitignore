@@ -8,6 +8,7 @@
 
 !.config/
 .config/*
+!.config/dosbox/
 !.config/dunst/
 !.config/dwm/
 !.config/fontconfig/
@@ -33,14 +34,15 @@
 !.config/python/
 !.config/root/
 !.config/shell/
-!.config/steam-tui/
 !.config/sxiv/
 !.config/wal/
 !.config/wget/
+!.config/wtwitch/
 !.config/x11/
 !.config/yay/
 !.config/zathura/
 !.config/zsh/
+!.config/linux-steam-integration.conf
 !.config/mimeapps.list
 !.config/user-dirs.dirs
 
@@ -49,6 +51,8 @@
 !.local/bin/
 !.local/share/
 .local/share/*
+!.local/share/bookmark
 !.local/share/larbs/
 !.local/share/Terraria/
 !.local/share/wallpapers/
+!.local/share/exponential.txt
