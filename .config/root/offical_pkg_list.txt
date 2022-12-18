@@ -245,3 +245,4 @@ zathura
 zathura-pdf-mupdf
 zip
 zsh
+zsh-completions
