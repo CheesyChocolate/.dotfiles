@@ -5,6 +5,7 @@ broadcom-bt-firmware
 digital
 dxvk-bin
 firefox-tridactyl-native-bin
+geforcenow-electron
 gtk-theme-arc-gruvbox-git
 htop-vim
 ledger-live-bin
@@ -23,6 +24,7 @@ python-bs4
 python-pip-search
 python-pipdate
 python-spotdl
+quickemu
 ruby-neovim
 samrewritten-git
 sc-im
