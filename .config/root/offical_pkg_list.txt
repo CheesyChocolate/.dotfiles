@@ -215,7 +215,6 @@ vkd3d
 vnstat
 vnstat-runit
 vulscan
-webkit2gtk
 which
 whois
 wine-ge-custom
