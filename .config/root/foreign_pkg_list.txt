@@ -32,6 +32,7 @@ simple-mtpfs
 task-spooler
 trackma-git
 tremc
+ungoogled-chromium-xdg-bin
 wordlists
 wtwitch
 xinput-toggle
