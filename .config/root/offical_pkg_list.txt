@@ -155,6 +155,7 @@ pacutils
 pamixer
 pandoc-bin
 patch
+perl-term-readline-gnu
 pipewire-pulse
 pkgconf
 polkit
