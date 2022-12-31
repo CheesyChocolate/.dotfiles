@@ -152,6 +152,7 @@ openssl-1.1
 p7zip
 pacman
 pacman-contrib
+pacman-static
 pacutils
 pamixer
 pandoc-bin

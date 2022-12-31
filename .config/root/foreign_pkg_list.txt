@@ -16,14 +16,15 @@ mkinitcpio-firmware
 moodle-dl
 mutt-wizard-git
 nodejs-neovim
-pacman-static
 pipe-viewer-git
 proton-ge-custom-bin
 protontricks-git
 python-bs4
+python-npx
 python-pip-search
 python-spotdl
 quickemu
+quickgui-bin
 ruby-neovim
 samrewritten-git
 sc-im
