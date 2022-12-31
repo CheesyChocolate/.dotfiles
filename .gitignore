@@ -53,6 +53,9 @@
 .local/share/*
 !.local/share/bookmark
 !.local/share/larbs/
+!.local/share/spotdl/
+.local/share/spotdl/*
+!.local/share/spotdl/config.json
 !.local/share/Terraria/
 !.local/share/wallpapers/
 !.local/share/exponential.txt
