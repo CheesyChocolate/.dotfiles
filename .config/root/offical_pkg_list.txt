@@ -167,6 +167,7 @@ pwndbg
 python-evdev
 python-geoip
 python-pip
+python-pipx
 python-pydbus
 python-pynvim
 python-qdarkstyle
