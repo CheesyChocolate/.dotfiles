@@ -113,6 +113,7 @@ libvirt-storage-iscsi-direct
 linux
 linux-firmware
 linux-headers
+lutris
 lynx
 lzop
 m4

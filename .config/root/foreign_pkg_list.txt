@@ -11,7 +11,6 @@ htop-vim
 ledger-live-bin
 lf-git
 linux-steam-integration
-lutris-git
 mangal-bin
 mkinitcpio-firmware
 moodle-dl
@@ -20,6 +19,7 @@ nodejs-neovim
 pacman-static
 pipe-viewer-git
 proton-ge-custom-bin
+protontricks-git
 python-bs4
 python-pip-search
 python-spotdl
