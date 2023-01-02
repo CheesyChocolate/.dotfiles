@@ -1,6 +1,8 @@
 bash-completion
+ffmpeg4.4
 geoclue
 lib32-gamemode
+lib32-gsm
 npm
 psutils
 python-cairocffi
@@ -13,7 +15,6 @@ python-pyarrow
 python-pycurl
 python-rfc3339-validator
 python-rfc3987
-python-smbus-git
 python-uri-template
 python-virtualenv
 python-webcolors
