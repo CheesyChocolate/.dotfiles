@@ -2,6 +2,8 @@ abook
 ani-cli-git
 bluetuith-bin
 broadcom-bt-firmware
+chaotic-keyring
+chaotic-mirrorlist
 digital
 dxvk-bin
 firefox-tridactyl-native-bin
