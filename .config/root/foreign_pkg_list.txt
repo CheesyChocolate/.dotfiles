@@ -33,6 +33,7 @@ sc-im
 sherlock-git
 simple-mtpfs
 task-spooler
+tlauncher
 trackma-git
 tremc
 ungoogled-chromium-xdg-bin
