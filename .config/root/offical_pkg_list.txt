@@ -112,6 +112,7 @@ libgphoto2
 libibus
 libjxl
 libnotify
+libreoffice-extension-languagetool
 libreoffice-fresh
 librewolf
 libtool
@@ -168,6 +169,8 @@ pacman-static
 pacutils
 pamixer
 pandoc-bin
+papirus-libreoffice-theme
+parlatype-libreoffice-extension
 patch
 perl-term-readline-gnu
 pipe-viewer-git
