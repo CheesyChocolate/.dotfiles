@@ -2,6 +2,7 @@ abook
 ani-cli-git
 bluetuith-bin
 broadcom-bt-firmware
+findbrokenpkgs
 firefox-tridactyl-native-bin
 geforcenow-electron
 gtk-theme-arc-gruvbox-git

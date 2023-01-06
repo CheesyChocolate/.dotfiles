@@ -124,6 +124,7 @@ linux
 linux-firmware
 linux-headers
 linux-steam-integration
+lostfiles
 lutris
 lynx
 lzop
@@ -146,6 +147,7 @@ mpd
 mpv
 mtools
 mtr
+namcap
 ncdu
 ncmpcpp
 neovim
