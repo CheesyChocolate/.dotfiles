@@ -6,7 +6,7 @@
 # generated password is piped to clipboard
 
 if [ $# -eq 0 ]; then
-    LENGTH=32
+    LENGTH=28
 else
     LENGTH=$1
 fi
