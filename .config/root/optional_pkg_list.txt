@@ -4,6 +4,7 @@ geoclue
 lib32-gamemode
 lib32-gsm
 npm
+pstoedit
 psutils
 python-cairocffi
 python-fqdn
