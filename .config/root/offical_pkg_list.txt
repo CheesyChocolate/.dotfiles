@@ -1,5 +1,9 @@
 acpilight
 arandr
+arch4edu-keyring
+arch4edu-mirrorlist
+archstrike-keyring
+archstrike-mirrorlist
 artix-archlinux-support
 atool
 autoconf
@@ -196,6 +200,7 @@ rsync-runit
 ruby
 runit
 samba
+sc-im
 sed
 shellcheck
 slock
