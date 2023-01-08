@@ -4,6 +4,7 @@
 
 case $BLOCK_BUTTON in
 	1) dmenubluetooth; pkill -RTMIN+2 dwmblocks ;;
+	2) "$TERMINAL" -e bluetuith ;;
 	3) notify-send " Bluetooth module" "\- Shows paired devices.
 - Click to configure bluetooth." ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
