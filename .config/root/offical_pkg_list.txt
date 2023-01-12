@@ -205,6 +205,7 @@ ruby
 runit
 samba
 sc-im
+screenkey
 sed
 shellcheck
 slock
