@@ -18,9 +18,12 @@
     },
     {
       "streamer": "zwag"
+    },
+    {
+      "streamer": "loltyler1"
     }
   ],
-  "apiToken": "1mwqkos5d1q8mn2naiybea08ybr17y",
-  "apiTokenExpiry": "1672486069",
-  "lastSubscriptionUpdate": "1672437440"
+  "apiToken": "elnd5hq07hrkgxvjsbxl8ojybh3k77",
+  "apiTokenExpiry": "1673483204",
+  "lastSubscriptionUpdate": "1673396804"
 }
