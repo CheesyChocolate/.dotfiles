@@ -8,3 +8,5 @@ irm christitus.com/win | iex # winutil
 https://github.com/noahvogt/chromium-patches/blob/master/xdg-basedir.patch # xdg chrome
 https://harablog.wordpress.com/2009/01/29/clearance-based-pathfinding/ # path_finding #AI #algorithm
 https://forum.artixlinux.org/index.php/topic,4361.0.html # arch #mirrorlist
+https://wiki.archlinux.org/title/Streaming_to_twitch.tv # stream #twitch
+https://www.passwordstore.org/ # pass #password
