@@ -29,6 +29,7 @@
 .config/pipe-viewer/*
 !.config/pipe-viewer/gtk-pipe-viewer.conf
 !.config/pipe-viewer/pipe-viewer.conf
+!.config/pipe-viewer/subscribed_channels.txt
 !.config/pipwire/
 !.config/pulse/
 !.config/python/
