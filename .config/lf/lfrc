@@ -75,6 +75,19 @@ cmd archive ${{
 	rm -rf $ans
 }}
 
+cmd convertf ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "convert to: "
+	read ans
+	#echo "$fx" | sed "s/\(.*\)\.\(.*\)/\1.$ans/" | xargs -I{} convert $fx {}
+	#TODO: add input option and output option. maybe only resoloution
+	for var in $fx; do
+		convert "$var" "$(echo $var | sed "s/\(.*\)\.\(.*\)/\1.$ans/")"
+	done
+}}
+
 cmd delete ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
