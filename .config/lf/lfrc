@@ -149,7 +149,8 @@ map gh
 map g top
 map D delete
 map E extract
-map r archive
+map R archive
+map c convertf
 map C copyto
 map M moveto
 map P :link
@@ -164,7 +165,7 @@ map O $mimeopen --ask "$f"
 map S share
 
 map A rename # at the very end
-map c push A<c-u> # new rename
+map r push A<c-u> # new rename
 map I push A<c-a> # at the very beginning
 map i push A<a-b><a-b><a-f> # before extension
 map a push A<a-b> # after extension
