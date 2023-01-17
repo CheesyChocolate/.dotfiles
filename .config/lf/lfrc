@@ -86,6 +86,9 @@ cmd convertf ${{
 	for var in $fx; do
 		convert "$var" "$(echo $var | sed "s/\(.*\)\.\(.*\)/\1.$ans/")"
 	done
+	printf "delete original?[y/N]"
+	read ans
+	[ $ans = "y" ] && rm $fx
 }}
 
 cmd delete ${{
