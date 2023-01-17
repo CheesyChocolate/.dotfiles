@@ -4,8 +4,8 @@
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=1
 GRUB_DISTRIBUTOR="Artix"
-GRUB_CMDLINE_LINUX_DEFAULT="8042.direct i8042.dumbkbd acpi_backlight=vendor acpi_sleep=nonvs mitigations=off resume=UUID=12d2735a-2dac-49f1-9f2a-b5c492e55b67"
-# options for swapfile hibernation: "resume_offset=2818048 loglevel=7 "
+GRUB_CMDLINE_LINUX_DEFAULT="8042.direct i8042.dumbkbd acpi_backlight=video acpi_sleep=nonvs mitigations=off resume=UUID=12d2735a-2dac-49f1-9f2a-b5c492e55b67"
+# options for swapfile hibernation: "resume_offset=2818048 loglevel=7 acpi_backlight=vendor"
 GRUB_CMDLINE_LINUX=""
 
 # Preload both GPT and MBR modules so that they are not missed
