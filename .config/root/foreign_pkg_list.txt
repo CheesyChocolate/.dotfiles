@@ -9,6 +9,7 @@ gtk-theme-arc-gruvbox-git
 htop-vim
 ledger-live-bin
 lf-git
+lobster
 mangal-bin
 mutt-wizard-git
 nodejs-neovim

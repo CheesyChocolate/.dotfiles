@@ -21,6 +21,7 @@
 .config/librewolf/*
 !.config/librewolf/userchrome.css
 !.config/librewolf/userContent.css.bak
+!.config/lobster/
 !.config/lynx/
 !.config/mpd/
 !.config/mpv/
