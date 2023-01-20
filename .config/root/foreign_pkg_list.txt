@@ -22,7 +22,6 @@ samrewritten-git
 sherlock-git
 simple-mtpfs
 task-spooler
-tlauncher
 tremc
 ungoogled-chromium-xdg-bin
 wordlists
