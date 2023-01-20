@@ -40,6 +40,7 @@
 !.config/python/
 !.config/root/
 !.config/shell/
+!.config/spicy/
 !.config/sxiv/
 !.config/wal/
 !.config/wget/
