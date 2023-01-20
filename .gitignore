@@ -20,7 +20,7 @@
 !.config/librewolf/
 .config/librewolf/*
 !.config/librewolf/userchrome.css
-!.config/librewolf/userContent.css.bak
+!.config/librewolf/userchrome.css.bak
 !.config/lobster/
 !.config/lynx/
 !.config/mpd/
