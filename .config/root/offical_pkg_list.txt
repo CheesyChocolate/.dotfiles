@@ -156,6 +156,7 @@ networkmanager
 networkmanager-runit
 newsboat
 nftables-runit
+nm-connection-editor
 nmap
 nodejs-lts-gallium
 noto-fonts
