@@ -22,3 +22,4 @@ python-uri-template
 python-virtualenv
 python-webcolors
 uvicorn
+zathura-djvu
