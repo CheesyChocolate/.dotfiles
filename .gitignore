@@ -18,9 +18,6 @@
 !.config/htop/
 !.config/lf/
 !.config/librewolf/
-.config/librewolf/*
-!.config/librewolf/userchrome.css
-!.config/librewolf/userchrome.css.bak
 !.config/lobster/
 !.config/lynx/
 !.config/mpd/
