@@ -10,3 +10,5 @@ https://harablog.wordpress.com/2009/01/29/clearance-based-pathfinding/ # path_fi
 https://forum.artixlinux.org/index.php/topic,4361.0.html # arch #mirrorlist
 https://wiki.archlinux.org/title/Streaming_to_twitch.tv # stream #twitch
 https://www.passwordstore.org/ # pass #password
+https://www.g-loaded.eu/2010/09/18/caching-nameserver-using-dnsmasq/ # DNS resolve #privacy
+https://wiki.archlinux.org/title/Dnsmasq # DHCP resolver
