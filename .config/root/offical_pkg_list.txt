@@ -5,6 +5,7 @@ arch4edu-keyring
 arch4edu-mirrorlist
 archstrike-keyring
 archstrike-mirrorlist
+aria2
 artix-archlinux-support
 atool
 autoconf
