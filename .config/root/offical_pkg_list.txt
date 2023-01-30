@@ -85,6 +85,7 @@ iptables-nft
 java-openjfx
 jdk-openjdk
 john
+jpegoptim
 jq
 jupyter-notebook
 lhasa
