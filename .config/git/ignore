@@ -19,6 +19,7 @@
 !.config/lf/
 !.config/librewolf/
 !.config/lobster/
+.config/lobster/lobster_history.txt
 !.config/lynx/
 !.config/mpd/
 !.config/mpv/
