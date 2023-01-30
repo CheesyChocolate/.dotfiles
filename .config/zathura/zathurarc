@@ -37,7 +37,7 @@ set render-loading-fg           "#ebdbb2" # fg
 set recolor-lightcolor          rgba(0,0,0,0) # bg
 set recolor-darkcolor           "#ebdbb2" # fg
 set recolor                     "true"
-# set recolor-keephue             true      # keep original color
+set recolor-keephue             true      # keep original color
 
 set sandbox none
 set statusbar-h-padding 0
