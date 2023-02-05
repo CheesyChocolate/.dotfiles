@@ -3,7 +3,7 @@
 # If keyboard light is off, will turn it on, else will turn it off.
 
 mode="1"
-if [ "$mode" == "$(cat /sys/devices/platform/sony-laptop/kbd_backlight)" ]; then
+if [ "$mode" -eq "$(cat /sys/devices/platform/sony-laptop/kbd_backlight)" ]; then
 	echo "0" | sudo tee /sys/devices/platform/sony-laptop/kbd_backlight
 else
 	echo "1" | sudo tee /sys/devices/platform/sony-laptop/kbd_backlight
