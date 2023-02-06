@@ -1,5 +1,6 @@
 bash-completion
 ffmpeg4.4
+fig2dev
 geoclue
 lib32-gamemode
 lib32-gsm
@@ -21,5 +22,6 @@ python-unidecode
 python-uri-template
 python-virtualenv
 python-webcolors
+scour
 uvicorn
 zathura-djvu
