@@ -56,8 +56,10 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export DEBUGINFOD_URLS="https://debuginfod.artixlinux.org"
 
+# private variables
+source "$XDG_CONFIG_HOME/shell/privateProfile"
+
 # Other program settings:
-export ANI_CLI_MODE="dub"
 export DICS="/usr/share/stardict/dic/"
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"

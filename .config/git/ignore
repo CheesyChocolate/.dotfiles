@@ -38,6 +38,7 @@
 !.config/python/
 !.config/root/
 !.config/shell/
+.config/shell/privateProfile
 !.config/spicy/
 !.config/sxiv/
 !.config/wal/
