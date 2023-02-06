@@ -8,6 +8,7 @@ geforcenow-electron
 gtk-theme-arc-gruvbox-git
 htop-vim
 iranian-fonts
+kjv-apocrypha
 ledger-live-bin
 lf-git
 lobster

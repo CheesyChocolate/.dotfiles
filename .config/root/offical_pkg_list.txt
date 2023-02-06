@@ -79,6 +79,7 @@ gvfs
 gzip
 imagemagick
 inetutils
+inkscape
 intel-ucode
 inxi
 iptables-nft
@@ -153,6 +154,7 @@ mtr
 namcap
 ncdu
 ncmpcpp
+neard
 neovim
 networkmanager
 networkmanager-runit
