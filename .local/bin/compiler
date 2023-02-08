@@ -41,7 +41,7 @@ case "$ext" in
 	m) octave "$file" ;;
 	md)	if  [ -x "$(command -v lowdown)" ]; then
 			lowdown --parse-no-intraemph "$file" -Tms | groff -mpdfmark -ms -kept -T pdf > "$base".pdf
-			lowdown --parse-no-intraemph "$file" -Tms | groff -mpdfmark -ms -kept -T html > "$base".html
+			lowdown --parse-no-intraemph "$file" -Thtml > "$base".html
 		elif [ -x "$(command -v groffdown)" ]; then
 			groffdown -i "$file" | groff -T pdf > "$base".pdf
 			groffdown -i "$file" | groff -T html > "$base".html
