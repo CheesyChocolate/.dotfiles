@@ -24,4 +24,6 @@ python-virtualenv
 python-webcolors
 scour
 uvicorn
+zathura-cb
 zathura-djvu
+zathura-ps
