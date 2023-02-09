@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# Rotates modern Linux desktop screen and input devices to match. Handy for
+# convertible notebooks. Call this script from panel launchers, keyboard
+# shortcuts, or touch gesture bindings (xSwipe, touchegg, etc.).
+#
+# Using transformation matrix bits taken from:
+#   https://wiki.ubuntu.com/X/InputCoordinateTransformation
+#
+# Has not been tested with multiple monitors.
+
+# Configure these to match your hardware (names taken from `xinput` output).
+TOUCHPAD='SynPS/2 Synaptics TouchPad'
+TOUCHSCREEN='N-trig DuoSense'
+STYLUS='N-trig DuoSense Mouse'
+
+# Display variables
+XDISPLAY=$(xrandr --current | grep primary | sed -e 's/ .*//g')
+ORIENTATION=$(xrandr --query --verbose | grep "$XDISPLAY" | sed 's/primary //' | awk '{print $5}')
+
+if [ "$ORIENTATION" = "normal" ]; then
+	# Rotate 90 degrees clockwise
+	xrandr --output "$XDISPLAY" --rotate right
+	xinput set-prop "$TOUCHPAD" --type=float "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1
+	xinput set-prop "$TOUCHSCREEN" --type=float "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1
+	xinput set-prop "$STYLUS" --type=float "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1
+elif [ "$ORIENTATION" = "right" ]; then
+	# Rotate 180 degrees clockwise
+	xrandr --output "$XDISPLAY" --rotate inverted
+	xinput set-prop "$TOUCHPAD" --type=float "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
+	xinput set-prop "$TOUCHSCREEN" --type=float "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
+	xinput set-prop "$STYLUS" --type=float "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
+elif [ "$ORIENTATION" = "inverted" ]; then
+	# Rotate 270 degrees clockwise
+	xrandr --output "$XDISPLAY" --rotate left
+	xinput set-prop "$TOUCHPAD" --type=float "Coordinate Transformation Matrix" 0 -1 1 1 0 0 0 0 1
+	xinput set-prop "$TOUCHSCREEN" --type=float "Coordinate Transformation Matrix" 0 -1 1 1 0 0 0 0 1
+	xinput set-prop "$STYLUS" --type=float "Coordinate Transformation Matrix" 0 -1 1 1 0 0 0 0 1
+elif [ "$ORIENTATION" = "left" ]; then
+	# Rotate 360 degrees clockwise
+	xrandr --output "$XDISPLAY" --rotate normal
+	xinput set-prop "$TOUCHPAD" --type=float "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
+	xinput set-prop "$TOUCHSCREEN" --type=float "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
+	xinput set-prop "$STYLUS" --type=float "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
+fi
