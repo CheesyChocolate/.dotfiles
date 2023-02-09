@@ -243,7 +243,6 @@ tlp
 tlp-runit
 tor
 tor-browser
-trackma-git
 transmission-cli
 ttf-font-awesome
 ttf-linux-libertine
