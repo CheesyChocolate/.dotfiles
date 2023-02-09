@@ -44,6 +44,7 @@
 !.config/wal/
 !.config/wget/
 !.config/wtwitch/
+.config/wtwitch/api.json
 !.config/x11/
 !.config/yay/
 !.config/zathura/
