@@ -123,7 +123,7 @@ cmd copyto ${{
 }}
 
 # d (select for cut) and P to paste hard-link
-# y (select for yank) and p to paste soft-link
+# y (select for yank) and P to paste soft-link
 cmd link %{{
 	set -- $(cat ~/.local/share/lf/files)
 	mode="$1"
