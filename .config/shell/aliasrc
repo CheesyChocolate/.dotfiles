@@ -33,7 +33,7 @@ alias \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
 	yt="yt-dlp --embed-metadata -i" \
-	yta="yt -x -f bestaudio/best" \
+	yta="yt -x -f bestaudio/best --audio-format flac" \
 	ffmpeg="ffmpeg -hide_banner"
 	#rsync="rsync -rtvzP"
 
