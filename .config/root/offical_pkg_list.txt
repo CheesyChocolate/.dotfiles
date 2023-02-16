@@ -10,6 +10,7 @@ atool
 autoconf
 automake
 base
+base-devel
 bat
 bc
 beanshell
@@ -215,6 +216,7 @@ shellcheck
 slock
 smartmontools
 socat
+soundcloud-dl-git
 steam
 streamlink
 sudo

@@ -13,7 +13,6 @@ python-httpx
 python-isoduration
 python-jsonpointer
 python-matplotlib
-python-mutagen
 python-pyarrow
 python-pycurl
 python-rfc3339-validator
