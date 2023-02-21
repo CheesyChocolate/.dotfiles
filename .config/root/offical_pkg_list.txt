@@ -199,6 +199,7 @@ python-pydbus
 python-pynvim
 python-pyxdg
 python-qdarkstyle
+python-spotdl
 python-urwid
 qemu-emulators-full
 qemu-full
