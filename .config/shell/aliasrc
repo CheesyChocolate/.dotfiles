@@ -68,13 +68,6 @@ gitignore_fix() {
 	git add -A
 	git commit -am "fixed untracked files"
 }
-tojpg() {
-	convert "$1" "${1%.*}.jpg"
-	rm -i "$1"
-}
-topdf() {
-	lowwriter --headless --convert-to pdf "$1"
-	rm -i "$1"
 }
 
 alias \
