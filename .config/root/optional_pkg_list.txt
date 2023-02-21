@@ -4,10 +4,10 @@ fig2dev
 geoclue
 lib32-gamemode
 lib32-gsm
+libappindicator-gtk3
 npm
 pstoedit
 psutils
-python-fastapi
 python-fqdn
 python-httpx
 python-isoduration
@@ -17,12 +17,12 @@ python-pyarrow
 python-pycurl
 python-rfc3339-validator
 python-rfc3987
-python-unidecode
 python-uri-template
 python-virtualenv
 python-webcolors
 scour
-uvicorn
+spice-protocol
+upower
 zathura-cb
 zathura-djvu
 zathura-ps
