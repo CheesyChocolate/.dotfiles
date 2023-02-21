@@ -4,7 +4,8 @@
     "simple_tui": false,
     "cache_path": "/home/suren/.local/share/spotdl/.spotipy",
     "audio_providers": [
-        "youtube-music"
+        "youtube-music",
+	"youtube"
     ],
     "lyrics_providers": [
         "genius",
