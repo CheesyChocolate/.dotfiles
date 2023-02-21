@@ -11,8 +11,6 @@ for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
 	alias $command="sudo $command"
 done; unset command
 
-se() { cd ~/.local/bin; $EDITOR $(fzf) ;}
-
 # ~/ Clean-up:
 alias \
 	monerod="monerod --data-dir ${XDG_DATA_HOME}/bitmonero" \
@@ -68,6 +66,9 @@ gitignore_fix() {
 	git add -A
 	git commit -am "fixed untracked files"
 }
+se() {
+	choice="$(find ~/.local/bin -mindepth 1 -printf '%P\n' | fzf)"
+	[ -f "$HOME/.local/bin/$choice" ] && $EDITOR "$HOME/.local/bin/$choice";
 }
 
 alias \
