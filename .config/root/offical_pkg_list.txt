@@ -276,7 +276,6 @@ xcompmgr
 xdg-user-dirs
 xdg-utils
 xdotool
-xfce4-power-manager
 xorg-server
 xorg-xdpyinfo
 xorg-xinit
