@@ -98,7 +98,6 @@ lib32-gtk2
 lib32-gtk3
 lib32-libcups
 lib32-libnm
-lib32-libpipewire
 lib32-libpulse
 lib32-libudev0-shim
 lib32-libva
@@ -117,7 +116,6 @@ libgphoto2
 libibus
 libjxl
 libnotify
-libpipewire
 libreoffice-extension-languagetool
 libreoffice-fresh
 librewolf
@@ -181,6 +179,7 @@ pandoc-bin
 papirus-libreoffice-theme
 parlatype-libreoffice-extension
 patch
+perl-json-xs
 perl-term-readline-gnu
 pipe-viewer-git
 pipewire-pulse
