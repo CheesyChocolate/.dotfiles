@@ -8,6 +8,7 @@ UCVls1GmFKf6WlTraIb_IaJg DistroTube
 UCIyZiiHXIH7KkqfaDvBmG-Q EZScape
 UCVeW9qkBjo3zosnqUbG7CFw John Hammond
 UC3ltptWa0xfrDweghW94Acg Karl Jobst
+UCxQKHvKbmSzGMvUrVtJYnUA Learn Linux TV
 UCpa-Zb0ZcQjTCPP1Dx_1M8Q LegalEagle
 UCRcgy6GzDeccI7dkbbBna3Q LEMMiNO
 UCXuqSBlHAE6Xw-yeJA0Tunw Linus Tech Tips
@@ -20,6 +21,7 @@ UCFj-cS-4lCQcoiNOfFD60dQ R9M
 UCRePSZq2rZ809kacREUSYuQ Speedrun Explained
 UCtUbO6rBht0daVIOGML3c8w Summoning Salt
 UCpUS8oR-IJSP3gFYrGAWEuQ TC Zwag
+UCeeFfhMcJa1kjtfZAGskOCA TechLinked
 UC5UAwBUum7CPN5buc-_N1Fw The Linux Experiment
 UCKGe7fZ_S788Jaspxg-_5Sg The PC Security Channel
 UCWzLmNWhgeh3h1j-M-Isy0g TheRussianBadger
