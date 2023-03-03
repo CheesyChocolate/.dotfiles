@@ -12,12 +12,13 @@ for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
 done; unset command
 
 # ~/ Clean-up:
+[ -f "$MBSYNCRC" ] && alias mbsync="mbsync -c $MBSYNCRC"
+[ -d "$MONERODIR" ] && alias monerod="monerod --data-dir $MONERODIR --log-file $MONERODIR/bitmonero.log" \
+			monero-wallet-gui="monero-wallet-gui --log-file=$MONERODIR/monero-wallet-gui.log"
+
 alias \
-	monerod="monerod --data-dir ${XDG_DATA_HOME}/bitmonero" \
-	yarn="yarn --use-yarnrc ${XDG_CONFIG_HOME}/yarn/config" \
-	dosbox="dosbox -conf ${XDG_CONFIG_HOME}/dosbox/dosbox.conf" \
-	monerod="monerod --data-dir $XDG_DATA_HOME/Monero" \
-	monero-wallet-gui="monero-wallet-gui --log-file=$XDG_DATA_HOME/Monero/monero-wallet-gui.log"
+	yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config" \
+	dosbox="dosbox -conf $XDG_CONFIG_HOME/dosbox/dosbox.conf"
 
 # breakin the habit
 alias \
