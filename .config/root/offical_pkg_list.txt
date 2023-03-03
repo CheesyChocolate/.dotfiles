@@ -38,7 +38,9 @@ dkms
 dmidecode
 dnsmasq
 docker
+docker-compose
 docker-runit
+docker-scan
 dosbox
 dosfstools
 dunst
