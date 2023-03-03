@@ -24,8 +24,8 @@ ruby-neovim
 samrewritten-git
 sherlock-git
 simple-mtpfs
+stig
 task-spooler
-tremc
 ungoogled-chromium-xdg-bin
 wordlists
 wtwitch
