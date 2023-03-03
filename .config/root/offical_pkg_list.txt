@@ -181,7 +181,6 @@ pandoc-bin
 papirus-libreoffice-theme
 parlatype-libreoffice-extension
 patch
-perl-json-xs
 perl-term-readline-gnu
 pipe-viewer-git
 pipewire-pulse
@@ -273,6 +272,7 @@ winetricks
 wireless-regdb
 wireplumber
 wireshark-cli
+wmname
 wpa_supplicant
 xcape
 xclip
