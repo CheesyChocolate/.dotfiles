@@ -1443,6 +1443,7 @@ _comps=(
 'tkconch' '_twisted'
 'tkinfo' '_texinfo'
 'tla' '_tla'
+'tldr' '_tldr'
 'tload' '_tload'
 'tmux' '_tmux'
 'tmuxinator' '_tmuxinator'
@@ -1463,7 +1464,6 @@ _comps=(
 'transmission-remote' '_transmission'
 'trap' '_trap'
 'tree' '_tree'
-'tremc' '_tremc'
 'trial' '_twisted'
 'trove' '_openstack'
 'true' '_nothing'
@@ -1854,8 +1854,8 @@ autoload -Uz _afew _android _archlinux-java _artisan _atach \
             _scrub _sdd _setcap _setup.py _sfdx \
             _shellcheck _showoff _srm _stack _streamlink \
             _subl _subliminal _supervisorctl _svm _tarsnap \
-            _teamocil _thor _tmuxinator _tmuxp _tox \
-            _tremc _udisksctl _ufw _updpkgsums _virtualbox \
+            _teamocil _thor _tldr _tmuxinator _tmuxp \
+            _tox _udisksctl _ufw _updpkgsums _virtualbox \
             _vnstat _wemux _wg-quick _wtwitch _xinput \
             _xsel _xwallpaper _yaourt _yarn _yay \
             _youtube-dl _yt-dlp _zathura _zcash-cli _cdr \
