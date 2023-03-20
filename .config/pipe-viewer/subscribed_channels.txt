@@ -6,6 +6,7 @@ UCg6gPGh8HU2U01vaFCAsvmQ Chris Titus Tech
 UC2Ds30pkifFVD0CE08wF50g Daidus
 UCVls1GmFKf6WlTraIb_IaJg DistroTube
 UCIyZiiHXIH7KkqfaDvBmG-Q EZScape
+UC7c3Kb6jYCRj4JOHHZTxKsQ GitHub
 UCVeW9qkBjo3zosnqUbG7CFw John Hammond
 UC3ltptWa0xfrDweghW94Acg Karl Jobst
 UCxQKHvKbmSzGMvUrVtJYnUA Learn Linux TV
@@ -13,9 +14,11 @@ UCpa-Zb0ZcQjTCPP1Dx_1M8Q LegalEagle
 UCRcgy6GzDeccI7dkbbBna3Q LEMMiNO
 UCXuqSBlHAE6Xw-yeJA0Tunw Linus Tech Tips
 UC2eYFnH61tmytImy1mTYvhA Luke Smith
+UCag3pW5VGGN6RKFVUNGBoMg Maker Tales
 UC8cVno7WVooCpLvjJUhFtoA Maximum
 UC7YOGHUfC1Tb6E4pudI9STA Mental Outlaw
 UC9x0AN7BWHpCDHSm9NiJFJQ NetworkChuck
+UC2PA-AKmVpU6NKCGtZq_rKQ Philosophy Tube
 UCkOu814wigKaeu-b2hFdU6w Pianta
 UCFj-cS-4lCQcoiNOfFD60dQ R9M
 UCRePSZq2rZ809kacREUSYuQ Speedrun Explained
