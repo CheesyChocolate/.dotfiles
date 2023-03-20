@@ -129,6 +129,8 @@ libvirt-storage-iscsi-direct
 linux
 linux-firmware
 linux-headers
+linux-lts
+linux-lts-headers
 linux-steam-integration
 lostfiles
 lutris
