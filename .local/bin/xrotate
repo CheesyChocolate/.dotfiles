@@ -9,6 +9,8 @@
 #
 # Has not been tested with multiple monitors.
 
+#TODO: when rotated multy finger gestures are confused
+
 # Configure these to match your hardware (names taken from `xinput` output).
 TOUCHPAD='SynPS/2 Synaptics TouchPad'
 TOUCHSCREEN='N-trig DuoSense'

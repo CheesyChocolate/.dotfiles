@@ -1,6 +1,6 @@
 {
   "player": "mpv",
-  "quality": "720p60",
+  "quality": "360p",
   "colors": "true",
   "printOfflineSubscriptions": "true",
   "subscriptions": [
