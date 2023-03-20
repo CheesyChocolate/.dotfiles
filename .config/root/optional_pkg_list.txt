@@ -1,3 +1,4 @@
+acsccid
 bash-completion
 ffmpeg4.4
 fig2dev
