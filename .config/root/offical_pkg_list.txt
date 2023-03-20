@@ -113,6 +113,7 @@ lib32-pipewire
 lib32-v4l-utils
 lib32-vkd3d
 libdecor
+libertinus-font
 libgphoto2
 libibus
 libjxl
@@ -255,7 +256,6 @@ tor
 tor-browser
 transmission-cli
 ttf-font-awesome
-ttf-linux-libertine
 ueberzug
 unace
 unclutter
