@@ -82,6 +82,7 @@ gzip
 imagemagick
 inetutils
 inkscape
+inotify-tools
 intel-ucode
 inxi
 iptables-nft
@@ -134,6 +135,7 @@ linux-lts
 linux-lts-headers
 linux-steam-integration
 lostfiles
+lshw
 lutris
 lynx
 lzop
@@ -261,6 +263,7 @@ unace
 unclutter
 unrar
 unzip
+ventoy-bin
 vim
 virt-manager
 virt-viewer
@@ -295,6 +298,7 @@ yay-git
 youtube-dl
 yt-dlp
 zathura
+zbar
 zip
 zsh
 zsh-completions
