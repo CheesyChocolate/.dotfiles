@@ -30,6 +30,7 @@ checkbashisms
 cpio
 cronie-runit
 cups-runit
+debuginfod
 dialog
 digital
 direnv
