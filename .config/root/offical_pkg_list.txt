@@ -1,8 +1,6 @@
 acpilight
 adobe-source-han-sans-jp-fonts
 arandr
-arch4edu-keyring
-arch4edu-mirrorlist
 archstrike-keyring
 archstrike-mirrorlist
 artix-archlinux-support
