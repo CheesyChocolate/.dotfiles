@@ -17,6 +17,7 @@ lobster
 mangal-bin
 mutt-wizard-git
 nodejs-neovim
+octave-io
 pam-gnupg-git
 python-bs4
 python-npx

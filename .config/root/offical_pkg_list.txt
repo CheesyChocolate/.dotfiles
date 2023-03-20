@@ -171,6 +171,7 @@ noto-fonts-emoji
 ntfs-3g
 ntp
 ntp-runit
+octave
 openbsd-netcat
 openssl-1.1
 p7zip

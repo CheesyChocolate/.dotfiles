@@ -2,6 +2,8 @@ bash-completion
 ffmpeg4.4
 fig2dev
 geoclue
+gnuplot
+intel-compute-runtime
 lib32-gamemode
 lib32-gsm
 libappindicator-gtk3

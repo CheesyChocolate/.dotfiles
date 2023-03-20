@@ -1,0 +1,2 @@
+# use gnuplot as plotting backend
+graphics_toolkit("gnuplot");

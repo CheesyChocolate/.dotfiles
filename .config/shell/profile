@@ -60,6 +60,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 export MONERODIR="$XDG_DATA_HOME/Monero"
+export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
 
 # private variables
 source "$XDG_CONFIG_HOME/shell/privateProfile"
