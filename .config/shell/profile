@@ -61,6 +61,7 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 export MONERODIR="$XDG_DATA_HOME/Monero"
 export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
+export MAXIMA_USERDIR="$XDG_CONFIG_HOME/maxima"
 
 # private variables
 source "$XDG_CONFIG_HOME/shell/privateProfile"

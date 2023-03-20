@@ -142,6 +142,7 @@ make
 man-db
 man-pages
 maven
+maxima
 mediainfo
 mesa-utils
 mkinitcpio-firmware
@@ -213,6 +214,7 @@ quickemu-git
 radvd
 remmina-git
 ripgrep
+rlwrap
 rsync-runit
 ruby
 runit
