@@ -19,7 +19,7 @@ bluez
 bluez-cups
 bluez-runit
 bluez-utils
-broadcom-wl
+broadcom-wl-dkms
 btrfs-progs
 calibre
 chaotic-keyring
