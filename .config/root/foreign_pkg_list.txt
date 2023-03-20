@@ -6,6 +6,7 @@ broadcom-bt-firmware
 findbrokenpkgs
 firefox-tridactyl-native-bin
 geforcenow-electron
+gitleaks
 gtk-theme-arc-gruvbox-git
 htop-vim
 iranian-fonts
