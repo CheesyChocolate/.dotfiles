@@ -27,6 +27,9 @@
 !.config/newsboat/
 !.config/npm/
 !.config/nvim/
+!.config/octave/
+.config/octave/*
+!.config/octave/octaverc
 !.config/pinentry/
 !.config/pipe-viewer/
 .config/pipe-viewer/*
