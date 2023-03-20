@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Uninstall Origin
+Exec=env WINEPREFIX="/home/suren/.local/share/lutris/Sources/origin" wine C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start\\ Menu\\\\Programs\\\\Origin\\\\Uninstall\\ Origin.lnk
+Type=Application
+StartupNotify=true
+Comment=Uninstall Origin
+Path=/home/suren/.local/share/lutris/Sources/origin/dosdevices/c:/Program Files (x86)/Origin
+Icon=F29E_OriginUninstall.0
+StartupWMClass=originuninstall.exe

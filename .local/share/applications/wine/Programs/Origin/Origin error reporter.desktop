@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Origin error reporter
+Exec=env WINEPREFIX="/home/suren/.local/share/lutris/Sources/origin" wine C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start\\ Menu\\\\Programs\\\\Origin\\\\Origin\\ error\\ reporter.lnk
+Type=Application
+StartupNotify=true
+Comment=Origin error reporter
+Path=/home/suren/.local/share/lutris/Sources/origin/dosdevices/c:/Program Files (x86)/Origin
+Icon=7E81_OriginER.0
+StartupWMClass=originer.exe
