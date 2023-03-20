@@ -40,7 +40,6 @@ dnsmasq
 docker
 docker-compose
 docker-runit
-docker-scan
 dosbox
 dosfstools
 dunst
@@ -216,7 +215,6 @@ rsync-runit
 ruby
 runit
 samba
-sc-im
 screenkey
 sed
 shellcheck
@@ -294,7 +292,6 @@ yay-git
 youtube-dl
 yt-dlp
 zathura
-zathura-pdf-mupdf
 zip
 zsh
 zsh-completions

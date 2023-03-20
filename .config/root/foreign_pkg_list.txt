@@ -25,6 +25,7 @@ python-pip-search
 quickgui-bin
 ruby-neovim
 samrewritten-git
+sc-im
 sherlock-git
 simple-mtpfs
 stig

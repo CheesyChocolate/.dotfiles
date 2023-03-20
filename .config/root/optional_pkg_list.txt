@@ -1,5 +1,6 @@
 acsccid
 bash-completion
+docker-scan
 ffmpeg4.4
 fig2dev
 geoclue
@@ -36,4 +37,5 @@ spice-protocol
 upower
 zathura-cb
 zathura-djvu
+zathura-pdf-mupdf
 zathura-ps
