@@ -1,7 +1,6 @@
-
 # GRUB boot loader configuration
 
-GRUB_DEFAULT=0
+GRUB_DEFAULT=saved
 GRUB_TIMEOUT=1
 GRUB_DISTRIBUTOR="Artix"
 GRUB_CMDLINE_LINUX_DEFAULT="8042.direct i8042.dumbkbd acpi_backlight=video acpi_sleep=nonvs mitigations=off resume=UUID=12d2735a-2dac-49f1-9f2a-b5c492e55b67"
@@ -56,10 +55,10 @@ GRUB_GFXPAYLOAD_LINUX=keep
 
 # Uncomment to make GRUB remember the last selection. This requires
 # setting 'GRUB_DEFAULT=saved' above.
-# GRUB_SAVEDEFAULT=true
+GRUB_SAVEDEFAULT=true
 
 # Uncomment to disable submenus in boot menu
-# GRUB_DISABLE_SUBMENU=y
+GRUB_DISABLE_SUBMENU=y
 
 # Probing for other operating systems is disabled for security reasons. Read
 # documentation on GRUB_DISABLE_OS_PROBER, if still want to enable this
