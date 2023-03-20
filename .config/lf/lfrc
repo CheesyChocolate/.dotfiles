@@ -142,6 +142,11 @@ cmd link %{{
 	lf -remote "send clear"
 }}
 
+cmd diff ${{
+	# lf -remote "send $id nvim -d $fx"
+	nvim -d $fx
+}}
+
 cmd setbg "$1"
 cmd bulkrename $vidir
 
