@@ -65,7 +65,7 @@ alias \
 gitignore_fix() {
 	git rm -r --cached .
 	git add -A
-	git commit -am "fixed untracked files"
+	# git commit -am "fixed untracked files"
 }
 se() {
 	choice="$(find ~/.local/bin -mindepth 1 -printf '%P\n' | fzf)"
