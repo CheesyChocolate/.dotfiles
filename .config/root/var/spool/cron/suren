@@ -1,0 +1,3 @@
+@hourly /home/suren/.local/bin/cron/newsup
+@daily /home/suren/.local/bin/cron/checkup
+*/10 * * * * /usr/bin/mailsync
