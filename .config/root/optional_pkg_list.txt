@@ -23,6 +23,7 @@ python-httpx
 python-isoduration
 python-jsonpointer
 python-matplotlib
+python-mutagen
 python-pprofile
 python-pyarrow
 python-pycurl
@@ -35,6 +36,7 @@ python-unidecode
 python-uri-template
 python-virtualenv
 python-webcolors
+rlwrap
 scour
 upower
 uvicorn

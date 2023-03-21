@@ -216,7 +216,6 @@ quickemu-git
 radvd
 remmina-git
 ripgrep
-rlwrap
 rsync-runit
 ruby
 runit
