@@ -227,7 +227,6 @@ shellcheck
 slock
 smartmontools
 socat
-soundcloud-dl-git
 steam
 streamlink
 sudo
