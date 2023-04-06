@@ -9,6 +9,7 @@ geforcenow-electron
 gitleaks
 gtk-theme-arc-gruvbox-git
 htop-vim
+hyx
 iranian-fonts
 kjv-apocrypha
 ledger-live-bin
