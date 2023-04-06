@@ -5,13 +5,13 @@
 
 xrandr --dpi 96		# Set DPI. User may want to use a larger number for larger screens.
 setbg $XDG_DATA_HOME/wallpapers &			# set the background with the `setbg` script
-xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
+xrdb $XDG_CONFIG_HOME/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 
 autostart="mpd xcompmgr dunst unclutter pipewire remapd"
 # you can also add wireplumber and clight
 
 for program in $autostart; do
-	pidof -s "$program" || "$program" &
+	pidof -sx "$program" || "$program" &
 done >/dev/null 2>&1
 
 # Ensure that xrdb has finished running before moving on to start the WM/DE.
