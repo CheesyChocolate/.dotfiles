@@ -3,12 +3,13 @@ bash-completion
 docker-scan
 ffmpeg4.4
 fig2dev
-geoclue
 gnuplot
+hunspell-en_us
 intel-compute-runtime
 lib32-gamemode
-lib32-gsm
 libappindicator-gtk3
+libmythes
+libva-intel-driver
 npm
 opencl-clhpp
 perl-json-xs

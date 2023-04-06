@@ -28,7 +28,6 @@ ruby-neovim
 samrewritten-git
 sc-im
 sherlock-git
-simple-mtpfs
 snyk
 stig
 task-spooler

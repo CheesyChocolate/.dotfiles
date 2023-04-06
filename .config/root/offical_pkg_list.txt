@@ -225,6 +225,7 @@ samba
 screenkey
 sed
 shellcheck
+simple-mtpfs
 slock
 smartmontools
 socat
