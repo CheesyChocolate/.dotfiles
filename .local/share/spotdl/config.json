@@ -40,5 +40,16 @@
     "keep_alive": false,
     "allowed_origins": null,
     "playlist_numbering": false,
-    "preserve_original_audio": false
+    "preserve_original_audio": false,
+    "max_retries": 3,
+    "scan_for_songs": false,
+    "fetch_albums": false,
+    "id3_separator": "/",
+    "ytm_data": false,
+    "add_unavailable": false,
+    "geo_bypass": true,
+    "generate_lrc": false,
+    "force_update_metadata": true,
+    "web_use_output_dir": "/home/suren/Music",
+    "keep_sessions": false
 }
