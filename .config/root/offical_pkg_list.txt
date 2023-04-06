@@ -67,12 +67,14 @@ gcc
 geoip-database-extra
 geoipupdate
 gettext
+gimagereader-gtk
 gimp
 git
 git-delta
 git-runit
 github-cli
 gnome-keyring
+gnome-maps
 grep
 groff
 grub
