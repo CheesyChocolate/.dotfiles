@@ -59,6 +59,7 @@
 !.local/
 .local/*
 !.local/bin/
+.local/bin/private/
 !.local/share/
 .local/share/*
 !.local/share/applications/
