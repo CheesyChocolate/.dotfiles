@@ -26,6 +26,7 @@ ccid
 chaotic-keyring
 chaotic-mirrorlist
 checkbashisms
+clamav
 cpio
 cronie-runit
 cups-runit
