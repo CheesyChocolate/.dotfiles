@@ -64,6 +64,9 @@
 .local/share/*
 !.local/share/applications/
 !.local/share/bookmark
+!.local/share/gnupg/
+.local/share/gnupg/*
+!.local/share/gnupg/gpg-agent.conf
 !.local/share/larbs/
 !.local/share/spotdl/
 .local/share/spotdl/*
