@@ -55,6 +55,7 @@ ffmpegthumbnailer
 file
 findutils
 firefox-tridactyl
+firejail
 firewalld
 firewalld-runit
 flex
