@@ -11,6 +11,7 @@ gtk-theme-arc-gruvbox-git
 htop-vim
 hyx
 iranian-fonts
+javafx-scenebuilder
 kjv-apocrypha
 ledger-live-bin
 lf-git
