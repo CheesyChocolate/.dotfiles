@@ -33,7 +33,6 @@ sherlock-git
 snyk
 stig
 task-spooler
-ungoogled-chromium-xdg-bin
 urlview-xdg-git
 wordlists
 wtwitch

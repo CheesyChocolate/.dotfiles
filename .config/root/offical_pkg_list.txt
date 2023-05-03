@@ -267,6 +267,7 @@ ttf-font-awesome
 ueberzug
 unace
 unclutter
+ungoogled-chromium
 unrar
 unzip
 ventoy-bin
