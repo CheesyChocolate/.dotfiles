@@ -1202,6 +1202,7 @@ _comps=(
 'pwait' '_pids'
 'pwdx' '_pids'
 'pwgen' '_pwgen'
+'pwn' '_pwn'
 'pygmentize' '_pygmentize'
 'pyhtmlizer' '_twisted'
 'qdbus' '_qdbus'
@@ -1450,7 +1451,6 @@ _comps=(
 'tload' '_tload'
 'tmux' '_tmux'
 'tmuxinator' '_tmuxinator'
-'tmuxp' '_tmuxp'
 'todo' '_devtodo'
 'todo.sh' '_todo.sh'
 'toilet' '_toilet'
@@ -1851,14 +1851,14 @@ autoload -Uz _afew _android _archlinux-java _artisan _atach \
             _pacsort _pactree _pass _patool _perf \
             _periscope _pgsql_utils _phing _pixz _pkcon \
             _play _pm2 _port _protoc _pulseaudio \
-            _pygmentize _qmk _qpdf _rails _ralio \
-            _rankmirrors _redis-cli _rfkill _rg _rkt \
-            _rmlint _rslsync _rspec _rsvm _rubocop \
-            _sbt _scala _scrub _sdd _setcap \
-            _setup.py _sfdx _shellcheck _showoff _srm \
-            _stack _streamlink _subl _subliminal _supervisorctl \
-            _svm _tarsnap _teamocil _thor _tldr \
-            _tmuxinator _tmuxp _tox _udisksctl _ufw \
+            _pwn _pygmentize _qmk _qpdf _rails \
+            _ralio _rankmirrors _redis-cli _rfkill _rg \
+            _rkt _rmlint _rslsync _rspec _rsvm \
+            _rubocop _sbt _scala _scrub _sdd \
+            _setcap _setup.py _sfdx _shellcheck _showoff \
+            _srm _stack _streamlink _subl _subliminal \
+            _supervisorctl _svm _tarsnap _teamocil _thor \
+            _tldr _tmuxinator _tox _udisksctl _ufw \
             _updpkgsums _virtualbox _vnstat _wemux _wg-quick \
             _wtwitch _xinput _xsel _xwallpaper _yaourt \
             _yarn _yay _youtube-dl _yt-dlp _zathura \
