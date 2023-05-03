@@ -280,8 +280,8 @@ vnstat-runit
 vulscan
 which
 whois
-wine-ge-custom
 wine-mono
+wine-staging
 winetricks
 wireless-regdb
 wireplumber
