@@ -73,6 +73,7 @@ gimagereader-gtk
 gimp
 git
 git-delta
+git-lfs
 git-runit
 github-cli
 gnome-keyring
