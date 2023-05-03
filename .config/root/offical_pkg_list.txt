@@ -60,6 +60,7 @@ firejail
 firewalld
 firewalld-runit
 flex
+freecad-git
 fwupd
 fzf
 gamemode
