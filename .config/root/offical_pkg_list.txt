@@ -209,9 +209,9 @@ pulsemixer
 pwndbg
 python-evdev
 python-geoip
-python-openpyxl
 python-pip
 python-pipx
+python-pwntools
 python-pydbus
 python-pynvim
 python-pyxdg
