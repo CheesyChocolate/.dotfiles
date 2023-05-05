@@ -91,6 +91,7 @@ inkscape
 inotify-tools
 intel-ucode
 inxi
+iotop
 iptables-nft
 java-openjfx
 jdk-openjdk
@@ -170,6 +171,7 @@ ncdu
 ncmpcpp
 neard
 neovim
+nethogs
 networkmanager
 networkmanager-runit
 newsboat
