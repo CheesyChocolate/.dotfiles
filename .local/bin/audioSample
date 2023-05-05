@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Requires ffmpeg
+
+# this script will take a audio file and create a sample of it in mp3.( for audio recognition)
+
+# Get options
+# -t duration of audio sample
+while getopts ":t:" opt; do
+  case $opt in
+    t)
+      duration=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+shift $((OPTIND-1))
+
+if [ $# -ne 1 ]; then
+  echo "Usage: $0 [-t duration] input_file" >&2
+  exit 1
+fi
+
+input_file=$1
+output_file="${1%.*}_sample.mp3"
+
+# Set default duration of audio sample
+if [ -z $duration ]; then
+  duration=5
+fi
+
+# Get input file duration
+file_duration=$(ffprobe -i "$input_file" -show_entries format=duration -v quiet -of csv="p=0")
+
+# Calculate start time
+start_time=$(echo "scale=3; ($file_duration-$duration)/2" | bc)
+
+# Trim audio
+ffmpeg -i "$input_file" -ss $start_time -t $duration -acodec libmp3lame "$output_file"
