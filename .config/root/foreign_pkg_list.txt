@@ -1,5 +1,6 @@
 abook
 ani-cli-git
+audd-cli-git
 bicon-git
 blender-plugin-cad-sketcher-git
 bluetuith-bin
@@ -29,6 +30,7 @@ quickgui-bin
 ruby-neovim
 samrewritten-git
 sc-im
+shazam-cli-git
 sherlock-git
 snyk
 stig
