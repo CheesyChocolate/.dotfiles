@@ -26,6 +26,8 @@ pam-gnupg-git
 python-bs4
 python-npx
 python-pip-search
+python-readchar
+python-xmpppy-git
 quickgui-bin
 ruby-neovim
 samrewritten-git

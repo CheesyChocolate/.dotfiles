@@ -285,7 +285,6 @@ whois
 wine-mono
 wine-staging
 winetricks
-wireguard-tools
 wireless-regdb
 wireplumber
 wireshark-cli
