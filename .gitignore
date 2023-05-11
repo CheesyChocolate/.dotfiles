@@ -46,6 +46,7 @@
 !.config/sxiv/
 !.config/wal/
 !.config/wget/
+!.config/wikiman/
 !.config/wtwitch/
 .config/wtwitch/api.json
 !.config/x11/
