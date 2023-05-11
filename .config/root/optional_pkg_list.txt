@@ -27,7 +27,6 @@ perl-parallel-forkmanager
 povray
 pstoedit
 psutils
-python-aiodns
 python-cairocffi
 python-fastapi
 python-fastnumbers
