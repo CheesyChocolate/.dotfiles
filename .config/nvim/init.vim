@@ -23,6 +23,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'github/copilot.vim'
 Plug 'mbbill/undotree'
 Plug 'LukeSmithxyz/vimling'
+Plug 'rhysd/vim-grammarous'
 call plug#end()
 
 set title
@@ -150,6 +151,10 @@ if has("persistent_undo")
 	let &undodir=target_path
 	set undofile
 endif
+
+" vim-grammarous settings
+" TODO: temporary fix for new unstable version of language tool
+let g:grammarous#jar_url = 'https://www.languagetool.org/download/LanguageTool-5.9.zip'
 
 " Ensure files are read as what I want:
 	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
