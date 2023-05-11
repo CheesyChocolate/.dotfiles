@@ -139,16 +139,16 @@ nmap <leader>cl  <Plug>(coc-codelens-action)
 
 " undotree file directory
 if has("persistent_undo")
-   let target_path = expand('$XDG_CACHE_HOME/nvim/undodir')
+	let target_path = expand('$XDG_CACHE_HOME/nvim/undodir')
 
-    " create the directory and any parent directories
-    " if the location does not exist.
-    if !isdirectory(target_path)
-        call mkdir(target_path, "p", 0700)
-    endif
+	" create the directory and any parent directories
+	" if the location does not exist.
+	if !isdirectory(target_path)
+		call mkdir(target_path, "p", 0700)
+	endif
 
-    let &undodir=target_path
-    set undofile
+	let &undodir=target_path
+	set undofile
 endif
 
 " Ensure files are read as what I want:
