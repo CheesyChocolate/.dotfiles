@@ -1,6 +1,7 @@
 acpilight
 adobe-source-han-sans-jp-fonts
 arandr
+arch-wiki-docs
 archstrike-keyring
 archstrike-mirrorlist
 artix-archlinux-support
@@ -282,6 +283,7 @@ vnstat-runit
 vulscan
 which
 whois
+wikiman
 wine-mono
 wine-staging
 winetricks
