@@ -77,6 +77,7 @@ gimagereader-gtk
 gimp
 git
 git-delta
+git-filter-repo
 git-lfs
 git-runit
 github-cli
@@ -283,6 +284,7 @@ smartmontools
 socat
 steam
 streamlink
+subversion
 sudo
 swtpm
 sxiv
@@ -317,6 +319,7 @@ unclutter
 ungoogled-chromium
 unrar
 unzip
+urlwatch
 ventoy-bin
 vim
 virt-manager
