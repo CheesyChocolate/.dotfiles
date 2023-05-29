@@ -1,4 +1,11 @@
-player=mpv
-subs_language=English
-video_quality=1080
-preferred_server=vidcloud
+history=1
+use_external_menu=0
+image_preview=0
+subs_language="English"
+player="mpv"
+quality="1080"
+json_output=0
+histfile="$HOME/.local/state/lobster/lobster_history.txt"
+cache_dir="/tmp/lobster"
+images_cache_dir="/tmp/lobster-images"
+applications_dir="$HOME/.local/share/applications/lobster"
