@@ -19,6 +19,7 @@ done; unset command
 alias \
 	yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config" \
 	dosbox="dosbox -conf $XDG_CONFIG_HOME/dosbox/dosbox.conf"
+	alias svn="svn --config-dir \"$XDG_CONFIG_HOME\"/subversion"
 
 # breakin the habit
 alias \
