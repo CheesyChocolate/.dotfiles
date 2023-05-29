@@ -100,6 +100,7 @@ john
 jpegoptim
 jq
 jupyter-notebook
+lf
 lhasa
 lib32-artix-archlinux-support
 lib32-giflib

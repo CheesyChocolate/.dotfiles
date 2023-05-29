@@ -16,7 +16,6 @@ iranian-fonts
 javafx-scenebuilder
 kjv-apocrypha
 ledger-live-bin
-lf-git
 lobster
 mangal-bin
 mutt-wizard-git
