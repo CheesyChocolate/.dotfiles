@@ -1,5 +1,6 @@
 {
 	"aururl": "https://aur.archlinux.org",
+	"aurrpcurl": "https://aur.archlinux.org/rpc?",
 	"buildDir": "/home/suren/.cache/yay",
 	"editor": "",
 	"editorflags": "",
@@ -8,7 +9,6 @@
 	"pacmanbin": "pacman",
 	"pacmanconf": "/etc/pacman.conf",
 	"redownload": "no",
-	"rebuild": "no",
 	"answerclean": "",
 	"answerdiff": "",
 	"answeredit": "",
@@ -23,6 +23,7 @@
 	"removemake": "ask",
 	"sudobin": "sudo",
 	"sudoflags": "",
+	"version": "12.0.5.r7.gc1aa71b",
 	"requestsplitn": 150,
 	"completionrefreshtime": 7,
 	"maxconcurrentdownloads": 0,
@@ -42,5 +43,9 @@
 	"batchinstall": true,
 	"singlelineresults": false,
 	"separatesources": true,
-	"version": "11.3.0"
+	"newinstallengine": true,
+	"debug": false,
+	"rpc": true,
+	"doubleconfirm": true,
+	"rebuild": "no"
 }
