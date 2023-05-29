@@ -1,4 +1,4 @@
-#files: 953	version: 5.9
+#files: 958	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -743,6 +743,7 @@ _comps=(
 'iftop' '_iftop'
 'ifup' '_net_interfaces'
 'ijoin' '_ispell'
+'img2sixel' '_img2sixel'
 'import' '_imagemagick'
 'inc' '_mh'
 'include-what-you-use' '_include-what-you-use'
@@ -822,6 +823,7 @@ _comps=(
 'ldd' '_ldd'
 'less' '_less'
 'let' '_math'
+'lf' '_lf'
 'lftp' '_ncftp'
 'lha' '_lha'
 'libinput' '_libinput'
@@ -979,6 +981,7 @@ _comps=(
 'mvim' '_vim'
 'mvn' '_mvn'
 'mvnDebug' '_mvn'
+'mw' '_mutt-wizard.zsh'
 'mx' '_hosts'
 'mysql' '_mysql_utils'
 'mysqladmin' '_mysql_utils'
@@ -1150,6 +1153,7 @@ _comps=(
 'podgrep' '_perl_modules'
 'podpath' '_perl_modules'
 'podtoc' '_perl_modules'
+'poetry' '_poetry'
 'poff' '_pon'
 'policytool' '_java'
 'pon' '_pon'
@@ -1338,6 +1342,7 @@ _comps=(
 'showmount' '_showmount'
 'showoff' '_showoff'
 'shred' '_shred'
+'shtab' '_shtab'
 'shuf' '_shuf'
 'shutdown' '_shutdown'
 'sisu' '_sisu'
@@ -1841,24 +1846,25 @@ autoload -Uz _afew _android _archlinux-java _artisan _atach \
             _git-flow _git-journal _git-pulls _git-revise _git-wtf \
             _gitleaks _glances _golang _google _gpgconf \
             _gtk-launch _hello _hledger _homestead _httpie \
-            _ibus _include-what-you-use _inxi _jmeter _jmeter-plugins \
-            _john _jonas _jrnl _jupyter _kak \
-            _kitchen _knife _language_codes _libinput _lilypond \
-            _loginctl _lunchy _mc _meson _middleman \
-            _mina _mix _mkinitcpio _mpv _mssh \
-            _mussh _mvn _nano _nanoc _nftables \
-            _ninja _node _notmuch _nvm _openssl \
-            _openvpn3 _optirun _opustools _paccache _pacdiff \
-            _paclist _paclog-pkglist _pacman _pacscripts _pacsearch \
-            _pacsort _pactree _parallel _pass _patool \
-            _perf _periscope _pgsql_utils _phing _pixz \
-            _pkcon _play _pm2 _port _protoc \
-            _pulseaudio _pwn _pygmentize _qmk _qpdf \
-            _rails _ralio _rankmirrors _redis-cli _rfkill \
-            _rg _rkt _rmlint _rslsync _rspec \
-            _rsvm _rubocop _sbt _scala _scrub \
-            _sdd _setcap _setup.py _sfdx _shellcheck \
-            _showoff _srm _stack _streamlink _subl \
+            _ibus _img2sixel _include-what-you-use _inxi _jmeter \
+            _jmeter-plugins _john _jonas _jrnl _jupyter \
+            _kak _kitchen _knife _language_codes _lf \
+            _libinput _lilypond _loginctl _lunchy _mc \
+            _meson _middleman _mina _mix _mkinitcpio \
+            _mpv _mssh _mussh _mutt-wizard.zsh _mvn \
+            _nano _nanoc _nftables _ninja _node \
+            _notmuch _nvm _openssl _openvpn3 _optirun \
+            _opustools _paccache _pacdiff _paclist _paclog-pkglist \
+            _pacman _pacscripts _pacsearch _pacsort _pactree \
+            _parallel _pass _patool _perf _periscope \
+            _pgsql_utils _phing _pixz _pkcon _play \
+            _pm2 _poetry _port _protoc _pulseaudio \
+            _pwn _pygmentize _qmk _qpdf _rails \
+            _ralio _rankmirrors _redis-cli _rfkill _rg \
+            _rkt _rmlint _rslsync _rspec _rsvm \
+            _rubocop _sbt _scala _scrub _sdd \
+            _setcap _setup.py _sfdx _shellcheck _showoff \
+            _shtab _srm _stack _streamlink _subl \
             _subliminal _supervisorctl _svm _tarsnap _teamocil \
             _thor _tldr _tmuxinator _tox _udisksctl \
             _ufw _updpkgsums _virtualbox _vnstat _wemux \
