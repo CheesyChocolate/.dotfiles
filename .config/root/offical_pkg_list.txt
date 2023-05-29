@@ -1,5 +1,6 @@
 acpilight
 adobe-source-han-sans-jp-fonts
+alsa-utils
 arandr
 arch-wiki-docs
 archstrike-keyring
