@@ -17,6 +17,7 @@ kjv-apocrypha
 ledger-live-bin
 lobster
 mangal-bin
+mars-mips
 mutt-wizard-git
 nodejs-neovim
 octave-io

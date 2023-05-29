@@ -4,6 +4,7 @@ arandr
 arch-wiki-docs
 archstrike-keyring
 archstrike-mirrorlist
+arduino-cli
 artix-archlinux-support
 atool
 autoconf
