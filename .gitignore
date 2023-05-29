@@ -39,6 +39,9 @@
 !.config/pipwire/
 !.config/pulse/
 !.config/python/
+!.config/retroarch/
+.config/retroarch/*
+!.config/retroarch/retroarch.cfg
 !.config/root/
 !.config/shell/
 .config/shell/privateProfile
