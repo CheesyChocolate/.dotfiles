@@ -1,6 +1,5 @@
 abook
 ani-cli-git
-audd-cli-git
 bicon-git
 blender-plugin-cad-sketcher-git
 bluetuith-bin
