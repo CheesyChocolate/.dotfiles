@@ -18,8 +18,9 @@ done; unset command
 
 alias \
 	yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config" \
-	dosbox="dosbox -conf $XDG_CONFIG_HOME/dosbox/dosbox.conf"
-	alias svn="svn --config-dir \"$XDG_CONFIG_HOME\"/subversion"
+	dosbox="dosbox -conf $XDG_CONFIG_HOME/dosbox/dosbox.conf" \
+	svn="svn --config-dir \"$XDG_CONFIG_HOME\"/subversion" \
+	irssi="irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi"
 
 # breakin the habit
 alias \

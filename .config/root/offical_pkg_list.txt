@@ -96,6 +96,7 @@ intel-ucode
 inxi
 iotop
 iptables-nft
+irssi
 java-openjfx
 jdk-openjdk
 john
@@ -358,5 +359,6 @@ yt-dlp
 zathura
 zbar
 zip
+zmap
 zsh
 zsh-completions
