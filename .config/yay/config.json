@@ -17,7 +17,7 @@
 	"gpgbin": "gpg",
 	"gpgflags": "",
 	"mflags": "",
-	"sortby": "votes",
+	"sortby": "popularity",
 	"searchby": "name-desc",
 	"gitflags": "",
 	"removemake": "ask",
