@@ -10,6 +10,12 @@ set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 set autoquit true
 
+
+cmd on-cd &{{
+	# set terminal title
+	printf "\033]0; $PWD\007" > /dev/tty
+}}
+
 # cmds/functions
 cmd open ${{
     # open mime types
