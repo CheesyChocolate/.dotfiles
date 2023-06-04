@@ -66,9 +66,9 @@ export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
 export MAXIMA_USERDIR="$XDG_CONFIG_HOME/maxima"
 export W3M_DIR="$XDG_STATE_HOME/w3m"
 export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
-export TEXMFHOME=$XDG_DATA_HOME/texmf
-export TEXMFVAR=$XDG_CACHE_HOME/texlive/texmf-var
-export TEXMFCONFIG=$XDG_CONFIG_HOME/texlive/texmf-config
+export TEXMFHOME="$XDG_DATA_HOME/texmf"
+export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
+export TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"
 
 # private variables
 source "$XDG_CONFIG_HOME/shell/privateProfile"
