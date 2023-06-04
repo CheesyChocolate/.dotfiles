@@ -37,10 +37,17 @@ set noruler
 set laststatus=0
 set noshowcmd
 
+" colorscheme
+	colorscheme industry
+	hi Normal ctermbg=none
+	hi NonText ctermbg=none
+	hi EndOfBuffer ctermbg=none
+
 " Providers Path
 	let g:python3_host_prog = '/usr/bin/python3'
 	let g:ruby_host_prog = '/usr/bin/neovim-ruby-host'
 	let g:node_host_prog = '/bin/neovim-node-host'
+
 
 " Some basics:
 	nnoremap c "_c
