@@ -4,6 +4,7 @@ bicon-git
 blender-plugin-cad-sketcher-git
 bluetuith-bin
 broadcom-bt-firmware
+dwm-lemon-git
 findbrokenpkgs
 firefox-tridactyl-native-bin
 geforcenow-electron
