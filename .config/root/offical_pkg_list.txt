@@ -106,6 +106,7 @@ jupyter-notebook
 lf
 lhasa
 lib32-artix-archlinux-support
+lib32-ffmpeg
 lib32-giflib
 lib32-gst-plugins-base-libs
 lib32-gtk2
