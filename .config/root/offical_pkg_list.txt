@@ -23,6 +23,7 @@ bluez-runit
 bluez-utils
 broadcom-wl-dkms
 btrfs-progs
+calcurse
 ccid
 chaotic-keyring
 chaotic-mirrorlist
@@ -105,7 +106,6 @@ jupyter-notebook
 lf
 lhasa
 lib32-artix-archlinux-support
-lib32-ffmpeg
 lib32-giflib
 lib32-gst-plugins-base-libs
 lib32-gtk2
