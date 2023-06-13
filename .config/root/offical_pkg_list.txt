@@ -23,7 +23,6 @@ bluez-runit
 bluez-utils
 broadcom-wl-dkms
 btrfs-progs
-calibre
 ccid
 chaotic-keyring
 chaotic-mirrorlist
