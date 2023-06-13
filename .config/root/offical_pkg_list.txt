@@ -324,6 +324,7 @@ unrar
 unzip
 urlwatch
 ventoy-bin
+vi
 vim
 virt-manager
 virt-viewer
