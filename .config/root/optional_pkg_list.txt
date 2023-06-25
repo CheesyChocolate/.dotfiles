@@ -17,6 +17,7 @@ mariadb-libs
 mousetweaks
 netcdf-cxx
 netcdf-fortran
+noto-fonts-cjk
 npm
 opencl-clhpp
 openmp
@@ -37,6 +38,7 @@ python-fastnumbers
 python-gitpython
 python-html5-parser
 python-httpx
+python-magic
 python-markdown
 python-mpi4py
 python-numba
@@ -53,6 +55,7 @@ python-rfc3987
 python-scipy
 python-setproctitle
 python-smbus-git
+python-tinycss2
 python-unidecode
 qt5-3d
 qt5-charts
