@@ -240,7 +240,6 @@ pacman-contrib
 pacman-static
 pacutils
 pandoc-bin
-papirus-libreoffice-theme
 parlatype-libreoffice-extension
 patch
 pcsc-tools
