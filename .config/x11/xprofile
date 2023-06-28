@@ -11,7 +11,8 @@ xrdb $XDG_CONFIG_HOME/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources 
 # dbus-update-activation-environment --all
 
 autostart="mpd xcompmgr dunst unclutter pipewire remapd"
-# you can also add wireplumber and clight
+
+eval $(ssh-agent)
 
 for program in $autostart; do
 	pidof -sx "$program" || "$program" &
