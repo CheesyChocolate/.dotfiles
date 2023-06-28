@@ -65,6 +65,7 @@ firewalld
 firewalld-runit
 flex
 freecad-git
+freepats-general-midi
 fwupd
 fzf
 gamemode
