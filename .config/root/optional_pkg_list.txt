@@ -28,6 +28,7 @@ pdal
 perl-json-xs
 perl-lwp-useragent-cached
 perl-parallel-forkmanager
+perl-tk
 povray
 pstoedit
 psutils

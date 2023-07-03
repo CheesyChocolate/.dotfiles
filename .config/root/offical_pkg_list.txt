@@ -13,7 +13,6 @@ base-devel
 bat
 bc
 beanshell
-biber
 binutils
 bison
 blas-openblas
@@ -34,6 +33,7 @@ clamav
 cpio
 cronie-runit
 cups-runit
+cvs
 debuginfod
 dialog
 digital
@@ -51,6 +51,7 @@ dunst
 dxvk-mingw-git
 efibootmgr
 elogind-runit
+eslint
 esysusers
 etmpfiles
 exfat-utils
@@ -105,6 +106,7 @@ john
 jpegoptim
 jq
 jupyter-collaboration
+julia
 jupyter-notebook
 lf
 lhasa
@@ -188,6 +190,7 @@ linux-lts-headers
 linux-steam-integration
 lostfiles
 lshw
+luarocks
 lutris
 lynx
 lzop
@@ -244,7 +247,7 @@ parlatype-libreoffice-extension
 patch
 pcsc-tools
 perl-term-readline-gnu
-perl-tk
+php
 pipe-viewer-git
 pipewire-pulse
 pkgconf
