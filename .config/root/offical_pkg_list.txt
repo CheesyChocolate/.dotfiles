@@ -105,7 +105,6 @@ jdk-openjdk
 john
 jpegoptim
 jq
-jupyter-collaboration
 julia
 jupyter-notebook
 lf
@@ -202,6 +201,7 @@ man-pages
 maven
 maxima
 mediainfo
+meld
 mercurial
 mesa-utils
 mkinitcpio-firmware

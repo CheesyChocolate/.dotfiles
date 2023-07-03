@@ -1,12 +1,14 @@
 acsccid
 arch-wiki-docs
 bash-completion
+biber
 cgns
 docker-scan
 fig2dev
 gnuplot
 hunspell-en_us
 intel-compute-runtime
+jupyter-collaboration
 lib32-gamemode
 libappindicator-gtk3
 liblas
