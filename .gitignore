@@ -27,7 +27,6 @@
 !.config/newsboat/
 !.config/npm/
 !.config/nvim/
-.config/nvim/plugged/
 !.config/octave/
 .config/octave/*
 !.config/octave/octaverc

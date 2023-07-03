@@ -4,3 +4,6 @@
 [submodule ".config/librewolf/cascade"]
 	path = .config/librewolf/cascade
 	url = git@github.com:CheesyChocolate/cascade.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:CheesyChocolate/nvim.git
