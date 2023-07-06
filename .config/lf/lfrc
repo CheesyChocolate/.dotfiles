@@ -13,7 +13,7 @@ set autoquit true
 
 cmd on-cd &{{
 	# display repository status in your prompt
-	if [ -d .git ]; then
+	if [ -d .git ] || [ -f .git ]; then
 		branch=$(git branch --show-current 2>/dev/null) || true
 		remote=$(git config --get branch.$branch.remote 2>/dev/null) || true
 		url=$(git remote get-url $remote 2>/dev/null) || true
