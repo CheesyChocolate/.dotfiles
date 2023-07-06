@@ -7,8 +7,13 @@
 [user]
 	name = CheesyChocolate
 	email = dev@behnamlal.xyz
+	signingkey = /home/suren/.ssh/github.pub
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
