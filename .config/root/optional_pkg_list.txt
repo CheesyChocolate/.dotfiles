@@ -58,7 +58,6 @@ python-rfc3987
 python-scipy
 python-setproctitle
 python-smbus-git
-python-tinycss2
 python-unidecode
 qt5-3d
 qt5-charts
