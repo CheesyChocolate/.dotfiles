@@ -8,6 +8,7 @@
 
 !.config/
 .config/*
+!.config/bat/
 !.config/dosbox/
 !.config/dunst/
 !.config/dwm/
