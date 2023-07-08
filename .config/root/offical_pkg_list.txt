@@ -252,6 +252,7 @@ php
 pipe-viewer-git
 pipewire-pulse
 pkgconf
+pkgfile
 polkit
 poppler
 powertop
