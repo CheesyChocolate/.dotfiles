@@ -91,6 +91,7 @@ grub
 grub-btrfs
 gvfs
 gzip
+hexchat
 imagemagick
 inetutils
 inkscape
