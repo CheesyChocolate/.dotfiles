@@ -30,6 +30,7 @@ pass-import
 python-bs4
 python-npx
 python-pip-search
+quickgui-bin
 ruby-neovim
 samrewritten-git
 sc-im

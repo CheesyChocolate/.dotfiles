@@ -272,7 +272,7 @@ python-spotdl
 python-urwid
 qemu-emulators-full
 qemu-full
-quickemu-git
+quickemu
 radvd
 remmina-git
 retroarch
