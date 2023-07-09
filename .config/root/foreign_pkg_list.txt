@@ -18,9 +18,11 @@ iranian-fonts
 javafx-scenebuilder
 kjv-apocrypha
 ledger-live-bin
+linode-cli-git
 lobster-git
 mangal-bin
 mars-mips
+mov-cli-git
 mutt-wizard-git
 nodejs-neovim
 nvim-packer-git
