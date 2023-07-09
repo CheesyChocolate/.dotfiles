@@ -40,7 +40,6 @@ python-debugpy
 python-fastnumbers
 python-gitpython
 python-html5-parser
-python-httpx
 python-magic
 python-markdown
 python-mpi4py

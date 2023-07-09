@@ -97,6 +97,7 @@ inetutils
 inkscape
 inotify-tools
 intel-ucode
+intltool
 inxi
 iotop
 iptables-nft
@@ -261,6 +262,7 @@ proton-ge-custom
 protontricks-git
 pulsemixer
 pwndbg
+python-boto
 python-evdev
 python-geoip
 python-pip
