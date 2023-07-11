@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "main": {
+      "user_id": "@lemonpi:matrix.org",
+      "url": "https://matrix.org"
+    }
+  },
+  "default_profile": "main",
+  "settings": {
+    "default_room": "#artix:libera.chat",
+    "typing_notice_send": false
+  },
+  "dirs": {
+    "downloads": "~/Downloads/"
+  }
+}

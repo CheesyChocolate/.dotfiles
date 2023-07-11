@@ -106,7 +106,6 @@ intltool
 inxi
 iotop
 iptables-nft
-irssi
 java-openjfx
 jdk-openjdk
 john
@@ -268,7 +267,6 @@ proton-ge-custom
 protontricks-git
 pulsemixer
 pwndbg
-python-boto
 python-evdev
 python-geoip
 python-pip

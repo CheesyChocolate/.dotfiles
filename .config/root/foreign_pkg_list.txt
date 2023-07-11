@@ -14,6 +14,7 @@ gitleaks
 gtk-theme-arc-gruvbox-git
 htop-vim
 hyx
+iamb-git
 iranian-fonts
 javafx-scenebuilder
 kjv-apocrypha
