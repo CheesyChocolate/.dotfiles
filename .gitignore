@@ -25,6 +25,9 @@
 !.config/lobster/
 .config/lobster/lobster_history.txt
 !.config/lynx/
+!.config/maven/
+.config/maven/*
+!.config/maven/settings.xml
 !.config/mpd/
 !.config/mpv/
 !.config/ncmpcpp/
