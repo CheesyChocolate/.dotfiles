@@ -2,6 +2,8 @@ acpi
 acpilight
 adobe-source-han-sans-jp-fonts
 alsa-utils
+android-ndk
+android-sdk
 arandr
 arduino-cli
 artix-archlinux-support
@@ -85,8 +87,10 @@ git-runit
 github-cli
 gnome-keyring
 gnome-maps
+gradle
 grep
 groff
+groovy
 grub
 grub-btrfs
 gvfs
@@ -97,6 +101,7 @@ inetutils
 inkscape
 inotify-tools
 intel-ucode
+intellij-idea-ultimate-edition
 intltool
 inxi
 iotop
@@ -109,6 +114,7 @@ jpegoptim
 jq
 julia
 jupyter-notebook
+kotlin
 lf
 lhasa
 lib32-artix-archlinux-support
@@ -291,6 +297,7 @@ samba
 screenkey
 sed
 shellcheck
+shfmt
 simple-mtpfs
 slock
 smartmontools
@@ -326,6 +333,7 @@ tor
 tor-browser
 transmission-cli
 ttf-font-awesome
+typescript
 ueberzug
 unace
 unclutter
