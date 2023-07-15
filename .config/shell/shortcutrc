@@ -27,4 +27,4 @@ cfmb="$EDITOR /home/suren/.config/ncmpcpp/bindings" \
 cfmc="$EDITOR /home/suren/.config/ncmpcpp/config" \
 cfl="$EDITOR /home/suren/.config/lf/lfrc" \
 cfL="$EDITOR /home/suren/.config/lf/scope" \
-cfX="$EDITOR /home/suren/.config/sxiv/exec/key-handler" \
+cfX="$EDITOR /home/suren/.config/nsxiv/exec/key-handler" \

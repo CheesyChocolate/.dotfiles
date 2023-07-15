@@ -26,4 +26,4 @@ hash -d cfmb=/home/suren/.config/ncmpcpp/bindings
 hash -d cfmc=/home/suren/.config/ncmpcpp/config 
 hash -d cfl=/home/suren/.config/lf/lfrc 
 hash -d cfL=/home/suren/.config/lf/scope 
-hash -d cfX=/home/suren/.config/sxiv/exec/key-handler 
+hash -d cfX=/home/suren/.config/nsxiv/exec/key-handler 

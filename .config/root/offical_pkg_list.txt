@@ -237,6 +237,7 @@ nmap
 nodejs-lts-gallium
 noto-fonts
 noto-fonts-emoji
+nsxiv
 ntfs-3g
 ntp
 ntp-runit
@@ -305,7 +306,6 @@ streamlink
 subversion
 sudo
 swtpm
-sxiv
 syslog-ng
 syslog-ng-runit
 termshark

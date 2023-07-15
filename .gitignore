@@ -33,6 +33,7 @@
 !.config/ncmpcpp/
 !.config/newsboat/
 !.config/npm/
+!.config/nsxiv/
 !.config/nvim/
 !.config/octave/
 .config/octave/*
@@ -53,7 +54,6 @@
 !.config/shell/
 .config/shell/privateProfile
 !.config/spicy/
-!.config/sxiv/
 !.config/wal/
 !.config/wget/
 !.config/wikiman/
