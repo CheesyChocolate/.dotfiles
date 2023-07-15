@@ -2,8 +2,6 @@ acpi
 acpilight
 adobe-source-han-sans-jp-fonts
 alsa-utils
-android-ndk
-android-sdk
 arandr
 arduino-cli
 artix-archlinux-support
@@ -66,6 +64,7 @@ firefox-tridactyl
 firejail
 firewalld
 firewalld-runit
+flatpak
 flex
 freecad-git
 fwupd
@@ -101,7 +100,6 @@ inetutils
 inkscape
 inotify-tools
 intel-ucode
-intellij-idea-ultimate-edition
 intltool
 inxi
 iotop
