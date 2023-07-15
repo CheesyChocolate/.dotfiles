@@ -55,6 +55,7 @@ eslint
 esysusers
 etmpfiles
 exfat-utils
+expac
 fakeroot
 ffmpeg
 ffmpegthumbnailer
@@ -95,6 +96,7 @@ grub-btrfs
 gvfs
 gzip
 hexchat
+htop-vim
 imagemagick
 inetutils
 inkscape
