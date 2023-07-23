@@ -3,10 +3,12 @@ arch-wiki-docs
 bash-completion
 biber
 cgns
+docker-buildx
 docker-scan
 espeak-ng
 festival
 fig2dev
+fuse-overlayfs
 gnuplot
 hunspell-en_us
 intel-compute-runtime
@@ -34,6 +36,7 @@ perl-json-xs
 perl-lwp-useragent-cached
 perl-parallel-forkmanager
 perl-tk
+podman-compose
 povray
 pstoedit
 psutils
@@ -50,7 +53,6 @@ python-mpi4py
 python-numba
 python-pdftotext
 python-pprofile
-python-protobuf
 python-pyarrow
 python-pycurl
 python-pyicu
@@ -62,6 +64,8 @@ python-scipy
 python-setproctitle
 python-smbus-git
 python-unidecode
+qemu-user-static
+qemu-user-static-binfmt
 qt5-3d
 qt5-charts
 qt5-datavis3d

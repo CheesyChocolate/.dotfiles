@@ -38,13 +38,13 @@ debuginfod
 dialog
 digital
 direnv
+distrobox
 djvulibre
 dkms
 dmidecode
 dnsmasq
 docker
 docker-compose
-docker-runit
 dosbox
 dosfstools
 dunst
@@ -198,6 +198,7 @@ lostfiles
 lshw
 luarocks
 lutris
+lxd
 lynx
 lzop
 m4
@@ -260,6 +261,7 @@ pipe-viewer-git
 pipewire-pulse
 pkgconf
 pkgfile
+podman
 polkit
 poppler
 powertop

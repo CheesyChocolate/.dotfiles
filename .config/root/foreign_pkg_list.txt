@@ -12,6 +12,7 @@ firefox-tridactyl-native-bin
 geforcenow-electron
 gitleaks
 gtk-theme-arc-gruvbox-git
+gvproxy-bin
 hyx
 iamb-git
 iranian-fonts
