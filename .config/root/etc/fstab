@@ -1,0 +1,19 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+
+# /dev/sda3 LABEL=BTRFS
+UUID=************************************	/         	btrfs     	rw,noatime,compress=lzo,shared,ssd,space_cache=v2,subvolid=256,subvol=/@	0 0
+
+# /dev/sda1 LABEL=BOOT
+UUID=B18E-88A9      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sda3 LABEL=BTRFS
+UUID=************************************	/home     	btrfs     	rw,noatime,compress=lzo,shared,ssd,space_cache=v2,subvolid=257,subvol=/@home	0 0
+
+# /dev/sda3 LABEL=BTRFS
+UUID=************************************	/var/log  	btrfs     	rw,noatime,compress=lzo,shared,ssd,space_cache=v2,subvolid=259,subvol=/@var_log	0 0
+
+# /dev/sda2 LABEL=SWAP
+UUID=************************************	none      	swap      	defaults  	0 0
