@@ -12,7 +12,7 @@ xrdb $XDG_CONFIG_HOME/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources 
 
 autostart="mpd xcompmgr dunst unclutter pipewire remapd"
 
-eval $(ssh-agent)
+#eval $(ssh-agent)
 
 for program in $autostart; do
 	pidof -sx "$program" || "$program" &
