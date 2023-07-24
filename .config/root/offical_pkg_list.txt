@@ -87,6 +87,7 @@ git-runit
 github-cli
 gnome-keyring
 gnome-maps
+go-yq
 gradle
 grep
 groff
@@ -96,6 +97,7 @@ grub-btrfs
 gvfs
 gzip
 hexchat
+hq
 htop-vim
 imagemagick
 inetutils
