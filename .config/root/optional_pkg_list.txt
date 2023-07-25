@@ -51,7 +51,9 @@ python-cchardet
 python-debugpy
 python-fastnumbers
 python-gitpython
+python-h2
 python-html5-parser
+python-httpx
 python-magic
 python-markdown
 python-mpi4py
@@ -68,6 +70,7 @@ python-rfc3987
 python-scipy
 python-setproctitle
 python-smbus-git
+python-socksio
 python-unidecode
 qemu-user-static
 qemu-user-static-binfmt
