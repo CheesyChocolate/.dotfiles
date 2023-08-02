@@ -7,6 +7,7 @@
     "cache_path": "/home/suren/.local/share/spotdl/.spotipy",
     "no_cache": false,
     "max_retries": 3,
+    "use_cache_file": false,
     "audio_providers": [
         "youtube-music",
 	"youtube"
@@ -30,7 +31,7 @@
     "filter_results": true,
     "threads": 4,
     "cookie_file": null,
-    "restrict": true,
+    "restrict": "strict",
     "print_errors": true,
     "sponsor_block": true,
     "preload": false,
@@ -44,6 +45,11 @@
     "add_unavailable": true,
     "generate_lrc": false,
     "force_update_metadata": false,
+    "only_verified_results": false,
+    "sync_without_deleting": false,
+    "max_filename_length": null,
+    "yt_dlp_args": null,
+    "detect_formats": null,
     "web_use_output_dir": false,
     "port": 8800,
     "host": "localhost",
