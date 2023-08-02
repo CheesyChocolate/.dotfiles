@@ -44,7 +44,7 @@
     "ytm_data": false,
     "add_unavailable": true,
     "generate_lrc": false,
-    "force_update_metadata": false,
+    "force_update_metadata": true,
     "only_verified_results": false,
     "sync_without_deleting": false,
     "max_filename_length": null,
