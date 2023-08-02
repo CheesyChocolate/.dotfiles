@@ -1,3 +1,4 @@
 @hourly /home/suren/.local/bin/cron/newsup
 @daily /home/suren/.local/bin/cron/checkup
 */10 * * * * /usr/bin/mailsync
+@monthly /bin/mbsync-get-cert mail.artixlinux.org /home/suren/.local/share/certs/mail.artixlinux.org.pem
