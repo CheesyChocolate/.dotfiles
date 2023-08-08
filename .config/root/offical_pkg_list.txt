@@ -267,17 +267,14 @@ podman
 polkit
 poppler
 powertop
+profanity
 progress
 proton-ge-custom
 protontricks-git
 pulsemixer
 pwndbg
-python-cachetools
 python-evdev
 python-geoip
-python-google-auth
-python-kubernetes
-python-oauthlib
 python-pip
 python-pipx
 python-pwntools
@@ -285,8 +282,6 @@ python-pydbus
 python-pynvim
 python-pyxdg
 python-qdarkstyle
-python-requests-oauthlib
-python-rsa
 python-spotdl
 python-urwid
 qemu-emulators-full

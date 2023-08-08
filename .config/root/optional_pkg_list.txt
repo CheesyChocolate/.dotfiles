@@ -50,10 +50,13 @@ python-cairocffi
 python-cchardet
 python-debugpy
 python-fastnumbers
+python-fqdn
 python-gitpython
 python-h2
 python-html5-parser
 python-httpx
+python-isoduration
+python-jsonpointer
 python-magic
 python-markdown
 python-mpi4py
@@ -66,12 +69,15 @@ python-pyicu
 python-pyinotify
 python-pyqt6-webengine
 python-regex
+python-rfc3339-validator
 python-rfc3987
 python-scipy
 python-setproctitle
 python-smbus-git
 python-socksio
 python-unidecode
+python-uri-template
+python-webcolors
 qemu-user-static
 qemu-user-static-binfmt
 qt5-3d
@@ -85,7 +91,6 @@ qt5-serialport
 qt5-websockets
 qt6-svg
 rlwrap
-scour
 speech-dispatcher
 texlive-binextra
 upower
