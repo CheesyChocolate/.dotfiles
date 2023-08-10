@@ -19,7 +19,7 @@ iranian-fonts
 javafx-scenebuilder
 kjv-apocrypha
 ledger-live-bin
-linode-cli-git
+linode-cli
 lobster-git
 mangal-bin
 mars-mips
