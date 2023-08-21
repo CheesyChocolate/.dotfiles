@@ -358,7 +358,7 @@ whois
 wikiman
 wine-mono
 wine-staging
-winetricks
+winetricks-git
 wireless-regdb
 wireplumber
 wireshark-cli

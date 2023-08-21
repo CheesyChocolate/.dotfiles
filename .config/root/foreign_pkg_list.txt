@@ -38,7 +38,7 @@ sc-im
 shazam-cli-git
 sherlock-git
 snyk
-stig
+stig-git
 task-spooler
 urlview-xdg-git
 wordlists
