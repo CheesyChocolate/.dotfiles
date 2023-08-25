@@ -139,6 +139,7 @@ lib32-openal
 lib32-pipewire
 lib32-v4l-utils
 lib32-vkd3d
+libcgroup
 libdecor
 libertinus-font
 libgphoto2

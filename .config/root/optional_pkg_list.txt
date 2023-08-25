@@ -16,6 +16,7 @@ intel-compute-runtime
 jupyter-collaboration
 lib32-gamemode
 libappindicator-gtk3
+libayatana-appindicator
 liblas
 libmythes
 libva-intel-driver
