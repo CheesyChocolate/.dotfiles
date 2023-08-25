@@ -116,6 +116,7 @@ jq
 julia
 jupyter-notebook
 kotlin
+ledger
 lf
 lhasa
 lib32-artix-archlinux-support
@@ -244,6 +245,7 @@ nsxiv
 ntfs-3g
 ntp
 ntp-runit
+nyxt
 octave
 onboard
 openbsd-netcat
@@ -332,6 +334,7 @@ tk
 tldr
 tlp
 tlp-runit
+tmux
 tor
 tor-browser
 transmission-cli
