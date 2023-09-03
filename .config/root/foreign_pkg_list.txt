@@ -31,7 +31,6 @@ pam-gnupg-git
 pass-import
 python-bs4
 python-npx
-python-openapi3
 quickgui-bin
 ruby-neovim
 samrewritten-git

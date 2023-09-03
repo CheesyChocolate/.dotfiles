@@ -107,6 +107,7 @@ intel-ucode
 intltool
 inxi
 iotop
+ipp-usb
 iptables-nft
 java-openjfx
 jdk-openjdk
@@ -227,6 +228,7 @@ mpd
 mpv
 mtools
 mtr
+mumble
 namcap
 ncdu
 ncmpcpp
