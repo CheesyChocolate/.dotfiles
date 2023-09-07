@@ -107,7 +107,6 @@ intel-ucode
 intltool
 inxi
 iotop
-ipp-usb
 iptables-nft
 java-openjfx
 jdk-openjdk

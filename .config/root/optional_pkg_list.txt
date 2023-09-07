@@ -13,6 +13,7 @@ fuse-overlayfs
 gnuplot
 hunspell-en_us
 intel-compute-runtime
+ipp-usb
 jupyter-collaboration
 lib32-gamemode
 libappindicator-gtk3
