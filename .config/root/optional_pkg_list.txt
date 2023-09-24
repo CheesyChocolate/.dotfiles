@@ -9,6 +9,7 @@ docker-buildx
 docker-scan
 ed
 espeak-ng
+f2fs-tools
 festival
 fig2dev
 fuse-overlayfs
@@ -28,10 +29,12 @@ lvm2
 mousetweaks
 netcdf-cxx
 netcdf-fortran
+nilfs-utils
 noto-fonts-cjk
 npm
 opencl-clhpp
 openmp
+openresolv
 openscad
 ospray
 ostra-cg
@@ -98,9 +101,12 @@ rlwrap
 sane-airscan
 speech-dispatcher
 texlive-binextra
+udftools
 upower
 wdiff
+webkit2gtk
 xfsprogs
+xorg-xhost
 zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
