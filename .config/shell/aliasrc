@@ -39,9 +39,9 @@ alias \
 
 # Colorize commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
-	la="ls -hAN --color=auto --group-directories-first" \
-	ll="ls -hAlN --color=auto --group-directories-first" \
+	ls="eza --icons --group-directories-first --color=always --time=accessed" \
+	la="eza --all --icons --group-directories-first --color=always --group --time=accessed" \
+	ll="eza --all --long --icons --group-directories-first --color=always --group --time=accessed" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
