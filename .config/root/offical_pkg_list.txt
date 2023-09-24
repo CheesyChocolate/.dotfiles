@@ -380,6 +380,7 @@ xorg-server
 xorg-xdpyinfo
 xorg-xinit
 xorg-xinput
+xorg-xkill
 xorg-xwininfo
 xournalpp
 xwallpaper
