@@ -5,6 +5,7 @@ alsa-utils
 arandr
 arduino-cli
 artix-archlinux-support
+artools-pkg
 atool
 autoconf
 automake
