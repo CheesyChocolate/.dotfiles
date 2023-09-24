@@ -25,10 +25,6 @@ alias \
 	svn="svn --config-dir \"$XDG_CONFIG_HOME\"/subversion" \
 	mvn="mvn -gs \"$XDG_CONFIG_HOME\"/maven/settings.xml"
 
-# breakin the habit
-alias \
-	which="echo use this command instead @ type"
-
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
 	cp="cp -iv" \
