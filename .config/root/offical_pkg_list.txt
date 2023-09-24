@@ -57,6 +57,7 @@ esysusers
 etmpfiles
 exfat-utils
 expac
+eza
 fakeroot
 ffmpeg
 ffmpegthumbnailer
