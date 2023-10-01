@@ -59,6 +59,12 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
+
+# Use fzf to find history and bind it to ctrl-r
+findHistory() {
+	print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
+}
+
 bindkey -s '^o' '^ulfcd\n'
 
 bindkey -s '^a' '^ubc -lq\n'
@@ -66,6 +72,8 @@ bindkey -s '^a' '^ubc -lq\n'
 bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"\n'
 
 bindkey '^[[P' delete-char
+
+bindkey -s '^r' '^ufindHistory\n'
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
