@@ -17,5 +17,5 @@ do
     then
         continue
     fi
-    diff -u "${pacnew_path}" "${modified_path}" | delta
+    diff -u "${modified_path}" "${pacnew_path}" | delta
 done
