@@ -1,10 +1,12 @@
 acsccid
+adios2
 arch-wiki-docs
 artix-checkupdates
 artix-rebuild-order
 bash-completion
 biber
 cgns
+cups-browsed
 docker-buildx
 docker-scan
 ed
@@ -25,7 +27,6 @@ liblas
 libmythes
 libva-intel-driver
 llvm
-lvm2
 mousetweaks
 netcdf-cxx
 netcdf-fortran
@@ -58,7 +59,6 @@ python-cchardet
 python-debugpy
 python-fastnumbers
 python-fqdn
-python-gitpython
 python-h2
 python-html5-parser
 python-httpx
