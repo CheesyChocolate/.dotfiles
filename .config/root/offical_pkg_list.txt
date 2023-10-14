@@ -48,6 +48,7 @@ docker
 docker-compose
 dosbox
 dosfstools
+dpkg
 dunst
 dxvk-mingw-git
 efibootmgr
