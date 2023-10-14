@@ -376,6 +376,7 @@ wireshark-cli
 wl-clipboard
 wmname
 wpa_supplicant
+wtype
 xcape
 xclip
 xcompmgr
