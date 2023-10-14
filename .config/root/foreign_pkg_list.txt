@@ -37,6 +37,7 @@ samrewritten-git
 sc-im
 shazam-cli-git
 sherlock-git
+showmethekey-git
 snyk
 stig-git
 task-spooler

@@ -21,7 +21,6 @@ intel-compute-runtime
 ipp-usb
 jupyter-collaboration
 lib32-gamemode
-libappindicator-gtk3
 libayatana-appindicator
 liblas
 libmythes
@@ -39,6 +38,7 @@ openresolv
 openscad
 ospray
 ostra-cg
+otf-font-awesome
 pdal
 perl-file-homedir
 perl-ipc-system-simple
@@ -102,7 +102,6 @@ sane-airscan
 speech-dispatcher
 texlive-binextra
 udftools
-upower
 wdiff
 webkit2gtk
 xfsprogs
