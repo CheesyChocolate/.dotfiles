@@ -73,6 +73,13 @@ se() {
 	[ -f "$HOME/.local/bin/$choice" ] && $EDITOR "$HOME/.local/bin/$choice";
 }
 
+pip() {
+    if [ $1 = "search" ]; then
+        pip_search "$2";
+    else pip "$@";
+    fi;
+};
+
 alias \
 	lf="lfub" \
 	magit="nvim -c MagitOnly" \
