@@ -6,6 +6,7 @@ artix-rebuild-order
 bash-completion
 biber
 cgns
+cni-plugins
 cups-browsed
 docker-buildx
 docker-scan
