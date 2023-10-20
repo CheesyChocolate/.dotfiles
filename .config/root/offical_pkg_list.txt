@@ -363,6 +363,7 @@ vnstat
 vnstat-runit
 vulscan
 waybar
+weechat
 which
 whois
 wikiman
