@@ -336,6 +336,7 @@ texlive-music
 texlive-pictures
 texlive-pstricks
 texlive-publishers
+thorium-browser-bin
 timeshift
 tk
 tldr
@@ -350,7 +351,6 @@ typescript
 ueberzug
 unace
 unclutter
-ungoogled-chromium
 unrar
 unzip
 urlwatch
