@@ -112,7 +112,6 @@ intltool
 inxi
 iotop
 iptables-nft
-java-openjfx
 jdk-openjdk
 john
 jpegoptim
