@@ -23,6 +23,9 @@
 !.config/iamb/config.json
 !.config/lf/
 !.config/librewolf/
+!.config/litecli/
+.config/litecli/*
+!.config/litecli/config
 !.config/lobster/
 .config/lobster/lobster_history.txt
 !.config/lynx/
