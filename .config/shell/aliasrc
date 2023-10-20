@@ -80,6 +80,10 @@ pip() {
     fi;
 };
 
+share() {
+	curl -F 'sprunge=<-' http://sprunge.us ;
+}
+
 alias \
 	lf="lfub" \
 	magit="nvim -c MagitOnly" \
