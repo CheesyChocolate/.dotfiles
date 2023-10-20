@@ -54,6 +54,7 @@ cmd open ${{
 		;;
 	audio/*|video/x-ms-asf) mpv --audio-display=no $f ;;
 	video/*|application/vnd.rn-realmedia) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+	application/vnd.sqlite3) litecli $fx ;;
 	application/pdf|application/vnd.djvu|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
 	application/pgp-encrypted) $EDITOR $fx ;;
 	application/vnd.openxmlformats-officedocument.wordprocessingml.document|application/vnd.oasis.opendocument.text|application/msword) setsid -f zaread $fx >/dev/null 2>&1 ;; # setsid -f libreoffice $fx >/dev/null 2>&1 ;;
