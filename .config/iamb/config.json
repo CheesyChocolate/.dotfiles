@@ -7,7 +7,7 @@
   },
   "default_profile": "main",
   "settings": {
-    "default_room": "#artix:libera.chat",
+    "default_room": "",
     "typing_notice_send": false
   },
   "dirs": {
