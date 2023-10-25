@@ -301,6 +301,7 @@ retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
 ripgrep
+rsm
 rsync-runit
 ruby
 runit
