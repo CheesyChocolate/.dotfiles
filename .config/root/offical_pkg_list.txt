@@ -248,12 +248,11 @@ noto-fonts
 noto-fonts-emoji
 nsxiv
 ntfs-3g
-ntp
-ntp-runit
 nyxt
 octave
 onboard
 openbsd-netcat
+openntpd
 openssl-1.1
 p7zip
 pacman
