@@ -14,5 +14,7 @@ else
 	. "$HOME/.xprofile"
 fi
 
+# Launching gnome-keyring-daemon outside desktop environments
+dbus-update-activation-environment --all
+
 ssh-agent dwm
-#exec dbus-launch --exit-with-session dwm
