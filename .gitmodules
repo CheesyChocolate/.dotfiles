@@ -10,3 +10,6 @@
 [submodule ".config/hypr"]
 	path = .config/hypr
 	url = git@github.com:CheesyChocolate/hyprland.git
+[submodule ".config/x11/xresources-themes"]
+	path = .config/x11/xresources-themes
+	url = https://github.com/janoamaral/Xresources-themes.git
