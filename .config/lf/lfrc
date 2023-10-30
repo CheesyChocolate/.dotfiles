@@ -58,8 +58,8 @@ cmd open ${{
 	application/pdf|application/vnd.djvu|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
 	application/pgp-encrypted) $EDITOR $fx ;;
 	application/vnd.openxmlformats-officedocument.wordprocessingml.document|application/vnd.oasis.opendocument.text|application/msword) setsid -f zaread $fx >/dev/null 2>&1 ;; # setsid -f libreoffice $fx >/dev/null 2>&1 ;;
-	application/x-sc) sc-im $fx ;;
-	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|application/vnd.oasis.opendocument.spreadsheet|application/vnd.oasis.opendocument.spreadsheet-template) setsid -f libreoffice $fx >/dev/null 2>&1 ;;
+	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|application/x-sc) sc-im $fx ;;
+	application/vnd.oasis.opendocument.spreadsheet|application/vnd.oasis.opendocument.spreadsheet-template) setsid -f libreoffice $fx >/dev/null 2>&1 ;;
 	application/vnd.openxmlformats-officedocument.presentationml.presentation|application/vnd.oasis.opendocument.presentation-template|application/vnd.oasis.opendocument.presentation|application/vnd.ms-powerpoint) setsid -f zaread $fx >/dev/null 2>&1 ;; # setsid -f libreoffice $fx >/dev/null 2>&1 ;;
 	application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template) setsid -f libreoffice $fx >/dev/null 2>&1 ;;
 	application/vnd.oasis.opendocument.formula) setsid -f libreoffice $fx >/dev/null 2>&1 ;;
