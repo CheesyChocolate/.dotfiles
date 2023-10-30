@@ -3,7 +3,6 @@ acpilight
 adobe-source-han-sans-jp-fonts
 alsa-utils
 ananicy
-ananicy-runit
 arandr
 arduino-cli
 artix-archlinux-support
