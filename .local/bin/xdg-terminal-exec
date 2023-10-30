@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# https://gitlab.gnome.org/GNOME/glib/-/merge_requests/2839
+
+"$TERMINAL" -e "$@"
