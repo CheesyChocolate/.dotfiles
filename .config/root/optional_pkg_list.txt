@@ -22,10 +22,15 @@ ipp-usb
 jupyter-collaboration
 lib32-gamemode
 libayatana-appindicator
+libgoom2
 liblas
 libmythes
+libtiger
 libva-intel-driver
+lirc
+live-media
 llvm
+lua-socket
 mousetweaks
 netcdf-cxx
 netcdf-fortran
@@ -69,6 +74,7 @@ python-markdown
 python-mpi4py
 python-numba
 python-pdftotext
+python-pickleshare
 python-pprofile
 python-pyarrow
 python-pycurl
@@ -110,3 +116,4 @@ zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
+zvbi

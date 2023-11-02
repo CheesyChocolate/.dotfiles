@@ -361,6 +361,7 @@ vim
 virt-manager
 virt-viewer
 vkd3d
+vlc
 vnstat
 vnstat-runit
 vulscan
