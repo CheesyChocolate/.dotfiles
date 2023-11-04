@@ -16,7 +16,6 @@ gvproxy-bin
 hyx
 iamb-git
 iranian-fonts
-javafx-scenebuilder
 kjv-apocrypha
 ledger-live-bin
 linode-cli
