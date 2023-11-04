@@ -90,6 +90,7 @@ git-filter-repo
 git-lfs
 git-runit
 github-cli
+gitleaks
 gnome-keyring
 gnome-maps
 go-yq
