@@ -32,8 +32,8 @@ alias \
 	rm="rm -vI" \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
-	yt="yt-dlp --embed-metadata -i" \
-	yta="yt -x -f bestaudio/best --audio-format flac" \
+	yt="yt-dlp --embed-metadata --embed-chapters -i" \
+	yta="yt -x -f bestaudio/best --embed-thumbnail --audio-format flac" \
 	ffmpeg="ffmpeg -hide_banner" \
 	rsync="rsync -vrPlu"
 
