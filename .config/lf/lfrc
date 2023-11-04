@@ -69,6 +69,7 @@ cmd open ${{
 		doc|docx|xls|xlsx|odt|ppt|pptx) setsid -f zaread $fx >/dev/null 2>&1 ;; # setsid -f libreoffice $fx >/dev/null 2>&1 ;;
 		ghw) setsid -f gtkwave $f >/dev/null 2>&1 ;;
 		ts) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+		mp3) mpv --audio-display=no $f ;;
 		*) setsid -f zathura $fx >/dev/null 2>&1 ;;
 	   esac ;;
 	application/gzip) case ${f##*.} in
