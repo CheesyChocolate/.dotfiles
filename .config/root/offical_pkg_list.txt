@@ -61,7 +61,6 @@ exfat-utils
 expac
 eza
 fakeroot
-festival-english
 ffmpeg
 ffmpegthumbnailer
 file
