@@ -10,12 +10,17 @@
     "use_cache_file": false,
     "audio_providers": [
         "youtube-music",
-	"youtube"
+	"youtube",
+	"slider-kz",
+	"soundcloud",
+	"bandcamp",
+	"piped"
     ],
     "lyrics_providers": [
         "genius",
         "azlyrics",
-        "musixmatch"
+        "musixmatch",
+	"synced"
     ],
     "playlist_numbering": false,
     "scan_for_songs": false,
@@ -50,6 +55,7 @@
     "max_filename_length": null,
     "yt_dlp_args": null,
     "detect_formats": null,
+    "save_errors": null,
     "web_use_output_dir": false,
     "port": 8800,
     "host": "localhost",
