@@ -1,0 +1,95 @@
+#!/bin/bash
+
+
+# Get updates from Arch repo
+
+# Check for updates using "artix-checkupdates -fu".
+# The command outputs a list of packages that need updating.
+# The first line is empty, the second line provides column headers,
+# and from the third line, package update information is displayed.
+
+# If no updates are found, exit the program with a message.
+# If updates are found, extract the package names from the output.
+
+# Import changes from Arch
+
+# Clone the package repository using "artixpkg git clone <packagename>"
+# to get any potential changes from the Artix Git repository.
+
+# Use "artixpkg repo import <packagename>" to import changes from the Arch repo.
+# The diff will be displayed on the terminal.
+
+# Display the diff with options: accept, undo, skip, edit(a,u,s,e)
+# 1. accept: Add the changes to the Artix repo using
+#    "artixpkg repo add -p world <packagename>" and move on to the next package.
+# 2. undo: Reset changes by executing
+#    "cd ~/Templates/artools-workspace/artixlinux/<packagename> && git reset --hard HEAD"
+#    and continue to the next package.
+# 3. skip: Skip this package and move on to the next one without pushing changes to the Artix repo.
+# 4. edit: Edit the changes using "nvim -c MagitOnly ~/Templates/artools-workspace/artixlinux/<packagename>".
+#    After editing, prompt for options: accept, undo, skip, edit(a,u,s,e) again.
+
+# TODO: check for which repo is package in. (don't default to world)
+
+#!/bin/bash
+
+# Define workspace directory and package tree
+WORKSPACE_DIR="${HOME}/Templates/artools-workspace"
+PACKAGE_TREE="${WORKSPACE_DIR}/artixlinux"
+
+cd "$WORKSPACE_DIR" || exit 1
+
+# Get updates from Arch repo
+updates=$(artix-checkupdates -fu | awk 'NR>2 {print $1}')
+
+# Check if there are updates
+if [ -z "$updates" ]; then
+	echo "No updates found. Exiting."
+	exit 0
+fi
+
+# Loop through each package and process updates
+for package in $updates; do
+	echo "Processing updates for $package..."
+
+    # pull the latest changes from the Artix repo
+    artixpkg git pull "$package"
+
+    # Import changes from Arch repo and display the diff
+    artixpkg repo import "$package"
+
+    while true; do
+	    # Prompt for user action
+	    read -p "Choose action: accept(a), undo(u), skip(s), edit(e): " action
+
+	    case $action in
+		    a | accept)
+			    # Add changes to Artix repo
+			    artixpkg repo add -p world "$package"
+			    break
+			    ;;
+		    u | undo)
+			    # Undo changes
+			    (cd "${PACKAGE_TREE}/${package}" && git reset --hard HEAD)
+			    # return to the workspace directory
+			    cd "$WORKSPACE_DIR" || exit 1
+			    break
+			    ;;
+		    s | skip)
+			    # Skip this package
+			    echo "Skipping $package."
+			    break
+			    ;;
+		    e | edit)
+			    # Edit changes
+			    nvim -c MagitOnly "${PACKAGE_TREE}/${package}"
+			    ;;
+		    *)
+			    echo "Invalid option. Please choose a valid option: accept(a), undo(u), skip(s), edit(e)."
+			    ;;
+	    esac
+    done
+done
+
+echo "All updates processed."
+exit 0

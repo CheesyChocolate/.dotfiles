@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Displays number of packages that need updating.
+# When clicked, notifies about available updates.
+
+case $BLOCK_BUTTON in
+	1) notify-send "$(artix-checkupdates -fu | awk 'NR>1 {print $1}')" ;;
+	2) setsid -f "$TERMINAL" -e artix-updates && read -r _ ;;
+        3) notify-send "🎨 artixpkg module" "\- Shows number of packages that need updating.
+- Left click opens list of updates in terminal
+- Middle click notifies about available updates" ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+updates="$(artix-checkupdates -fu | awk 'NR>2 {print $1}' | wc -l 2>/dev/null)"
+
+[ "$updates" = "0" ] || echo "🎨$updates"
