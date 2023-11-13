@@ -100,6 +100,7 @@ export SUDO_PROMPT="$(tput setab 1 setaf 7 bold)[sudo]$(tput sgr0) $(tput setaf 
 # Start graphical server on user's current tty if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
 [ "$(tty)" = "/dev/tty2" ] && ! pidof -s Hyprland >/dev/null 2>&1 && exec Hyprland
+[ "$(tty)" = "/dev/tty3" ] && ! pidof -s bsod >/dev/null 2>&1 && exec bsod
 
 # Switch escape and caps if tty and no passwd required:
 sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/null
