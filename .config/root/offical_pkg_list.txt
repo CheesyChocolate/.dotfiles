@@ -114,6 +114,8 @@ intltool
 inxi
 iotop
 iptables-nft
+java-rhino
+java-runtime-common
 jdk-openjdk
 john
 jpegoptim
@@ -151,9 +153,9 @@ libertinus-font
 libgphoto2
 libibus
 libjxl
+libmilter
 libnfc
 libnotify
-libreoffice-extension-languagetool
 libreoffice-fresh
 libretro-beetle-pce
 libretro-beetle-pce-fast
@@ -264,7 +266,6 @@ pacman-contrib
 pacman-static
 pacutils
 pandoc-bin
-parlatype-libreoffice-extension
 patch
 pcsc-tools
 perl-term-readline-gnu

@@ -7,6 +7,7 @@ bash-completion
 biber
 cgns
 cni-plugins
+coin-or-mp
 cups-browsed
 docker-buildx
 docker-scan
@@ -44,6 +45,7 @@ openscad
 ospray
 ostra-cg
 otf-font-awesome
+parlatype-libreoffice-extension
 pdal
 perl-file-homedir
 perl-ipc-system-simple
