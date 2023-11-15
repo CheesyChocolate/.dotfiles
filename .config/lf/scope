@@ -13,10 +13,6 @@ image() {
 	fi
 }
 
-ifub() {
-	[ -n "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && command -V ueberzug >/dev/null 2>&1
-}
-
 # Note that the cache file name is a function of file information, meaning if
 # an image appears in multiple places across the machine, it will not have to
 # be regenerated once seen.
