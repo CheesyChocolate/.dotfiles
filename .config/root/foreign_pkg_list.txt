@@ -1,7 +1,5 @@
 abook
 ani-cli-git
-archstrike-keyring
-archstrike-mirrorlist
 bicon-git
 blender-plugin-cad-sketcher-git
 bluetuith-bin

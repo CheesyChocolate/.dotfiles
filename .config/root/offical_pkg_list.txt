@@ -4,6 +4,8 @@ adobe-source-han-sans-jp-fonts
 alsa-utils
 ananicy
 arandr
+archstrike-keyring
+archstrike-mirrorlist
 arduino-cli
 artix-archlinux-support
 artools-pkg
