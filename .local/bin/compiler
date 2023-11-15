@@ -36,6 +36,7 @@ case "$ext" in
 	cs) mcs "$file" && mono "$base".exe ;;
 	go) go run "$file" ;;
 	h) sudo make install ;;
+	html) lynx -width="$4" -display_charset=utf-8 -dump "$1" ;;
 	#java) javac -d classes "$file" && java -cp classes "${1%.*}" ;; # i prefer to compile manually
 	java) java "$file" ;;
 	js) node "$file" ;;
