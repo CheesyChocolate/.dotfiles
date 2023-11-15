@@ -79,7 +79,7 @@ cmd open ${{
     esac
 }}
 
-cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+cmd mkdir $mkdir -p "$@"
 
 # Share any file 256MiB limit
 cmd share $curl -F"file=@$fx" https://0x0.st | xclip -selection clipboard
@@ -223,7 +223,7 @@ map c convertf
 map C copyto
 map M moveto
 map P :link
-map <c-n> push :mkdir<space>
+map <c-n> push :mkdir<space>""<left>
 map <c-r> reload
 map <c-s> set hidden!
 map <enter> shell
