@@ -9,7 +9,6 @@ archstrike-mirrorlist
 arduino-cli
 artix-archlinux-support
 artools-pkg
-atool
 autoconf
 automake
 base
@@ -269,6 +268,7 @@ pacman-static
 pacutils
 pandoc-bin
 patch
+patool
 pcsc-tools
 perl-term-readline-gnu
 php

@@ -90,20 +90,25 @@ cmd extract ${{
 	printf "%s\n\t" "$fx"
 	printf "extract?[y/N]"
 	read ans
-	[ $ans = "y" ] && aunpack $fx
+	[ $ans = "y" ] && patool extract $fx
 }}
 
 cmd archive ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
 	printf "%s\n\t" "$fx"
-	printf "archive to: "
+	printf "archive name: "
 	read ans
+	[ -z "$ans" ] && ans=archive-$(openssl rand -hex 2)
 	printf "archive type?[tar.gz]"
 	read type
+	[ -z "$type" ] && type="tar.gz"
 	mkdir $ans
+	printf "password?[none]"
+	read pass
 	cp -r $fx $ans
-	apack $ans.$type $ans
+	# patool create $ans.$type $ans
+	[ -z "$pass" ] && patool create $ans.$type $ans || patool create --password=$pass $ans.$type $ans
 	rm -rf $ans
 }}
 
