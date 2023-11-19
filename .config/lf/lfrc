@@ -107,7 +107,6 @@ cmd archive ${{
 	printf "password?[none]"
 	read pass
 	cp -r $fx $ans
-	# patool create $ans.$type $ans
 	[ -z "$pass" ] && patool create $ans.$type $ans || patool create --password=$pass $ans.$type $ans
 	rm -rf $ans
 }}
