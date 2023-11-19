@@ -255,8 +255,8 @@ noto-fonts-emoji
 nsxiv
 ntfs-3g
 nyxt
+ocaml
 octave
-odt2txt
 onboard
 openbsd-netcat
 openntpd
@@ -299,7 +299,7 @@ python-spotdl
 python-urwid
 qemu-emulators-full
 qemu-full
-quickemu
+quickemu-git
 radvd
 remmina-git
 retroarch
@@ -342,7 +342,7 @@ texlive-music
 texlive-pictures
 texlive-pstricks
 texlive-publishers
-thorium-browser-bin
+thorium-browser-avx-bin
 timeshift
 tk
 tldr
@@ -355,6 +355,7 @@ transmission-cli
 ttf-font-awesome
 typescript
 ueberzug
+umockdev
 unace
 unclutter
 unrar

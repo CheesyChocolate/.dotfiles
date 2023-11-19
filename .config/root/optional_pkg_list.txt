@@ -9,6 +9,7 @@ cgns
 cni-plugins
 coin-or-mp
 cups-browsed
+dblatex
 docker-buildx
 docker-scan
 ed
@@ -17,6 +18,7 @@ f2fs-tools
 fig2dev
 fuse-overlayfs
 gnuplot
+gobject-introspection
 hunspell-en_us
 intel-compute-runtime
 ipp-usb
@@ -28,6 +30,7 @@ liblas
 libmythes
 libtiger
 libva-intel-driver
+lilypond
 lirc
 live-media
 llvm
@@ -66,13 +69,10 @@ python-cchardet
 python-debugpy
 python-fastnumbers
 python-fqdn
-python-h2
 python-html5-parser
-python-httpx
 python-isoduration
 python-jsonpointer
 python-magic
-python-markdown
 python-mpi4py
 python-numba
 python-pdftotext
@@ -110,6 +110,8 @@ sane-airscan
 speech-dispatcher
 texlive-binextra
 udftools
+unarchiver
+valgrind
 wdiff
 webkit2gtk
 xfsprogs
