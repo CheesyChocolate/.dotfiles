@@ -36,7 +36,7 @@
     "filter_results": true,
     "threads": 4,
     "cookie_file": null,
-    "restrict": "strict",
+    "restrict": "none",
     "print_errors": true,
     "sponsor_block": true,
     "preload": false,
