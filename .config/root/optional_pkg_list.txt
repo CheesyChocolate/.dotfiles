@@ -33,7 +33,6 @@ libva-intel-driver
 lilypond
 lirc
 live-media
-llvm
 lua-socket
 mousetweaks
 netcdf-cxx
