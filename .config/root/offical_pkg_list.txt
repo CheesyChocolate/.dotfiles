@@ -38,6 +38,7 @@ cpio
 cronie-runit
 cups-runit
 cvs
+darcs
 debuginfod
 dialog
 digital
@@ -72,6 +73,7 @@ firewalld
 firewalld-runit
 flatpak
 flex
+fossil
 freecad-git
 fwupd
 fzf
