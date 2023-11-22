@@ -372,6 +372,7 @@ vkd3d
 vlc
 vnstat
 vnstat-runit
+vscodium
 vulscan
 waybar
 weechat
