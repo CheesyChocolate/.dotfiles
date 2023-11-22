@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Get updates from Arch repo
 
 # Check for updates using "artix-checkupdates -fu".
@@ -28,8 +27,6 @@
 # 3. skip: Skip this package and move on to the next one without pushing changes to the Artix repo.
 # 4. edit: Edit the changes using "nvim -c MagitOnly ~/Templates/artools-workspace/artixlinux/<packagename>".
 #    After editing, prompt for options: accept, undo, skip, edit(a,u,s,e) again.
-
-# TODO: check for which repo is package in. (don't default to world)
 
 #!/bin/bash
 
@@ -89,7 +86,7 @@ for package in $packageBasenames; do
 	    case $action in
 		    a | accept)
 			    # Add changes to Artix repo
-			    artixpkg repo add -p world "$package"
+			    artixpkg repo add -p "$repo" "$package"
 			    break
 			    ;;
 		    u | undo)
