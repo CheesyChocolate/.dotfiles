@@ -40,7 +40,7 @@ PACKAGE_TREE="${WORKSPACE_DIR}/artixlinux"
 cd "$WORKSPACE_DIR" || exit 1
 
 # Get updates from Arch repo
-updates=$(artix-checkupdates -fu | awk 'NR>2 {print $1}')
+updates=$(artix-checkupdates -fu | awk 'NR>2')
 
 # Check if there are updates
 if [ -z "$updates" ]; then
@@ -48,9 +48,33 @@ if [ -z "$updates" ]; then
 	exit 0
 fi
 
+packageBasenames=$(echo "$updates" | awk '{print $1}')
+
+libs=''
+otherPackages=''
+
+# get lib packages
+# `lib*` and `lib32-lib*` but not `lib32-*`
+for package in $packageBasenames; do
+	if [[ $package == lib* ]] && [[ $package != lib32-* ]]; then
+		libs+="$package "
+	elif [[ $package == lib32-lib* ]]; then
+		libs+="$package "
+	else
+		otherPackages+="$package "
+	fi
+done
+
+# add lib packages to the beginning of the other packages
+packageBasenames="$libs $otherPackages"
+
 # Loop through each package and process updates
-for package in $updates; do
-	echo "Processing updates for $package..."
+for package in $packageBasenames; do
+
+    # get the repo name
+    repo=$(echo "$updates" | grep -E "^${package} " | awk '{print $2}')
+
+    echo "Processing updates for $package in $repo ..."
 
     # pull the latest changes from the Artix repo
     artixpkg git pull "$package"
