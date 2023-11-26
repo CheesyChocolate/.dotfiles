@@ -23,7 +23,8 @@ alias \
 	yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config" \
 	dosbox="dosbox -conf $XDG_CONFIG_HOME/dosbox/dosbox.conf" \
 	svn="svn --config-dir \"$XDG_CONFIG_HOME\"/subversion" \
-	mvn="mvn -gs \"$XDG_CONFIG_HOME\"/maven/settings.xml"
+	mvn="mvn -gs \"$XDG_CONFIG_HOME\"/maven/settings.xml" \
+	adb='HOME="$XDG_DATA_HOME"/android adb'
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
