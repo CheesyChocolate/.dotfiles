@@ -330,6 +330,7 @@ sudo
 swtpm
 syslog-ng
 syslog-ng-runit
+tenacity-git
 termshark
 texinfo
 texlive-basic
