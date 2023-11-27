@@ -71,7 +71,6 @@ python-fqdn
 python-html5-parser
 python-isoduration
 python-jsonpointer
-python-magic
 python-mpi4py
 python-numba
 python-pdftotext
