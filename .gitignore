@@ -23,6 +23,8 @@
 !.config/iamb/config.json
 !.config/lf/
 !.config/librewolf/
+.config/librewolf/*
+!.config/librewolf/cascade
 !.config/litecli/
 .config/litecli/*
 !.config/litecli/config
