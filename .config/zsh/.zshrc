@@ -22,6 +22,10 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
+# fish like autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^b' autosuggest-accept
+
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1

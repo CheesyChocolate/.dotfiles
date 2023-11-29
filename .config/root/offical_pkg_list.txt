@@ -412,4 +412,5 @@ zbar
 zip
 zmap
 zsh
+zsh-autosuggestions
 zsh-completions
