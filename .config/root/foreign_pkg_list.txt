@@ -29,6 +29,7 @@ pass-import
 python-bs4
 python-npx
 quickgui-bin
+ripdrag-git
 ruby-neovim
 samrewritten-git
 sc-im

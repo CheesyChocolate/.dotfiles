@@ -84,6 +84,8 @@ cmd mkdir $mkdir -p "$@"
 # Share any file 256MiB limit
 cmd shareLink $curl -F"file=@$fx" https://0x0.st | xclip -selection clipboard
 
+cmd ripdrag $setsid -f ripdrag --and-exit --disable-thumbnails --all --no-click $fx
+
 cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
@@ -239,6 +241,7 @@ map X !$f
 map o &mimeopen "$f"
 map O $mimeopen --ask "$f"
 map Sl shareLink
+map Sr ripdrag
 
 map A :rename; cmd-end # at the very end
 map r push A<c-u> # new rename
