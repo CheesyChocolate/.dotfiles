@@ -82,7 +82,7 @@ cmd open ${{
 cmd mkdir $mkdir -p "$@"
 
 # Share any file 256MiB limit
-cmd share $curl -F"file=@$fx" https://0x0.st | xclip -selection clipboard
+cmd shareLink $curl -F"file=@$fx" https://0x0.st | xclip -selection clipboard
 
 cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
@@ -238,7 +238,7 @@ map x $$f
 map X !$f
 map o &mimeopen "$f"
 map O $mimeopen --ask "$f"
-map S share
+map Sl shareLink
 
 map A :rename; cmd-end # at the very end
 map r push A<c-u> # new rename
