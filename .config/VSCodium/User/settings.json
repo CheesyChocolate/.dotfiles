@@ -1,0 +1,15 @@
+{
+    "workbench.colorTheme": "Rosé Pine",
+    "glassit.alpha": 240,
+    "git.openRepositoryInParentFolders": "never",
+    "redhat.telemetry.enabled": false,
+    "editor.tabSize": 8,
+    "cmake.showOptionsMovedNotification": false,
+    "workbench.startupEditor": "none",
+    "workbench.editor.restoreViewState": false,
+    "window.restoreWindows": "none",
+    "python.languageServer": "Pylance",
+    "files.associations": {
+        "*.py": "python"
+    }
+}

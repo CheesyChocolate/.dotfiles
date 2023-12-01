@@ -64,6 +64,11 @@
 !.config/vlc/
 !.config/vlc/*
 .config/vlc/vlc-qt-interface.conf
+!.config/VSCodium/
+.config/VSCodium/*
+!.config/VSCodium/User/
+.config/VSCodium/User/*
+!.config/VSCodium/User/settings.json
 !.config/wal/
 !.config/wget/
 !.config/wikiman/
