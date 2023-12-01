@@ -61,6 +61,9 @@
 !.config/shell/
 .config/shell/privateProfile
 !.config/spicy/
+!.config/vlc/
+!.config/vlc/*
+.config/vlc/vlc-qt-interface.conf
 !.config/wal/
 !.config/wget/
 !.config/wikiman/
