@@ -10,6 +10,16 @@
     "window.restoreWindows": "none",
     "python.languageServer": "Pylance",
     "files.associations": {
-        "*.py": "python"
-    }
+        "*.py": "python",
+        "*.md": "markdown",
+        "*.yml": "yaml"
+    },
+    "[django-txt]": {},
+    "github.copilot.enable": {
+        "plaintext": "true",
+        "markdown": "true",
+        "scminput": "true"
+    },
+    "codetogether.userName": "LemonPie",
+    "codetogether.virtualCursorRemember": true
 }
