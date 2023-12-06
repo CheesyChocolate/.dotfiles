@@ -79,6 +79,7 @@ python-pprofile
 python-pyarrow
 python-pyicu
 python-pyinotify
+python-pypubsub
 python-pyqt6-webengine
 python-regex
 python-rfc3339-validator
@@ -87,6 +88,7 @@ python-scipy
 python-setproctitle
 python-smbus-git
 python-socksio
+python-ujson
 python-unidecode
 python-uri-template
 python-webcolors

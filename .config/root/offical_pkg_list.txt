@@ -28,14 +28,17 @@ bluez-runit
 bluez-utils
 broadcom-wl-dkms
 btrfs-progs
+burpsuite
 calcurse
 ccid
+cewl
 chaotic-keyring
 chaotic-mirrorlist
 checkbashisms
 clamav
 cpio
 cronie-runit
+crunch
 cups-runit
 cvs
 debuginfod
@@ -64,6 +67,7 @@ eza
 fakeroot
 ffmpeg
 ffmpegthumbnailer
+ffuf
 file
 findutils
 firefox-tridactyl
@@ -106,6 +110,7 @@ gzip
 hexchat
 hq
 htop-vim
+hydra
 hyprland
 imagemagick
 inetutils
@@ -376,6 +381,7 @@ vscodium
 vulscan
 waybar
 weechat
+wfuzz
 which
 whois
 wikiman
