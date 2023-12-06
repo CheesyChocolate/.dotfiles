@@ -38,7 +38,6 @@ cpio
 cronie-runit
 cups-runit
 cvs
-darcs
 debuginfod
 dialog
 digital
@@ -251,7 +250,7 @@ newsboat
 nftables-runit
 nm-connection-editor
 nmap
-nodejs-lts-gallium
+nodejs
 noto-fonts
 noto-fonts-emoji
 nsxiv
@@ -404,6 +403,8 @@ xorg-xkill
 xorg-xwininfo
 xournalpp
 xwallpaper
+yamllint
+yarn
 yay-git
 youtube-dl
 yt-dlp
@@ -412,5 +413,4 @@ zbar
 zip
 zmap
 zsh
-zsh-autosuggestions
 zsh-completions

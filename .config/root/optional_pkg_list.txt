@@ -77,7 +77,6 @@ python-pdftotext
 python-pickleshare
 python-pprofile
 python-pyarrow
-python-pycurl
 python-pyicu
 python-pyinotify
 python-pyqt6-webengine
