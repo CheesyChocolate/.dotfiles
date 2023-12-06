@@ -21,5 +21,7 @@
         "scminput": "true"
     },
     "codetogether.userName": "LemonPie",
-    "codetogether.virtualCursorRemember": true
+    "codetogether.virtualCursorRemember": true,
+    "editor.minimap.size": "fill",
+    "editor.minimap.renderCharacters": false
 }
