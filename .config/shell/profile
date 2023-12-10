@@ -71,6 +71,8 @@ export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
 export TEXMFHOME="$XDG_DATA_HOME/texmf"
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 export TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"
+export BIB="$XDG_DATA_HOME/bibtex/uni.bib"
+export REFER="$XDG_DATA_HOME/bibtex/refer.bib"
 
 # private variables
 source "$XDG_CONFIG_HOME/shell/privateProfile"
