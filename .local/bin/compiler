@@ -35,6 +35,7 @@ case "$ext" in
 	c) cc "$file" -o "$base" && "$base" ;;
 	cpp) g++ "$file" -o "$base" && "$base" ;;
 	cs) mcs "$file" && mono "$base".exe ;;
+	csproj) dotnet watch run --project "$file" ;;
 	go) go run "$file" ;;
 	h) sudo make install ;;
 	html) lynx -width="$4" -display_charset=utf-8 -dump "$1" ;;
