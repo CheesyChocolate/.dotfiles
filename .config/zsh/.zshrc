@@ -55,7 +55,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Use lf to switch directories and bind it to ctrl-o
 lfcd () {
-    cd "$(command lf -print-last-dir "$@")"
+    cd "$(lf -print-last-dir "$@")"
 }
 
 # Use fzf to find history and bind it to ctrl-r
