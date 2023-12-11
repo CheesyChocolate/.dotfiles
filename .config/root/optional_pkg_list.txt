@@ -4,6 +4,7 @@ arch-wiki-docs
 artix-checkupdates
 artix-rebuild-order
 aspnet-targeting-pack
+avisynthplus
 bash-completion
 biber
 cgns
@@ -17,13 +18,16 @@ ed
 espeak-ng
 f2fs-tools
 fig2dev
+frei0r-plugins
 fuse-overlayfs
+gavl
 gnuplot
 gobject-introspection
 hunspell-en_us
 intel-compute-runtime
 ipp-usb
 jupyter-collaboration
+ladspa
 lib32-gamemode
 libayatana-appindicator
 libgoom2

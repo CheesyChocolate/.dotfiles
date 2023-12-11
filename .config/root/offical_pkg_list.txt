@@ -41,6 +41,7 @@ cronie-runit
 crunch
 cups-runit
 cvs
+dash
 debuginfod
 dialog
 digital
