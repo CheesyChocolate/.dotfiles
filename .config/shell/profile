@@ -73,6 +73,9 @@ export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 export TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"
 export BIB="$XDG_DATA_HOME/bibtex/uni.bib"
 export REFER="$XDG_DATA_HOME/bibtex/refer.bib"
+export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
+export NUGET_PACKAGES="$XDG_DATA_HOME/nuget"
+export OMNISHARPHOME="$XDG_CONFIG_HOME/omnisharp"
 
 # private variables
 source "$XDG_CONFIG_HOME/shell/privateProfile"

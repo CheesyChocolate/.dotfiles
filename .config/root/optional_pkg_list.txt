@@ -3,6 +3,7 @@ adios2
 arch-wiki-docs
 artix-checkupdates
 artix-rebuild-order
+aspnet-targeting-pack
 bash-completion
 biber
 cgns
@@ -40,6 +41,7 @@ netcdf-fortran
 nilfs-utils
 noto-fonts-cjk
 npm
+nss-mdns
 opencl-clhpp
 openmp
 openresolv

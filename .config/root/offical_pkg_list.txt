@@ -54,6 +54,7 @@ docker
 docker-compose
 dosbox
 dosfstools
+dotnet-sdk
 dpkg
 dunst
 dxvk-mingw-git
@@ -253,6 +254,7 @@ networkmanager
 networkmanager-runit
 newsboat
 nftables-runit
+nginx
 nm-connection-editor
 nmap
 nodejs
