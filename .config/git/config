@@ -17,3 +17,7 @@
 	gpgsign = true
 [tag]
 	gpgSign = true
+[core]
+	pager = nvim -R
+[color]
+	pager = no
