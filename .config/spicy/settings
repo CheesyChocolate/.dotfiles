@@ -7,5 +7,5 @@ sync-modifiers=true
 resize-guest=true
 
 [ui]
-toolbar=false
+toolbar=true
 statusbar=true
