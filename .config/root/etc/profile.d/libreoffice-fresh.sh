@@ -6,4 +6,4 @@
 #export SAL_USE_VCLPLUGIN=qt5
 #export SAL_USE_VCLPLUGIN=qt6
 #export SAL_USE_VCLPLUGIN=gtk3
-export SAL_USE_VCLPLUGIN=gtk4
+#export SAL_USE_VCLPLUGIN=gtk4
