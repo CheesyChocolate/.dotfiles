@@ -1,6 +1,6 @@
 # GRUB boot loader configuration
 
-GRUB_DEFAULT=0
+GRUB_DEFAULT=3
 GRUB_TIMEOUT=1
 GRUB_DISTRIBUTOR="Artix"
 GRUB_CMDLINE_LINUX_DEFAULT="mitigation=off resume=UUID=d3608e8e-60c4-42bf-adbd-2b394cba4f46 resume_offset=533760"
