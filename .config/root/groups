@@ -1,1 +1,3 @@
-games network wireshark seat libvirt-qemu libvirt docker video kvm input audio wheel
+games dbus network scanner power wireshark libvirt docker seat video uucp storage optical lp kvm input audio wheel
+
+usermod -a -G video,audio,input,power,storage,optical,lp,scanner,dbus,uucp,games,network,wireshark,seat,libvirt,docker,kvm,wheel USER
