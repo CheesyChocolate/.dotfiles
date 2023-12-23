@@ -352,7 +352,6 @@ texlive-music
 texlive-pictures
 texlive-pstricks
 texlive-publishers
-thorium-browser-avx-bin
 timeshift
 tk
 tldr
@@ -368,6 +367,7 @@ ueberzug
 umockdev
 unace
 unclutter
+ungoogled-chromium
 unrar
 unzip
 urlwatch
