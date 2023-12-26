@@ -71,5 +71,6 @@ case "$ext" in
 	sent) setsid -f sent "$file" 2>/dev/null ;;
 	sh) sh "$file" ;;
 	tex) textype "$file" ;;
+	uml) plantuml "$file" ;;
 	*) sed -n '/^#!/s/^#!//p; q' "$file" | xargs -r -I % "$file" ;;
 esac
