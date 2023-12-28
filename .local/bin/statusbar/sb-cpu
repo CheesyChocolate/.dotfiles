@@ -9,4 +9,10 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-sensors | awk '/Core 0/ {print "🌡" $3}'
+# sensors | awk '/Core 0/ {print "🌡" $3}'
+
+cpu_temp=$(sensors k10temp-pci-00c3 | grep °C | awk '{print $2}')
+gpu_temp=$(sensors amdgpu-pci-0300 | grep °C | awk '{print $2}')
+nvme_temp=$(sensors nvme-pci-0100 | grep Composite | awk '{print $2}')
+
+echo "🌡$cpu_temp🎮$gpu_temp💾$nvme_temp"
