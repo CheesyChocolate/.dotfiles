@@ -5,5 +5,5 @@
 sleep 5s # wait for udev to settle
 while :; do
 	remaps
-	grep -qP -m1 '[^un]bind.+\/[^:]+\(usb\)' <(udevadm monitor -u -t seat -s input -s usb)
+	watch -gn1 sh -c 'xinput --list | grep keyboard' >/dev/null 2>&1
 done
