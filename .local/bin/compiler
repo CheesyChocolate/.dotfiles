@@ -69,6 +69,7 @@ case "$ext" in
 	rs) cargo build && cargo run ;;
 	sass) sassc -a "$file" "$base".css ;;
 	scad) openscad -o "$base".stl "$file" ;;
+	scala) scala "$file" ;;
 	sent) setsid -f sent "$file" 2>/dev/null ;;
 	sh) sh "$file" ;;
 	tex) textype "$file" ;;
