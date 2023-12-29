@@ -38,6 +38,7 @@ cmd open ${{
     # open mime types
     case $(file --mime-type "$(readlink -f $f)" -b) in
 	image/vnd.djvu|application/pdf|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
+	text/csv) sc-im $fx ;;
 	text/plain) case ${f##*.} in
 		csv) sc-im $fx ;;
 		*) $EDITOR $fx ;;
