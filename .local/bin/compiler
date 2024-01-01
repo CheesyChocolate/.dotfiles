@@ -32,8 +32,8 @@ case "$ext" in
 	# Try to keep these cases in alphabetical order.
 	[0-9]) preconv "$file" | refer -PS -e | groff -mandoc -T pdf > "$base".pdf ;;
 	bash) bash "$file" ;;
-	c) cc "$file" -o "$base" && "$base" ;;
-	cpp) g++ "$file" -o "$base" && "$base" ;;
+	c) cc "$file" -o "$base".out && "$base".out ;;
+	cpp) g++ "$file" -o "$base".out && "$base".out ;;
 	cs) mcs "$file" && mono "$base".exe ;;
 	csproj) dotnet watch run --project "$file" ;;
 	exs) elixir "$file" ;;
