@@ -1,0 +1,10 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = *
+
+[Action]
+When = PostTransaction
+Exec = /etc/pacman.d/scripts/cleancache

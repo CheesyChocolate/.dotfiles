@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Days in cache
+DAYSIC=30
+
+# Package versions
+PACVERS=2
+FILECOUNT1=0
+FILECOUNT2=0
+CANDIPAC=""
+#
+# Count packages to delete
+let FILECOUNT1=$(/usr/bin/find /var/cache/pacman/pkg/ -mindepth 1 -name '*' -mtime +$DAYSIC | wc -l)
+
+if [ $FILECOUNT1 -gt 0 ]; then
+    echo -n "Delete $FILECOUNT1 files older than $DAYSIC days "
+fi
+
+CANDIPAC=$( /usr/bin/paccache -d -k $PACVERS )
+if !(`echo $CANDIPAC | grep -sqie 'no candidate packages found'`); then
+    let FILECOUNT2=$(echo $CANDIPAC | grep -sie 'run.*candidates' | cut -f2 -d ':' | cut -f2 -d ' ' | sed 's/^[\t ]*//g')
+    if [ $FILECOUNT1 -gt 0 ]; then
+	echo "and $FILECOUNT2 files more than $PACVERS versions from the cache directory "
+    else
+	echo "Delete $FILECOUNT2 files more than $PACVERS versions from the cache directory "
+    fi
+fi
+
+# Delete files older than $DAYSIC days from the cache dir
+/usr/bin/find /var/cache/pacman/pkg/ -mindepth 1 -name '*' -mtime +$DAYSIC -delete
+# Delete more than $PACVERS versions of a package
+/usr/bin/paccache -r -q -k $PACVERS
+/usr/bin/du -smh /var/cache/pacman/pkg
