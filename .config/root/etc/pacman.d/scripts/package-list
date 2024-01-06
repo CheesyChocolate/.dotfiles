@@ -2,10 +2,8 @@
 
 # This script is used to generate the package list for the Arch Linux
 
-/usr/bin/pacman -Qqen > "$XDG_CONFIG_HOME/root/offical_pkg_list.txt"
+/usr/bin/pacman -Qqen > "/home/suren/.config/root/offical_pkg_list.txt"
 
-/usr/bin/pacman -Qqem > "$XDG_CONFIG_HOME/root/foreign_pkg_list.txt"
+/usr/bin/pacman -Qqem > "/home/suren/.config/root/foreign_pkg_list.txt"
 
-/usr/bin/comm -13 <(pacman -Qqdt | sort) <(/usr/bin/pacman -Qqdtt | sort) > "$XDG_CONFIG_HOME/root/optional_pkg_list.txt"
-
-echo "Package list generated"
+/usr/bin/comm -13 <(pacman -Qqdt | sort) <(/usr/bin/pacman -Qqdtt | sort) > "/home/suren/.config/root/optional_pkg_list.txt"
