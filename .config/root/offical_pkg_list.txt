@@ -184,6 +184,7 @@ lib32-libpulse
 lib32-libudev0-shim
 lib32-libva
 lib32-libva-mesa-driver
+lib32-libva-vdpau-driver
 lib32-libvdpau
 lib32-libxcomposite
 lib32-libxinerama
@@ -228,7 +229,6 @@ libretro-citra
 libretro-core-info
 libretro-desmume
 libretro-dolphin
-libretro-duckstation
 libretro-flycast
 libretro-gambatte
 libretro-genesis-plus-gx
@@ -256,6 +256,7 @@ librewolf
 libudev0-shim
 libunrar
 libva-mesa-driver
+libva-vdpau-driver
 libvips
 libvirt-runit
 libvirt-storage-gluster

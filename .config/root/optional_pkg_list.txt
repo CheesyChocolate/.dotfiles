@@ -73,7 +73,6 @@ python-boto
 python-cairocffi
 python-cchardet
 python-debugpy
-python-dnspython
 python-fastnumbers
 python-fqdn
 python-h2
