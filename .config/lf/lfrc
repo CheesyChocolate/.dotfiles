@@ -71,6 +71,7 @@ cmd open ${{
 	application/vnd.openxmlformats-*|vnd.oasis.opendocument*) setsid -f zaread $fx >/dev/null 2>&1 ;; # catch rest of the office files
 	application/octet-stream) case ${f##*.} in
 		doc|docx|xls|xlsx|odt|ppt|pptx) setsid -f zaread $fx >/dev/null 2>&1 ;; # setsid -f libreoffice $fx >/dev/null 2>&1 ;;
+		txt) $EDITOR $fx ;;
 		ghw) setsid -f gtkwave $f >/dev/null 2>&1 ;;
 		ts) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
 		mp3) mpv --audio-display=no $f ;;
