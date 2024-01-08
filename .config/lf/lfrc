@@ -75,6 +75,7 @@ cmd open ${{
 		ghw) setsid -f gtkwave $f >/dev/null 2>&1 ;;
 		ts) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
 		mp3) mpv --audio-display=no $f ;;
+		vp6) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
 		*) setsid -f zathura $fx >/dev/null 2>&1 ;;
 	   esac ;;
 	application/gzip) case ${f##*.} in
