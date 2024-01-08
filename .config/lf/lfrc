@@ -42,6 +42,10 @@ cmd open ${{
 		csv) sc-im $fx ;;
 		*) $EDITOR $fx ;;
 	   esac ;;
+	text/xml) case ${f##*.} in
+		dig) digital $fx ;;
+		*) $EDITOR $fx ;;
+	   esac ;;
 	text/*|application/json|application/javascript|inode/x-empty|application/x-subrip|application/vnd.gentoo.ebuild) $EDITOR $fx;;
 	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
 	image/svg+xml) display -- $f ;;
