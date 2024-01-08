@@ -23,8 +23,8 @@ fi
 CANDIPAC=$(/usr/bin/paccache -d -k "$PACVERS" 2>&1)
 
 if ! echo "$CANDIPAC" | grep -q 'no candidate packages found'; then
-	FILECOUNT2=$(echo "$CANDIPAC" | grep -E 'run.*candidates' | awk -F'[: ]+' '{print $NF}')
-	if [ "$FILECOUNT2" -gt 0 ]; then
+	FILECOUNT2=$(echo "$CANDIPAC" | grep -E 'run.*candidates' | awk '{print $1}')
+	if [[ "$FILECOUNT2" =~ ^[0-9]+$ && "$FILECOUNT2" -gt 0 ]]; then
 		if [ "$FILECOUNT1" -gt 0 ]; then
 			echo "and $FILECOUNT2 files have more than $PACVERS versions in the cache directory."
 		else
