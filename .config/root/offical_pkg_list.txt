@@ -363,6 +363,7 @@ patool
 pcsc-tools
 pentbox
 perl-inc-latest
+perl-io-compress-brotli
 perl-module-build
 perl-parse-yapp
 perl-term-readline-gnu
