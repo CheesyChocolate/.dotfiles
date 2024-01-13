@@ -363,7 +363,6 @@ patool
 pcsc-tools
 pentbox
 perl-inc-latest
-perl-io-compress-brotli
 perl-module-build
 perl-parse-yapp
 perl-term-readline-gnu
@@ -436,6 +435,7 @@ snapper
 socat
 solvespace
 sshfs
+sshuttle
 steam
 streamlink
 subversion
@@ -455,16 +455,21 @@ tesseract-data-lat
 tesseract-data-tur
 texlive-basic
 texlive-bibtexextra
+texlive-context
 texlive-fontsextra
+texlive-fontutils
 texlive-formatsextra
 texlive-games
 texlive-humanities
 texlive-latexextra
+texlive-luatex
 texlive-mathscience
+texlive-metapost
 texlive-music
 texlive-pictures
 texlive-pstricks
 texlive-publishers
+texlive-xetex
 timidity++
 tinycompress
 tk

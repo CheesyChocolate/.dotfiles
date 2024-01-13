@@ -56,6 +56,7 @@ ostra-cg
 otf-font-awesome
 pdal
 perl-file-homedir
+perl-io-compress-brotli
 perl-ipc-system-simple
 perl-json-xs
 perl-lwp-useragent-cached
