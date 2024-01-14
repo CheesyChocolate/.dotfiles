@@ -134,6 +134,7 @@ grimblast-git
 groovy
 grub
 grub-btrfs
+gst-plugin-pipewire
 gst-plugin-va
 gvfs
 hexchat
@@ -194,6 +195,8 @@ lib32-mpg123
 lib32-ocl-icd
 lib32-openal
 lib32-pipewire
+lib32-pipewire-jack
+lib32-pipewire-v4l2
 lib32-v4l-utils
 lib32-vkd3d
 libc++
@@ -369,7 +372,13 @@ perl-term-readline-gnu
 php
 pinentry-bemenu
 pipe-viewer-git
+pipewire-alsa
 pipewire-pulse
+pipewire-roc
+pipewire-session-manager
+pipewire-v4l2
+pipewire-x11-bell
+pipewire-zeroconf
 pkgfile
 plantuml
 podman

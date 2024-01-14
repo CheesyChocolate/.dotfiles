@@ -20,6 +20,7 @@ mangal-bin
 mars-mips
 mutt-wizard-git
 nodejs-neovim
+obs-pipewire-audio-capture-bin
 octave-io
 oda-file-converter
 pam-gnupg-git
