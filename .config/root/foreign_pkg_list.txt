@@ -12,7 +12,6 @@ iamb-git
 iranian-fonts
 kjv-apocrypha
 ledger-live-bin
-libretro-duckstation
 linode-cli
 litecli
 lobster-git

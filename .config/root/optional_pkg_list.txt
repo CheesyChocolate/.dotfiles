@@ -13,8 +13,6 @@ coin-or-mp
 cups-browsed
 dblatex
 ditaa
-docker-buildx
-docker-scan
 ed
 erlang-unixodbc
 espeak-ng
@@ -63,7 +61,6 @@ perl-lwp-useragent-cached
 perl-parallel-forkmanager
 perl-tk
 perl-yaml-tiny
-pigz
 plantuml-ascii-math
 podman-compose
 podman-dnsname
@@ -114,6 +111,7 @@ qt5-serialport
 qt5-websockets
 rlwrap
 sane-airscan
+sox
 speech-dispatcher
 texlive-binextra
 udftools

@@ -68,9 +68,7 @@ dkms
 dmidecode
 dmraid
 dnsmasq
-docker
 docker-compose
-docker-runit
 docx2txt
 dosbox
 dosfstools
@@ -90,6 +88,7 @@ exfat-utils
 expac
 extra-cmake-modules
 eza
+fakechroot
 faudio
 festival-english
 ffmpeg
@@ -169,6 +168,7 @@ jupyter-server-ydoc
 kernel-headers-musl
 kotlin
 ledger
+lemon
 lf
 lftp
 lhasa
@@ -283,7 +283,6 @@ lzop
 maim
 man-db
 man-pages
-mariadb
 mathjax
 maven
 maxima
@@ -382,6 +381,7 @@ pipewire-zeroconf
 pkgfile
 plantuml
 podman
+podman-docker
 polkit-gnome
 poppler
 powertop
@@ -443,6 +443,7 @@ smartmontools
 snapper
 socat
 solvespace
+sqlite-analyzer
 sshfs
 sshuttle
 steam
