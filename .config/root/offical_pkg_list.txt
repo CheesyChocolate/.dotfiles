@@ -2,6 +2,7 @@ acpi
 acpi_call-dkms
 acpilight
 adobe-source-han-sans-jp-fonts
+alsa-firmware
 alsa-utils
 amd-ucode
 appstream-glib
@@ -442,6 +443,7 @@ slock
 smartmontools
 snapper
 socat
+sof-firmware
 solvespace
 sqlite-analyzer
 sshfs
