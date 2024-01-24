@@ -329,6 +329,7 @@ networkmanager-vpnc
 newsboat
 nftables-runit
 nginx
+nim
 nm-connection-editor
 nmap
 nodejs
