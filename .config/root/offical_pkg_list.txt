@@ -403,6 +403,7 @@ python-pipx
 python-pwntools
 python-pydbus
 python-pynvim
+python-pytorch
 python-pyxdg
 python-qdarkstyle
 python-spotdl
