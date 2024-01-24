@@ -65,6 +65,7 @@ case "$ext" in
 	ms) preconv "$file" | refer -PS -e | groff -me -ms -kept -T pdf > "$base".pdf ;;
 	nim) nim compile --run "$file" ;;
 	org) emacs "$file" --batch -u "$USER" -f org-latex-export-to-pdf ;;
+	php) php "$file" ;;
 	py) python "$file" ;;
 	[rR]md) Rscript -e "rmarkdown::render('$file', quiet=TRUE)" ;;
 	rs) cargo build && cargo run ;;
@@ -75,6 +76,7 @@ case "$ext" in
 	sh) sh "$file" ;;
 	sql) rm -f "$base".db && sqlite3 "$base".db < "$file" ;;
 	tex) textype "$file" ;;
+	ts) tsc "$file" && node "$base".js ;;
 	uml) plantuml "$file" ;;
 	*) sed -n '/^#!/s/^#!//p; q' "$file" | xargs -r -I % "$file" ;;
 esac
