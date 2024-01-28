@@ -102,6 +102,7 @@ firewalld-runit
 flatpak
 flickcurl
 fossil
+fpc
 freecad-git
 fwupd
 fzf
@@ -165,6 +166,7 @@ jdk-openjdk
 john
 jpegoptim
 jq
+jre11-openjdk
 julia
 jupyter-notebook
 jupyter-server-ydoc
@@ -388,6 +390,7 @@ podman
 podman-docker
 polkit-gnome
 poppler
+powershell
 powertop
 profanity
 progress

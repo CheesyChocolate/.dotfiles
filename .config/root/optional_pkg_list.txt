@@ -23,6 +23,7 @@ fuse-overlayfs
 gavl
 gcc-fortran
 gnuplot
+gtest
 hunspell-en_us
 ipp-usb
 jupyter-collaboration
