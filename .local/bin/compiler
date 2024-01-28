@@ -65,6 +65,7 @@ case "$ext" in
 	ms) preconv "$file" | refer -PS -e | groff -me -ms -kept -T pdf > "$base".pdf ;;
 	nim) nim compile --run "$file" ;;
 	org) emacs "$file" --batch -u "$USER" -f org-latex-export-to-pdf ;;
+	p) fpc "$file" && "$base" ;;
 	php) php "$file" ;;
 	py) python "$file" ;;
 	[rR]md) Rscript -e "rmarkdown::render('$file', quiet=TRUE)" ;;
