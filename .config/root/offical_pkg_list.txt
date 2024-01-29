@@ -505,6 +505,7 @@ tmux
 tor
 tor-browser
 transmission-cli
+tree-sitter-cli
 ttf-dejavu
 ttf-fantasque-nerd
 ttf-font-awesome
