@@ -137,6 +137,8 @@ grub-btrfs
 gst-plugin-pipewire
 gst-plugin-va
 gvfs
+hdf5
+helvum
 hexchat
 hq
 htop-vim
@@ -393,11 +395,13 @@ proton-ge-custom
 protontricks-git
 pulsemixer
 pwndbg
+python-cloudpickle
 python-css-parser
 python-entrypoints
 python-evdev
 python-geoip
 python-gmpy2
+python-keras
 python-pip
 python-pipx
 python-pwntools
@@ -407,6 +411,9 @@ python-pytorch
 python-pyxdg
 python-qdarkstyle
 python-spotdl
+python-tensorflow
+python-tensorflow-serving-api
+python-torchvision
 python-urwid
 qemu-emulators-full
 qemu-full
@@ -458,6 +465,7 @@ swaylock
 swtpm
 sysfsutils
 tenacity-git
+tensorflow
 terminus-font
 termshark
 tesseract-data-ara

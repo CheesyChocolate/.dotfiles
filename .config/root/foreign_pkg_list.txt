@@ -26,6 +26,7 @@ pam-gnupg-git
 pass-import
 python-bs4
 python-npx
+python-pygad
 quickgui-bin
 remmina-plugin-rdesktop
 remmina-plugin-ultravnc
