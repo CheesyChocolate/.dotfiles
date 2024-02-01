@@ -9,6 +9,7 @@
 !.config/
 .config/*
 !.config/bat/
+!.config/distrobox/
 !.config/dosbox/
 !.config/dunst/
 !.config/dwm/
