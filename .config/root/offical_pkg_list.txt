@@ -31,6 +31,7 @@ bluez
 bluez-cups
 bluez-runit
 bluez-utils
+bmon
 btrfs-progs
 buildah
 burpsuite
@@ -125,6 +126,7 @@ gnome-epub-thumbnailer
 gnome-keyring
 gnome-maps
 gnu-free-fonts
+gnucobol
 go
 go-yq
 gobuster
@@ -300,7 +302,7 @@ mesa-utils
 mesa-vdpau
 metalog
 metalog-runit
-metasploit-framework
+metasploit
 microsoft-gsl
 mkinitcpio-firmware
 monero
@@ -415,7 +417,6 @@ python-pyxdg
 python-qdarkstyle
 python-spotdl
 python-tensorflow
-python-tensorflow-serving-api
 python-torchvision
 python-urwid
 qemu-emulators-full
@@ -460,6 +461,7 @@ solvespace
 sqlite-analyzer
 sshfs
 sshuttle
+ssllabs-scan
 steam
 streamlink
 subversion

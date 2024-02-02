@@ -94,6 +94,7 @@ python-rfc3339-validator
 python-rfc3987
 python-setproctitle
 python-socksio
+python-tensorflow-serving-api
 python-ujson
 python-unidecode
 python-uri-template
