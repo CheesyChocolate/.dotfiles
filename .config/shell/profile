@@ -77,6 +77,7 @@ export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
 export NUGET_PACKAGES="$XDG_DATA_HOME/nuget"
 export OMNISHARPHOME="$XDG_CONFIG_HOME/omnisharp"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
+export KERAS_HOME="${XDG_STATE_HOME}/keras"
 
 # private variables
 source "$XDG_CONFIG_HOME/shell/privateProfile"
