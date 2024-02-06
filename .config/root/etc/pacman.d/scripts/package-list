@@ -2,7 +2,7 @@
 
 # This script is used to generate the package list for the Arch Linux
 
-/usr/bin/pacman -Qqen > "/home/suren/.config/root/offical_pkg_list.txt"
+/usr/bin/pacman -Qqen > "/home/suren/.config/root/official_pkg_list.txt"
 
 /usr/bin/pacman -Qqem > "/home/suren/.config/root/foreign_pkg_list.txt"
 
