@@ -92,6 +92,7 @@ extra-cmake-modules
 eza
 fakechroot
 faudio
+fd
 festival-english
 ffmpeg
 ffmpegthumbnailer
@@ -121,6 +122,7 @@ git-runit
 github-cli
 gitleaks
 glib2-docs
+glow
 gmic
 gnome-epub-thumbnailer
 gnome-keyring
@@ -290,6 +292,7 @@ lzop
 maim
 man-db
 man-pages
+marksman
 mathjax
 maven
 maxima
@@ -372,6 +375,7 @@ pass-otp
 patool
 pcsc-tools
 pentbox
+perl-authen-sasl
 perl-inc-latest
 perl-module-build
 perl-parse-yapp
@@ -412,7 +416,7 @@ python-pipx
 python-pwntools
 python-pydbus
 python-pynvim
-python-pytorch
+python-pytorch-rocm
 python-pyxdg
 python-qdarkstyle
 python-spotdl
@@ -442,6 +446,7 @@ rsm
 rsync-runit
 ruby
 runit
+rust-analyzer
 samba
 sbctl
 scala

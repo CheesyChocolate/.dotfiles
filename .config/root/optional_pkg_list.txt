@@ -39,6 +39,7 @@ lirc
 live-media
 lksctp-tools
 lua-socket
+meson
 mousetweaks
 netcdf-cxx
 netcdf-fortran
@@ -63,7 +64,6 @@ perl-tk
 perl-yaml-tiny
 plantuml-ascii-math
 podman-compose
-podman-dnsname
 povray
 pstoedit
 psutils
@@ -75,7 +75,6 @@ python-fastnumbers
 python-fqdn
 python-h2
 python-html5-parser
-python-httpx
 python-isoduration
 python-jsonpointer
 python-jupyter-server-terminals
