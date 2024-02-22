@@ -1,2 +1,2 @@
 # use gnuplot as plotting backend
-graphics_toolkit("gnuplot");
+# graphics_toolkit("gnuplot");
