@@ -39,6 +39,8 @@ lirc
 live-media
 lksctp-tools
 lua-socket
+lvm2
+mdadm
 meson
 mousetweaks
 netcdf-cxx
@@ -68,7 +70,6 @@ povray
 pstoedit
 psutils
 python-boto
-python-cairocffi
 python-cchardet
 python-debugpy
 python-fastnumbers
@@ -114,6 +115,7 @@ sox
 speech-dispatcher
 texlive-binextra
 udftools
+udisks2-btrfs
 unarchiver
 valgrind
 wdiff

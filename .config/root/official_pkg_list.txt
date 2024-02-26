@@ -110,6 +110,7 @@ fwupd
 fzf
 gamemode
 gamescope
+geckodriver
 geoip-database-extra
 geoipupdate
 gimagereader-gtk
@@ -172,6 +173,7 @@ jpegoptim
 jq
 jre11-openjdk
 julia
+jupyter-console
 jupyter-notebook
 jupyter-server-ydoc
 kernel-headers-musl
