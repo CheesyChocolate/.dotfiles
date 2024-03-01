@@ -183,7 +183,6 @@ lemon
 lf
 lftp
 lhasa
-lib32-aom
 lib32-artix-archlinux-support
 lib32-giflib
 lib32-gst-plugins-base-libs
@@ -285,6 +284,7 @@ linux-steam-integration
 logrotate
 lostfiles
 lshw
+lua-sec
 luarocks
 lutris
 lxd
@@ -413,11 +413,13 @@ python-evdev
 python-geoip
 python-gmpy2
 python-keras
+python-openai
 python-pip
 python-pipx
 python-pwntools
 python-pydbus
 python-pynvim
+python-pyperclip
 python-pytorch-rocm
 python-pyxdg
 python-qdarkstyle

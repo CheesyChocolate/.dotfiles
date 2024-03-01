@@ -38,7 +38,6 @@ lilypond
 lirc
 live-media
 lksctp-tools
-lua-socket
 lvm2
 mdadm
 meson
@@ -74,15 +73,16 @@ python-cchardet
 python-debugpy
 python-fastnumbers
 python-fqdn
-python-h2
 python-html5-parser
 python-isoduration
 python-jsonpointer
 python-jupyter-server-terminals
+python-mdit_py_plugins
 python-mpi4py
 python-numba
 python-pdftotext
 python-pickleshare
+python-plotly
 python-pprofile
 python-pyarrow
 python-pyicu
@@ -92,8 +92,10 @@ python-pyqt6-webengine
 python-regex
 python-rfc3339-validator
 python-rfc3987
+python-scikit-learn
 python-setproctitle
 python-socksio
+python-tenacity
 python-tensorflow-serving-api
 python-ujson
 python-unidecode
