@@ -10,6 +10,7 @@ gtk-theme-arc-gruvbox-git
 hyx
 iamb-git
 iranian-fonts
+jupyter-server-ydoc
 kjv-apocrypha
 ledger-live-bin
 librepcb-git

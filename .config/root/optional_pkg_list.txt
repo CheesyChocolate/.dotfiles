@@ -23,6 +23,8 @@ fuse-overlayfs
 gavl
 gcc-fortran
 gnuplot
+gst-plugins-bad
+gst-plugins-ugly
 gtest
 hunspell-en_us
 ipp-usb
@@ -39,7 +41,6 @@ lirc
 live-media
 lksctp-tools
 lvm2
-mdadm
 meson
 mousetweaks
 netcdf-cxx
@@ -127,4 +128,3 @@ zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
-zvbi

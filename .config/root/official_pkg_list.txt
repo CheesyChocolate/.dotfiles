@@ -5,6 +5,7 @@ adobe-source-han-sans-jp-fonts
 alsa-firmware
 alsa-utils
 amd-ucode
+android-tools
 appstream-glib
 arandr
 archstrike-keyring
@@ -13,6 +14,7 @@ arduino-cli
 artix-archlinux-support
 artools-pkg
 asciidoc
+aspell-en
 aspnet-runtime
 avahi-runit
 axel
@@ -175,7 +177,6 @@ jre11-openjdk
 julia
 jupyter-console
 jupyter-notebook
-jupyter-server-ydoc
 kernel-headers-musl
 kotlin
 ledger
@@ -398,7 +399,6 @@ podman
 podman-docker
 polkit-gnome
 poppler
-powershell
 powertop
 profanity
 progress
@@ -420,7 +420,7 @@ python-pwntools
 python-pydbus
 python-pynvim
 python-pyperclip
-python-pytorch-rocm
+python-pytorch-opt-rocm
 python-pyxdg
 python-qdarkstyle
 python-spotdl
@@ -547,6 +547,7 @@ vnstat-runit
 volatility3
 vscodium
 vscodium-marketplace
+vsftpd-runit
 vulkan-radeon
 vulkan-tools
 vulscan
