@@ -1,4 +1,4 @@
-#files: 1005	version: 5.9
+#files: 1020	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -176,6 +176,7 @@ _comps=(
 'bat' '_bat'
 'batch' '_at'
 'baz' '_baz'
+'bazel' '_bazel'
 'beep' '_beep'
 'bg' '_jobs_bg'
 'bibtex' '_bibtex'
@@ -370,6 +371,19 @@ _comps=(
 'disown' '_jobs_fg'
 'display' '_imagemagick'
 'dist' '_mh'
+'distrobox' '_distrobox'
+'distrobox-assemble' '_distrobox-assemble'
+'distrobox-create' '_distrobox-create'
+'distrobox-enter' '_distrobox-enter'
+'distrobox-ephemeral' '_distrobox-ephemeral'
+'distrobox-export' '_distrobox-export'
+'distrobox-generate-entry' '_distrobox-generate-entry'
+'distrobox-host-exec' '_distrobox-host-exec'
+'distrobox-init' '_distrobox-init'
+'distrobox-list' '_distrobox-list'
+'distrobox-rm' '_distrobox-rm'
+'distrobox-stop' '_distrobox-stop'
+'distrobox-upgrade' '_distrobox-upgrade'
 'django-admin' '_django'
 'django-admin.py' '_django'
 'dkms' '_dkms'
@@ -1101,6 +1115,7 @@ _comps=(
 'paste' '_paste'
 'pasuspender' '_pulseaudio'
 'patch' '_patch'
+'patchelf' '_patchelf'
 'patool' '_patool'
 'pax' '_pax'
 'pcat' '_pack'
@@ -1877,35 +1892,38 @@ bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
 autoload -Uz _afew _android _arch-rebuild-order _archlinux-java _artisan \
-            _atach _avdmanager _bat _bitcoin-cli _bluetoothctl \
-            _bower _bundle _busctl _bwrap _cap \
-            _cargo _cask _ccache _cf _chafa \
-            _checkupdates _choc _chromium _clang-check _clang-format \
-            _clang-tidy _cmake _codium _coffee _conan \
-            _concourse _console _cppcheck _curl _dad \
-            _dart _dget _dhcpcd _diana _direnv \
-            _docpad _dotnet _drush _ecdsautil _emacs \
-            _emacsclient _email-notmuch _emulator _envdir _exportfs \
-            _eza _fab _fail2ban-client _fd _ffind \
-            _firejail _firewalld _flatpak _fleetctl _flutter \
-            _fossil _fvm _fwupdmgr _gas _gh \
-            _ghc _gist _git-flow _git-pulls _git-revise \
-            _git-wtf _gitleaks _glances _glow _golang \
-            _google _gpgconf _grpcurl _gtk-launch _hello \
-            _hg _hledger _homestead _httpie _hugo \
-            _ibus _img2sixel _include-what-you-use _inxi _jmeter \
-            _jmeter-plugins _john _jonas _jrnl _jupyter \
-            _kak _kitchen _knife _language_codes _lf \
-            _libinput _lilypond _loginctl _luarocks _luarocks-admin \
-            _lunchy _mc _meson _middleman _mina \
-            _mix _mkcert _mkinitcpio _mpv _msfconsole \
-            _msfvenom _mssh _mussh _mutt-wizard.zsh _mvn \
-            _nano _nanoc _neofetch _networkQuality _nftables \
-            _nim _ninja _node _notmuch _nvm \
-            _nvme _openssl _openvpn3 _optirun _paccache \
-            _pacdiff _paclist _paclog-pkglist _pacman _pacscripts \
-            _pacsearch _pacsort _pactree _parallel _pass \
-            _pass-import _patool _periscope _pgsql_utils _phing \
+            _atach _avdmanager _bat _bazel _bitcoin-cli \
+            _bluetoothctl _bower _bundle _busctl _bwrap \
+            _cap _cargo _cask _ccache _cf \
+            _chafa _checkupdates _choc _chromium _clang-check \
+            _clang-format _clang-tidy _cmake _codium _coffee \
+            _conan _concourse _console _cppcheck _curl \
+            _dad _dart _dget _dhcpcd _diana \
+            _direnv _distrobox _distrobox-assemble _distrobox-create _distrobox-enter \
+            _distrobox-ephemeral _distrobox-export _distrobox-generate-entry _distrobox-host-exec _distrobox-init \
+            _distrobox-list _distrobox-rm _distrobox-stop _distrobox-upgrade _docpad \
+            _dotnet _drush _ecdsautil _emacs _emacsclient \
+            _email-notmuch _emulator _envdir _exportfs _eza \
+            _fab _fail2ban-client _fd _ffind _firejail \
+            _firewalld _flatpak _fleetctl _flutter _fossil \
+            _fvm _fwupdmgr _gas _gh _ghc \
+            _gist _git-flow _git-pulls _git-revise _git-wtf \
+            _gitleaks _glances _glow _golang _google \
+            _gpgconf _grpcurl _gtk-launch _hello _hg \
+            _hledger _homestead _httpie _hugo _ibus \
+            _img2sixel _include-what-you-use _inxi _jmeter _jmeter-plugins \
+            _john _jonas _jrnl _jupyter _kak \
+            _kitchen _knife _language_codes _lf _libinput \
+            _lilypond _loginctl _luarocks _luarocks-admin _lunchy \
+            _mc _meson _middleman _mina _mix \
+            _mkcert _mkinitcpio _mpv _msfconsole _msfvenom \
+            _mssh _mussh _mutt-wizard.zsh _mvn _nano \
+            _nanoc _neofetch _networkQuality _nftables _nim \
+            _ninja _node _notmuch _nvm _nvme \
+            _openssl _openvpn3 _optirun _paccache _pacdiff \
+            _paclist _paclog-pkglist _pacman _pacscripts _pacsearch \
+            _pacsort _pactree _parallel _pass _pass-import \
+            _patchelf _patool _periscope _pgsql_utils _phing \
             _pimport _pip _pixz _pkcon _pkgfile \
             _play _playerctl _pm2 _podman _podman-remote \
             _poetry _port _progress _protoc _pulseaudio \
