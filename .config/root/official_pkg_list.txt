@@ -2,6 +2,8 @@ acpi
 acpi_call-dkms
 acpilight
 adobe-source-han-sans-jp-fonts
+adwaita-qt5-git
+adwaita-qt6-git
 alsa-firmware
 alsa-utils
 amd-ucode
@@ -435,7 +437,9 @@ python-z3-solver
 qemu-emulators-full
 qemu-full
 qt5-styleplugins
+qt5ct
 qt6-imageformats
+qt6ct
 qt6gtk2
 quickemu-git
 radeontop
