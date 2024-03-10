@@ -131,7 +131,6 @@ qt5-script
 qt5-scxml
 qt5-serialport
 qt5-websockets
-rlwrap
 sane-airscan
 sox
 speech-dispatcher

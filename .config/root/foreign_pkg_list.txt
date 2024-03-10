@@ -3,6 +3,7 @@ ani-cli-git
 bicon-git
 blender-plugin-cad-sketcher-git
 bluetuith-bin
+cht.sh-git
 dwm-lemon-git
 findbrokenpkgs
 firefox-tridactyl-native-bin
