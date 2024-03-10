@@ -48,6 +48,5 @@ wordlists
 wtwitch
 xinput-toggle
 xsct
-youtube-dl
 zaread-git
 zsh-fast-syntax-highlighting-git

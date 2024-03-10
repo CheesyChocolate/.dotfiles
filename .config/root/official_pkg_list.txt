@@ -588,6 +588,7 @@ yamllint
 yarn
 yay-git
 yt-dlp
+yt-dlp-drop-in
 zathura
 zbar
 zip
