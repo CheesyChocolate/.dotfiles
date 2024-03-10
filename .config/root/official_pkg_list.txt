@@ -396,6 +396,7 @@ pipewire-x11-bell
 pipewire-zeroconf
 pkgfile
 plantuml
+plumber
 podman
 podman-docker
 polkit-gnome
@@ -425,10 +426,12 @@ python-pyperclip
 python-pytorch-opt-rocm
 python-pyxdg
 python-qdarkstyle
+python-qiskit
 python-spotdl
 python-tensorflow
 python-torchvision
 python-urwid
+python-z3-solver
 qemu-emulators-full
 qemu-full
 qt5-styleplugins
