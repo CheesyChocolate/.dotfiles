@@ -441,7 +441,6 @@ qt5ct
 qt6-imageformats
 qt6ct
 qt6gtk2
-quickemu-git
 radeontop
 radvd
 rapidjson
@@ -455,6 +454,7 @@ retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
 ripgrep
+ripgrep-all
 rsm
 rsync-runit
 ruby
