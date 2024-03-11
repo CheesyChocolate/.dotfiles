@@ -168,6 +168,7 @@ intltool
 inxi
 iotop
 iptables-nft
+ispell
 iwd
 java-rhino
 java-runtime-common
@@ -179,6 +180,7 @@ jre11-openjdk
 julia
 jupyter-console
 jupyter-notebook
+jupyterlab-widgets
 kernel-headers-musl
 kotlin
 ledger
@@ -272,7 +274,6 @@ librewolf
 libudev0-shim
 libunrar
 libva-mesa-driver
-libva-vdpau-driver
 libvips
 libvirt-runit
 libvirt-storage-gluster
@@ -417,6 +418,7 @@ python-entrypoints
 python-evdev
 python-geoip
 python-gmpy2
+python-ipywidgets
 python-keras
 python-openai
 python-pip

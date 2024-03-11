@@ -36,6 +36,7 @@ libgoom2
 liblas
 libmythes
 libtiger
+libva-vdpau-driver
 libvncserver
 lilypond
 lirc
@@ -72,6 +73,7 @@ pstoedit
 psutils
 python-blosc
 python-boto
+python-bottleneck
 python-cchardet
 python-cvxopt
 python-cvxpy
@@ -89,10 +91,13 @@ python-krb5
 python-libarchive-c
 python-lz4
 python-mpi4py
+python-netcdf4
 python-nose
 python-numba
+python-pandas-datareader
 python-pdftotext
 python-pickleshare
+python-pint
 python-plotly
 python-pprofile
 python-psycopg2
@@ -100,9 +105,11 @@ python-pyarrow
 python-pygit2
 python-pyicu
 python-pyinotify
+python-pymysql
 python-pypubsub
 python-pyqt6-webengine
 python-pyscipopt
+python-pytables
 python-qiskit-aer
 python-regex
 python-rfc3339-validator
@@ -120,6 +127,9 @@ python-ujson
 python-unidecode
 python-uri-template
 python-webcolors
+python-xarray
+python-xlrd
+python-xlwt
 python-xxhash
 qemu-user-static
 qemu-user-static-binfmt
