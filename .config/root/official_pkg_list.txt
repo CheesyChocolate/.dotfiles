@@ -387,7 +387,6 @@ perl-module-build
 perl-parse-yapp
 perl-term-readline-gnu
 php
-pidgin
 pinentry-bemenu
 pipe-viewer-git
 pipewire-alsa
@@ -410,7 +409,6 @@ progress
 proton-ge-custom
 protontricks-git
 pulsemixer
-purple-skypeweb
 pwndbg
 python-cloudpickle
 python-css-parser

@@ -26,8 +26,6 @@ octave-io
 oda-file-converter
 pam-gnupg-git
 pass-import
-purple-discord-git
-purple-gowhatsapp-git
 python-bs4
 python-jupytext
 python-npx
