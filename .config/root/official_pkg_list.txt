@@ -281,6 +281,8 @@ libvirt-storage-iscsi-direct
 libxdg-basedir
 linux
 linux-firmware
+linux-g14
+linux-g14-headers
 linux-headers
 linux-lts
 linux-lts-headers
