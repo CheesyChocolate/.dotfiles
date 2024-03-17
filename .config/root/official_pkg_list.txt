@@ -51,6 +51,7 @@ checkbashisms
 clamav
 clamav-runit
 cli11
+clinfo
 cliphist
 colord-gtk
 colord-gtk-common
@@ -119,6 +120,7 @@ geoip-database-extra
 geoipupdate
 gimagereader-gtk
 gimp
+ginkgo-hpc-hip
 git
 git-delta
 git-filter-repo
@@ -147,11 +149,16 @@ grub-btrfs
 gst-plugin-pipewire
 gst-plugin-va
 gvfs
+hashcat
+hashcat-utils
+hcxkeys
+hcxtools
 hdf5
 helvum
 hexchat
 hq
 htop-vim
+htpdate
 hugo
 hydra
 hyphen-en
@@ -180,7 +187,6 @@ jre11-openjdk
 julia
 jupyter-console
 jupyter-notebook
-jupyterlab-widgets
 kernel-headers-musl
 kotlin
 ledger
@@ -401,6 +407,7 @@ pipewire-zeroconf
 pkgfile
 plantuml
 plumber
+pocl
 podman
 podman-docker
 polkit-gnome
@@ -418,7 +425,7 @@ python-entrypoints
 python-evdev
 python-geoip
 python-gmpy2
-python-ipywidgets
+python-jwcrypto
 python-keras
 python-openai
 python-pip
@@ -443,6 +450,7 @@ qt5ct
 qt6-imageformats
 qt6ct
 qt6gtk2
+r2ghidra
 radeontop
 radvd
 rapidjson
@@ -457,11 +465,13 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 ripgrep
 ripgrep-all
+rocm-opencl-sdk
 rsm
 rsync-runit
 ruby
 runit
 rust-analyzer
+sagemath
 samba
 sbctl
 scala
@@ -479,6 +489,7 @@ socat
 sof-firmware
 solvespace
 sqlite-analyzer
+sqlmap
 sshfs
 sshuttle
 ssllabs-scan
