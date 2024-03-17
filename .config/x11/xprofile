@@ -3,8 +3,6 @@
 # This file runs when a DM logs you into a graphical session.
 # If you use startx/xinit like a Chad, this file will also be sourced.
 
-mpv --no-audio-display --fullscreen "$XDG_DATA_HOME"/Windows_95_Startup.webm
-
 xrandr --dpi 96		# Set DPI. User may want to use a larger number for larger screens.
 setbg $XDG_DATA_HOME/wallpapers &			# set the background with the `setbg` script
 xrdb $XDG_CONFIG_HOME/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
@@ -14,6 +12,9 @@ autostart="mpd xcompmgr dunst unclutter pipewire remapd"
 for program in $autostart; do
 	pidof -sx "$program" || "$program" &
 done >/dev/null 2>&1
+
+# run startup video asynchronously
+nohup mpv --no-audio-display --fullscreen "$XDG_DATA_HOME"/Windows_95_Startup.webm >/dev/null 2>&1 &
 
 # Ensure that xrdb has finished running before moving on to start the WM/DE.
 [ -n "$xrdbpid" ] && wait "$xrdbpid"
