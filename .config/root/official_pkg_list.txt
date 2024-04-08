@@ -335,6 +335,7 @@ mtr
 mumble
 mythes-en
 namcap
+nasm
 ncdu
 ncmpcpp
 ncurses5-compat-libs

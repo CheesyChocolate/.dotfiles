@@ -31,6 +31,7 @@ textype() { \
 case "$ext" in
 	# Try to keep these cases in alphabetical order.
 	[0-9]) preconv "$file" | refer -PS -e | groff -mandoc -T pdf > "$base".pdf ;;
+	asm) nasm -f elf64 "$file" && ld -s -o "$base" "$base".o && "$base" ;;
 	bash) bash "$file" ;;
 	c) cc "$file" -o "$base".out && "$base".out ;;
 	cpp) g++ "$file" -o "$base".out && "$base".out ;;
