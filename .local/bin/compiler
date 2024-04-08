@@ -46,7 +46,7 @@ case "$ext" in
 	java) java "$file" ;;
 	js) node "$file" ;;
 	lua) lua "$file" ;;
-	m) octave "$file" ;;
+	m) octave-cli "$file" ;;
 	md)	if  [ -x "$(command -v lowdown)" ]; then
 			lowdown --parse-no-intraemph "$file" -Tms | groff -mpdfmark -ms -kept -T pdf > "$base".pdf
 		elif [ -x "$(command -v groffdown)" ]; then
