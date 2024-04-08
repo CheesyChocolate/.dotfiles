@@ -17,4 +17,4 @@ fi
 # Launching gnome-keyring-daemon outside desktop environments
 dbus-update-activation-environment --all
 
-ssh-agent dwm
+dbus-launch ssh-agent dwm
