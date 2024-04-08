@@ -64,6 +64,7 @@ case "$ext" in
 				# --variable mainfont="DejaVu Serif" \
 				# --variable sansfont="Noto Sans Mono"
 		fi ; ;;
+	mmd) mmdc -i "$file" -o "$base".png ;;
 	mom) preconv "$file" | refer -PS -e | groff -mom -kept -T pdf > "$base".pdf ;;
 	ms) preconv "$file" | refer -PS -e | groff -me -ms -kept -T pdf > "$base".pdf ;;
 	nim) nim compile --run "$file" ;;

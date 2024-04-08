@@ -19,6 +19,7 @@ litecli
 lobster-git
 mangal-bin
 mars-mips
+mermaid-cli
 mutt-wizard-git
 nodejs-neovim
 obs-pipewire-audio-capture-bin
