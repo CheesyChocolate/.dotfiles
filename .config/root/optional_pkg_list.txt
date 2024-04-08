@@ -26,6 +26,7 @@ erlang-unixodbc
 espeak-ng
 f2fs-tools
 fig2dev
+freerdp
 frei0r-plugins
 fricas
 fuse-overlayfs
@@ -33,6 +34,7 @@ gap-packages
 gavl
 gcc-fortran
 gnuplot
+gst-libav
 gst-plugins-bad
 gst-plugins-ugly
 gtest
@@ -44,6 +46,7 @@ jupyterlab-widgets
 ladspa
 latte-integrale
 lib32-gamemode
+libappindicator-gtk3
 libgoom2
 liblas
 libmythes
@@ -132,7 +135,6 @@ python-pyinotify
 python-pymysql
 python-pynormaliz
 python-pypubsub
-python-pyqt6-webengine
 python-pyscipopt
 python-pytables
 python-qiskit-aer

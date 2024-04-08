@@ -13,7 +13,6 @@ iamb-git
 iranian-fonts
 kjv-apocrypha
 ledger-live-bin
-librepcb-nightly
 linode-cli
 litecli
 lobster-git
@@ -27,7 +26,6 @@ octave-io
 oda-file-converter
 pam-gnupg-git
 pass-import
-python-bs4
 python-jupytext
 python-npx
 python-pygad
@@ -36,7 +34,6 @@ quickgui-bin
 remmina-plugin-rdesktop
 remmina-plugin-ultravnc
 remmina-plugin-url
-ripdrag-git
 ruby-neovim
 samrewritten-git
 sc-im

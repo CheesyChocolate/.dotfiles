@@ -96,7 +96,6 @@ expac
 extra-cmake-modules
 eza
 fakechroot
-faudio
 fd
 festival-english
 ffmpeg
@@ -135,7 +134,6 @@ gnome-epub-thumbnailer
 gnome-keyring
 gnome-maps
 gnu-free-fonts
-gnucobol
 go
 go-yq
 gobuster
@@ -165,6 +163,7 @@ hyphen-en
 hyprland
 hyprpicker-git
 i2c-tools
+iftop
 imagemagick
 img2pdf
 inetutils
@@ -183,7 +182,6 @@ jdk-openjdk
 john
 jpegoptim
 jq
-jre11-openjdk
 julia
 jupyter-console
 jupyter-notebook
@@ -240,6 +238,7 @@ libnotify
 libpillowfight
 libreoffice-extension-languagetool
 libreoffice-fresh
+librepcb
 libretro-beetle-pce
 libretro-beetle-pce-fast
 libretro-beetle-psx
@@ -289,10 +288,16 @@ linux
 linux-firmware
 linux-g14
 linux-g14-headers
+linux-hardened
+linux-hardened-headers
 linux-headers
 linux-lts
 linux-lts-headers
+linux-lts515
+linux-lts515-headers
 linux-steam-integration
+linux-zen
+linux-zen-headers
 logrotate
 lostfiles
 lshw
@@ -387,6 +392,7 @@ pacman-static
 pacutils
 pandoc-bin
 pass-otp
+passt
 patool
 pcsc-tools
 pentbox
@@ -435,11 +441,11 @@ python-pwntools
 python-pydbus
 python-pynvim
 python-pyperclip
+python-pyqt6-webengine
 python-pytorch-opt-rocm
 python-pyxdg
 python-qdarkstyle
 python-qiskit
-python-spotdl
 python-tensorflow
 python-torchvision
 python-urwid
@@ -464,8 +470,10 @@ retroarch
 retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
+ripdrag-git
 ripgrep
 ripgrep-all
+rocm-ml-libraries
 rocm-opencl-sdk
 rsm
 rsync-runit
@@ -489,6 +497,8 @@ snapper
 socat
 sof-firmware
 solvespace
+soundcloud-dl-git
+spotdl
 sqlite-analyzer
 sqlmap
 sshfs
