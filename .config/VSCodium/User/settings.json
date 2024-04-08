@@ -23,5 +23,8 @@
     "codetogether.userName": "LemonPie",
     "codetogether.virtualCursorRemember": true,
     "editor.minimap.size": "fill",
-    "editor.minimap.renderCharacters": false
+    "editor.minimap.renderCharacters": false,
+    "snyk.yesWelcomeNotification": false,
+    "snyk.advanced.cliPath": "/home/suren/.local/share/snyk-ls/snyk-linux",
+    "snyk.trustedFolders": []
 }
