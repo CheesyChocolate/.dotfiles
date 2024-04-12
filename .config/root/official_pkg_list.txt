@@ -585,6 +585,7 @@ umockdev
 unace
 unclutter
 ungoogled-chromium
+universal-android-debloater-bin
 unrar
 unzip
 uriparser

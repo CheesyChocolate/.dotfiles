@@ -181,6 +181,7 @@ topcom
 udftools
 udisks2-btrfs
 unarchiver
+usbmuxd
 valgrind
 wdiff
 webkit2gtk
