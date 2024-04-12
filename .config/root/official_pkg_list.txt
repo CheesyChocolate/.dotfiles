@@ -133,6 +133,7 @@ gmic
 gnome-epub-thumbnailer
 gnome-keyring
 gnome-maps
+gnome-themes-extra
 gnu-free-fonts
 go
 go-yq
@@ -146,6 +147,10 @@ grub
 grub-btrfs
 gst-plugin-pipewire
 gst-plugin-va
+gtk-engine-murrine
+gtk-engines
+gtkmm
+gtkmm-4.0
 gvfs
 hashcat
 hashcat-utils
