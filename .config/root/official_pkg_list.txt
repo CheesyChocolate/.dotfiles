@@ -28,6 +28,7 @@ beanshell
 bemenu
 bemenu-ncurses
 bemenu-wayland
+blanket
 blas-openblas
 blas64-openblas
 blender
@@ -110,6 +111,7 @@ flickcurl
 fossil
 fpc
 freecad-git
+fritzing
 fwupd
 fzf
 gamemode
@@ -147,6 +149,7 @@ grub
 grub-btrfs
 gst-plugin-pipewire
 gst-plugin-va
+gstreamer-vaapi
 gtk-engine-murrine
 gtk-engines
 gtkmm
@@ -431,6 +434,7 @@ proton-ge-custom
 protontricks-git
 pulsemixer
 pwndbg
+pyenv
 python-cloudpickle
 python-css-parser
 python-entrypoints

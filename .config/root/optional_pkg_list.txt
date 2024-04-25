@@ -168,6 +168,7 @@ qt5-script
 qt5-scxml
 qt5-serialport
 qt5-websockets
+qt6-tools
 rubiks
 sage-notebook-exporter
 sane-airscan
