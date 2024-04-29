@@ -61,7 +61,8 @@ alias \
 	z="zathura" \
 	za="zaread" \
 	pacmanfix="sudo rm -R /var/lib/pacman/sync" \
-	download="xargs -n 1 curl -LO < ./downloadList.txt"
+	download="xargs -n 1 curl -LO < ./downloadList.txt" \
+	chatllama="nice -n 19 ollama start >/dev/null 2>&1 & sleep 1 ; ollama run HaghDazhDefoov ; killall ollama"
 
 # function aliases
 gitignore_fix() {

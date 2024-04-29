@@ -384,6 +384,7 @@ obs-studio
 ocaml
 octave
 odt2txt
+ollama
 onboard
 openbsd-netcat
 openconnect
