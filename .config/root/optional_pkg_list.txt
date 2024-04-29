@@ -158,7 +158,6 @@ python-xarray
 python-xlrd
 python-xlwt
 python-xxhash
-qemu-user-static
 qemu-user-static-binfmt
 qt5-3d
 qt5-charts
@@ -168,7 +167,6 @@ qt5-script
 qt5-scxml
 qt5-serialport
 qt5-websockets
-qt6-tools
 rubiks
 sage-notebook-exporter
 sane-airscan

@@ -136,6 +136,7 @@ gnome-epub-thumbnailer
 gnome-keyring
 gnome-maps
 gnome-themes-extra
+gnu-efi
 gnu-free-fonts
 go
 go-yq
@@ -483,6 +484,7 @@ ripdrag-git
 ripgrep
 ripgrep-all
 rocm-ml-libraries
+rocm-ml-sdk
 rocm-opencl-sdk
 rsm
 rsync-runit
