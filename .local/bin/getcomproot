@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # A helper script for LaTeX/groff files used by `compiler` and `opout`.
 # The user can add the root file of a larger project as a comment as below:
