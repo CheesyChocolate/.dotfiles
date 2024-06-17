@@ -194,6 +194,9 @@ cmd diff ${{
 	# lf -remote "send $id nvim -d $fx"
 	nvim -d $fx
 }}
+cmd gdiff ${{
+	meld $fx
+}}
 
 cmd setbg "$1"
 
