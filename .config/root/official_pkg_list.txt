@@ -14,6 +14,7 @@ archstrike-keyring
 archstrike-mirrorlist
 arduino-cli
 artix-archlinux-support
+artix-dark-theme
 artools-pkg
 asciidoc
 aspell-en
