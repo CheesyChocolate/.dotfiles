@@ -26,9 +26,15 @@ octave-io
 oda-file-converter
 pam-gnupg-git
 pass-import
+python-chembl-webresource-client
+python-gymnasium
 python-jupytext
 python-npx
 python-pygad
+python-stable-baselines3
+python-stable-baselines3-contrib
+python-streamlit
+python-ydata-profiling
 quickemu-git
 quickgui-bin
 remmina-plugin-rdesktop

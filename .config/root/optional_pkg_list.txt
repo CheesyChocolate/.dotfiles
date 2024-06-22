@@ -118,6 +118,7 @@ python-mpi4py
 python-netcdf4
 python-nose
 python-numba
+python-openpyxl
 python-pandas-datareader
 python-pdftotext
 python-phitigra
