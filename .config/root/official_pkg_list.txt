@@ -5,6 +5,8 @@ acpilight
 adobe-source-han-sans-jp-fonts
 adwaita-qt5-git
 adwaita-qt6-git
+alhp-keyring
+alhp-mirrorlist
 alsa-firmware
 alsa-utils
 amd-ucode
@@ -46,6 +48,10 @@ bmon
 btrfs-progs
 buildah
 burpsuite
+cachyos-keyring
+cachyos-mirrorlist
+cachyos-v3-mirrorlist
+cachyos-v4-mirrorlist
 calcurse
 calf
 ccid
