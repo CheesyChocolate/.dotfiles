@@ -1,4 +1,4 @@
-@hourly /home/suren/.local/bin/cron/newsup
-@daily /home/suren/.local/bin/cron/checkup
-*/10 * * * * /usr/bin/mailsync
+@hourly env DISPLAY=:0 /home/suren/.local/bin/cron/newsup
+@daily env DISPLAY=:0 /home/suren/.local/bin/cron/checkup
+*/10 * * * * env DISPLAY=:0 /usr/bin/mailsync
 @weekly /bin/mbsync-get-cert mail.artixlinux.org > /home/suren/.local/share/certs/mail.artixlinux.org.pem
