@@ -84,6 +84,7 @@ dash
 ddcutil
 debuginfod
 dialog
+diffpdf
 digital
 direnv
 distrobox
