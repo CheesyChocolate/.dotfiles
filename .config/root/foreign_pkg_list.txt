@@ -7,6 +7,7 @@ cht.sh-git
 dwm-lemon-git
 findbrokenpkgs
 firefox-tridactyl-native-bin
+geforcenow-electron
 gtk-theme-arc-gruvbox-git
 hyx
 iamb-git
@@ -24,6 +25,7 @@ nodejs-neovim
 obs-pipewire-audio-capture-bin
 octave-io
 oda-file-converter
+pacman-static
 pam-gnupg-git
 pass-import
 python-chembl-webresource-client
@@ -36,15 +38,14 @@ python-stable-baselines3-contrib
 python-streamlit
 python-ydata-profiling
 quickemu-git
-quickgui-bin
 remmina-plugin-rdesktop
 remmina-plugin-ultravnc
 remmina-plugin-url
 ruby-neovim
 samrewritten-git
 sc-im
+sent-git
 shazam-cli-git
-sherlock-git
 showmethekey-git
 snyk
 stig-git
