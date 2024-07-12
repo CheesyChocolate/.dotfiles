@@ -67,6 +67,9 @@ clamav-runit
 cli11
 clinfo
 cliphist
+code
+code-features
+code-marketplace
 colord-gtk
 colord-gtk-common
 composer
@@ -663,8 +666,6 @@ vlc
 vnstat
 vnstat-runit
 volatility3
-vscodium
-vscodium-marketplace
 vsftpd-runit
 vulkan-mesa-layers
 vulkan-radeon
