@@ -83,6 +83,7 @@ export OMNISHARPHOME="$XDG_CONFIG_HOME/omnisharp"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export KERAS_HOME="${XDG_STATE_HOME}/keras"
 export OLLAMA_MODELS="$XDG_DATA_HOME/ollama/models"
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
 
 # private variables
