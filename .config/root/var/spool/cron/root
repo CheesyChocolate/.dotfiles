@@ -1,3 +1,4 @@
 @reboot sleep 5m; echo 1 > /proc/brcm_monitor0
 @reboot /usr/bin/grub-btrfsd -t -s
+@daily /usr/bin/rsync -a --delete /boot /.bootbackup
 @daily /usr/bin/freshclam
