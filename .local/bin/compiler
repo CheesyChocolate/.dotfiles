@@ -71,6 +71,7 @@ case "$ext" in
 	nim) nim compile --run "$file" ;;
 	org) emacs "$file" --batch -u "$USER" -f org-latex-export-to-pdf ;;
 	p) fpc "$file" && "$base" ;;
+	pl) perl "$file" ;;
 	php) php "$file" ;;
 	py) python "$file" ;;
 	[rR]md) Rscript -e "rmarkdown::render('$file', quiet=TRUE)" ;;
