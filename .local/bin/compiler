@@ -85,5 +85,6 @@ case "$ext" in
 	tex) textype "$file" ;;
 	ts) tsc "$file" && node "$base".js ;;
 	uml) plantuml "$file" ;;
+	zig) zig run "$file" ;;
 	*) sed -n '/^#!/s/^#!//p; q' "$file" | xargs -r -I % "$file" ;;
 esac
