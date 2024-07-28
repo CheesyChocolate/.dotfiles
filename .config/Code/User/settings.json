@@ -1,0 +1,30 @@
+{
+    "workbench.startupEditor": "none",
+    "telemetry.telemetryLevel": "off",
+    "workbench.colorTheme": "Rosé Pine",
+    "glassit.alpha": 160,
+    "glassit-linux.opacity": 50,
+    "animations.Install-Method": "Apc Customize UI++",
+    "apc.imports": [
+        "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
+    ],
+    "git.openRepositoryInParentFolders": "never",
+    "editor.wordWrap": "on",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingComments": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.copyWithSyntaxHighlighting": false,
+    "github.copilot.enable": {
+        "plaintext": "true",
+        "markdown": "true"
+    },
+    "vim.neovimUseConfigFile": true,
+    "vim.neovimConfigPath": "~/.config/nvim/init.lua",
+    "vim.neovimPath": "/usr/bin/nvim",
+    "update.mode": "none",
+    "update.showReleaseNotes": false,
+    "chat.editor.wordWrap": "on",
+    "notebook.consolidatedRunButton": true
+}
