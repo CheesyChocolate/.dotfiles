@@ -36,6 +36,7 @@ fuse-overlayfs
 gap-packages
 gavl
 gcc-fortran
+glib2-devel
 gnuplot
 gst-libav
 gst-plugins-bad
@@ -158,6 +159,7 @@ python-socksio
 python-sqlalchemy
 python-tenacity
 python-tensorflow-serving-api
+python-tzdata
 python-unidecode
 python-uri-template
 python-webcolors

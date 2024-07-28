@@ -9,6 +9,7 @@ findbrokenpkgs
 firefox-tridactyl-native-bin
 geforcenow-electron
 gtk-theme-arc-gruvbox-git
+hyprpicker
 hyx
 iamb-git
 iranian-fonts
@@ -42,6 +43,7 @@ remmina-plugin-rdesktop
 remmina-plugin-ultravnc
 remmina-plugin-url
 ruby-neovim
+ruff-lsp
 samrewritten-git
 sc-im
 sent-git

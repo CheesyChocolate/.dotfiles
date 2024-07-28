@@ -83,6 +83,7 @@ cython
 dash
 ddcutil
 debuginfod
+delve
 dialog
 diffpdf
 digital
@@ -194,7 +195,6 @@ hugo
 hydra
 hyphen-en
 hyprland
-hyprpicker-git
 i2c-tools
 icu69
 iftop
@@ -348,6 +348,7 @@ logrotate
 lostfiles
 lshw
 lua-sec
+lua51
 luarocks
 lutris-git
 lv2-example-plugins
@@ -466,6 +467,7 @@ plantuml
 plumber
 pocl
 podman
+polkit
 polkit-gnome
 poppler
 powertop
@@ -547,7 +549,6 @@ rubberband-ladspa
 rubberband-lv2
 rubberband-vamp
 ruby
-ruff-lsp
 runit
 rust-analyzer
 sagemath
