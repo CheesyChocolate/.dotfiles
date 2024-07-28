@@ -628,6 +628,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-xetex
+thunderbird
 timidity++
 tinycompress
 tk
