@@ -78,6 +78,9 @@
 !.config/x11/
 !.config/yay/
 !.config/zathura/
+!.config/zed/
+.config/zed/*
+!.config/zed/settings.json
 !.config/zsh/
 !.config/linux-steam-integration.conf
 !.config/mimeapps.list

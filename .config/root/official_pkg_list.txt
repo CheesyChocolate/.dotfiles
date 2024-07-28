@@ -719,6 +719,7 @@ yt-dlp
 yt-dlp-drop-in
 zathura
 zbar
+zed
 zip
 zmap
 zsh
