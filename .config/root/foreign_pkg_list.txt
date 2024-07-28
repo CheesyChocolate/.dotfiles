@@ -29,6 +29,7 @@ oda-file-converter
 pacman-static
 pam-gnupg-git
 pass-import
+pinentry-dmenu
 python-chembl-webresource-client
 python-gymnasium
 python-jupytext
