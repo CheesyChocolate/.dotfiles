@@ -60,10 +60,7 @@ alias \
 	v="$EDITOR" \
 	p="pacman" \
 	z="zathura" \
-	za="zaread" \
-	pacmanfix="sudo rm -R /var/lib/pacman/sync" \
-	download="xargs -n 1 curl -LO < ./downloadList.txt" \
-	chatllama="nice -n 19 ollama start >/dev/null 2>&1 & sleep 1 ; ollama run HaghDazhDefoov ; killall ollama"
+	za="zaread"
 
 # function aliases
 gitignore_fix() {
@@ -92,3 +89,6 @@ alias \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 	weath="less -S ${XDG_CACHE_HOME:-$HOME/.cache}/weatherreport" \
+	pacmanfix="sudo rm -R /var/lib/pacman/sync" \
+	download="xargs -n 1 curl -LO < ./downloadList.txt" \
+	chatllama="nice -n 19 ollama start >/dev/null 2>&1 & sleep 1 ; ollama run HaghDazhDefoov ; killall ollama" \
