@@ -720,6 +720,8 @@ yt-dlp-drop-in
 zathura
 zbar
 zed
+zellij
+zig
 zip
 zmap
 zsh
