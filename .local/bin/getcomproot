@@ -5,8 +5,5 @@
 # % root = mainfile.tex
 # And the compiler script will run on that instead of the opened file.
 
-texroot="$(grep -i "^.\+\s*root\s*=\s*\S\+" "$1")"
-texroot="${texroot##*=}"
-texroot="${texroot//[\"\' ]}"
-
-[ -f "$texroot" ] && readlink -f "$texroot" || exit 1
+texroot="$(sed -n 's/^\s*%.*root\s*=\s*\(\S\+\).*/\1/p' "${1}")"
+[ -f "${texroot}" ] && readlink -f "${texroot}" || exit "1"
