@@ -26,5 +26,6 @@
     "update.mode": "none",
     "update.showReleaseNotes": false,
     "chat.editor.wordWrap": "on",
-    "notebook.consolidatedRunButton": true
+    "notebook.consolidatedRunButton": true,
+    "python.languageServer": "Pylance"
 }
