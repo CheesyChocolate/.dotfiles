@@ -112,7 +112,7 @@ elixir
 eslint
 ethtool
 evil-winrm
-exfat-utils
+exfatprogs
 expac
 extra-cmake-modules
 eza
