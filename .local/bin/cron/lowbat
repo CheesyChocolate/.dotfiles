@@ -5,7 +5,7 @@ acpi -b | awk -F'[,:%]' '{print $2, $3}' | {
 
 	if [ "$status" == Discharging ] && [ "$capacity" -lt 5 ]; then
 		logger "Critical battery threshold"
-		notify-send "Critical battery threshold" "Hibernating in 30 seconds"
+		dunstify "Critical battery threshold" "Hibernating in 30 seconds"
 		sleep 30
 		# slock loginctl hibernate -i # TODO: slock doesn't work
 		loginctl hibernate -i
