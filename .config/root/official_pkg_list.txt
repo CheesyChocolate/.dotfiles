@@ -62,6 +62,7 @@ chaotic-keyring
 chaotic-mirrorlist
 check
 checkbashisms
+chkrootkit
 clamav
 clamav-runit
 cli11
@@ -353,6 +354,7 @@ luarocks
 lutris-git
 lv2-example-plugins
 lxd
+lynis
 lynx
 lzo
 lzop
