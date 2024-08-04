@@ -146,6 +146,7 @@ geoip-database-extra
 geoipupdate
 gimagereader-gtk
 gimp
+gimp-extras
 ginkgo-hpc-hip
 git
 git-delta
