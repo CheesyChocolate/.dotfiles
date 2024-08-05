@@ -167,6 +167,8 @@ go
 go-yq
 gobuster
 goverlay
+gpart
+gparted
 gptfdisk
 gradle
 grim
@@ -220,6 +222,7 @@ java-runtime-common
 jdk-openjdk
 jdk8-openjdk
 jedi-language-server
+jfsutils
 john
 jpegoptim
 jq
@@ -531,6 +534,7 @@ r2ghidra
 radeontop
 radvd
 rapidjson
+reiserfsprogs
 remmina
 remmina-plugin-anydesk-git
 remmina-plugin-folder
