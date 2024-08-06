@@ -557,6 +557,7 @@ rubberband-ladspa
 rubberband-lv2
 rubberband-vamp
 ruby
+ruby-docs
 runit
 rust-analyzer
 sagemath

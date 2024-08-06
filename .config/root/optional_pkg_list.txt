@@ -170,6 +170,7 @@ python-xlwt
 python-xxhash
 qemu-user-static-binfmt
 rubiks
+ruby-stdlib
 sage-notebook-exporter
 sane-airscan
 shared_meataxe
