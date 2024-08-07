@@ -10,6 +10,7 @@ bash-language-server
 benzene
 biber
 botan
+box2d
 buckygen
 c-xsc
 cgns
@@ -77,6 +78,7 @@ nss-mdns
 opencl-clhpp
 openresolv
 openscad
+openvr
 ospray
 ostra-cg
 otf-font-awesome
@@ -93,6 +95,7 @@ perl-parallel-forkmanager
 perl-tk
 perl-yaml-tiny
 pigz
+pipewire-libcamera
 plantri
 plantuml-ascii-math
 podman-compose
@@ -104,6 +107,7 @@ python-blosc
 python-boto
 python-bottleneck
 python-cchardet
+python-colorcet
 python-cvxpy
 python-cylp
 python-database-cubic-hecke
@@ -115,6 +119,7 @@ python-fqdn
 python-gssapi
 python-html5-parser
 python-igraph
+python-inflect
 python-isoduration
 python-itsdangerous
 python-jsonpointer
@@ -123,6 +128,7 @@ python-jupyter-server-terminals
 python-krb5
 python-libarchive-c
 python-lsp-server
+python-lxml-html-clean
 python-lz4
 python-mpi4py
 python-netcdf4
@@ -157,7 +163,6 @@ python-setproctitle
 python-smbprotocol
 python-socksio
 python-sqlalchemy
-python-tenacity
 python-tensorflow-serving-api
 python-tzdata
 python-unidecode
@@ -194,6 +199,7 @@ vscode-json-languageserver
 wdiff
 xfsprogs
 xjadeo
+xorg-xhost
 yaml-language-server
 yapf
 zathura-cb

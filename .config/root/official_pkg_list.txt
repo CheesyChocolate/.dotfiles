@@ -329,6 +329,7 @@ libretro-snes9x
 libretro-yabause
 librewolf
 libudev0-shim
+libultrahdr
 libunrar
 libva-mesa-driver
 libvips
@@ -384,6 +385,7 @@ microsoft-gsl
 mkinitcpio-firmware
 monero
 monero-gui
+mono
 moodle-dl-git
 moreutils
 movit
@@ -558,6 +560,7 @@ rubberband-lv2
 rubberband-vamp
 ruby
 ruby-docs
+ruff-lsp
 runit
 rust-analyzer
 sagemath
@@ -586,6 +589,7 @@ sshfs
 sshuttle
 ssllabs-scan
 steam
+steamcmd
 streamlink
 subversion
 swaybg
@@ -594,6 +598,7 @@ swtpm
 sysfsutils
 tenacity
 tensorflow-opt
+termdown
 terminus-font
 termshark
 tesseract-data-ara

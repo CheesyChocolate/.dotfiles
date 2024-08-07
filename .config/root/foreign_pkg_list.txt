@@ -29,12 +29,12 @@ oda-file-converter
 pacman-static
 pam-gnupg-git
 pass-import
-pinentry-dmenu
 python-chembl-webresource-client
 python-gymnasium
 python-jupytext
 python-npx
 python-pygad
+python-pyrr
 python-stable-baselines3
 python-stable-baselines3-contrib
 python-streamlit
@@ -44,7 +44,6 @@ remmina-plugin-rdesktop
 remmina-plugin-ultravnc
 remmina-plugin-url
 ruby-neovim
-ruff-lsp
 samrewritten-git
 sc-im
 sent-git
