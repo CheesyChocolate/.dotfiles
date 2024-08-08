@@ -351,6 +351,7 @@ linux-lts515-headers
 linux-steam-integration
 linux-zen
 linux-zen-headers
+lldb
 logrotate
 lostfiles
 lshw
