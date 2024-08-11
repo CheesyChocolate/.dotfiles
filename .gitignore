@@ -37,6 +37,7 @@
 .config/maven/*
 !.config/maven/settings.xml
 !.config/mpd/
+!.config/mov-cli/
 !.config/mpv/
 !.config/ncmpcpp/
 !.config/newsboat/
