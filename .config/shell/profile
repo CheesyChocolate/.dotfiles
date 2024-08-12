@@ -120,6 +120,7 @@ export SUDO_PROMPT="$(tput setab 1 setaf 7 bold)[sudo]$(tput sgr0) $(tput setaf 
 
 # Start graphical server on user's current tty if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
+# TODO: https://forum.artixlinux.org/index.php/topic,5600.msg40424.html#msg40424
 [ "$(tty)" = "/dev/tty2" ] && ! pidof -s Hyprland >/dev/null 2>&1 && exec Hyprland
 [ "$(tty)" = "/dev/tty3" ] && ! pidof -s bsod >/dev/null 2>&1 && exec bsod
 
