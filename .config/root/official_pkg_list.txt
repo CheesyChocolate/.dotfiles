@@ -743,3 +743,4 @@ zmap
 zsh
 zsh-autosuggestions
 zsh-completions
+zsh-lovers
