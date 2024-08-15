@@ -92,3 +92,5 @@ alias \
 	pacmanfix="sudo rm -R /var/lib/pacman/sync" \
 	download="xargs -n 1 curl -LO < ./downloadList.txt" \
 	chatllama="nice -n 19 ollama start >/dev/null 2>&1 & sleep 1 ; ollama run HaghDazhDefoov ; killall ollama" \
+	tv="tmux new-session -d -s nvim_session 'nvim'; tmux attach -t nvim_session"
+	# TODO:  tv: tmux <C-b> is destroying the vim copilot key bindings
