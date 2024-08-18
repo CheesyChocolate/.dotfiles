@@ -36,6 +36,7 @@ bemenu
 bemenu-ncurses
 bemenu-wayland
 bigsh0t
+binwalk
 blanket
 blas-openblas
 blas64-openblas
@@ -54,6 +55,7 @@ cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
 calcurse
 calf
+cargo-tauri
 ccid
 cewl
 cfitsio
@@ -191,6 +193,7 @@ hcxkeys
 hcxtools
 hdf5
 helvum
+heroic-games-launcher
 hexchat
 hq
 htop-vim
@@ -201,6 +204,7 @@ hydra
 hyphen-en
 hyprland
 i2c-tools
+i2pd-runit
 icu69
 iftop
 imagemagick
@@ -217,6 +221,7 @@ iptables-nft
 ispell
 iwd
 iwd-runit
+java-commons-io
 java-rhino
 java-runtime-common
 jdk-openjdk
@@ -276,7 +281,6 @@ libcgif
 libcgroup
 libconfig
 libdecor
-libertinus-font
 libgphoto2
 libgsf
 libgtop
@@ -288,6 +292,8 @@ libmodule
 libnfc
 libnotify
 libpillowfight
+libportal-gtk4
+libportal-qt6
 libreoffice-extension-languagetool
 libreoffice-fresh
 librepcb
@@ -430,12 +436,14 @@ ntfs-3g
 ntp
 ntp-runit
 nvme-cli
+nvtop
 nyxt
 obs-studio
 ocaml
 octave
 odt2txt
 ollama
+ollama-tinyllama-1b
 onboard
 openbsd-netcat
 opencl-rusticl-mesa
@@ -447,6 +455,7 @@ openssl-1.1
 optipng
 osm-gps-map
 otf-firamono-nerd
+otf-libertinus
 otf-sora
 p7zip
 pacman-contrib
@@ -706,6 +715,7 @@ wireguard-tools
 wireless-regdb
 wireplumber
 wireshark-cli
+wireshark-qt
 wl-clipboard
 wmctrl
 wmname

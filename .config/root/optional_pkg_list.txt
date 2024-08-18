@@ -37,7 +37,6 @@ fuse-overlayfs
 gap-packages
 gavl
 gcc-fortran
-glib2-devel
 gnuplot
 gst-libav
 gst-plugins-bad
