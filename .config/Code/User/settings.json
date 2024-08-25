@@ -27,5 +27,12 @@
     "update.showReleaseNotes": false,
     "chat.editor.wordWrap": "on",
     "notebook.consolidatedRunButton": true,
-    "python.languageServer": "Pylance"
+    "python.languageServer": "Pylance",
+    "security.workspace.trust.untrustedFiles": "open",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeEvaluation.deprecateTypingAliases": true,
+    "notebook.lineNumbers": "on"
 }
