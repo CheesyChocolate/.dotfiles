@@ -385,8 +385,6 @@ mercurial
 mesa
 mesa-utils
 mesa-vdpau
-metalog
-metalog-runit
 metasploit
 microsoft-gsl
 mkinitcpio-firmware
@@ -589,6 +587,7 @@ slock
 smartmontools
 snapper
 socat
+socklog
 sof-firmware
 solvespace
 soundcloud-dl-git
