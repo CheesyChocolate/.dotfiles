@@ -15,12 +15,14 @@ esac
 updates="$(artix-checkupdates -fu | awk 'NR>2 {print $1}' | wc -l 2>/dev/null)"
 moves=$(artix-checkupdates -fmn | awk 'NR>2 {print $1}' | wc -l 2>/dev/null)
 
-if [ "$updates" = "0" ] && [ "$moves" = "0" ]; then
-	echo "🎨0"
-elif [ "$updates" = "0" ] && [ "$moves" != "0" ]; then
-	echo "🚨$moves"
-elif [ "$updates" != "0" ] && [ "$moves" = "0" ]; then
-	echo "🎨$updates"
-else
-	echo "🎨$updates 🚨$moves"
+output=""
+
+if [ "$updates" != "0" ]; then
+	output="🎨$updates"
 fi
+
+if [ "$moves" != "0" ]; then
+	output="$output 🚨$moves"
+fi
+
+echo "$output"
