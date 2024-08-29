@@ -158,6 +158,7 @@ git-runit
 github-cli
 gitleaks
 glib2-docs
+glow
 gmic
 gnome-epub-thumbnailer
 gnome-keyring
@@ -203,6 +204,7 @@ hugo
 hydra
 hyphen-en
 hyprland
+hyprpicker
 i2c-tools
 i2pd-runit
 icu69
@@ -358,6 +360,7 @@ linux-steam-integration
 linux-zen
 linux-zen-headers
 lldb
+llm-manager
 logrotate
 lostfiles
 lshw
@@ -440,7 +443,7 @@ obs-studio
 ocaml
 octave
 odt2txt
-ollama
+ollama-rocm
 ollama-tinyllama-1b
 onboard
 openbsd-netcat
@@ -527,6 +530,7 @@ python-pyvirtualdisplay
 python-pyxdg
 python-qdarkstyle
 python-qiskit
+python-scikit-image
 python-tensorflow-opt
 python-torchvision
 python-urwid
@@ -560,6 +564,7 @@ ripgrep-all
 rocm-ml-libraries
 rocm-ml-sdk
 rocm-opencl-sdk
+rpi-imager
 rsm
 rsync-runit
 rtaudio
@@ -651,7 +656,6 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-xetex
-thunderbird
 timidity++
 tinycompress
 tk
@@ -661,8 +665,10 @@ tlp-runit
 tmux
 tor
 tor-browser
+torsocks
 transmission-cli
 tree-sitter-cli
+ts-node
 ttf-dejavu
 ttf-fantasque-nerd
 ttf-font-awesome
@@ -699,6 +705,7 @@ vulkan-swrast
 vulkan-tools
 vulscan
 waybar
+webkitgtk-6.0
 webrtc-audio-processing
 weechat
 wf-recorder
@@ -723,6 +730,7 @@ wtype
 x11-ssh-askpass
 xcape
 xclip
+xcolor
 xcompmgr
 xdg-user-dirs
 xdg-utils

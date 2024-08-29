@@ -7,9 +7,7 @@ cht.sh-git
 dwm-lemon-git
 findbrokenpkgs
 firefox-tridactyl-native-bin
-geforcenow-electron
 gtk-theme-arc-gruvbox-git
-hyprpicker
 hyx
 iamb-git
 iranian-fonts
@@ -38,6 +36,7 @@ python-pyrr
 python-stable-baselines3
 python-stable-baselines3-contrib
 python-streamlit
+python-tifffile
 python-ydata-profiling
 quickemu-git
 remmina-plugin-rdesktop

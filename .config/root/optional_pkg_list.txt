@@ -32,6 +32,7 @@ espeak-ng
 f2fs-tools
 fig2dev
 flake8
+freeimage
 fricas
 fuse-overlayfs
 gap-packages
@@ -118,6 +119,7 @@ python-fqdn
 python-gssapi
 python-html5-parser
 python-igraph
+python-imagecodecs
 python-inflect
 python-isoduration
 python-itsdangerous
