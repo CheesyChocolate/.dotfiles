@@ -1,5 +1,6 @@
 abook
 ani-cli-git
+anylogic-ple
 bicon-git
 blender-plugin-cad-sketcher-git
 bluetuith-bin
