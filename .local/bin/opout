@@ -13,4 +13,5 @@ case "${*}" in
 	*.uml) setsid -f nsxiv "$basename".png >/dev/null 2>&1 ;;
 	*.sql) setsid -f "$TERMINAL" -e litecli "$basename".db >/dev/null 2>&1 ;;
 	*.mmd) setsid -f nsxiv "$basename".png >/dev/null 2>&1 ;;
+	*.ipynb) setsid -f code "$1" >/dev/null 2>&1 ;;
 esac
