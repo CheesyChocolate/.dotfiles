@@ -81,7 +81,7 @@ case "$ext" in
 	scala) scala "$file" ;;
 	sent) setsid -f sent "$file" 2>/dev/null ;;
 	sh) sh "$file" ;;
-	sql) rm -f "$base".db && sqlite3 "$base".db < "$file" ;;
+	sql) rm -f "$base".tmp.db && sqlite3 "$base".tmp.db < "$file" ;;
 	tex) textype "$file" ;;
 	ts) tsc "$file" && node "$base".js ;;
 	uml) plantuml "$file" ;;
