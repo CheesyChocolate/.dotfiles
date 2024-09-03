@@ -131,6 +131,7 @@ firewalld-runit
 flatpak
 flickcurl
 flite
+foremost
 fossil
 fpc
 freecad-git
