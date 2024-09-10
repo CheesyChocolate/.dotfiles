@@ -38,6 +38,7 @@ fuse-overlayfs
 gap-packages
 gavl
 gcc-fortran
+glib2-devel
 gnuplot
 gst-libav
 gst-plugins-bad
@@ -115,12 +116,14 @@ python-database-knotinfo
 python-debugpy
 python-distributed
 python-fastnumbers
+python-flax
 python-fqdn
 python-gssapi
 python-html5-parser
 python-igraph
 python-imagecodecs
 python-inflect
+python-inquirerpy
 python-isoduration
 python-itsdangerous
 python-jsonpointer
@@ -155,7 +158,6 @@ python-pypubsub
 python-pyscipopt
 python-pytables
 python-qiskit-aer
-python-regex
 python-rfc3339-validator
 python-rfc3987
 python-rope

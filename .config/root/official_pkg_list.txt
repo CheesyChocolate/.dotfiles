@@ -242,6 +242,7 @@ kernel-headers-musl
 kimageformats
 kotlin
 ledger
+ledger-live
 lemon
 lf
 lftp
@@ -277,6 +278,7 @@ lib32-v4l-utils
 lib32-vkd3d
 lib32-vulkan-mesa-layers
 lib32-vulkan-swrast
+libblockdev-smart
 libc++
 libc++abi
 libcgif
@@ -443,8 +445,8 @@ obs-studio
 ocaml
 octave
 odt2txt
+ollama-gemma2-2b
 ollama-rocm
-ollama-tinyllama-1b
 onboard
 openbsd-netcat
 opencl-rusticl-mesa
@@ -532,7 +534,9 @@ python-qdarkstyle
 python-qiskit
 python-scikit-image
 python-tensorflow-opt
+python-tifffile
 python-torchvision
+python-transformers
 python-urwid
 python-z3-solver
 qastools

@@ -1,4 +1,5 @@
 abook
+activate-linux-git
 ani-cli-git
 anylogic-ple
 bicon-git
@@ -13,7 +14,6 @@ hyx
 iamb-git
 iranian-fonts
 kjv-apocrypha
-ledger-live-bin
 linode-cli
 litecli
 lobster-git
@@ -37,7 +37,6 @@ python-pyrr
 python-stable-baselines3
 python-stable-baselines3-contrib
 python-streamlit
-python-tifffile
 python-ydata-profiling
 quickemu-git
 remmina-plugin-rdesktop
