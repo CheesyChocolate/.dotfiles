@@ -507,6 +507,7 @@ python-cloudpickle
 python-css-parser
 python-entrypoints
 python-evdev
+python-freezegun
 python-geoip
 python-gmpy2
 python-graphviz
@@ -757,10 +758,10 @@ yt-dlp-drop-in
 zathura
 zbar
 zed
-zellij
 zig
 zip
 zmap
+zotero-bin
 zsh
 zsh-autosuggestions
 zsh-completions

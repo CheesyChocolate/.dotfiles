@@ -21,6 +21,7 @@ colord
 coxeter
 cryptominisat
 cups-browsed
+db
 dblatex
 ditaa
 docker-buildx
