@@ -28,7 +28,7 @@ _comp_options+=(globdots)		# Include hidden files.
 
 # fish like autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^b' autosuggest-accept
+bindkey '^_' autosuggest-accept
 
 # vi mode
 bindkey -v
