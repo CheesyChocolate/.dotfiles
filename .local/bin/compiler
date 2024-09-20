@@ -2,89 +2,85 @@
 
 # This script will compile or run another finishing operation on a document. I
 # have this script run via vim.
-#
+
 # Compiles .tex. groff (.mom, .ms), .rmd, .md, .org.  Opens .sent files as sent
 # presentations. Runs scripts based on extension or shebang.
-#
+
 # Note that .tex files which you wish to compile with XeLaTeX should have the
 # string "xelatex" somewhere in a comment/command in the first 5 lines.
 
-file=$(readlink -f "$1")
+file="${1}"
+ext="${file##*.}"
 dir=${file%/*}
 base="${file%.*}"
-ext="${file##*.}"
 
-cd "$dir" || exit 1
+cd "${dir}" || exit "1"
 
-textype() { \
-	textarget="$(getcomproot "$file" || echo "$file")"
-	echo "$textarget"
-	command="pdflatex"
-	( head -n5 "$textarget" | grep -qi 'xelatex' ) && command="xelatex"
-	$command --output-directory="${textarget%/*}" "${textarget%.*}"
-		grep -qi addbibresource "$textarget" &&
-		biber --input-directory "${textarget%/*}" "${textarget%.*}" &&
-		$command --output-directory="${textarget%/*}" "${textarget%.*}" &&
-		$command --output-directory="${textarget%/*}" "${textarget%.*}"
-}
-
-case "$ext" in
+case "${ext}" in
 	# Try to keep these cases in alphabetical order.
-	[0-9]) preconv "$file" | refer -PS -e | groff -mandoc -T pdf > "$base".pdf ;;
-	asm) nasm -f elf64 "$file" && ld -s -o "$base" "$base".o && "$base" ;;
-	bash) bash "$file" ;;
-	c) cc "$file" -o "$base".out && "$base".out ;;
-	cpp) g++ "$file" -o "$base".out && "$base".out ;;
-	cs) mcs "$file" && mono "$base".exe ;;
-	csproj) dotnet watch run --project "$file" ;;
-	exs) elixir "$file" ;;
-	f90) gfortran "$file" -o "$base" && "$base" ;;
-	go) go run "$file" ;;
+	[0-9]) preconv "${file}" | refer -PS -e | groff -mandoc -T pdf >"${base}.pdf" ;;
+	asm) nasm -f elf64 "${file}" && ld -s -o "${base}" "${base}.o" && "./${base}" ;;
+	bash) bash "${file}" ;;
+	c) cc "${file}" -o "${base}.out" && "./${base}.out" ;;
+	cpp) g++ "${file}" -o "${base}.out" && "./${base}.out" ;;
+	cs) mcs "${file}" && mono "${base}.exe" ;;
+	csproj) dotnet watch run --project "${file}" ;;
+	exs) elixir "${file}" ;;
+	f90) gfortran "${file}" -o "${base}" && "./${base}" ;;
+	go) go run "${file}" ;;
 	h) sudo make install ;;
-	html) lynx -width="$4" -display_charset=utf-8 -dump "$1" ;;
+	html) lynx -width="${4}" -display_charset=utf-8 -dump "${1}" ;;
 	ipynb) python "${file%.*}.py" ;; # 'GCBallesteros/jupytext.nvim' will convert to .py
-	# java) javac -d classes "$file" && java -cp classes "${1%.*}" ;; # i prefer to compile manually
-	java) java "$file" ;;
-	js) node "$file" ;;
-	lua) lua "$file" ;;
-	m) octave-cli "$file" ;;
-	md)	if  [ -x "$(command -v lowdown)" ]; then
-			lowdown --parse-no-intraemph "$file" -Tms | groff -mpdfmark -ms -kept -T pdf > "$base".pdf
-		elif [ -x "$(command -v groffdown)" ]; then
-			groffdown -i "$file" | groff -T pdf > "$base".pdf
-		else
-			pandoc \
-				"$file" \
-				--highlight-style=tango \
-				-V geometry:"left=1cm, top=1cm, right=1cm, bottom=2cm" \
-				-s \
-				-o "$base".pdf \
-				# -V geometry:"landscape" \
-				# -f markdown-implicit_figures \
-				# --pdf-engine=xelatex \
-				# --variable mainfont="DejaVu Serif" \
-				# --variable sansfont="Noto Sans Mono"
-		fi ; ;;
-	mmd) mmdc -i "$file" -o "$base".png ;;
-	mom) preconv "$file" | refer -PS -e | groff -mom -kept -T pdf > "$base".pdf ;;
-	ms) preconv "$file" | refer -PS -e | groff -me -ms -kept -T pdf > "$base".pdf ;;
-	nim) nim compile --run "$file" ;;
-	org) emacs "$file" --batch -u "$USER" -f org-latex-export-to-pdf ;;
-	p) fpc "$file" && "$base" ;;
-	pl) perl "$file" ;;
-	php) php "$file" ;;
-	py) python "$file" ;;
-	[rR]md) Rscript -e "rmarkdown::render('$file', quiet=TRUE)" ;;
+	# java) javac -d classes "${file}" && java -cp classes "${base}" ;; # i prefer to compile manually
+	java) java "${file}" ;;
+	js) node "${file}" ;;
+	lua) lua "${file}" ;;
+	m) octave-cli "${file}" ;;
+	md)	[ -x "$(command -v lowdown)" ] &&
+			lowdown --parse-no-intraemph "${file}" -Tms | groff -mpdfmark -ms -kept -T pdf >"${base}.pdf" ||
+		[ -x "$(command -v groffdown)" ] &&
+			groffdown -i "${file}" | groff -T pdf >"${base}.pdf" ||
+			pandoc_options=""
+			# pandoc_options="${pandoc_options} -t ms"
+			pandoc_options="${pandoc_options} --highlight-style=tango"
+			pandoc_options="${pandoc_options} -V geometry:left=1cm,top=1cm,right=1cm,bottom=2cm"
+			# pandoc_options="${pandoc_options} -V geometry:'landscape'"
+			# pandoc_options="${pandoc_options} -f markdown-implicit_figures"
+			# pandoc_options="${pandoc_options} --pdf-engine=xelatex"
+			# pandoc_options="${pandoc_options} --variable mainfont='DejaVu Serif'"
+			# pandoc_options="${pandoc_options} --variable sansfont='Noto Sans Mono'"
+			pandoc_options="${pandoc_options} -s"
+			pandoc_options="${pandoc_options} -o ${base}.pdf"
+			pandoc "${file}" ${pandoc_options}
+		;;
+	mmd) mmdc -i "${file}" -o "${base}.png" ;;
+	mom | ms) preconv "${file}" | refer -PS -e | groff -T pdf -m"${ext}" >"${base}.pdf" ;;
+	nim) nim compile --run "${file}" ;;
+	org) emacs "${file}" --batch -u "${USER}" -f org-latex-export-to-pdf ;;
+	p) fpc "${file}" && "./${base}" ;;
+	pl) perl "${file}" ;;
+	php) php "${file}" ;;
+	py) python "${file}" ;;
+	[rR]md) Rscript -e "rmarkdown::render('${file}', quiet=TRUE)" ;;
 	rs) cargo build && cargo run ;;
-	sass) sassc -a "$file" "$base".css ;;
-	scad) openscad -o "$base".stl "$file" ;;
-	scala) scala "$file" ;;
-	sent) setsid -f sent "$file" 2>/dev/null ;;
-	sh) sh "$file" ;;
-	sql) rm -f "$base".tmp.db && sqlite3 "$base".tmp.db < "$file" ;;
-	tex) textype "$file" ;;
-	ts) tsc "$file" && node "$base".js ;;
-	uml) plantuml "$file" ;;
-	zig) zig run "$file" ;;
-	*) sed -n '/^#!/s/^#!//p; q' "$file" | xargs -r -I % "$file" ;;
+	sass) sassc -a "${file}" "${base}.css" ;;
+	scad) openscad -o "${base}.stl" "${file}" ;;
+	scala) scala "${file}" ;;
+	sent) setsid -f sent "${file}" 2>"/dev/null" ;;
+	sh) sh "${file}" ;;
+	sql) rm -f "${base}.tmp.db" && sqlite3 "${base}.tmp.db" <"${file}" ;;
+	tex)
+		textarget="$(getcomproot "${file}" || echo "${file}")"
+		command="pdflatex"
+		head -n5 "${textarget}" | grep -qi "xelatex" && command="xelatex"
+		${command} --output-directory="${textarget%/*}" "${textarget%.*}" &&
+			grep -qi addbibresource "${textarget}" &&
+			biber --input-directory "${textarget%/*}" "${textarget%.*}" &&
+			${command} --output-directory="${textarget%/*}" "${textarget%.*}" &&
+			${command} --output-directory="${textarget%/*}" "${textarget%.*}"
+		;;
+	ts) tsc "${file}" && node "${base}.js" ;;
+	uml) plantuml "${file}" ;;
+	zig) zig run "${file}" ;;
+	*) sed -n '/^#!/s/^#!//p; q' "${file}" | xargs -r -I % "${file}" ;;
 esac
