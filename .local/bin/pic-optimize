@@ -5,5 +5,5 @@
 # - jpegoptim
 # - optipng
 
-for file in *.png; do convert "$file" -verbose -resize 600\> "$file"; done
+for file in *.png; do magick "$file" -verbose -resize 600\> "$file"; done
 img-optimize --std --path "$(pwd)"
