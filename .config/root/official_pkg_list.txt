@@ -62,6 +62,7 @@ cfitsio
 chafa
 chaotic-keyring
 chaotic-mirrorlist
+cheat
 check
 checkbashisms
 chkrootkit

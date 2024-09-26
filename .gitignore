@@ -66,6 +66,9 @@
 !.config/vlc/
 !.config/vlc/*
 .config/vlc/vlc-qt-interface.conf
+!.config/cheat/
+.config/cheat/*
+!.config/cheat/conf.yml
 !.config/Code/
 .config/Code/*
 !.config/Code/User/
