@@ -18,6 +18,9 @@ cmd on-cd &{{
 		remote=$(git config --get branch.$branch.remote 2>/dev/null) || true
 		url=$(git remote get-url $remote 2>/dev/null) || true
 		fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%d\033[0m\033[1m%f\033[0m\033[33;1m [GIT URL:> $url]\033[0m"
+	elif [ -d _darcs ]; then
+		url=$(darcs show repo 2>/dev/null | awk '/Default Remote:/{print $3}') || true
+		fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%d\033[0m\033[1m%f\033[0m\033[33;1m [DARCS URL:> $url]\033[0m"
 	elif [ -d .hg ]; then
 		hg=$(hg path 2>/dev/null | awk 'NR==1') || true
 		fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%d\033[0m\033[1m%f\033[0m\033[33;1m [HG BRANCH:> $hg]\033[0m"
