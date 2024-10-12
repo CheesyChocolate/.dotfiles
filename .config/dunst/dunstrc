@@ -13,15 +13,15 @@
 [urgency_low]
     background = "#1d2021"
     foreground = "#928374"
-    timeout = 3
+    timeout = 5
 
 [urgency_normal]
     foreground = "#ebdbb2"
     background = "#458588"
-    timeout = 5
+    timeout = 10
 
 [urgency_critical]
     background = "#1cc24d"
     foreground = "#ebdbb2"
     frame_color = "#fabd2f"
-    timeout = 10
+    timeout = 20
