@@ -9,7 +9,7 @@
 {
   "theme": "Rosé Pine",
   "telemetry": {
-    "diagnostics": true,
+    "diagnostics": false,
     "metrics": false
   },
   "vim_mode": true,
