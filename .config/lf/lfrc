@@ -10,6 +10,7 @@ set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 set autoquit true
 
+set promptfmt "\033[1;31m[\033[1;33m%u\033[1;32m@\033[1;34m%h \033[1;35m%d\033[1;0m%f\033[1;31m]\033[0m"
 
 cmd on-cd &{{
 	# display repository status in your prompt
