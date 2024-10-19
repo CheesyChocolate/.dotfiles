@@ -25,7 +25,6 @@ nodejs-neovim
 obs-pipewire-audio-capture-bin
 octave-io
 oda-file-converter
-pacman-static
 pam-gnupg-git
 pass-import
 python-chembl-webresource-client

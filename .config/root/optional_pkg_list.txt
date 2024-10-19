@@ -5,7 +5,6 @@ artix-checkupdates
 artix-rebuild-order
 aspnet-targeting-pack
 avisynthplus
-bash-completion
 bash-language-server
 benzene
 biber

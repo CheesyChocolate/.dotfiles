@@ -46,6 +46,7 @@ bluez-cups
 bluez-runit
 bluez-utils
 bmon
+bootlogd
 btrfs-progs
 buildah
 burpsuite
@@ -84,6 +85,7 @@ cups-runit
 cvs
 cyberchef-electron
 cython
+darcs
 dash
 ddcutil
 debuginfod
@@ -367,6 +369,7 @@ llm-manager
 logrotate
 lostfiles
 lshw
+lua-jsregexp
 lua-sec
 lua51
 luarocks
@@ -463,6 +466,7 @@ otf-libertinus
 otf-sora
 p7zip
 pacman-contrib
+pacman-static
 pacutils
 pandoc-bin
 pass-otp
@@ -508,7 +512,6 @@ python-cloudpickle
 python-css-parser
 python-entrypoints
 python-evdev
-python-freezegun
 python-geoip
 python-gmpy2
 python-graphviz
@@ -581,6 +584,7 @@ ruby
 ruby-docs
 ruff-lsp
 runit
+runit-bash-completions
 rust-analyzer
 sagemath
 samba
