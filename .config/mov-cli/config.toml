@@ -1,0 +1,45 @@
+# Confused?
+# Check out the WIKI on configuration: https://github.com/mov-cli/mov-cli/wiki/Configuration
+
+[mov-cli]
+version = 1
+debug = false
+player = "mpv"
+quality = "auto"
+parser = "lxml"
+# editor = "nano"
+skip_update_checker = true
+auto_try_next_scraper = true
+hide_ip = true
+
+# [mov-cli.quality]
+# resolution = 720
+
+[mov-cli.ui]
+fzf = true
+# limit = 20
+preview = true
+watch_options = true
+display_quality = false
+
+[mov-cli.plugins]
+films = "film-central"
+test = "mov-cli-test"
+
+[mov-cli.scrapers]
+vid1 = "films.vidsrcto"
+vid2 = "films.vidsrcme"
+vid3 = "films.vadapav"
+# default = "youtube"
+test = "test.DEFAULT"
+
+[mov-cli.http] # Don't mess with it if you don't know what you are doing!
+timeout = 15
+# headers = { User-Agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0" }
+
+[mov-cli.downloads] # Do not use backslashes use forward slashes
+save_path = "~/Videos/mov-cli"
+# yt_dlp = true
+
+[mov-cli.subtitles] # See this page: https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
+language = "en"
