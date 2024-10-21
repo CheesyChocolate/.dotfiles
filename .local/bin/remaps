@@ -9,3 +9,5 @@ setxkbmap -option caps:super,altwin:menu_win
 killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape'
 # Turn off caps lock if on since there is no longer a key for it.
 xset -q | grep -q "Caps Lock:\s*on" && xdotool key Caps_Lock
+# Turn numlock on if off.
+xset q | grep -q "Num Lock:\s*off" && xdotool key Num_Lock
