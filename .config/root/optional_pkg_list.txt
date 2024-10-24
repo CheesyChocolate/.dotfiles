@@ -122,6 +122,7 @@ python-gssapi
 python-html5-parser
 python-igraph
 python-imagecodecs
+python-importlib_resources
 python-inflect
 python-inquirerpy
 python-isoduration

@@ -689,6 +689,7 @@ turbo-base64
 typescript
 ueberzug
 umockdev
+umu-launcher
 unace
 unclutter
 ungoogled-chromium
