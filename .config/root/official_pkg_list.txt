@@ -81,6 +81,7 @@ composer
 cpio
 cronie-runit
 crunch
+cuda-tools
 cups-runit
 cvs
 cyberchef-electron
