@@ -51,8 +51,7 @@ case "${ext}" in
 			# pandoc_options="${pandoc_options} --variable mainfont='DejaVu Serif'"
 			# pandoc_options="${pandoc_options} --variable sansfont='Noto Sans Mono'"
 			pandoc_options="${pandoc_options} -s"
-			pandoc_options="${pandoc_options} -o ${base}.pdf"
-			pandoc "${file}" ${pandoc_options}
+			pandoc "${file}" ${pandoc_options} -o "${base}.pdf"
 		;;
 	mmd) mmdc -i "${file}" -o "${base}.png" ;;
 	mom | ms) preconv "${file}" | refer -PS -e | groff -T pdf -m"${ext}" >"${base}.pdf" ;;
