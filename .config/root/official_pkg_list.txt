@@ -263,14 +263,12 @@ lib32-libnm
 lib32-libpulse
 lib32-libudev0-shim
 lib32-libva
-lib32-libva-mesa-driver
 lib32-libva-vdpau-driver
 lib32-libvdpau
 lib32-libxcomposite
 lib32-libxinerama
 lib32-libxslt
 lib32-mangohud
-lib32-mesa-vdpau
 lib32-mpg123
 lib32-ocl-icd
 lib32-openal
@@ -345,7 +343,6 @@ librewolf
 libudev0-shim
 libultrahdr
 libunrar
-libva-mesa-driver
 libvips
 libvirt-runit
 libvirt-storage-gluster
@@ -367,6 +364,7 @@ linux-zen
 linux-zen-headers
 lldb
 llm-manager
+llvm-julia
 logrotate
 lostfiles
 lshw
@@ -394,7 +392,6 @@ meld
 mercurial
 mesa
 mesa-utils
-mesa-vdpau
 metasploit
 microsoft-gsl
 mkinitcpio-firmware
@@ -450,7 +447,6 @@ obs-studio
 ocaml
 octave
 odt2txt
-ollama-gemma2-2b
 ollama-rocm
 onboard
 openbsd-netcat

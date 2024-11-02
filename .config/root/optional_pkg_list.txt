@@ -58,7 +58,6 @@ liblas
 libmythes
 libsemigroups
 libtiger
-libva-vdpau-driver
 libvncserver
 lilypond
 lirc
