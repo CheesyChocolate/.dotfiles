@@ -526,7 +526,6 @@ python-pwntools
 python-pydbus
 python-pygame
 python-pylint-venv
-python-pynvim
 python-pyperclip
 python-pyqt6-webengine
 python-pytorch-opt-rocm

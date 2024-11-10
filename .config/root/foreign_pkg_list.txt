@@ -21,7 +21,6 @@ mangal-bin
 mars-mips
 mermaid-cli
 mutt-wizard-git
-nodejs-neovim
 obs-pipewire-audio-capture-bin
 octave-io
 oda-file-converter
@@ -41,7 +40,6 @@ quickemu-git
 remmina-plugin-rdesktop
 remmina-plugin-ultravnc
 remmina-plugin-url
-ruby-neovim
 samrewritten-git
 sc-im
 sent-git
