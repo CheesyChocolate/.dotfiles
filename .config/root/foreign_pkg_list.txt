@@ -17,6 +17,7 @@ kjv-apocrypha
 linode-cli
 litecli
 lobster-git
+luajit-tiktoken-bin
 mangal-bin
 mars-mips
 mermaid-cli
