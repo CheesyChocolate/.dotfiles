@@ -116,6 +116,9 @@
 !.local/share/ollama/
 .local/share/ollama/*
 !.local/share/ollama/Modelfile-*
+!.local/share/rustup/
+.local/share/rustup/*
+!.local/share/rustup/settings.toml
 !.local/share/spotdl/
 .local/share/spotdl/*
 !.local/share/spotdl/config.json
