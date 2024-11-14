@@ -86,6 +86,7 @@
 !.config/waybar/
 !.config/wget/
 !.config/wikiman/
+!.config/wireplumber/
 !.config/wtwitch/
 .config/wtwitch/api.json
 !.config/x11/
