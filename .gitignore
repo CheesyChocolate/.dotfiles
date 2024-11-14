@@ -22,6 +22,9 @@
 !.config/dunst/
 !.config/dwm/
 !.config/fontconfig/
+!.config/gh/
+.config/gh/*
+!.config/gh/config.yml
 !.config/git/
 !.config/gtk-2.0/
 !.config/gtk-3.0/
