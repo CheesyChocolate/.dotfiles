@@ -27,6 +27,7 @@
 !.config/gh/config.yml
 !.config/gh-copilot/
 !.config/git/
+!.config/glow/
 !.config/gtk-2.0/
 !.config/gtk-3.0/
 !.config/gtk-4.0/
