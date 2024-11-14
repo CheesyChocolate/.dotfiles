@@ -31,8 +31,8 @@
 !.config/gtk-2.0/
 !.config/gtk-3.0/
 !.config/gtk-4.0/
-!.config/hypr/
 !.config/htop/
+!.config/hypr/
 !.config/iamb/
 .config/iamb/*
 !.config/iamb/config.json
@@ -49,8 +49,8 @@
 !.config/maven/
 .config/maven/*
 !.config/maven/settings.xml
-!.config/mpd/
 !.config/mov-cli/
+!.config/mpd/
 !.config/mpv/
 !.config/ncmpcpp/
 !.config/newsboat/
