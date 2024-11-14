@@ -99,6 +99,7 @@
 !.config/linux-steam-integration.conf
 !.config/mimeapps.list
 !.config/user-dirs.dirs
+!.config/user-dirs.locale
 
 !.local/
 .local/*
