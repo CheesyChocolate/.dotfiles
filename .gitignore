@@ -83,6 +83,7 @@
 !.config/vlc/*
 .config/vlc/vlc-qt-interface.conf
 !.config/wal/
+!.config/waybar/
 !.config/wget/
 !.config/wikiman/
 !.config/wtwitch/
