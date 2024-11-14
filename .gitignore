@@ -57,6 +57,7 @@
 !.config/npm/
 !.config/nsxiv/
 !.config/nvim/
+!.config/nvtop/
 !.config/octave/
 .config/octave/*
 !.config/octave/octaverc
