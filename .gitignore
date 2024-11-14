@@ -78,6 +78,7 @@
 .config/shell/privateProfile
 !.config/spicy/
 !.config/swaylock/
+!.config/tmux/
 !.config/vlc/
 !.config/vlc/*
 .config/vlc/vlc-qt-interface.conf
