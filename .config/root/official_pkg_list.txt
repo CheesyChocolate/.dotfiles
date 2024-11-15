@@ -372,7 +372,7 @@ lua-jsregexp
 lua-sec
 lua51
 luarocks
-lutris-git
+lutris
 lv2-example-plugins
 lxd
 lynis

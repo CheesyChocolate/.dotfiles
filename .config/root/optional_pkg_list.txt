@@ -153,7 +153,6 @@ python-pyicu
 python-pyinotify
 python-pymysql
 python-pynormaliz
-python-pypresence
 python-pypubsub
 python-pyscipopt
 python-pytables
