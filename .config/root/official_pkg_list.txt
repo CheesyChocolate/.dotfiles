@@ -301,6 +301,7 @@ libpillowfight
 libportal-gtk4
 libportal-qt6
 libreoffice-extension-languagetool
+libreoffice-extension-texmaths
 libreoffice-fresh
 librepcb
 libretro-beetle-pce
@@ -674,6 +675,8 @@ tor-browser
 torsocks
 transmission-cli
 tree-sitter-cli
+tree-sitter-javascript
+tree-sitter-rust
 ts-node
 ttf-dejavu
 ttf-fantasque-nerd
