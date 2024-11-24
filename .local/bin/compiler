@@ -31,10 +31,12 @@ case "${ext}" in
 	go) go run "${file}" ;;
 	h) sudo make install ;;
 	html) lynx -width="${4}" -display_charset=utf-8 -dump "${1}" ;;
+	hs) ghc -dynamic "${file}" && "${base}" ;;
 	ipynb) python "${file%.*}.py" ;; # 'GCBallesteros/jupytext.nvim' will convert to .py
 	# java) javac -d classes "${file}" && java -cp classes "${base}" ;; # i prefer to compile manually
 	java) java "${file}" ;;
 	js) node "${file}" ;;
+	lhs) ghc -dynamic "${file}" && "${base}" ;;
 	lua) lua "${file}" ;;
 	m) octave-cli "${file}" ;;
 	md)	[ -x "$(command -v lowdown)" ] &&

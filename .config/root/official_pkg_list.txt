@@ -150,6 +150,7 @@ gamescope
 geckodriver
 geoip-database-extra
 geoipupdate
+ghc
 gimagereader-gtk
 gimp
 gimp-extras
