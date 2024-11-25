@@ -586,6 +586,7 @@ runit-bash-completions
 rust-analyzer
 sagemath
 samba
+sbcl
 sbctl
 sbt
 scala

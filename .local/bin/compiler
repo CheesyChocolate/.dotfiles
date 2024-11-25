@@ -37,6 +37,7 @@ case "${ext}" in
 	java) java "${file}" ;;
 	js) node "${file}" ;;
 	lhs) ghc -dynamic "${file}" && "${base}" ;;
+	lisp) sbcl --script "${file}" ;;
 	lua) lua "${file}" ;;
 	m) octave-cli "${file}" ;;
 	md)	[ -x "$(command -v lowdown)" ] &&
