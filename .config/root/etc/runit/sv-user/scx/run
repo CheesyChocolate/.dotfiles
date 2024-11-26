@@ -1,0 +1,4 @@
+#!/bin/sh
+[ -x /usr/lib/scx/bin/sched_ext ] || exit 0
+[ -f /etc/default/scx ] && . /etc/default/scx
+${SCX_SCHEDULER_OVERRIDE:-$SCX_SCHEDULER} ${SCX_FLAGS_OVERRIDE:-$SCX_FLAGS}

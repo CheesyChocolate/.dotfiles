@@ -592,6 +592,7 @@ sbt
 scala
 schedtool
 screenkey
+scx-scheds
 seatd-runit
 shellcheck
 shfmt
