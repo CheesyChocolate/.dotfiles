@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# fix drowdown menu not having visible text
+export GTK_THEME=Adwaita:light
+
+/opt/anylogic/anylogic
