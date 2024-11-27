@@ -28,6 +28,8 @@ case "${ext}" in
 	csproj) dotnet watch run --project "${file}" ;;
 	exs) elixir "${file}" ;;
 	f90) gfortran "${file}" -o "${base}" && "./${base}" ;;
+	fs) dotnet fsi "${file}" ;;
+	fsproj) dotnet run --project "${file}" ;;
 	go) go run "${file}" ;;
 	h) sudo make install ;;
 	html) lynx -width="${4}" -display_charset=utf-8 -dump "${1}" ;;
