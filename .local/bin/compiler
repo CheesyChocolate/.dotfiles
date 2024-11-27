@@ -67,6 +67,7 @@ case "${ext}" in
 	pl) perl "${file}" ;;
 	php) php "${file}" ;;
 	py) python "${file}" ;;
+	[rR]) Rscript "${file}" ;;
 	[rR]md) Rscript -e "rmarkdown::render('${file}', quiet=TRUE)" ;;
 	rs) cargo build && cargo run ;;
 	sass) sassc -a "${file}" "${base}.css" ;;
