@@ -30,6 +30,7 @@
 ## Remove the leading # first to enable this; lines starting with # are ignored.
 
 # server_names = ['scaleway-fr', 'google', 'yandex', 'cloudflare']
+server_names = ['<dns-server-name-TODO>']
 
 
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
@@ -490,7 +491,7 @@ cache_neg_max_ttl = 600
 ## Path to the query log file (absolute, or relative to the same directory as the config file)
 ## Can be set to /dev/stdout in order to log to the standard output.
 
-# file = '/var/log/dnscrypt-proxy/query.log'
+file = '/var/log/dnscrypt-proxy/query.log'
 
 
 ## Query log format (currently supported: tsv and ltsv)
@@ -516,7 +517,7 @@ format = 'tsv'
 
 ## Path to the query log file (absolute, or relative to the same directory as the config file)
 
-# file = '/var/log/dnscrypt-proxy/nx.log'
+file = '/var/log/dnscrypt-proxy/nx.log'
 
 
 ## Query log format (currently supported: tsv and ltsv)
@@ -892,3 +893,6 @@ skip_incompatible = false
 
   # [static.myserver]
   #   stamp = 'sdns://AQcAAAAAAAAAAAAQMi5kbnNjcnlwdC1jZXJ0Lg'
+
+  [static.'<dns-server-name-TODO>']
+  stamp = '<sdns://dns-server-url-TODO>'

@@ -102,6 +102,8 @@ djvulibre
 dkms
 dmidecode
 dmraid
+dnscrypt-proxy
+dnscrypt-proxy-runit
 dnsmasq
 docker
 docker-compose
