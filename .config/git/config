@@ -5,14 +5,14 @@
 	helper =
 	helper = !/usr/bin/gh auth git-credential
 [user]
-	name = CheesyChocolate
-	email = dev@behnamlal.xyz
-	signingkey = dev@behnamlal.xyz
-#[sendemail]
-#	smtpserver =
-#	smtpuser =
-#	smtpencryption =
-#	smtpserverport =
+	name = <username-TODO>
+	email = <email-TODO>
+	signingkey = <email-TODO>
+[sendemail]
+	smtpserver = <server-address-TODO>
+	smtpuser = <email-TODO>
+	smtpencryption = <***-TODO>
+	smtpserverport = <***-TODO>
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
