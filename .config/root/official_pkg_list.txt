@@ -1,3 +1,4 @@
+64gram-desktop
 acpi
 acpi_call-dkms
 acpid-runit
@@ -67,6 +68,7 @@ cheat
 check
 checkbashisms
 chkrootkit
+ckbcomp
 clamav
 clamav-runit
 cli11
@@ -116,6 +118,7 @@ easy-rsa
 efibootmgr
 egl-wayland
 elixir
+esettingsd
 eslint
 ethtool
 evil-winrm
@@ -124,6 +127,7 @@ expac
 extra-cmake-modules
 eza
 fakechroot
+fann
 farbfeld
 fd
 festival-english
@@ -145,6 +149,7 @@ freerdp
 fritzing
 fwupd
 fzf
+game-devices-udev
 gamemode
 gamescope
 geckodriver
@@ -244,6 +249,9 @@ jupyter-notebook
 jupyterlab-lsp
 kdenlive
 kernel-headers-musl
+kicad
+kicad-library
+kicad-library-3d
 kimageformats
 kotlin
 ledger
@@ -392,6 +400,7 @@ maxima-fas
 mediainfo
 meld
 mercurial
+mermaid-cli
 mesa
 mesa-utils
 metasploit

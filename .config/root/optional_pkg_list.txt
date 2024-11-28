@@ -199,6 +199,7 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 wdiff
+webkit2gtk
 xfsprogs
 xjadeo
 xorg-xhost
