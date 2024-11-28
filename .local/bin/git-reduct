@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# git-reduct
+
+# this script uses git filter to reduct the sensitive information in the git
+# repository.
+
+# the script gets two arguments:
+# 1. the action to perform: 'clean' or 'smudge'
+# 2. the path to the settings file that contains the sensitive information in
+# the form of a bash associative array
+
+source $XDG_CONFIG_HOME/git-reduct/settings.sh
+
+SED_CMD="sed"
+
+for key in "${!settingsMap[@]}"; do
+    keyEscaped=$(echo -n "${key}" | sed 's/[&/\]/\\&/g')
+    valueEscaped=$(echo -n "${settingsMap[${key}]}" | sed 's/[&/\]/\\&/g')
+
+    if [[ "$1" == "clean" ]]; then
+        SED_CMD+=" -e \"s|${keyEscaped}|${valueEscaped}|g\""
+    elif [[ "$1" == "smudge" ]]; then
+        SED_CMD+=" -e \"s|${valueEscaped}|${keyEscaped}|g\""
+    else
+        echo "'smudge' or 'clean' shall be given as the first argument"
+        exit 1
+    fi
+done
+
+eval $SED_CMD
