@@ -128,4 +128,5 @@ export SUDO_PROMPT="$(tput setab 1 setaf 7 bold)[sudo]$(tput sgr0) $(tput setaf 
 [ "$(tty)" = "/dev/tty3" ] && ! pidof -s bsod >/dev/null 2>&1 && exec bsod
 
 # Switch escape and caps if tty and no passwd required:
+# TODO: It is recommended to run kbd_mode(1) before loadkeys instead of using the -u option.
 sudo -n loadkeys "$XDG_DATA_HOME/larbs/ttymaps.kmap" 2>/dev/null
