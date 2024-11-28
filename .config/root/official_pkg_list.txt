@@ -700,6 +700,7 @@ unrar
 unzip
 uriparser
 urlwatch
+vagrant
 vala
 ventoy-bin
 vi
