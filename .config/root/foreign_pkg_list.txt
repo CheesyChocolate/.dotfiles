@@ -20,7 +20,6 @@ lobster-git
 luajit-tiktoken-bin
 mangal-bin
 mars-mips
-mermaid-cli
 mutt-wizard-git
 obs-pipewire-audio-capture-bin
 octave-io
