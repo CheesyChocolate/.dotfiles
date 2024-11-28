@@ -7,9 +7,10 @@
 
 # the script gets two arguments:
 # 1. the action to perform: 'clean' or 'smudge'
-# 2. the path to the settings file that contains the sensitive information in
-# the form of a bash associative array
 
+# TODO: add support for multiple settings files to improve the performance by
+# distributing the settings to multiple files. and use the settings file name
+# as the second argument.
 source $XDG_CONFIG_HOME/git-reduct/settings.sh
 
 SED_CMD="sed"
