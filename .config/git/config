@@ -8,6 +8,11 @@
 	name = CheesyChocolate
 	email = dev@behnamlal.xyz
 	signingkey = dev@behnamlal.xyz
+#[sendemail]
+#	smtpserver =
+#	smtpuser =
+#	smtpencryption =
+#	smtpserverport =
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
