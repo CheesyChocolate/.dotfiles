@@ -11,8 +11,8 @@
 
 file="${1}"
 ext="${file##*.}"
-# dir=$(dirname "${file}") # alternative to the following line
-dir=${file%/*}
+dir=$(dirname "${file}") # alternative to the following line
+# dir=${file%/*}
 base="${file%.*}"
 
 cd "${dir}" || exit "1"
