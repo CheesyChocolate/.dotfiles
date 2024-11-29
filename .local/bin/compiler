@@ -42,7 +42,11 @@ case "${ext}" in
 	lisp) sbcl --script "${file}" ;;
 	lua) lua "${file}" ;;
 	m) octave-cli "${file}" ;;
-	md)	[ -x "$(command -v lowdown)" ] &&
+	md)
+		# check if file has mermaid code block
+		grep -q ':::mermaid' "$file" &&
+				mmdc -i "$file" -o "$base.out.md" && file="$base.out.md"
+		[ -x "$(command -v lowdown)" ] &&
 			lowdown --parse-no-intraemph "${file}" -Tms | groff -mpdfmark -ms -kept -T pdf >"${base}.pdf" ||
 		[ -x "$(command -v groffdown)" ] &&
 			groffdown -i "${file}" | groff -T pdf >"${base}.pdf" ||
