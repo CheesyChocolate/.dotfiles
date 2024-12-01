@@ -5,8 +5,6 @@ Target = *
 
 [Action]
 Description = Reviewing .pacnew files...
-Exec = /etc/pacman.d/scripts/pacdiff_delta
+Exec = /usr/bin/pacdiff --output
 When = PostTransaction
-Depends = diffutils
-Depends = git-delta
 Depends = pacman-contrib
