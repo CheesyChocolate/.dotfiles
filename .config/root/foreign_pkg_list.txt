@@ -14,6 +14,7 @@ hyx
 iamb-git
 iranian-fonts
 kjv-apocrypha
+lib32-libva-vdpau-driver
 linode-cli
 litecli
 lobster-git
