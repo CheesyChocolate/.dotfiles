@@ -91,6 +91,7 @@ export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
 export R_HISTFILE="$XDG_CONFIG_HOME/R/history"
 export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
 export VAGRANT_ALIAS_FILE="$XDG_DATA_HOME/vagrant/aliases"
+export DOT_SAGE="$XDG_CONFIG_HOME/sage"
 
 # private variables
 source "$XDG_CONFIG_HOME/shell/privateProfile"
