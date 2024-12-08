@@ -14,6 +14,7 @@ amd-ucode
 android-tools
 appstream-glib
 arandr
+arch4edu-keyring
 archstrike-keyring
 archstrike-mirrorlist
 ardour
@@ -407,6 +408,7 @@ mesa
 mesa-utils
 metasploit
 microsoft-gsl
+mirrorlist.arch4edu
 mkinitcpio-firmware
 monero
 monero-gui
