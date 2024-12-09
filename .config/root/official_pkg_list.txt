@@ -688,6 +688,7 @@ tldr
 tlp
 tlp-runit
 tmux
+tokei
 tor
 tor-browser
 torsocks

@@ -17,6 +17,9 @@ base="${file%.*}"
 
 cd "${dir}" || exit "1"
 
+# run sloc on file to get disappointed
+tokei "${file}"
+
 case "${ext}" in
 	# Try to keep these cases in alphabetical order.
 	[0-9]) preconv "${file}" | refer -PS -e | groff -mandoc -T pdf >"${base}.pdf" ;;
