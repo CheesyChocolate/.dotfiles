@@ -12,6 +12,7 @@ botan
 box2d
 buckygen
 c-xsc
+ccache
 cgns
 cni-plugins
 coin-or-csdp
@@ -24,7 +25,6 @@ db
 dblatex
 ditaa
 docker-buildx
-docker-scan
 dot2tex
 dsdp
 ed
@@ -104,6 +104,7 @@ pyright
 python-black
 python-blosc
 python-boto
+python-boto3
 python-bottleneck
 python-cchardet
 python-colorcet
@@ -175,6 +176,7 @@ python-xlrd
 python-xlwt
 python-xxhash
 qemu-user-static-binfmt
+rhino
 rubiks
 ruby-stdlib
 sage-notebook-exporter
@@ -184,6 +186,7 @@ sirocco
 slirp4netns
 sox
 speech-dispatcher
+strace
 swi-prolog
 texlab
 texlive-binextra

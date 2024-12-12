@@ -422,6 +422,7 @@ mpv
 mtools
 mtr
 mumble
+mupdf-tools
 musescore
 mythes-en
 namcap
@@ -460,6 +461,7 @@ nvtop
 obs-studio
 ocaml
 octave
+octave-io
 odt2txt
 ollama-rocm
 onboard
@@ -518,6 +520,7 @@ ptunnel
 pulsemixer
 pwndbg
 pyenv
+pypy
 python-awscrt
 python-cloudpickle
 python-css-parser
@@ -577,7 +580,6 @@ retroarch
 retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
-rhino
 ripdrag-git
 ripgrep
 ripgrep-all
@@ -604,6 +606,7 @@ samba
 sbcl
 sbctl
 sbt
+sc-im
 scala
 schedtool
 screenkey
@@ -616,6 +619,7 @@ simple-mtpfs
 slock
 smartmontools
 snapper
+sniffnet
 socat
 socklog
 sof-firmware
@@ -705,6 +709,7 @@ ttf-iosevka-nerd
 ttf-nerd-fonts-symbols-common
 turbo-base64
 typescript
+typst
 ueberzug
 umockdev
 umu-launcher
@@ -786,6 +791,7 @@ zed
 zig
 zip
 zmap
+zola
 zotero-bin
 zsh
 zsh-autosuggestions

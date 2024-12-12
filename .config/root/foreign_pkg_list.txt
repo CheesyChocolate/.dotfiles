@@ -14,7 +14,6 @@ hyx
 iamb-git
 iranian-fonts
 kjv-apocrypha
-lib32-libva-vdpau-driver
 linode-cli
 litecli
 lobster-git
@@ -22,8 +21,8 @@ luajit-tiktoken-bin
 mangal-bin
 mars-mips
 mutt-wizard-git
+nuitka
 obs-pipewire-audio-capture-bin
-octave-io
 oda-file-converter
 pam-gnupg-git
 pass-import
@@ -42,7 +41,6 @@ remmina-plugin-rdesktop
 remmina-plugin-ultravnc
 remmina-plugin-url
 samrewritten-git
-sc-im
 sent-git
 shazam-cli-git
 showmethekey-git
