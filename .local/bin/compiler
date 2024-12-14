@@ -23,14 +23,14 @@ tokei "${file}"
 case "${ext}" in
 	# Try to keep these cases in alphabetical order.
 	[0-9]) preconv "${file}" | refer -PS -e | groff -mandoc -T pdf >"${base}.pdf" ;;
-	asm) nasm -f elf64 "${file}" && ld -s -o "${base}" "${base}.o" && "./${base}" ;;
+	asm) nasm -f elf64 "${file}" && ld -s -o "${base}.out" "${base}.o" && "${base}.out" ;;
 	bash) bash "${file}" ;;
 	c) cc "${file}" -o "${base}.out" && "${base}.out" ;;
 	cpp) g++ "${file}" -o "${base}.out" && "${base}.out" ;;
 	cs) mcs "${file}" && mono "${base}.exe" ;;
 	csproj) dotnet watch run --project "${file}" ;;
 	exs) elixir "${file}" ;;
-	f90) gfortran "${file}" -o "${base}" && "./${base}" ;;
+	f90) gfortran "${file}" -o "${base}.out" && "${base}.out" ;;
 	fs) dotnet fsi "${file}" ;;
 	fsproj) dotnet run --project "${file}" ;;
 	go) go run "${file}" ;;
@@ -70,7 +70,7 @@ case "${ext}" in
 	mom | ms) preconv "${file}" | refer -PS -e | groff -T pdf -m"${ext}" >"${base}.pdf" ;;
 	nim) nim compile --run "${file}" ;;
 	org) emacs "${file}" --batch -u "${USER}" -f org-latex-export-to-pdf ;;
-	p) fpc "${file}" && "./${base}" ;;
+	p) fpc "${file}" && "${base}" ;;
 	pl) perl "${file}" ;;
 	php) php "${file}" ;;
 	py) python "${file}" ;;
