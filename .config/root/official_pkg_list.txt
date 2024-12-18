@@ -39,6 +39,8 @@ bemenu-ncurses
 bemenu-wayland
 bigsh0t
 binwalk
+blackarch-keyring
+blackarch-mirrorlist
 blanket
 blas-openblas
 blas64-openblas
