@@ -27,7 +27,6 @@ aspell-en
 aspnet-runtime
 aubio
 avahi-runit
-aws-cli
 axel
 base
 base-devel
@@ -553,6 +552,7 @@ python-pyxdg
 python-qdarkstyle
 python-qiskit
 python-scikit-image
+python-streamlit
 python-tensorflow-opt
 python-tifffile
 python-torchvision
@@ -622,6 +622,7 @@ slock
 smartmontools
 snapper
 sniffnet
+snyk
 socat
 socklog
 sof-firmware

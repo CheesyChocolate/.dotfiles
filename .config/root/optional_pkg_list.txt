@@ -45,6 +45,7 @@ gst-plugins-bad
 gst-plugins-ugly
 harvid
 hunspell-en_us
+icedtea-web
 ipp-usb
 jmol
 jupyter-collaboration
@@ -117,6 +118,7 @@ python-distributed
 python-fastnumbers
 python-flax
 python-fqdn
+python-gpgme
 python-gssapi
 python-html5-parser
 python-igraph
@@ -136,6 +138,7 @@ python-lxml-html-clean
 python-lz4
 python-mpi4py
 python-netcdf4
+python-numba
 python-openpyxl
 python-pandas-datareader
 python-pdftotext
@@ -161,10 +164,12 @@ python-rfc3339-validator
 python-rfc3987
 python-rope
 python-scikit-learn
+python-service-identity
 python-setproctitle
 python-smbprotocol
 python-socksio
 python-sqlalchemy
+python-statsmodels
 python-tensorflow-serving-api
 python-tzdata
 python-unidecode

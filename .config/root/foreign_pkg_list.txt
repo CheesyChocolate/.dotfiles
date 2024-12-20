@@ -23,7 +23,6 @@ mars-mips
 mutt-wizard-git
 nuitka
 obs-pipewire-audio-capture-bin
-oda-file-converter
 pam-gnupg-git
 pass-import
 python-chembl-webresource-client
@@ -34,8 +33,6 @@ python-pygad
 python-pyrr
 python-stable-baselines3
 python-stable-baselines3-contrib
-python-streamlit
-python-ydata-profiling
 quickemu-git
 remmina-plugin-rdesktop
 remmina-plugin-ultravnc
@@ -44,7 +41,6 @@ samrewritten-git
 sent-git
 shazam-cli-git
 showmethekey-git
-snyk
 stig-git
 task-spooler
 urlview-xdg-git
