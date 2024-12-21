@@ -6,6 +6,13 @@
 !! Set a default font and font size as below:
 *.font: monospace:size=10
 
+!! Set the font options:
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.autohint: 0
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
 
 ! name		dark	light
 ! black		0	8
