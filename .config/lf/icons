@@ -63,6 +63,7 @@ fi             # FILE
 *.pyc           
 *.pyo           
 *.pyd           
+*.ipynb         
 *.coffee        
 *.mustache      
 *.hbs           
@@ -334,6 +335,7 @@ Vagrantfile             
 *.emf   🖼
 *.ogv   🖼
 *.ogx   🖼
+*.heic  🖼
 
 # audio formats (extensions from dircolors defaults)
 *.aac   🎵
@@ -435,3 +437,4 @@ ex	🎯
 *.jar   ♨
 *.java	♨
 *.py	🐍
+*.ipynb	📒
