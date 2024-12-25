@@ -9,7 +9,6 @@ bash-language-server
 benzene
 biber
 botan
-box2d
 buckygen
 c-xsc
 ccache
@@ -104,8 +103,6 @@ psutils
 pyright
 python-black
 python-blosc
-python-boto
-python-boto3
 python-bottleneck
 python-cchardet
 python-colorcet
@@ -133,12 +130,14 @@ python-jupymake
 python-jupyter-server-terminals
 python-krb5
 python-libarchive-c
+python-linkify-it-py
 python-lsp-server
 python-lxml-html-clean
 python-lz4
 python-mpi4py
 python-netcdf4
 python-numba
+python-oauth2client
 python-openpyxl
 python-pandas-datareader
 python-pdftotext
@@ -177,6 +176,7 @@ python-uri-template
 python-webcolors
 python-whatthepatch
 python-xarray
+python-xcffib
 python-xlrd
 python-xlwt
 python-xxhash
@@ -184,7 +184,6 @@ qemu-user-static-binfmt
 rhino
 rubiks
 ruby-stdlib
-sage-notebook-exporter
 sane-airscan
 shared_meataxe
 sirocco

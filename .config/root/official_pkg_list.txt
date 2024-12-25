@@ -6,6 +6,7 @@ acpilight
 adobe-source-han-sans-jp-fonts
 adwaita-qt5-git
 adwaita-qt6-git
+afl++
 alhp-keyring
 alhp-mirrorlist
 alsa-firmware
@@ -486,6 +487,7 @@ pandoc-bin
 pass-otp
 passt
 patool
+pax-utils
 pcsc-tools
 pentbox
 perl-authen-sasl
@@ -533,6 +535,7 @@ python-graphviz
 python-imageio
 python-imageio-ffmpeg
 python-ipympl
+python-javalang
 python-jwcrypto
 python-keras
 python-objgraph
@@ -558,6 +561,7 @@ python-tifffile
 python-torchvision
 python-transformers
 python-urwid
+python-vdf
 python-z3-solver
 qastools
 qemu-emulators-full
@@ -568,6 +572,7 @@ qt6-imageformats
 qt6-quick3d
 qt6ct
 qt6gtk2
+quickemu-git
 r2ghidra
 radeontop
 radvd
@@ -601,6 +606,7 @@ ruff-lsp
 runit
 runit-bash-completions
 rust-analyzer
+rustdesk-bin
 sage-data-cunningham_tables
 sagemath
 sagetex
@@ -742,6 +748,7 @@ vulkan-radeon
 vulkan-swrast
 vulkan-tools
 vulscan
+wasm-pack
 waybar
 webkitgtk-6.0
 webrtc-audio-processing
