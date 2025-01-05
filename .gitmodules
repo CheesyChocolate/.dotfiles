@@ -13,3 +13,6 @@
 [submodule ".config/x11/xresources-themes"]
 	path = .config/x11/xresources-themes
 	url = https://github.com/janoamaral/Xresources-themes.git
+[submodule ".config/zsh/plugins/zsh-select-with-lf"]
+	path = .config/zsh/plugins/zsh-select-with-lf
+	url = https://github.com/chmouel/zsh-select-with-lf.git

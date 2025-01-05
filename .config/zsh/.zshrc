@@ -84,6 +84,9 @@ bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
+# select with path with lf
+source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins/zsh-select-with-lf/zsh-select-with-lf.plugin.zsh" 2>/dev/null
+
 # Additional completion definitions for Zsh
 fpath=(/usr/share/zsh/site-functions $fpath)
 
