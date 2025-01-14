@@ -1,6 +1,3 @@
-[submodule ".config/mpv/script_modules/mpvSockets"]
-	path = .config/mpv/script_modules/mpvSockets
-	url = https://github.com/wis/mpvSockets.git
 [submodule ".config/librewolf/cascade"]
 	path = .config/librewolf/cascade
 	url = git@github.com:CheesyChocolate/cascade.git
