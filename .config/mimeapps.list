@@ -23,3 +23,7 @@ x-scheme-handler/http=librewolf.desktop
 x-scheme-handler/https=librewolf.desktop
 x-scheme-handler/about=librewolf.desktop
 x-scheme-handler/unknown=librewolf.desktop
+x-scheme-handler/tonsite=io.github.tdesktop_x64.TDesktop.desktop
+
+[Added Associations]
+x-scheme-handler/tonsite=io.github.tdesktop_x64.TDesktop.desktop;
