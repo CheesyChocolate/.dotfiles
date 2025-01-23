@@ -1,4 +1,5 @@
 64gram-desktop
+7zip
 acpi
 acpi_call-dkms
 acpid-runit
@@ -28,6 +29,7 @@ aspell-en
 aspnet-runtime
 aubio
 avahi-runit
+aws-cli
 axel
 base
 base-devel
@@ -78,6 +80,7 @@ clamav-runit
 cli11
 clinfo
 cliphist
+cloudflare-warp-bin
 code
 code-features
 code-marketplace
@@ -111,6 +114,7 @@ dnsmasq
 docker
 docker-compose
 docker-runit
+doctl
 docx2txt
 dosbox
 dosfstools
@@ -327,7 +331,6 @@ libretro-blastem
 libretro-bsnes
 libretro-bsnes-hd
 libretro-bsnes2014
-libretro-citra
 libretro-core-info
 libretro-desmume
 libretro-dolphin
@@ -365,8 +368,6 @@ libvirt-storage-iscsi-direct
 libxdg-basedir
 linux
 linux-firmware
-linux-g14
-linux-g14-headers
 linux-hardened
 linux-hardened-headers
 linux-headers
@@ -397,7 +398,6 @@ lzop
 maim
 man-db
 man-pages
-marksman
 mathjax
 maven
 maxima
@@ -479,7 +479,6 @@ osm-gps-map
 otf-firamono-nerd
 otf-libertinus
 otf-sora
-p7zip
 pacman-contrib
 pacman-static
 pacutils
@@ -637,6 +636,7 @@ soundcloud-dl-git
 spotdl
 sqlite-analyzer
 sqlmap
+ssh-tpm-agent
 sshfs
 sshuttle
 ssllabs-scan
@@ -719,7 +719,7 @@ ttf-nerd-fonts-symbols-common
 turbo-base64
 typescript
 typst
-ueberzug
+ueberzugpp
 umockdev
 umu-launcher
 unace
@@ -730,6 +730,7 @@ unrar
 unzip
 uriparser
 urlwatch
+uv
 vagrant
 vala
 ventoy-bin

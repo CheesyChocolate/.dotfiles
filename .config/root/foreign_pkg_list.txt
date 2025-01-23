@@ -1,7 +1,6 @@
 abook
 activate-linux-git
 ani-cli-git
-anylogic-ple
 bicon-git
 blender-plugin-cad-sketcher-git
 bluetuith-bin
@@ -34,7 +33,6 @@ remmina-plugin-rdesktop
 remmina-plugin-ultravnc
 remmina-plugin-url
 samrewritten-git
-scarab-bin
 sent-git
 shazam-cli-git
 showmethekey-git

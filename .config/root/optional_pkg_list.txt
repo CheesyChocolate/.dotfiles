@@ -37,6 +37,7 @@ fuse-overlayfs
 gap-packages
 gavl
 gcc-fortran
+glaze
 glib2-devel
 gnuplot
 gst-libav
@@ -44,6 +45,7 @@ gst-plugins-bad
 gst-plugins-ugly
 harvid
 hunspell-en_us
+hyprland-protocols
 icedtea-web
 ipp-usb
 jmol
@@ -63,6 +65,7 @@ lilypond
 lirc
 live-media
 lksctp-tools
+llvm18
 lvm2
 meson
 mousetweaks
@@ -72,6 +75,7 @@ netcdf-cxx
 netcdf-fortran
 new-session-manager
 nilfs-utils
+nlohmann-json
 noto-fonts-cjk
 npm
 nss-mdns
@@ -145,7 +149,6 @@ python-phitigra
 python-pickleshare
 python-pint
 python-pkgconfig
-python-plotly
 python-pprofile
 python-psycopg2
 python-pycosat
