@@ -1,4 +1,4 @@
-#files: 1050	version: 5.9
+#files: 1060	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -399,9 +399,11 @@ _comps=(
 'doas' '_doas'
 'docker' '_docker'
 'docpad' '_docpad'
+'doctl' '_doctl'
 'domainname' '_yp'
 'dos2unix' '_dos2unix'
 'dotnet' '_dotnet'
+'dpkg-parsechangelog' '_dpkg-parsechangelog'
 'drill' '_drill'
 'dropbox' '_dropbox'
 'dropdb' '_pgsql_utils'
@@ -594,14 +596,9 @@ _comps=(
 'ginstall' '_install'
 'gist' '_gist'
 'git' '_git'
-'git-cvsserver' '_git'
 'git-flow' '_git-flow'
 'git-pulls' '_git-pulls'
-'git-receive-pack' '_git'
 'git-revise' '_git-revise'
-'git-shell' '_git'
-'git-upload-archive' '_git'
-'git-upload-pack' '_git'
 'git-wtf' '_git-wtf'
 'gitk' '_git'
 'gitleaks' '_gitleaks'
@@ -841,6 +838,7 @@ _comps=(
 'killall5' '_killall'
 'kioclient' '_kfmclient'
 'kitchen' '_kitchen'
+'kitty' '_kitty'
 'knife' '_knife'
 'knock' '_knock'
 'konqueror' '_webbrowser'
@@ -1491,6 +1489,7 @@ _comps=(
 'swiftc' '_swift'
 'sync' '_nothing'
 'sysctl' '_sysctl'
+'systemd-inhibit' '_elogind-inhibit'
 'tac' '_tac'
 'tacker' '_openstack'
 'tail' '_tail'
@@ -1517,7 +1516,6 @@ _comps=(
 'tg' '_topgit'
 'thor' '_thor'
 'tidy' '_tidy'
-'tig' '_git'
 'time' '_precommand'
 'timeout' '_timeout'
 'times' '_nothing'
@@ -1603,6 +1601,7 @@ _comps=(
 'unxz' '_xz'
 'unzip' '_zip'
 'updpkgsums' '_updpkgsums'
+'upower' '_upower'
 'uptime' '_uptime'
 'urxvt' '_urxvt'
 'urxvt256c' '_urxvt'
@@ -1613,6 +1612,7 @@ _comps=(
 'useradd' '_user_admin'
 'userdel' '_users'
 'usermod' '_user_admin'
+'uv' '_uv'
 'vacuumdb' '_pgsql_utils'
 'vagrant' '_vagrant'
 'val' '_sccs'
@@ -1930,47 +1930,49 @@ autoload -Uz _afew _android _arch-rebuild-order _archlinux-java _artisan \
             _dget _dhcpcd _diana _direnv _distrobox \
             _distrobox-assemble _distrobox-create _distrobox-enter _distrobox-ephemeral _distrobox-export \
             _distrobox-generate-entry _distrobox-host-exec _distrobox-init _distrobox-list _distrobox-rm \
-            _distrobox-stop _distrobox-upgrade _dkms _docker _docpad \
-            _dotnet _drush _dunst _dunstctl _ecdsautil \
-            _emacs _emacsclient _email-notmuch _emulator _envdir \
-            _exportfs _eza _fab _fail2ban-client _fd \
-            _ffind _firejail _firewalld _flatpak _fleetctl \
-            _flutter _fossil _fvm _fwupdmgr _gas \
-            _gh _ghc _gist _git-flow _git-pulls \
-            _git-revise _git-wtf _gitleaks _glances _glow \
-            _golang _google _gpgconf _grpcurl _gtk-launch \
-            _hello _hg _hledger _homestead _httpie \
-            _hugo _hyprctl _hyprpm _ibus _img2sixel \
-            _include-what-you-use _inxi _jmeter _jmeter-plugins _john \
-            _jonas _jrnl _jupyter _kak _kitchen \
-            _knife _language_codes _lf _lftp _libinput \
-            _lilypond _loginctl _luarocks _luarocks-admin _lunchy \
-            _lxc _mc _meson _middleman _mina \
-            _mix _mkcert _mkinitcpio _mpv _msfconsole \
-            _msfvenom _mssh _mussh _mutt-wizard.zsh _mvn \
-            _nano _nanoc _neofetch _networkQuality _newsboat \
-            _nftables _nim _ninja _node _notmuch \
-            _nvm _nvme _openssl _openvpn3 _optirun \
-            _paccache _pacdiff _paclist _paclog-pkglist _pacman \
-            _pacscripts _pacsearch _pacsort _pactree _parallel \
-            _pass _pass-import _patchelf _patool _periscope \
-            _pgsql_utils _phing _pimport _pip _pixz \
-            _pkcon _pkgfile _play _playerctl _pm2 \
-            _podman _podman-remote _poetry _port _progress \
-            _protoc _pulseaudio _pwn _pygmentize _qmk \
-            _qpdf _r2 _rabin2 _radiff2 _rafind2 \
-            _ragg2 _rahash2 _rails _ralio _rankmirrors \
-            _rasm2 _rax2 _redis-cli _rfkill _rg \
-            _rkt _rmlint _rslsync _rsm _rspec \
-            _rsvm _rubocop _ruff _rustup _sbctl \
-            _sbt _scala _screencapture _scrub _sdd \
-            _sdkmanager _setcap _setup.py _sfdx _shellcheck \
-            _showoff _shtab _skopeo _snapper _srm \
-            _stack _streamlink _subliminal _supervisorctl _svm \
-            _swaylock _teamocil _texdoc _thor _tldr \
-            _tlp _tlp-radio-device _tlp-rdw _tlp-run-on _tlp-stat \
-            _tmuxinator _tox _ts-node _tsc _typst \
-            _udevadm _udisks2 _udisksctl _ufw _updpkgsums \
+            _distrobox-stop _distrobox-upgrade _distrobox_containers _distrobox_images _distrobox_running_containers \
+            _dkms _docker _docpad _doctl _dotnet \
+            _dpkg-parsechangelog _drush _dunst _dunstctl _ecdsautil \
+            _elogind-inhibit _emacs _emacsclient _email-notmuch _emulator \
+            _envdir _exportfs _eza _fab _fail2ban-client \
+            _fd _ffind _firejail _firewalld _flatpak \
+            _fleetctl _flutter _fossil _fvm _fwupdmgr \
+            _gas _gh _ghc _gist _git \
+            _git-flow _git-pulls _git-revise _git-wtf _gitleaks \
+            _glances _glow _golang _google _gpgconf \
+            _grpcurl _gtk-launch _hello _hg _hledger \
+            _homestead _httpie _hugo _hyprctl _hyprpm \
+            _ibus _img2sixel _include-what-you-use _inxi _jmeter \
+            _jmeter-plugins _john _jonas _jrnl _jupyter \
+            _kak _kitchen _kitty _knife _language_codes \
+            _lf _lftp _libinput _lilypond _loginctl \
+            _luarocks _luarocks-admin _lunchy _lxc _mc \
+            _meson _middleman _mina _mix _mkcert \
+            _mkinitcpio _mpv _msfconsole _msfvenom _mssh \
+            _mussh _mutt-wizard.zsh _mvn _nano _nanoc \
+            _neofetch _networkQuality _newsboat _nftables _nim \
+            _ninja _node _notmuch _nvm _nvme \
+            _openssl _openvpn3 _optirun _paccache _pacdiff \
+            _paclist _paclog-pkglist _pacman _pacscripts _pacsearch \
+            _pacsort _pactree _parallel _pass _pass-import \
+            _patchelf _patool _periscope _pgsql_utils _phing \
+            _pimport _pip _pixz _pkcon _pkgfile \
+            _play _playerctl _pm2 _podman _podman-remote \
+            _poetry _port _progress _protoc _pulseaudio \
+            _pwn _pygmentize _qmk _qpdf _r2 \
+            _rabin2 _radiff2 _rafind2 _ragg2 _rahash2 \
+            _rails _ralio _rankmirrors _rasm2 _rax2 \
+            _redis-cli _rfkill _rg _rkt _rmlint \
+            _rslsync _rsm _rspec _rsvm _rubocop \
+            _ruff _rustup _sbctl _sbt _scala \
+            _screencapture _scrub _sdd _sdkmanager _setcap \
+            _setup.py _sfdx _shellcheck _showoff _shtab \
+            _skopeo _snapper _srm _stack _streamlink \
+            _subliminal _supervisorctl _svm _swaylock _teamocil \
+            _texdoc _thor _tldr _tlp _tlp-radio-device \
+            _tlp-rdw _tlp-run-on _tlp-stat _tmuxinator _tox \
+            _ts-node _tsc _typst _udevadm _udisks2 \
+            _udisksctl _ufw _updpkgsums _upower _uv \
             _vagrant _virtualbox _vnstat _wemux _wg-quick \
             _wikiman _wl-copy _wl-paste _wpctl _wtwitch \
             _xsel _xwallpaper _yarn _yay _yq \
