@@ -212,30 +212,12 @@ cmd link %{{
 }}
 
 cmd diff ${{
-	# # TODO: doesn't across clients (somehow connect to server)
-	# # lf -remote "send $id nvim -d $fx"
-	filetype=""
-	# # TODO: not efficient to loop like this
-	for f in $fx; do
-		if [ -d "$f" ]; then
-			filetype="dir"
-			break
-		elif [ "$(file --mime-type -b $f)" = "application/pdf" ]; then
-			filetype="pdf"
-			break
-		fi
-	done
-	case $filetype in
-		dir) meld $fx;;
-		pdf) diffpdf $fx;;
-		*) nvim -d $fx;;
+	first_file=$(printf '%s\n' "$fx" | head -n1)	# To handle file names with spaces
+	case "$(file --mime-type -b "$first_file")" in
+	    inode/directory) meld $fx ;;
+	    application/pdf) diffpdf $fx ;;
+	    *) nvim -d $fx ;;
 	esac
-	# printf "$fx"
-	# case "$(file --dereference --brief --mime-type -- "$1")" in
-	# 	inode/directory) meld $fx;;
-	# 	application/pdf
-	# 	*) nvim -d $fx;;
-	# esac
 }}
 
 cmd setbg "$1"
