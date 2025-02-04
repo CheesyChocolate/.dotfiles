@@ -1,3 +1,3 @@
-@reboot /usr/bin/grub-btrfsd -t -s
+@reboot . /etc/default/grub-btrfs/config; /usr/bin/grub-btrfsd --syslog /.snapshots
 @daily /usr/bin/rsync -a --delete /boot /.bootbackup
 @daily /usr/bin/freshclam
