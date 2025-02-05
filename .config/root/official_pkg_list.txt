@@ -587,6 +587,7 @@ retroarch
 retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
+rink
 ripdrag-git
 ripgrep
 ripgrep-all
