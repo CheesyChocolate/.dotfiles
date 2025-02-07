@@ -37,6 +37,7 @@ alias \
 	yt="yt-dlp --embed-metadata --embed-chapters -i" \
 	yta="yt -x -f bestaudio/best --embed-thumbnail --audio-format flac" \
 	ffmpeg="ffmpeg -hide_banner" \
+	fd="fd --no-ignore-vcs" \
 	rsync="rsync -vrPlu"
 
 # Colorize commands when possible.
