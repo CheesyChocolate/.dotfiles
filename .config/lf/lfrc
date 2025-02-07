@@ -51,6 +51,7 @@ cmd open ${{
 	text/csv) sc-im $fx ;;
 	text/plain) case ${f##*.} in
 		csv) sc-im $fx ;;
+		log) less $fx ;;
 		*) $EDITOR $fx ;;
 	   esac ;;
 	text/xml) case ${f##*.} in
