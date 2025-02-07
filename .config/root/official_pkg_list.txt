@@ -543,6 +543,7 @@ python-openai
 python-opencv
 python-pip
 python-pipx
+python-prettytable
 python-pwntools
 python-pydbus
 python-pygame

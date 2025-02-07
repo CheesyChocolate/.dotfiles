@@ -1,1 +1,81 @@
-/home/suren/.local/share/pipx/venvs/pip-search/bin/pip_search
+#!/usr/bin/env python
+
+# pip_search.py
+# A workaround until pip_search is fixed
+# https://github.com/victorgarric/pip_search/issues/44#issuecomment-2565349625
+
+import requests
+import string
+import re
+import hashlib
+import bs4
+import sys
+from prettytable import PrettyTable
+
+args = sys.argv
+
+
+url = f"https://pypi.org/search/?q={args[1]}"
+
+session = requests.Session()
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0",
+}
+resp = session.get(url, headers=headers)
+
+# Get script.js url
+pattern = re.compile(r"/(.*)/script.js")
+path = pattern.findall(resp.text)[0]
+script_url = f"https://pypi.org/{path}/script.js"
+# print(script_url)
+
+resp = session.get(script_url)
+
+# Find the PoW data from script.js
+pattern = re.compile(
+    r'init\(\[\{"ty":"pow","data":\{"base":"(.+?)","hash":"(.+?)","hmac":"(.+?)","expires":"(.+?)"\}\}\], "(.+?)"'
+)
+base, hash, hmac, expires, token = pattern.findall(resp.text)[0]
+# print(base, hash, hmac, expires, token, sep="\n")
+
+# Compute the PoW answer
+answer = ""
+characters = string.ascii_letters + string.digits
+for c1 in characters:
+    for c2 in characters:
+        c = base + c1 + c2
+        if hashlib.sha256(c.encode()).hexdigest() == hash:
+            answer = c1 + c2
+            break
+    if answer:
+        break
+
+# Send the PoW answer
+back_url = f"https://pypi.org/{path}/fst-post-back"
+data = {
+    "token": token,
+    "data": [
+        {"ty": "pow", "base": base, "answer": answer, "hmac": hmac, "expires": expires}
+    ],
+}
+resp = session.post(back_url, json=data)
+
+# Get the search result with new cookies
+resp = session.get(url)
+
+soup = bs4.BeautifulSoup(resp.text, "html.parser")
+mods = [i.text for i in soup.select(".package-snippet__name")]
+mods_desc = [i.text for i in soup.select(".package-snippet__description")]
+
+
+table = PrettyTable()
+table.align = "l"
+table.field_names = ["Module", "Description"]
+
+
+i = 0
+for m in mods:
+    table.add_row([m, mods_desc[i]])
+    i += 1
+
+print(table)
