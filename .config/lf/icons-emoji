@@ -23,7 +23,7 @@ fi      📄       # FILE
 *.styl          🎨
 *.sass          🎨
 *.scss          🎨
-*.htm           🌐
+*.htm           🌎
 *.html          🌎
 *.slim          🌐
 *.haml          🌐
@@ -35,8 +35,8 @@ fi      📄       # FILE
 *.markdown      📘
 *.json          🔢
 *.webmanifest   🔢
-*.js            📜
-*.mjs           📜
+*.js            🟨
+*.mjs           🟨
 *.jsx           ⚛️
 *.rb            💎
 *.gemspec       💎
@@ -55,6 +55,7 @@ fi      📄       # FILE
 *.yml           🛠️
 *.yaml          🛠️
 *.toml          🛠️
+*.cfg           🛠️
 *.bat           🖥️
 *.mk            ⚒️
 *.webp          🖼️
@@ -66,13 +67,16 @@ fi      📄       # FILE
 *.cc            🚀
 *.cp            🚀
 *.c             🔣
-*.cs            🎮
-*.h             📜
-*.hh            📜
-*.hpp           📜
-*.hxx           📜
+*.cs            👓
+*.csproj        👓
+*.h             🔣
+*.hh            🚀
+*.hpp           🚀
+*.hxx           🚀
+*.so            ⛓️
 *.hs            🔥
 *.lhs           🔥
+*.lisp          🌀
 *.nix           🐧
 *.lua           🌙
 *.jar           ♨
@@ -90,12 +94,14 @@ fi      📄       # FILE
 *.diff          🔀
 *.db            🗄️
 *.sql           🗄️
+*.sqlite        🗄️
 *.dump          🗄️
+*.pkl           🗃️
 *.clj           ☯️
 *.cljc          ☯️
 *.cljs          ☯️
 *.edn           ☯️
-*.scala         🦀
+*.scala         🐱
 *.go            🏎️
 *.dart          🎯
 *.xul           🌐
@@ -105,11 +111,12 @@ fi      📄       # FILE
 *.pm            🦪
 *.t             🦪
 *.rss           📡
-'*.f#'          🎵
-*.fsscript      🎵
-*.fsx           🎵
-*.fs            🎵
-*.fsi           🎵
+'*.f#'          🕶️
+*.fsscript      🕶️
+*.fsx           🕶️
+*.fs            🕶️
+*.fsproj        🕶️
+*.fsi           🕶️
 *.rs            🦀
 *.rlib          🦀
 *.d             🏗️
@@ -120,11 +127,11 @@ fi      📄       # FILE
 *.eex           🔥
 *.leex          🔥
 *.heex          🔥
-*.vim           ✨
+*.vim           🥬
 *.ai            🎨
 *.psd           🖌️
 *.psb           🖌️
-*.ts            📜
+*.ts            🟦
 *.tsx           ⚛️
 *.jl            🏎️
 *.pp            📝
@@ -133,6 +140,7 @@ fi      📄       # FILE
 *.swift         🏎️
 *.xcplayground  🏎️
 *.tex           📜
+*.csl           🔖
 *.r             📊
 *.R             📊
 *.rmd           📊
@@ -142,6 +150,20 @@ fi      📄       # FILE
 *.sol           🌞
 *.pem           🔑
 *.zig           ⚡
+*.wasm          🌱
+*.nim	        🐆
+*.asm           🕸️
+*.ino           🕸️
+*.rink          
+*.dwg           📐
+*.dxf           📐
+*.obj           📐
+*.fbx           📐
+*.FCStd         📐
+*.blend         🌌
+*.uml           
+*.plantuml      
+*.mmd           
 
 # file names (vim-devicons) (case-insensitive not supported in lf)
 *gruntfile.coffee       ⚙️
@@ -150,24 +172,25 @@ fi      📄       # FILE
 *gulpfile.coffee        🍹
 *gulpfile.js            🍹
 *gulpfile.ls            🍹
-*mix.lock               🔥
+*mix.lock               🚫
 *dropbox                ☁️
+*.lock                  🚫
 *.ds_store              🗂️
 *.gitconfig             🔧
-*.gitignore             🚫
+*.gitignore             🗑️
 *.gitattributes         🔧
 *.gitlab-ci.yml         🦊
 *.bashrc                🛠️
 *.zshrc                 🛠️
 *.zshenv                🛠️
 *.zprofile              🛠️
-*.vimrc                 ✨
-*.gvimrc                ✨
-*_vimrc                 ✨
-*_gvimrc                ✨
+*.vimrc                 🥬
+*.gvimrc                🥬
+*_vimrc                 🥬
+*_gvimrc                🥬
 *.bashprofile           🛠️
 *favicon.ico            🌟
-*license                📜
+*license                ⚖️
 *node_modules           📦
 *react.jsx              ⚛️
 *procfile               📑
@@ -182,6 +205,8 @@ fi      📄       # FILE
 *makefile               🔧
 *cmakelists.txt         🔧
 *robots.txt             🤖
+*PKGBUILD               🧙
+*.ebuild                 🧙
 
 # file names (case-sensitive adaptations)
 *Gruntfile.coffee       ⚙️
@@ -192,7 +217,7 @@ fi      📄       # FILE
 *Gulpfile.ls            🍹
 *Dropbox                ☁️
 *.DS_Store              🗂️
-*LICENSE                📜
+*LICENSE                ⚖️
 *React.jsx              ⚛️
 *Procfile               📑
 *Dockerfile             🐳
@@ -211,7 +236,7 @@ fi      📄       # FILE
 # .*materialize.*\.js$    🎨
 # .*materialize.*\.css$   🎨
 # .*mootools.*\.js$       🛠️
-# .*vimrc.*               ✨
+# .*vimrc.*               🥬
 # Vagrantfile$            📦
 
 # file patterns (file name adaptations)
@@ -222,7 +247,7 @@ fi      📄       # FILE
 *materialize.min.js     🎨
 *materialize.min.css    🎨
 *mootools.min.js        🛠️
-*vimrc                  ✨
+*vimrc                  🥬
 Vagrantfile             📦
 
 # archives or compressed (extensions from dircolors defaults)
@@ -351,12 +376,19 @@ Vagrantfile             📦
 *.me	✍
 *.ms	✍
 *.xml   📰
+*.xsl   📰
 *.gpg   🔒
 *.pdf	📚
 *.djvu	📚
 *.epub	📚
+*.mobi	📚
+*.doc	📗
+*.docx	📗
+*.odt	📗
 *.csv   📓
 *.xlsx  📓
+*.vcf   📇
+*.ics   📅
 *.z64   🎮
 *.v64	🎮
 *.n64	🎮
@@ -369,7 +401,16 @@ Vagrantfile             📦
 *.log	📙
 *.iso	📀
 *.img   📀
+*.qcow2 🛸
+*.ova   🛸
 *.bib   🎓
 *.ged   👪
 *.part  💔
 *.torrent 🔽
+*.apk   📱
+*.xapk  📱
+*.exe   🪟
+*.msi   🪟
+*.dll   ⛓️
+*.ipa   🍏
+*.dmg   🍏
