@@ -1,9 +1,9 @@
 # GRUB boot loader configuration
 
-GRUB_DEFAULT=3
+GRUB_DEFAULT=12
 GRUB_TIMEOUT=1
 GRUB_DISTRIBUTOR="Artix"
-GRUB_CMDLINE_LINUX_DEFAULT="mitigation=off resume=UUID=d3608e8e-60c4-42bf-adbd-2b394cba4f46 resume_offset=533760"
+GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=********-****-****-****-************ resume_offset=******"
 GRUB_CMDLINE_LINUX=""
 
 # Preload both GPT and MBR modules so that they are not missed
