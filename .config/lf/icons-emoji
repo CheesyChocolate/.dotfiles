@@ -92,6 +92,7 @@ fi      📄       # FILE
 *.ml            🧠
 *.mli           🧠
 *.diff          🔀
+*.patch         🔀
 *.db            🗄️
 *.sql           🗄️
 *.sqlite        🗄️
