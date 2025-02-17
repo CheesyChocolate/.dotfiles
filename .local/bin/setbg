@@ -40,7 +40,7 @@ fi
 # check using x11 or wayland
 SESSION_TYPE=$(loginctl show-session self -p Type --value)
 if [ "$SESSION_TYPE" = "wayland" ]; then
-	swaybg -m fill -i "$bgloc"
+	hyprctl hyprpaper reload ,"$bgloc"
 else
 	xwallpaper --zoom "$bgloc"
 	# If running, dwm hit the key to refresh the color scheme.

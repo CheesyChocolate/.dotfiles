@@ -225,6 +225,7 @@ hugo
 hydra
 hyphen-en
 hyprland
+hyprpaper
 hyprpicker
 i2c-tools
 i2pd-runit
@@ -648,7 +649,6 @@ steam
 steamcmd
 streamlink
 subversion
-swaybg
 swaylock
 swtpm
 sysfsutils
