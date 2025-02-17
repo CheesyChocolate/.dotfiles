@@ -182,7 +182,6 @@ python-xarray
 python-xcffib
 python-xlrd
 python-xlwt
-python-xxhash
 qemu-user-static-binfmt
 rhino
 rubiks
@@ -212,7 +211,6 @@ webkit2gtk
 xfsprogs
 xjadeo
 xorg-xhost
-yaml-language-server
 yapf
 zathura-cb
 zathura-djvu

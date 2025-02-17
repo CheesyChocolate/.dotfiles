@@ -22,6 +22,7 @@ mars-mips
 mutt-wizard-git
 nuitka
 obs-pipewire-audio-capture-bin
+oda-file-converter
 pam-gnupg-git
 pass-import
 python-chembl-webresource-client
