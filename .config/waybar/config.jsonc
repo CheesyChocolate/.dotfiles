@@ -10,26 +10,27 @@
 		"hyprland/workspaces",
 		"hyprland/window"
 	],
+	"modules-center": [
+		"mpd"
+	],
 	"modules-right": [
-		"tray",
-		"mpd",
 		"privacy",
-		"custom/mail",
 		"custom/updates",
 		"temperature",
-		"battery",
-		"network",
-		"backlight",
+		"custom/mail",
 		"bluetooth",
 		"wireplumber",
+		"battery",
+		"backlight",
 		"custom/weather",
 		"clock",
-		"hyprland/language"
+		"hyprland/language",
+		"tray"
 	],
 	"bluetooth": {
-		"format": " {status}",
-		"format-connected": " {device_alias}",
-		"format-connected-battery": " {device_alias}{device_battery_percentage}%",
+		"format": "{status}",
+		"format-connected": "",
+		"format-connected-battery": "{device_battery_percentage}%",
 		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
 		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
@@ -40,46 +41,25 @@
 		"format": "{}",
 		"interval": 30,
 		"on-click": "kitty -e less -Sf $XDG_CACHE_HOME/weatherreport",
-		"exec": "~/.local/bin/statusbar/sb-forecast",
+		"exec": "$HOME/.local/bin/statusbar/sb-forecast",
 		"return-type": "string"
 	},
 	"custom/mail": {
-		"format": "📩{}",
+		"format": "{}",
 		"interval": 30,
-		"exec": "notmuch count tag:flagged OR tag:inbox AND NOT tag:killed"
+		"exec": "$HOME/.local/bin/statusbar/sb-mailbox"
 	},
 	"mpd": {
-		"format": "{stateIcon} {artist} - {title} ",
+		"format": "{stateIcon}{artist} - {title} ",
 		"format-disconnected": "Disconnected ",
 		"format-stopped": "{consumeIcon}Stopped ",
 		"interval": 10,
-		"consume-icons": {
-			"on": " " // Icon shows only when "consume" is on
-		},
-		"random-icons": {
-			"off": "<span color=\"#f53c3c\"></span> ",
-			"on": " "
-		},
-		"repeat-icons": {
-			"on": " "
-		},
-		"single-icons": {
-			"on": "1 "
-		},
 		"state-icons": {
-			"paused": "",
-			"playing": ""
+			"paused": "⏸",
+			"playing": ""
 		},
 		"tooltip-format": "MPD (connected)",
 		"tooltip-format-disconnected": "MPD (disconnected)"
-	},
-	"network": {
-		"format-wifi": "<span color='#589df6'></span> <span color='gray'>{essid}</span>",
-		"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-		"format-linked": "{ifname} (No IP) ",
-		"format-disconnected": "Disconnected ⚠",
-		"format-alt": "{ifname}: {ipaddr}/{cidr}",
-		"interval": 5
 	},
 	"privacy": {
 		"icon-spacing": 4,
@@ -105,18 +85,18 @@
 	},
 	"hyprland/language": {
 		"format": "⌨️{}",
-		"format-en": "EN-us",
-		"format-tr": "TR-tr",
-		"format-ir": "IR-pr",
-		"keyboard-name": "at-translated-set-2-keyboard"
+		"format-en": "us",
+		"format-tr": "tr",
+		"format-ir": "ir"
 	},
 	"temperature": {
 		"critical-threshold": 80,
-		"format": "<span color='#e88939'>{icon}</span> {temperatureC}°C",
+		"format": "{icon}<span color='#e88939'>{temperatureC}°C</span>",
 		"format-icons": [
-			"",
-			"",
-			""
+			"🧊",
+			"🌡",
+			"🌡",
+			"🔥"
 		]
 	},
 	"hyprland/window": {
@@ -129,11 +109,11 @@
 		"on-scroll-down": "hyprctl dispatch workspace e-1"
 	},
 	"custom/updates": {
-		"format": " {} ",
-		"interval": 7200, // every two hours
+		"format": "📦{} ",
+		"interval": 72000,
 		"exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'", // # of updates and tooltip details
 		"exec-if": "exit 0", // always run; consider advanced run conditions
-		"on-click": "kitty -e sudo pacman -Syu", // update system
+		"on-click": "kitty -e sudo yay -Syu",
 		"signal": 8
 	},
 	"tray": {
@@ -142,7 +122,7 @@
 	},
 	"clock": {
 		"format": "{:%Y %b %d (%a)🕛%H:%M}",
-		"format-alt": "{:%A, %B %d, %Y (%R)}  ",
+		"format-alt": "{:%A, %B %d, %Y (%R)}🕛",
 		"tooltip-format": "<tt><small>{calendar}</small></tt>",
 		"calendar": {
 			"mode": "year",
@@ -170,7 +150,9 @@
 		"format-icons": [
 			"🔅",
 			"🔆"
-		]
+		],
+		// TODO: the command is a daemon, write a script to toggle
+		// "on-click": "hyprsunset"
 	},
 	"battery": {
 		"interval": 60,
@@ -178,29 +160,26 @@
 			"warning": 15,
 			"critical": 5
 		},
-		"format": "<span color='#e88939'>{icon}</span> {capacity}%",
-		"format-charging": "<span color='#e88939'> </span> {capacity}%",
-		"format-plugged": "<span color='#e88939'></span> {capacity}%",
+		"format": "{icon}<span color='#e88939'>{capacity}%</span>",
+		"format-charging": "🔌<span color='#e88939'>{capacity}%</span> ",
+		"format-plugged": "🛑<span color='#e88939'>{capacity}%</span> ",
 		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
+			"❗",
+			"🪫",
+			"🔋",
+			"⚡"
 		]
 	},
 	"wireplumber": {
-		"format": "{icon} {volume}%",
-		"format-muted": "",
+		"format": "{icon}{volume}%",
+		"format-muted": "🔇",
 		"on-click": "helvum",
 		"max-volume": 150,
 		"scroll-step": 0.2,
-		// "on-scroll-up": "pamixer -i 5",
-		// "on-scroll-down": "pamixer -d 5",
 		"format-icons": [
-			"",
-			"",
-			""
+			"🔈",
+			"🔉",
+			"🔊"
 		]
 	}
 }
