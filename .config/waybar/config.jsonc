@@ -1,116 +1,193 @@
 {
-    "layer": "top",
-    "position": "top",
-    "mod": "dock",
-    "exclusive": true,
-    "passthrough": false,
-    "gtk-layer-shell": true,
-    "height": 0,
-    "modules-left": [
-        "clock",
-        "custom/weather",
-        "hyprland/workspaces"
-    ],
-    "modules-center": ["hyprland/window"],
-    "modules-right": [
-        "tray",
-        "custom/updates",
-        "custom/language",
-        "battery",
-        "backlight",
-        "pulseaudio",
-        "pulseaudio#microphone"
-    ],
-
-    "hyprland/window": {
-        "format": "{}"
-    },
-    "wlr/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "on-click": "activate",
-        //"format": "{icon}",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "0": []
-        }
-    },
-    "custom/updates": {
-        "format": " {}",
-        "interval": 7200,                     // every two hours
-        "exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'",       // # of updates and tooltip details
-        "exec-if": "exit 0",                  // always run; consider advanced run conditions
-        "on-click": "st -e sudo pacman -Syu", // update system
-        "signal": 8
-    },
-   "custom/weather" : {
-        "tooltip" : true,
-        "format" : "{}",
-        "interval" : 30,
-        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
-        "return-type" : "json"
-    },
-    "tray": {
-        "icon-size": 13,
-        "spacing": 10
-    },
-    "clock": {
-        "format": "{: %R   %d/%m}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", ""],
-        "on-scroll-up": "brightnessctl set 1%+",
-        "on-scroll-down": "brightnessctl set 1%-",
-        "min-length": 6
-    },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", "", "", ""]
-    },
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "tooltip": false,
-        "format-muted": " Muted",
-        "on-click": "pamixer -t",
-        "on-scroll-up": "pamixer -i 5",
-        "on-scroll-down": "pamixer -d 5",
-        "scroll-step": 5,
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        }
-    },
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": " Muted",
-        "on-click": "pamixer --default-source -t",
-        "on-scroll-up": "pamixer --default-source -i 5",
-        "on-scroll-down": "pamixer --default-source -d 5",
-        "scroll-step": 5
-    }
+	"layer": "top",
+	"position": "top",
+	"mod": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"gtk-layer-shell": true,
+	"height": 0,
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+	"modules-right": [
+		"tray",
+		"mpd",
+		"privacy",
+		"custom/mail",
+		"custom/updates",
+		"temperature",
+		"battery",
+		"network",
+		"backlight",
+		"wireplumber",
+		"clock",
+		"custom/weather",
+		"hyprland/language"
+	],
+	"custom/weather": {
+		"tooltip": true,
+		"format": "{}",
+		"interval": 30,
+		"exec": "~/.config/waybar/scripts/waybar-wttr.py",
+		"return-type": "json"
+	},
+	"custom/mail": {
+		"format": "📩{}",
+		"interval": 30,
+		"exec": "notmuch count tag:flagged OR tag:inbox AND NOT tag:killed"
+	},
+	"mpd": {
+		"format": "{stateIcon} {artist} - {title} ",
+		"format-disconnected": "Disconnected ",
+		"format-stopped": "{consumeIcon}Stopped ",
+		"interval": 10,
+		"consume-icons": {
+			"on": " " // Icon shows only when "consume" is on
+		},
+		"random-icons": {
+			"off": "<span color=\"#f53c3c\"></span> ",
+			"on": " "
+		},
+		"repeat-icons": {
+			"on": " "
+		},
+		"single-icons": {
+			"on": "1 "
+		},
+		"state-icons": {
+			"paused": "",
+			"playing": ""
+		},
+		"tooltip-format": "MPD (connected)",
+		"tooltip-format-disconnected": "MPD (disconnected)"
+	},
+	"network": {
+		"format-wifi": "<span color='#589df6'></span> <span color='gray'>{essid}</span>",
+		"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+		"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": "Disconnected ⚠",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}",
+		"interval": 5
+	},
+	"privacy": {
+		"icon-spacing": 4,
+		"icon-size": 18,
+		"transition-duration": 250,
+		"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			},
+			{
+				"type": "audio-out",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			}
+		]
+	},
+	"hyprland/language": {
+		"format": "⌨️{}",
+		"format-en": "EN-us",
+		"format-tr": "TR-tr",
+		"format-ir": "IR-pr",
+		"keyboard-name": "at-translated-set-2-keyboard"
+	},
+	"temperature": {
+		"critical-threshold": 80,
+		"format": "<span color='#e88939'>{icon}</span> {temperatureC}°C",
+		"format-icons": [
+			"",
+			"",
+			""
+		]
+	},
+	"hyprland/window": {
+		"icon": true
+	},
+	"hyprland/workspaces": {
+		"all-outputs": true,
+		"on-click": "activate"
+	},
+	"custom/updates": {
+		"format": " {} ",
+		"interval": 7200, // every two hours
+		"exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'", // # of updates and tooltip details
+		"exec-if": "exit 0", // always run; consider advanced run conditions
+		"on-click": "kitty -e sudo pacman -Syu", // update system
+		"signal": 8
+	},
+	"tray": {
+		"icon-size": 13,
+		"spacing": 10
+	},
+	"clock": {
+		"format": "⏰{:%H:%M}",
+		"format-alt": "{:%A, %B %d, %Y (%R)}  ",
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"mode": "year",
+			"mode-mon-col": 3,
+			"weeks-pos": "right",
+			"on-scroll": 1,
+			"format": {
+				"months": "<span color='#ffead3'><b>{}</b></span>",
+				"days": "<span color='#ecc6d9'><b>{}</b></span>",
+				"weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+				"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+				"today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+			}
+		},
+		"actions": {
+			"on-click-right": "mode",
+			"on-scroll-up": "tz_up",
+			"on-scroll-down": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
+	},
+	"backlight": {
+		"format": "{icon}{percent}%",
+		"format-icons": [
+			"🔅",
+			"🔆"
+		]
+	},
+	"battery": {
+		"interval": 60,
+		"states": {
+			"warning": 15,
+			"critical": 5
+		},
+		"format": "<span color='#e88939'>{icon}</span> {capacity}%",
+		"format-charging": "<span color='#e88939'> </span> {capacity}%",
+		"format-plugged": "<span color='#e88939'></span> {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"wireplumber": {
+		"format": "{icon} {volume}%",
+		"format-muted": "",
+		"on-click": "helvum",
+		"max-volume": 150,
+		"scroll-step": 0.2,
+		// "on-scroll-up": "pamixer -i 5",
+		// "on-scroll-down": "pamixer -d 5",
+		"format-icons": [
+			"",
+			"",
+			""
+		]
+	}
 }
