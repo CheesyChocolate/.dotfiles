@@ -119,6 +119,7 @@ export AWT_TOOLKIT="MToolkit wmname LG3D"	# May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1		# Fix for Java applications in dwm
 # export MPLBACKEND="GTK4Agg"
 export SUDO_PROMPT="$(tput setab 1 setaf 7 bold)[sudo]$(tput sgr0) $(tput setaf 6)make$(tput sgr0) $(tput setaf 5)%p$(tput sgr0) $(tput setaf 6)some popcorn$(tput sgr0): "
+export BEMENU_OPTS="--binding vim --ignorecase --vim-esc-exits"
 
 [ ! -f "$XDG_CONFIG_HOME/shell/shortcutrc" ] && setsid -f shortcuts >/dev/null 2>&1
 
