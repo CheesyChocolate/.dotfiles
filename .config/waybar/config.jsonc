@@ -37,11 +37,11 @@
 		"on-click": "kitty -e bluetuith"
 	},
 	"custom/weather": {
-		"tooltip": true,
 		"format": "{}",
 		"interval": 30,
-		"exec": "~/.config/waybar/scripts/waybar-wttr.py",
-		"return-type": "json"
+		"on-click": "kitty -e less -Sf $XDG_CACHE_HOME/weatherreport",
+		"exec": "~/.local/bin/statusbar/sb-forecast",
+		"return-type": "string"
 	},
 	"custom/mail": {
 		"format": "📩{}",
