@@ -22,8 +22,8 @@
 		"backlight",
 		"bluetooth",
 		"wireplumber",
-		"clock",
 		"custom/weather",
+		"clock",
 		"hyprland/language"
 	],
 	"bluetooth": {
@@ -141,7 +141,7 @@
 		"spacing": 10
 	},
 	"clock": {
-		"format": "⏰{:%H:%M}",
+		"format": "{:%Y %b %d (%a)🕛%H:%M}",
 		"format-alt": "{:%A, %B %d, %Y (%R)}  ",
 		"tooltip-format": "<tt><small>{calendar}</small></tt>",
 		"calendar": {
