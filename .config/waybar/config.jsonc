@@ -124,7 +124,9 @@
 	},
 	"hyprland/workspaces": {
 		"all-outputs": true,
-		"on-click": "activate"
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1"
 	},
 	"custom/updates": {
 		"format": " {} ",
