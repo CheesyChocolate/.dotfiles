@@ -225,8 +225,11 @@ hugo
 hydra
 hyphen-en
 hyprland
+hyprlock
 hyprpaper
 hyprpicker
+hyprpolkitagent
+hyprsunset
 i2c-tools
 i2pd-runit
 icu69
