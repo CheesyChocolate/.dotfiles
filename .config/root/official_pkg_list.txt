@@ -166,6 +166,7 @@ geckodriver
 geoip-database-extra
 geoipupdate
 ghc
+ghostty
 gimagereader-gtk
 gimp
 gimp-extras

@@ -26,6 +26,7 @@
 .config/gh/*
 !.config/gh/config.yml
 !.config/gh-copilot/
+!.config/ghostty/
 !.config/git/
 !.config/glow/
 !.config/gtk-2.0/

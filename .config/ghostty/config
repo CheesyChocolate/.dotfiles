@@ -1,0 +1,37 @@
+# font
+font-family = "monospaced"
+font-family = "NotoColorEmoji"
+font-size = 11
+
+# decoration
+config-file = theme.conf
+background-opacity = 0.80
+
+# misc
+# TODO: does not work
+link-url = true
+title-report = true
+copy-on-select = false
+confirm-close-surface = false
+shell-integration-features = no-cursor,title
+linux-cgroup = always
+
+# cursor
+# TODO: does not work
+cursor-style-blink = false
+
+# key bindings
+keybind = clear
+
+keybind = alt+c=copy_to_clipboard
+keybind = alt+v=paste_from_clipboard
+# keybind = alt+k=scroll_page_lines
+# keybind = alt+j=scroll_page_lines
+keybind = alt+u=scroll_page_up
+keybind = alt+d=scroll_page_down
+keybind = alt+shift+u=scroll_to_top
+keybind = alt+shift+d=scroll_to_bottom
+# keybind = alt+shift+k=increase_font_size
+# keybind = alt+shift+j=decrease_font_size
+# keybind = alt+l=open_url_to_clipboard
+keybind = alt+y=copy_url_to_clipboard
