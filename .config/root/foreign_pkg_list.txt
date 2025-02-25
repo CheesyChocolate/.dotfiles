@@ -40,6 +40,7 @@ showmethekey-git
 stig-git
 task-spooler
 urlview-xdg-git
+weechat-notify-send-git
 wordlists
 wtwitch
 xinput-toggle

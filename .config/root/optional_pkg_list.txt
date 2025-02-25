@@ -61,10 +61,10 @@ libmythes
 libsemigroups
 libtiger
 libvncserver
+libxnvctrl
 lilypond
 lirc
 live-media
-lksctp-tools
 llvm18
 lvm2
 meson
@@ -141,7 +141,6 @@ python-lz4
 python-mpi4py
 python-netcdf4
 python-numba
-python-oauth2client
 python-openpyxl
 python-pandas-datareader
 python-pdftotext
@@ -151,6 +150,7 @@ python-pint
 python-pkgconfig
 python-pprofile
 python-psycopg2
+python-pyamg
 python-pycosat
 python-pydocstyle
 python-pygit2

@@ -520,6 +520,7 @@ podman
 polkit
 polkit-gnome
 poppler
+powershell-bin
 powertop
 profanity
 progress
@@ -585,7 +586,6 @@ r2ghidra
 radeontop
 radvd
 rapidjson
-reiserfsprogs
 remmina
 remmina-plugin-anydesk-git
 remmina-plugin-folder
@@ -654,7 +654,6 @@ steam
 steamcmd
 streamlink
 subversion
-swaylock
 swtpm
 sysfsutils
 tenacity
