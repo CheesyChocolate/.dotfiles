@@ -81,9 +81,6 @@ cli11
 clinfo
 cliphist
 cloudflare-warp-bin
-code
-code-features
-code-marketplace
 colord-gtk
 colord-gtk-common
 composer
