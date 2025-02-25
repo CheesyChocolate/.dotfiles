@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# dmenu process killer
+
+pid=$(ps aux | sed 1d | dmenu -l 10 | awk '{print $2}')
+echo "$pid" | xargs kill -9
