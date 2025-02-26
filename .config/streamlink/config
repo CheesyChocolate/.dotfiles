@@ -1,0 +1,4 @@
+player=mpv
+default-stream=best
+twitch-disable-ads
+twitch-low-latency

@@ -42,7 +42,6 @@ task-spooler
 urlview-xdg-git
 weechat-notify-send-git
 wordlists
-wtwitch
 xinput-toggle
 xsct
 zaread-git

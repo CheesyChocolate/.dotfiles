@@ -78,6 +78,7 @@
 !.config/shell/
 .config/shell/privateProfile
 !.config/spicy/
+!.config/streamlink/
 !.config/swaylock/
 !.config/tmux/
 !.config/vlc/
@@ -88,8 +89,6 @@
 !.config/wget/
 !.config/wikiman/
 !.config/wireplumber/
-!.config/wtwitch/
-.config/wtwitch/api.json
 !.config/x11/
 !.config/yay/
 !.config/zathura/
