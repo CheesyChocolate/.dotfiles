@@ -150,6 +150,7 @@ flite
 foremost
 fossil
 fpc
+freebasic
 freecad-git
 freerdp
 fritzing
