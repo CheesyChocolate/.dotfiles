@@ -36,6 +36,7 @@
 .config/iamb/*
 !.config/iamb/config.json
 !.config/kitty/
+!.config/latexmk/
 !.config/lf/
 !.config/librewolf/
 .config/librewolf/*
