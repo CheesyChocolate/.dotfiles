@@ -77,7 +77,7 @@ se() {
 pip() {
     if [ $1 = "search" ]; then
         pip_search "$2";
-    else pip "$@";
+    else command pip "$@";
     fi;
 };
 
