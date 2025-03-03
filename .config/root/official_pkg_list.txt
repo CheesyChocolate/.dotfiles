@@ -725,7 +725,7 @@ ttf-nerd-fonts-symbols-common
 turbo-base64
 typescript
 typst
-ueberzug
+ueberzugpp
 umockdev
 umu-launcher
 unace
