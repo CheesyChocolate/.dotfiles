@@ -10,7 +10,7 @@ function switch_to() {
 }
 
 function has_session() {
-	tmux list-sessions | grep -q "^$1:"
+	tmux has-session -t "$1" 2>/dev/null
 }
 
 function hydrate() {
