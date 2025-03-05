@@ -47,7 +47,7 @@ if [[ -z "${selected}" ]]; then
 fi
 
 # Create session name and change directory
-session_name=$(basename "${selected}" | tr '.' '_' | sed 's/[^a-zA-Z0-9]/_/g')
+session_name=$(basename "${selected}" | tr -c '[:alnum:]' '_')
 cd "${selected}"
 
 # Create and configure the session
