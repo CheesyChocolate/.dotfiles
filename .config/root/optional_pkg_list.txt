@@ -151,6 +151,7 @@ python-pkgconfig
 python-pprofile
 python-psycopg2
 python-pyamg
+python-pyarrow
 python-pycosat
 python-pydocstyle
 python-pygit2
@@ -161,6 +162,7 @@ python-pynormaliz
 python-pypubsub
 python-pyscipopt
 python-pytables
+python-pywavelets
 python-qiskit-aer
 python-rfc3339-validator
 python-rfc3987
@@ -176,6 +178,7 @@ python-tensorflow-serving-api
 python-tzdata
 python-unidecode
 python-uri-template
+python-watchdog
 python-webcolors
 python-whatthepatch
 python-xarray
