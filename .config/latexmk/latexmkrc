@@ -1,7 +1,7 @@
 $bibtex_use = 1.5;
 $cleanup_includes_cusdep_generated = 1;
 $cleanup_includes_generated = 1;
-$out_dir = "out";
+# $out_dir = "out";
 $pdf_mode = 5;	# NOTE: XeLaTeX need "\usepackage{newtxtext}" to properly handle bold fonts
 $silent = 1;
 
