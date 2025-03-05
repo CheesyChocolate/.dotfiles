@@ -33,7 +33,7 @@ done
 
 # display creation using parameter expansion
 display_projects=("${(@)projects/#$HOME\/Templates\//}")
-selected_display=$(print -l "${display_projects[@]}" | fzf)
+selected_display=$(print -l "${display_projects[@]}" | fzf --preview "ls -la ${HOME}/Templates/{} | head -20" --preview-window=right:50%)
 
 # Find the original path
 selected=""
