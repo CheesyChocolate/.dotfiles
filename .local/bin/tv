@@ -1,7 +1,26 @@
 #!/usr/bin/env zsh
 
-projects=()
+# Functions for session management
+function switch_to() {
+	if [[ -z $TMUX ]]; then
+		tmux attach-session -t "$1"
+	else
+		tmux switch-client -t "$1"
+	fi
+}
 
+function has_session() {
+	tmux list-sessions | grep -q "^$1:"
+}
+
+function hydrate() {
+	if [[ -f "$2/.tmux-sessionizer" ]]; then
+		tmux send-keys -t "$1" "source $2/.tmux-sessionizer" C-m
+	fi
+}
+
+# Collect projects
+projects=()
 base_dirs=(${HOME}/Templates/*/*(/))
 
 function contains_only_dirs() {
@@ -22,22 +41,23 @@ selected_display="$(print -lnr "${display_projects[@]}" | fzf)"
 selected=""
 [[ "$selected_display" ]] && selected="${projects[${display_projects[(i)$selected_display]}]}"
 
-if [[ "${selected}" ]]; then
-	session_name=$(basename "${selected}" | sed 's/[^a-zA-Z0-9]/_/g')
-	cd "${selected}"
-
-	# Check if tmux is running and create a new session or attach to existing one
-	if ! tmux has-session -t "$session_name" 2>/dev/null; then
-		tmux new-session -d -s "$session_name" -n "editor" -c "${selected}" "nvim ."
-		tmux new-window -t "$session_name:2" -n "shell" -c "${selected}"
-		tmux new-window -t "$session_name:3" -n "git" -c "${selected}" "nvim -c MagitOnly"
-		tmux select-window -t "$session_name:1"
-	fi
-
-	# Attach to the session
-	if [[ -z "$TMUX" ]]; then
-		tmux attach-session -t "$session_name"
-	else
-		tmux switch-client -t "$session_name"
-	fi
+# Exit if no selection was made
+if [[ -z "${selected}" ]]; then
+	exit 0
 fi
+
+# Create session name and change directory
+session_name=$(basename "${selected}" | tr '.' '_' | sed 's/[^a-zA-Z0-9]/_/g')
+cd "${selected}"
+
+# Create and configure the session
+if ! has_session "$session_name"; then
+	tmux new-session -d -s "$session_name" -n "editor" -c "${selected}" "nvim ."
+	tmux new-window -t "$session_name:2" -n "shell" -c "${selected}"
+	tmux new-window -t "$session_name:3" -n "git" -c "${selected}" "nvim -c MagitOnly"
+	tmux select-window -t "$session_name:1"
+	hydrate "$session_name" "${selected}"
+fi
+
+# Attach to session
+switch_to "$session_name"
