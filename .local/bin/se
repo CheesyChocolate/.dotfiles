@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+s=("${HOME}/.local/bin/"**/*(.))
+c="$(print -lnr ${s:t:r} | fzf)"
+[[ "${c}" ]] && "${EDITOR}" ${${(M)s:#*/${c}*}[1]}
