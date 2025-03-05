@@ -22,33 +22,34 @@ function hydrate() {
 # Collect projects
 projects=()
 base_dirs=(${HOME}/Templates/*/*(/))
-
-function contains_only_dirs() {
-	local dir=$1
-	[[ -n "$(ls -A $dir)" ]] && [[ -z "$(find $dir -maxdepth 1 -type f)" ]]
-}
-
 for dir in $base_dirs; do
-	if contains_only_dirs "$dir"; then
-		projects+=("$dir"/*(/:A))
+	# Use -L to avoid following symlinks
+	if [[ -n "$(ls -LA $dir 2>/dev/null | grep -v '^\.')" ]] && [[ -z "$(find -L $dir -maxdepth 1 -type f -not -path "*/\.*" | head -1)" ]]; then
+		projects+=($dir/*(/N))
 	else
 		projects+=($dir)
 	fi
 done
 
-display_projects=("${projects[@]#$HOME/Templates/}")
-selected_display="$(print -lnr "${display_projects[@]}" | fzf)"
+# display creation using parameter expansion
+display_projects=("${(@)projects/#$HOME\/Templates\//}")
+selected_display=$(print -l "${display_projects[@]}" | fzf)
+
+# Find the original path
 selected=""
-[[ "$selected_display" ]] && selected="${projects[${display_projects[(i)$selected_display]}]}"
+for i in {1..$#display_projects}; do
+	if [[ "${display_projects[$i]}" == "$selected_display" ]]; then
+		selected="${projects[$i]}"
+		break
+	fi
+done
 
 # Exit if no selection was made
-if [[ -z "${selected}" ]]; then
-	exit 0
-fi
+[[ -z "${selected}" ]] && exit 0
 
 # Create session name and change directory
 session_name=$(basename "${selected}" | tr -c '[:alnum:]' '_')
-cd "${selected}"
+cd "${selected}" || exit 1
 
 # Create and configure the session
 if ! has_session "$session_name"; then
