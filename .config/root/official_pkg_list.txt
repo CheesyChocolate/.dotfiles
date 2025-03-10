@@ -147,6 +147,7 @@ firewalld-runit
 flatpak
 flickcurl
 flite
+fnm
 foremost
 fossil
 fpc
@@ -538,6 +539,7 @@ python-evdev
 python-geoip
 python-gmpy2
 python-graphviz
+python-hatch
 python-imageio
 python-imageio-ffmpeg
 python-ipympl
@@ -693,6 +695,7 @@ texlive-langspanish
 texlive-latexextra
 texlive-luatex
 texlive-mathscience
+texlive-meta
 texlive-metapost
 texlive-music
 texlive-pictures

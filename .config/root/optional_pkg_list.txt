@@ -68,7 +68,6 @@ live-media
 llvm18
 lvm2
 meson
-mousetweaks
 msolve
 mypy
 netcdf-cxx
@@ -198,7 +197,6 @@ speech-dispatcher
 strace
 swi-prolog
 texlab
-texlive-binextra
 topcom
 typescript-language-server
 udftools
