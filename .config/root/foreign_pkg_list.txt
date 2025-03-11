@@ -38,6 +38,7 @@ sent-git
 shazam-cli-git
 showmethekey-git
 stig-git
+svkbd-git
 task-spooler
 urlview-xdg-git
 weechat-notify-send-git

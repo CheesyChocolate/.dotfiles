@@ -473,7 +473,6 @@ octave
 octave-io
 odt2txt
 ollama-rocm
-onboard
 openbsd-netcat
 opencl-rusticl-mesa
 openconnect
