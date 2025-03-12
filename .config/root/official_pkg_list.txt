@@ -471,6 +471,7 @@ obs-studio
 ocaml
 octave
 octave-io
+odin
 odt2txt
 ollama-rocm
 openbsd-netcat

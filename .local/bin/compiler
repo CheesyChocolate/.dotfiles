@@ -66,6 +66,7 @@ case "${ext}" in
 	mmd) mmdc -i "${file}" -o "${base}.png" ;;
 	mom | ms) preconv "${file}" | refer -PS -e | groff -T pdf -m"${ext}" >"${base}.pdf" ;;
 	nim) nim compile --run "${file}" ;;
+	odin) odin run "${file}" -file ;;
 	org) emacs "${file}" --batch -u "${USER}" -f org-latex-export-to-pdf ;;
 	p) fpc "${file}" && "${base}" ;;
 	pl) perl "${file}" ;;
