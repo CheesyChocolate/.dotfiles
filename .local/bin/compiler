@@ -85,6 +85,7 @@ case "${ext}" in
 	tex) latexmk "${file}" ;;
 	ts) tsc "${file}" && node "${base}.js" ;;
 	uml) plantuml "${file}" ;;
+	vhdl) ghdl -a "${file}" && ghdl -e "${base##*/}" && ghdl -r "${base##*/}" ;;	# HACK: entity name must match filename
 	zig) zig run "${file}" ;;
 	*) sed -n '/^#!/s/^#!//p; q' "${file}" | xargs -r -I % "${file}" ;;
 esac

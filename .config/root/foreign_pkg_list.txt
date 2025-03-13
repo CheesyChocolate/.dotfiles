@@ -8,6 +8,7 @@ cht.sh-git
 dwm-lemon-git
 findbrokenpkgs
 firefox-tridactyl-native-bin
+ghdl
 gtk-theme-arc-gruvbox-git
 hyx
 iamb-git
