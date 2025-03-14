@@ -9,6 +9,7 @@ dwm-lemon-git
 findbrokenpkgs
 firefox-tridactyl-native-bin
 ghdl
+gnucobol
 gtk-theme-arc-gruvbox-git
 hyx
 iamb-git

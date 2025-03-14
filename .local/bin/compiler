@@ -24,6 +24,7 @@ case "${ext}" in
 	bas) fbc "${file}" && "${base}" ;;
 	bash) bash "${file}" ;;
 	c) cc "${file}" -o "${base}.out" && "${base}.out" ;;
+	cob) cobc -x -O2 -o "${base}.out" "${file}" && "${base}.out" ;;
 	cpp) g++ "${file}" -o "${base}.out" && "${base}.out" ;;
 	cs) mcs "${file}" && mono "${base}.exe" ;;
 	csproj) dotnet watch run --project "${file}" ;;
