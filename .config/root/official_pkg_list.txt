@@ -73,6 +73,7 @@ chaotic-mirrorlist
 cheat
 check
 checkbashisms
+chicken
 chkrootkit
 ckbcomp
 clamav

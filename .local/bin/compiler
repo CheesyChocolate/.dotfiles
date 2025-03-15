@@ -80,6 +80,7 @@ case "${ext}" in
 	sass) sassc -a "${file}" "${base}.css" ;;
 	scad) openscad -o "${base}.stl" "${file}" ;;
 	scala) scala "${file}" ;;
+	scm) chicken-csi -script "${file}" ;;
 	sent) setsid -f sent "${file}" 2>"/dev/null" ;;
 	sh) sh "${file}" ;;
 	sql) rm -f "${base}.tmp.db" && sqlite3 "${base}.tmp.db" <"${file}" ;;
