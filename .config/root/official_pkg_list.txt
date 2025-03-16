@@ -81,6 +81,7 @@ clamav-runit
 cli11
 clinfo
 cliphist
+clojure
 cloudflare-warp-bin
 colord-gtk
 colord-gtk-common
