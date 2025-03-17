@@ -94,6 +94,7 @@ cvs
 cyberchef-electron
 cython
 darcs
+dart
 dash
 ddcutil
 debuginfod
