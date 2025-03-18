@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 
-s=("${HOME}/.local/bin/"**/*(.))
-c="$(print -lnr ${s:t:r} | fzf)"
-[[ "${c}" ]] && "${EDITOR}" ${${(M)s:#*/${c}*}[1]}
+local -r bindir="${HOME}/.local/bin/"
+s=("${bindir}"**/*(.))
+c="$(print -lnr ${s/$bindir/} | fzf)"
+[[ "${c}" ]] && "${EDITOR}" "$bindir$c"
