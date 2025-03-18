@@ -163,6 +163,7 @@ fzf
 game-devices-udev
 gamemode
 gamescope
+gcc-ada
 gcc9
 geckodriver
 geoip-database-extra
