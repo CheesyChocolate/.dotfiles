@@ -53,6 +53,7 @@ bluez-runit
 bluez-utils
 bmon
 bootlogd
+brave-bin
 btrfs-progs
 buildah
 burpsuite
@@ -256,6 +257,7 @@ iwd-runit
 java-commons-io
 java-rhino
 java-runtime-common
+jdk
 jdk-openjdk
 jdk17-openjdk
 jedi-language-server
@@ -423,6 +425,7 @@ mesa-utils
 metasploit
 microsoft-gsl
 mirrorlist.arch4edu
+mission-center
 mkinitcpio-firmware
 monero
 monero-gui

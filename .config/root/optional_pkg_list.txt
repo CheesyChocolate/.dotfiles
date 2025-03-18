@@ -1,5 +1,4 @@
 acsccid
-adios2
 arch-wiki-docs
 artix-checkupdates
 artix-rebuild-order
@@ -20,7 +19,6 @@ colord
 coxeter
 cryptominisat
 cups-browsed
-db
 dblatex
 ditaa
 docker-buildx
@@ -55,6 +53,7 @@ ladspa
 latte-integrale
 lib32-gamemode
 libappindicator-gtk3
+libgnome-keyring
 libgoom2
 liblas
 libmythes
@@ -167,6 +166,7 @@ python-rfc3339-validator
 python-rfc3987
 python-rope
 python-scikit-learn
+python-seaborn
 python-service-identity
 python-setproctitle
 python-smbprotocol
