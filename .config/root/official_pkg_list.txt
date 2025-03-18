@@ -275,6 +275,7 @@ kicad-library-3d
 kimageformats
 kitty
 kotlin
+ldc
 ledger
 ledger-live
 lemon

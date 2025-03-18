@@ -30,6 +30,7 @@ case "${ext}" in
 	cpp) g++ "${file}" -o "${base}.out" && "${base}.out" ;;
 	cs) mcs "${file}" && mono "${base}.exe" ;;
 	csproj) dotnet watch run --project "${file}" ;;
+	d) ldc "${file}" && "${base}" ;;
 	dart) dart "${file}" ;;
 	exs) elixir "${file}" ;;
 	f90) gfortran "${file}" -o "${base}.out" && "${base}.out" ;;
