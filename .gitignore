@@ -82,6 +82,7 @@
 !.config/streamlink/
 !.config/swaylock/
 !.config/tmux/
+!.config/tridactyl/
 !.config/vlc/
 !.config/vlc/*
 .config/vlc/vlc-qt-interface.conf
