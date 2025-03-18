@@ -1,5 +1,25 @@
 #!/usr/bin/env zsh
 
+function usage() {
+	echo "Usage: tv"
+	echo "Open a tmux session for a project in ~/Templates"
+	echo "  -s        Simple mode. no tmux, only one lf window"
+	echo "  -h        Display this help message"
+	exit 1
+}
+
+# Parse arguments
+while getopts "sh" opt; do
+	case $opt in
+	s)
+		simple_mode=true
+		;;
+	h)
+		usage
+		;;
+	esac
+done
+
 # Functions for session management
 function switch_to() {
 	if [[ -z $TMUX ]]; then
@@ -46,6 +66,12 @@ done
 
 # Exit if no selection was made
 [[ -z "${selected}" ]] && exit 0
+
+# Simple mode
+if [[ -n $simple_mode ]]; then
+	lf "${selected}"
+	exit 0
+fi
 
 # Create session name and change directory
 session_name=$(basename "${selected}" | tr -c '[:alnum:]' '_')
