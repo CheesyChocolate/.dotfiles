@@ -83,6 +83,7 @@ case "${ext}" in
 	rink) rink -f "${file}" ;;
 	[rR]) Rscript "${file}" ;;
 	[rR]md) Rscript -e "rmarkdown::render('${file}', quiet=TRUE)" ;;
+	rb) ruby "${file}" ;;
 	rs) cargo build && cargo run ;;
 	sass) sassc -a "${file}" "${base}.css" ;;
 	scad) openscad -o "${base}.stl" "${file}" ;;
