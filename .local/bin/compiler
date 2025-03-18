@@ -87,6 +87,7 @@ case "${ext}" in
 	scm) chicken-csi -script "${file}" ;;
 	sent) setsid -f sent "${file}" 2>"/dev/null" ;;
 	sh) sh "${file}" ;;
+	sml) smlnj "${file}" ;;
 	sql) rm -f "${base}.tmp.db" && sqlite3 "${base}.tmp.db" <"${file}" ;;
 	tex) latexmk "${file}" ;;
 	ts) tsc "${file}" && node "${base}.js" ;;

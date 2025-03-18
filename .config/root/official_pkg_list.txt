@@ -639,6 +639,7 @@ silk
 simple-mtpfs
 slock
 smartmontools
+smlnj
 snapper
 sniffnet
 snyk
