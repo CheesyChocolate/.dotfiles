@@ -22,6 +22,7 @@ case "${ext}" in
 	[0-9]) preconv "${file}" | refer -PS -e | groff -mandoc -T pdf >"${base}.pdf" ;;
 	adb) gnatmake -o "${base}.out" "${file}" && "${base}.out" ;;
 	asm) nasm -f elf64 "${file}" && ld -s -o "${base}.out" "${base}.o" && "${base}.out" ;;
+	bat) wine cmd /c "${file}" ;;
 	bas) fbc "${file}" && "${base}" ;;
 	bash) bash "${file}" ;;
 	c) cc "${file}" -o "${base}.out" && "${base}.out" ;;
@@ -76,6 +77,7 @@ case "${ext}" in
 	p) fpc "${file}" && "${base}" ;;
 	pl) perl "${file}" ;;
 	php) php "${file}" ;;
+	ps1) pwsh "${file}" ;;
 	py) python "${file}" ;;
 	rink) rink -f "${file}" ;;
 	[rR]) Rscript "${file}" ;;
