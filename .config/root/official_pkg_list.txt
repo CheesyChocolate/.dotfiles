@@ -280,6 +280,7 @@ kotlin
 ldc
 ledger
 ledger-live
+leiningen
 lemon
 lf
 lftp
