@@ -85,6 +85,7 @@ case "${ext}" in
 	[rR]md) Rscript -e "rmarkdown::render('${file}', quiet=TRUE)" ;;
 	rb) ruby "${file}" ;;
 	rs) cargo build && cargo run ;;
+	sage) sage "${file}" ;;
 	sass) sassc -a "${file}" "${base}.css" ;;
 	scad) openscad -o "${base}.stl" "${file}" ;;
 	scala) scala "${file}" ;;
