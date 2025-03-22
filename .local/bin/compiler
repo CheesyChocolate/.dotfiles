@@ -78,6 +78,7 @@ case "${ext}" in
 	org) emacs "${file}" --batch -u "${USER}" -f org-latex-export-to-pdf ;;
 	p) fpc "${file}" && "${base}" ;;
 	pl) perl "${file}" ;;
+	pro) swipl -q -s "${file}" ;;	# HACK: use top-level unnamed goal if you want to run non-interactive
 	php) php "${file}" ;;
 	ps1) pwsh "${file}" ;;
 	py) python "${file}" ;;
