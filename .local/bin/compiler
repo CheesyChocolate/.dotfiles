@@ -45,6 +45,7 @@ case "${ext}" in
 	hs) ghc -dynamic "${file}" && "${base}" ;;
 	ipynb) python "${file%.*}.py" ;; # 'GCBallesteros/jupytext.nvim' will convert to .py
 	java) javac -d classes "${file}" && java -cp classes "${base##*/}" ;;
+	jl) julia "${file}" ;;
 	js) node "${file}" ;;
 	lhs) ghc -dynamic "${file}" && "${base}" ;;
 	lisp) sbcl --script "${file}" ;;
