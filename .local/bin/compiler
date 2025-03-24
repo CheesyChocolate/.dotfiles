@@ -51,6 +51,7 @@ case "${ext}" in
 	lisp) sbcl --script "${file}" ;;
 	lua) lua "${file}" ;;
 	m) octave-cli "${file}" ;;
+	m4) m4 "${file}" ;;
 	md)
 		# check if file has mermaid code block
 		grep -q ':::mermaid' "$file" &&
