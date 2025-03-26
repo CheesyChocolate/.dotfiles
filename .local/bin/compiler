@@ -47,11 +47,13 @@ case "${ext}" in
 	java) javac -d classes "${file}" && java -cp classes "${base##*/}" ;;
 	jl) julia "${file}" ;;
 	js) node "${file}" ;;
+	kt) kotlinc "${file}" -include-runtime -d "${base}.jar" && java -jar "${base}.jar" ;;
 	lhs) ghc -dynamic "${file}" && "${base}" ;;
 	lisp) sbcl --script "${file}" ;;
 	lua) lua "${file}" ;;
 	m) octave-cli "${file}" ;;
 	m4) m4 "${file}" ;;
+	mac) maxima -b "${file}" ;;
 	md)
 		# check if file has mermaid code block
 		grep -q ':::mermaid' "$file" &&
