@@ -100,6 +100,7 @@ case "${ext}" in
 	sh) sh "${file}" ;;
 	sml) smlnj "${file}" ;;
 	sql) rm -f "${base}.tmp.db" && sqlite3 "${base}.tmp.db" <"${file}" ;;
+	tcl) tclsh "${file}" ;;
 	tex) latexmk "${file}" ;;
 	ts) tsc "${file}" && node "${base}.js" ;;
 	uml) plantuml "${file}" ;;
