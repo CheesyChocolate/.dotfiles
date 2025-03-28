@@ -22,6 +22,7 @@ case "${ext}" in
 	[0-9]) preconv "${file}" | refer -PS -e | groff -mandoc -T pdf >"${base}.pdf" ;;
 	adb) gnatmake -o "${base}.out" "${file}" && "${base}.out" ;;
 	asm) nasm -f elf64 "${file}" && ld -s -o "${base}.out" "${base}.o" && "${base}.out" ;;
+	awk) awk -f "${file}" ;;
 	bat) wine cmd /c "${file}" ;;
 	bas) fbc "${file}" && "${base}" ;;
 	bash) bash "${file}" ;;
