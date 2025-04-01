@@ -74,6 +74,7 @@ chaotic-mirrorlist
 cheat
 check
 checkbashisms
+checksec
 chicken
 chkrootkit
 ckbcomp
@@ -173,7 +174,6 @@ ghc
 ghostty
 gimagereader-gtk
 gimp
-gimp-extras
 ginkgo-hpc-hip
 git
 git-delta
@@ -219,7 +219,7 @@ hcxkeys
 hcxtools
 hdf5
 helvum
-heroic-games-launcher
+heroic-games-launcher-git
 hexchat
 hiprt
 hq
@@ -543,6 +543,7 @@ pypy
 python-awscrt
 python-cloudpickle
 python-css-parser
+python-datasets
 python-entrypoints
 python-evdev
 python-geoip

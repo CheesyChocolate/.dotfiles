@@ -9,6 +9,7 @@ dwm-lemon-git
 findbrokenpkgs
 firefox-tridactyl-native-bin
 ghdl
+gimp-extras
 gnucobol
 gtk-theme-arc-gruvbox-git
 hyx
@@ -27,6 +28,7 @@ obs-pipewire-audio-capture-bin
 oda-file-converter
 pam-gnupg-git
 pass-import
+phantomjs-git
 python-chembl-webresource-client
 python-jupytext
 python-npx
@@ -36,6 +38,7 @@ remmina-plugin-rdesktop
 remmina-plugin-ultravnc
 remmina-plugin-url
 samrewritten-git
+scarab-bin
 sent-git
 shazam-cli-git
 showmethekey-git

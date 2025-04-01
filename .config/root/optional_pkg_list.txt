@@ -132,13 +132,13 @@ python-jupymake
 python-jupyter-server-terminals
 python-krb5
 python-libarchive-c
+python-librosa
 python-linkify-it-py
 python-lsp-server
 python-lxml-html-clean
 python-lz4
 python-mpi4py
 python-netcdf4
-python-numba
 python-openpyxl
 python-pandas-datareader
 python-pdftotext
@@ -149,12 +149,12 @@ python-pkgconfig
 python-pprofile
 python-psycopg2
 python-pyamg
-python-pyarrow
 python-pycosat
 python-pydocstyle
 python-pygit2
 python-pyicu
 python-pyinotify
+python-pymad
 python-pymysql
 python-pynormaliz
 python-pypubsub
@@ -165,7 +165,6 @@ python-qiskit-aer
 python-rfc3339-validator
 python-rfc3987
 python-rope
-python-scikit-learn
 python-seaborn
 python-service-identity
 python-setproctitle
@@ -174,6 +173,7 @@ python-socksio
 python-sqlalchemy
 python-statsmodels
 python-tensorflow-serving-api
+python-truststore
 python-tzdata
 python-unidecode
 python-uri-template
@@ -191,6 +191,7 @@ ruby-stdlib
 sane-airscan
 shared_meataxe
 sirocco
+sleuthkit
 slirp4netns
 sox
 speech-dispatcher
