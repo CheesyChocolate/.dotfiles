@@ -1,0 +1,4 @@
+channels:
+  - conda-forge
+envs_dirs:
+  - /home/suren/.local/share/mamba/envs

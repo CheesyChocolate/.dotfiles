@@ -424,6 +424,7 @@ mermaid-cli
 mesa
 mesa-utils
 metasploit
+micromamba-bin
 microsoft-gsl
 mirrorlist.arch4edu
 mission-center

@@ -12,6 +12,7 @@
 !.config/cheat/
 .config/cheat/*
 !.config/cheat/conf.yml
+!.config/conda/
 !.config/distrobox/
 !.config/dosbox/
 !.config/dunst/
