@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# Source this script to set up mamba (micromamba) in your shell.
+
+export MAMBA_EXE="/usr/bin/micromamba"
+export MAMBA_ROOT_PREFIX="$XDG_DATA_HOME/mamba"
+
+# activate mamba in zsh
+eval "$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2>/dev/null)"
+
+# alias
+alias \
+	mamba="micromamba" \
+	conda="micromamba" \
+	miniconda="micromamba"
+
+# activate mamba base environment
+micromamba activate
