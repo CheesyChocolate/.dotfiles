@@ -25,6 +25,7 @@ artix-archlinux-support
 artix-dark-theme
 artools-pkg
 asciidoc
+asciinema
 aspell-en
 aspnet-runtime
 aubio
@@ -77,6 +78,7 @@ checkbashisms
 checksec
 chicken
 chkrootkit
+chntpw
 ckbcomp
 clamav
 clamav-runit
@@ -139,7 +141,6 @@ extra-cmake-modules
 eza
 fakechroot
 fann
-farbfeld
 fd
 festival-english
 ffmpeg
@@ -222,7 +223,6 @@ helvum
 heroic-games-launcher-git
 hexchat
 hiprt
-hq
 htop-vim
 htpdate
 httptunnel
@@ -240,6 +240,7 @@ i2pd-runit
 icu69
 ida-free
 iftop
+ihaskell
 imagemagick
 img2pdf
 inetutils
@@ -492,6 +493,7 @@ openssh
 openssh-runit
 openssl-1.1
 optipng
+os-prober
 osm-gps-map
 otf-firamono-nerd
 otf-libertinus
@@ -533,7 +535,7 @@ powershell-bin
 powertop
 profanity
 progress
-proton-ge-custom
+proton-ge-custom-bin
 protontricks-git
 proxytunnel
 ptunnel
@@ -549,6 +551,7 @@ python-entrypoints
 python-evdev
 python-geoip
 python-gmpy2
+python-gradio
 python-graphviz
 python-hatch
 python-imageio
@@ -564,6 +567,7 @@ python-pip
 python-pipx
 python-prettytable
 python-pwntools
+python-pyaudio
 python-pydbus
 python-pygame
 python-pylint-venv
@@ -575,6 +579,7 @@ python-pyxdg
 python-qdarkstyle
 python-qiskit
 python-scikit-image
+python-spyder-kernels
 python-tensorflow-opt
 python-tifffile
 python-torchvision
@@ -664,6 +669,8 @@ ssllabs-scan
 steam
 steamcmd
 streamlink
+stylua
+subdl
 subversion
 swtpm
 sysfsutils
@@ -753,6 +760,7 @@ urlwatch
 uv
 vagrant
 vala
+valkey
 ventoy-bin
 vi
 vim

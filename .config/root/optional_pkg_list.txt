@@ -19,6 +19,7 @@ colord
 coxeter
 cryptominisat
 cups-browsed
+dart-sass
 dblatex
 ditaa
 docker-buildx
@@ -119,10 +120,10 @@ python-flax
 python-fqdn
 python-gpgme
 python-gssapi
+python-hf-xet
 python-html5-parser
 python-igraph
 python-imagecodecs
-python-importlib_resources
 python-inflect
 python-inquirerpy
 python-isoduration
@@ -188,6 +189,7 @@ qemu-user-static-binfmt
 rhino
 rubiks
 ruby-stdlib
+sagemath-giac
 sane-airscan
 shared_meataxe
 sirocco
@@ -195,6 +197,7 @@ sleuthkit
 slirp4netns
 sox
 speech-dispatcher
+steam-native-runtime
 strace
 swi-prolog
 texlab

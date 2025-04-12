@@ -6,12 +6,13 @@ blender-plugin-cad-sketcher-git
 bluetuith-bin
 cht.sh-git
 dwm-lemon-git
+farbfeld
 findbrokenpkgs
 firefox-tridactyl-native-bin
 ghdl
-gimp-extras
 gnucobol
 gtk-theme-arc-gruvbox-git
+hq
 hyx
 iamb-git
 iranian-fonts
@@ -38,7 +39,6 @@ remmina-plugin-rdesktop
 remmina-plugin-ultravnc
 remmina-plugin-url
 samrewritten-git
-scarab-bin
 sent-git
 shazam-cli-git
 showmethekey-git
