@@ -72,6 +72,7 @@
 !.config/pipe-viewer/subscribed_channels.txt
 !.config/pipewire/
 !.config/pulse/
+.config/pulse/cookie
 !.config/python/
 !.config/retroarch/
 .config/retroarch/*
