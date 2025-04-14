@@ -42,21 +42,26 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+/* static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; */
+/* static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" }; */
+/* static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" }; */
+static const char *tags[] = { "𐏑", "𐏒", "𐏒𐏑", "𐏒𐏒", "𐏒𐏒𐏑", "𐏒𐏒𐏒", "𐏒𐏒𐏒𐏑", "𐏒𐏒𐏒𐏒", "𐏒𐏒𐏒𐏒𐏑" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	*/
-	/* class    instance      title       	 tags mask    isfloating   isterminal  noswallow  monitor */
-	/* { "Gimp",     NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 }, */
-	{ TERMCLASS,  NULL,       NULL,       	    0,            0,           1,         0,        -1 },
-	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
-	{ TERMCLASS, "floatterm", NULL,	 	    0, 		  1,	       1, 	  0,	    -1 },
-	{ TERMCLASS,      "bg",        NULL,       	    1 << 7,       0,           1,         0,        -1 },
-	{ TERMCLASS,      "spterm",    NULL,       	    SPTAG(0),     1,           1,         0,        -1 },
-	{ TERMCLASS,      "spcalc",    NULL,       	    SPTAG(1),     1,           1,         0,        -1 },
+	/* class	instance	title		tags mask	isfloating	isterminal	noswallow	monitor */
+	/* { "Gimp",	NULL,		NULL,		1 << 8,		0,		0,		0,		-1 }, */
+	{ "svkbd",	NULL,		NULL,		0,		1,		0,		0,		-1},
+	{ TERMCLASS,	NULL,		NULL,		0,		0,		1,		0,		-1 },
+	{ NULL,		NULL,		"Event Tester",	0,		0,		0,		1,		-1 },
+	{ TERMCLASS,	"floatterm",	NULL,		0,		1,		1,		0,		-1 },
+	{ TERMCLASS,	"bg",		NULL,		1 << 7,		0,		1,		0,		-1 },
+	{ TERMCLASS,	"spterm",	NULL,		SPTAG(0),	1,		1,		0,		-1 },
+	{ TERMCLASS,	"spcalc",	NULL,		SPTAG(1),	1,		1,		0,		-1 },
+	{ "ripdrag",	NULL,		NULL,		0,		1,		0,		0,		-1 },
 };
 
 /* layout(s) */
@@ -134,7 +139,7 @@ ResourcePref resources[] = {
 #include <X11/XF86keysym.h>
 #include "shiftview.c"
 
-static Key const keys[] = {
+static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
@@ -165,7 +170,7 @@ static Key const keys[] = {
 	{ MODKEY|ShiftMask,		XK_q,		spawn,		{.v = (const char*[]){ "sysact", NULL } } },
 	{ MODKEY,			XK_w,		spawn,		{.v = (const char*[]){ BROWSER, NULL } } },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "lynx-ng", NULL } } },
-	{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
+	{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook 2>/dev/null") },
 	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
 	{ MODKEY,			XK_r,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "lfub", NULL } } },
 	{ MODKEY|ShiftMask,		XK_r,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "htop", NULL } } },
@@ -191,7 +196,7 @@ static Key const keys[] = {
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
-	{ MODKEY|ShiftMask,		XK_s,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "sudo", "nmtui", NULL } } },
+	{ MODKEY|ShiftMask,		XK_s,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "nmtui", NULL } } },
 	{ MODKEY,			XK_d,		spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu-otp", NULL } } },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
@@ -238,7 +243,7 @@ static Key const keys[] = {
 	{ MODKEY|ShiftMask,		XK_Page_Down,	shifttag,	{ .i = +1 } },
 	{ MODKEY,			XK_Insert,	spawn,		SHCMD("xdotool type $(grep -v '^#' ~/.local/share/bookmark/urls | dmenu -i -l 50 | cut -d' ' -f1)") },
 
-	{ MODKEY,			XK_F1,		spawn,		{.v = (const char*[]){ "xinput-toggle", "-r", "SynPS/2 Synaptics TouchPad", NULL } } },
+	{ MODKEY,			XK_F1,		spawn,		{.v = (const char*[]){ "xinput-toggle", "-r", "ASUP1200:00 093A:200A Touchpad", NULL } } },
 	{ MODKEY,			XK_F2,		spawn,		SHCMD("kl-toggle") },
 	{ MODKEY,			XK_F3,		spawn,		SHCMD("xset dpms force off; mpc pause; pauseallmpv") },
 	{ MODKEY,			XK_F4,		spawn,		SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
@@ -261,8 +266,8 @@ static Key const keys[] = {
 	{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") },
 
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%+; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%- && wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%+; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%+ && wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioPrev,		spawn,		{.v = (const char*[]){ "mpc", "prev", NULL } } },
 	{ 0, XF86XK_AudioNext,		spawn,		{.v = (const char*[]){ "mpc",  "next", NULL } } },
 	{ 0, XF86XK_AudioPause,		spawn,		{.v = (const char*[]){ "mpc", "pause", NULL } } },
@@ -283,9 +288,9 @@ static Key const keys[] = {
 	{ 0, XF86XK_MyComputer,		spawn,		{.v = (const char*[]){ TERMINAL, "-e",  "lfub",  "/", NULL } } },
 	/* { 0, XF86XK_Battery,		spawn,		SHCMD("") }, */
 	{ 0, XF86XK_Launch1,		spawn,		{.v = (const char*[]){ "xset", "dpms", "force", "off", NULL } } },
-	{ 0, XF86XK_TouchpadToggle,	spawn,		{.v = (const char*[]){ "xinput-toggle", "-r", "SynPS/2 Synaptics TouchPad", NULL } } },
-	{ 0, XF86XK_TouchpadOff,	spawn,		{.v = (const char*[]){ "xinput", "disable", "SynPS/2 Synaptics TouchPad", NULL } } },
-	{ 0, XF86XK_TouchpadOn,		spawn,		{.v = (const char*[]){ "xinput", "enable", "SynPS/2 Synaptics TouchPad", NULL } } },
+	{ 0, XF86XK_TouchpadToggle,	spawn,		{.v = (const char*[]){ "xinput-toggle", "-r", "ASUP1200:00 093A:200A Touchpad", NULL } } },
+	{ 0, XF86XK_TouchpadOff,	spawn,		{.v = (const char*[]){ "xinput", "disable", "ASUP1200:00 093A:200A Touchpad", NULL } } },
+	{ 0, XF86XK_TouchpadOn,		spawn,		{.v = (const char*[]){ "xinput", "enable", "ASUP1200:00 093A:200A Touchpad", NULL } } },
 	{ 0, XF86XK_MonBrightnessUp,	spawn,		{.v = (const char*[]){ "xbacklight", "-inc", "10", NULL } } },
 	{ 0, XF86XK_MonBrightnessDown,	spawn,		{.v = (const char*[]){ "xbacklight", "-dec", "10", NULL } } },
 
@@ -334,3 +339,4 @@ static const Button buttons[] = {
 	{ ClkTagBar,		0,		Button5,	shiftview,	{.i = 1} },
 	{ ClkRootWin,		0,		Button2,	togglebar,	{0} },
 };
+
