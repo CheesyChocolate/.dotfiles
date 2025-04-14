@@ -3,7 +3,6 @@
 # Rerun the remaps script whenever a new input device is added.
 
 while :; do
-	sleep 5s # for first time to wait for udev to settle, for subsequent runs to prevent spamming
 	remaps
-	watch -gn1 sh -c 'xinput --list | grep keyboard' >/dev/null 2>&1
+	grep -qP -m1 '[^un]bind.+\/[^:]+\(usb\)' <(udevadm monitor -u -t seat -s input -s usb)
 done
