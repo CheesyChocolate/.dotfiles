@@ -21,4 +21,5 @@ dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 # Launching gnome-keyring-daemon outside desktop environments
 dbus-update-activation-environment --all
 
+# TODO: replace with ssh-tpm-agent
 dbus-launch ssh-agent dwm
