@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+# Source this script to set up ruby and gem environment
+
+export GEM_HOME="$(gem env user_gemhome)"
+export PATH="$PATH:$GEM_HOME/bin"

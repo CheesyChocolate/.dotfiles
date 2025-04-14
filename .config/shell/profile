@@ -8,9 +8,6 @@
 # Adds all directories in `~/.local/bin` to $PATH
 export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 
-# user defined PATH
-#export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/gem/ruby/3.0.0/bin"
-
 unsetopt PROMPT_SP 2>/dev/null
 
 # Default programs:
