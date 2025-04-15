@@ -1,5 +1,5 @@
 @hourly export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u $USER)/bus; export DISPLAY=:0; . $HOME/.config/shell/profile; /home/suren/.local/bin/cron/newsup
 @daily export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u $USER)/bus; export DISPLAY=:0; . $HOME/.config/shell/profile; /home/suren/.local/bin/cron/checkup
 */10 * * * * export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u $USER)/bus; export DISPLAY=:0; . $HOME/.config/shell/profile; /bin/mailsync
-@weekly /home/suren/.local/bin/mbsync-get-cert -s mail.artixlinux.org > /home/suren/.local/share/certs/mail.artixlinux.org.pem
+@weekly /usr/bin/mbsync-get-cert -s mail.artixlinux.org > /home/suren/.local/share/certs/mail.artixlinux.org.pem
 */2 * * * * export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u $USER)/bus; export DISPLAY=:0; . $HOME/.config/shell/profile; /home/suren/.local/bin/cron/lowbat
