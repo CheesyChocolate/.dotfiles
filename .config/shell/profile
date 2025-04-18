@@ -119,6 +119,13 @@ export _JAVA_AWT_WM_NONREPARENTING=1		# Fix for Java applications in dwm
 export SUDO_PROMPT="$(tput setab 1 setaf 7 bold)[sudo]$(tput sgr0) $(tput setaf 6)make$(tput sgr0) $(tput setaf 5)%p$(tput sgr0) $(tput setaf 6)some popcorn$(tput sgr0): "
 export BEMENU_OPTS="--binding vim --ignorecase --vim-esc-exits"
 
+# NOTE: Temporary measure
+# Allow unnamed modules to access restricted native methods and disable XML
+# entity size limit This resolves LanguageTool startup issues caused by:
+# - native access restrictions (System::load, sun.misc.Unsafe)
+# - XML entity size limit exceeded in grammar rule parsing
+JAVA_TOOL_OPTIONS="--enable-native-access=ALL-UNNAMED -Djdk.xml.totalEntitySizeLimit=0"
+
 [ ! -f "$XDG_CONFIG_HOME/shell/shortcutrc" ] && setsid -f shortcuts >/dev/null 2>&1
 
 # Start graphical server on user's current tty if not already running.
