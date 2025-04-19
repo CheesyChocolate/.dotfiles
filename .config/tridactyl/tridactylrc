@@ -9,7 +9,8 @@ bind / fillcmdline find
 bind ? fillcmdline find -?
 bind n findnext 1
 bind N findnext -1
-bind ,<Space> nohlsearch
+bind ,<Space> nohlsearch	# TODO: maybe I can use the following to make this work
+" bind --mode=normal <Escape> composite mode normal ; hidecmdline ; nohlsearch
 
 " The default behaviour of <C-a> and <C-x> caused me to lose a lot of filled in forms.
 unbind <C-a>
