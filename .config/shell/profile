@@ -124,7 +124,8 @@ export BEMENU_OPTS="--binding vim --ignorecase --vim-esc-exits"
 # entity size limit This resolves LanguageTool startup issues caused by:
 # - native access restrictions (System::load, sun.misc.Unsafe)
 # - XML entity size limit exceeded in grammar rule parsing
-JAVA_TOOL_OPTIONS="--enable-native-access=ALL-UNNAMED -Djdk.xml.totalEntitySizeLimit=0"
+# JAVA_TOOL_OPTIONS="--enable-native-access=ALL-UNNAMED -Djdk.xml.totalEntitySizeLimit=0"
+_JAVA_OPTIONS="$_JAVA_OPTIONS --enable-native-access=ALL-UNNAMED -Djdk.xml.totalEntitySizeLimit=0"
 
 [ ! -f "$XDG_CONFIG_HOME/shell/shortcutrc" ] && setsid -f shortcuts >/dev/null 2>&1
 
