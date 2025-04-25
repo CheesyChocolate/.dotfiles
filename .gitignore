@@ -126,5 +126,6 @@
 !.local/share/spotdl/
 .local/share/spotdl/*
 !.local/share/spotdl/config.json
+!.local/share/utils/
 !.local/share/wallpapers/
 !.local/share/exponential.txt
