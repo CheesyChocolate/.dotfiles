@@ -116,7 +116,6 @@
 !.local/share/gnupg/
 .local/share/gnupg/*
 !.local/share/gnupg/gpg-agent.conf
-!.local/share/larbs/
 !.local/share/ollama/
 .local/share/ollama/*
 !.local/share/ollama/Modelfile-*

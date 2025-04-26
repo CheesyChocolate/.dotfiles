@@ -10,6 +10,6 @@ set -e
 ifinstalled "geoip"
 addr="$(geoiplookup "$(curl -sfm 1 ifconfig.me 2>/dev/null)")"
 name="${addr##*, }"
-flag="$(grep "flag: $name" "${XDG_DATA_HOME:-$HOME/.local/share}/larbs/emoji")"
+flag="$(grep "flag: $name" "${XDG_DATA_HOME:-$HOME/.local/share}/utils/emoji")"
 flag="${flag%% *}"
 printf "%s %s\\n" "$flag" "$name"

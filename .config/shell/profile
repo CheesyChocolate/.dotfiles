@@ -140,4 +140,4 @@ _JAVA_OPTIONS="$_JAVA_OPTIONS --enable-native-access=ALL-UNNAMED -Djdk.xml.total
 
 # Switch escape and caps if tty and no passwd required:
 # TODO: It is recommended to run kbd_mode(1) before loadkeys instead of using the -u option.
-sudo -n loadkeys "$XDG_DATA_HOME/larbs/ttymaps.kmap" 2>/dev/null
+sudo -n loadkeys "$XDG_DATA_HOME/utils/ttymaps.kmap" 2>/dev/null
