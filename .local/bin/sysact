@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # A dmenu wrapper script for system functions.
-export WM="dwm"
+export WM="${XDG_SESSION_DESKTOP}"
 case "$(readlink -f /sbin/init)" in
 	*systemd*) ctl='systemctl' ;;
 	*) ctl='loginctl' ;;
@@ -13,14 +13,30 @@ wmpid(){ # This function is needed if there are multiple instances of the window
 	echo "${tree%%)*}"
 }
 
-case "$(printf "🔒 lock\n🚪 leave $WM\n♻️ renew $WM\n🐻 hibernate\n🔃 reboot\n🖥️shutdown\n💤 sleep\n📺 display off" | dmenu -i -p 'Action: ')" in
-	'🔒 lock') slock ;;
-	"🚪 leave $WM") kill -TERM "$(wmpid)" ;;
-	"♻️ renew $WM") kill -HUP "$(wmpid)" ;;
-	'🐻 hibernate') slock $ctl hibernate -i ;;
-	'💤 sleep') slock $ctl suspend -i ;;
-	'🔃 reboot') $ctl reboot -i ;;
-	'🖥️shutdown') $ctl poweroff -i ;;
-	'📺 display off') xset dpms force off ;;
-	*) exit 1 ;;
-esac
+if [ $WM = "dwm" ]; then
+	case "$(printf "🔒 lock\n🚪 leave $WM\n♻️ renew $WM\n🐻 hibernate\n🔃 reboot\n🖥️shutdown\n💤 sleep\n📺 display off" | dmenu -i -p 'Action: ')" in
+		'🔒 lock') slock ;;
+		"🚪 leave $WM") kill -TERM "$(wmpid)" ;;
+		"♻️ renew $WM") kill -HUP "$(wmpid)" ;;
+		'🐻 hibernate') slock $ctl hibernate -i ;;
+		'💤 sleep') slock $ctl suspend -i ;;
+		'🔃 reboot') $ctl reboot -i ;;
+		'🖥️shutdown') $ctl poweroff -i ;;
+		'📺 display off') xset dpms force off ;;
+		*) exit 1 ;;
+	esac
+fi
+
+if [ $WM = "Hyprland" ]; then
+	case "$(printf "🔒 lock\n🚪 leave $WM\n♻️ renew $WM\n🐻 hibernate\n🔃 reboot\n🖥️shutdown\n💤 sleep\n📺 display off" | bemenu -i -p 'Action: ')" in
+		'🔒 lock') hyprlock ;;
+		"🚪 leave $WM") hyprctl dispatch exit ;;
+		"♻️ renew $WM") hyprctl reload ;;
+		'🐻 hibernate') hyprlock & $ctl hibernate -i ;;
+		'💤 sleep') hyprlock & $ctl suspend -i ;;
+		'🔃 reboot') $ctl reboot -i ;;
+		'🖥️shutdown') $ctl poweroff -i ;;
+		'📺 display off') hyprctl dispatch dpms off ;;
+		*) exit 1 ;;
+	esac
+fi
