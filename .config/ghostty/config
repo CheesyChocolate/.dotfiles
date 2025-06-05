@@ -13,7 +13,9 @@ link-url = true
 title-report = true
 copy-on-select = false
 confirm-close-surface = false
-shell-integration-features = no-cursor,title
+# TODO: does not work, possibly the integration is not set up correctly. look at logs
+shell-integration-features = no-cursor,no-title,no-sudo
+gtk-titlebar = false
 linux-cgroup = always
 
 # cursor
