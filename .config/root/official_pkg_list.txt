@@ -79,6 +79,7 @@ checksec
 chicken
 chkrootkit
 chntpw
+cinelerra-gg-git
 ckbcomp
 clamav
 clamav-runit
@@ -147,6 +148,7 @@ festival-english
 ffmpeg
 ffmpegthumbnailer
 ffuf
+firefox
 firefox-tridactyl
 firejail
 firewalld
@@ -169,6 +171,7 @@ gamemode
 gamescope
 gcc-ada
 gcc9
+gdu
 geckodriver
 geoip-database-extra
 geoipupdate
@@ -195,6 +198,7 @@ gnu-free-fonts
 go
 go-yq
 gobuster
+google-earth-pro
 goverlay
 gpart
 gparted
@@ -225,6 +229,7 @@ hiprt
 htop-vim
 htpdate
 httptunnel
+httrack
 hugo
 hydra
 hyphen-en
@@ -279,7 +284,6 @@ kitty
 kotlin
 ldc
 ledger
-ledger-live
 leiningen
 lemon
 lf
@@ -305,7 +309,7 @@ lib32-mangohud
 lib32-mpg123
 lib32-ocl-icd
 lib32-openal
-lib32-opencl-rusticl-mesa
+lib32-opencl-mesa
 lib32-pipewire
 lib32-pipewire-jack
 lib32-pipewire-v4l2
@@ -426,7 +430,6 @@ micromamba-bin
 microsoft-gsl
 mission-center
 mkinitcpio-firmware
-modest
 monero
 monero-gui
 mono
@@ -444,7 +447,6 @@ musescore
 mythes-en
 namcap
 nasm
-ncdu
 ncmpcpp
 ncurses5-compat-libs
 neovim
@@ -483,13 +485,12 @@ odin
 odt2txt
 ollama-rocm
 openbsd-netcat
-opencl-rusticl-mesa
+opencl-mesa
 openconnect
 openldap
 openssh-runit
 openssl-1.1
 optipng
-os-prober
 osm-gps-map
 otf-firamono-nerd
 otf-libertinus
@@ -520,12 +521,12 @@ pipewire-x11-bell
 pipewire-zeroconf
 pkgfile
 plantuml
+plocate
 plumber
 pocl
 podman
 polkit-gnome
 poppler
-powershell-bin
 powertop
 profanity
 progress
@@ -569,6 +570,7 @@ python-pyvirtualdisplay
 python-pyxdg
 python-qdarkstyle
 python-scikit-image
+python-selenium
 python-spyder-kernels
 python-tensorflow-opt
 python-torchvision
@@ -590,6 +592,7 @@ r2ghidra
 radeontop
 radvd
 rapidjson
+rebuild-detector
 remmina
 remmina-plugin-anydesk-git
 remmina-plugin-folder
@@ -709,6 +712,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-xetex
+tigervnc
 timidity++
 tinycompress
 tldr
@@ -718,7 +722,7 @@ tlp-runit
 tmux
 tokei
 tor
-tor-browser
+tor-browser-bin
 torsocks
 transmission-cli
 tree-sitter-cli
@@ -834,6 +838,7 @@ yarn
 yay-git
 yt-dlp
 yt-dlp-drop-in
+zapzap
 zathura
 zbar
 zed

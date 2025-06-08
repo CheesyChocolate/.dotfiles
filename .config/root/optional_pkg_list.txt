@@ -29,7 +29,6 @@ ed
 espeak-ng
 f2fs-tools
 fig2dev
-flake8
 freeimage
 fricas
 fuse-overlayfs
@@ -103,6 +102,7 @@ podman-compose
 pstoedit
 psutils
 pyright
+python-authlib
 python-black
 python-blosc
 python-bottleneck
@@ -116,6 +116,7 @@ python-debugpy
 python-distributed
 python-email-validator
 python-fastnumbers
+python-flake8
 python-flax
 python-fqdn
 python-gpgme
@@ -124,7 +125,6 @@ python-hf-xet
 python-hypothesis
 python-igraph
 python-imagecodecs
-python-inflect
 python-inquirerpy
 python-isoduration
 python-itsdangerous
@@ -163,6 +163,7 @@ python-pynormaliz
 python-pypubsub
 python-pyscipopt
 python-pytables
+python-pytest-xdist
 python-pywavelets
 python-rfc3339-validator
 python-rfc3987

@@ -1,7 +1,7 @@
 abook
 activate-linux-git
+amass-bin
 ani-cli-git
-bicon-git
 blackarch-keyring
 blackarch-mirrorlist
 blender-plugin-cad-sketcher-git
@@ -10,6 +10,7 @@ cht.sh-git
 farbfeld
 findbrokenpkgs
 firefox-tridactyl-native-bin
+geforce-infinity-bin
 ghdl
 gnucobol
 gtk-theme-arc-gruvbox-git
@@ -18,12 +19,14 @@ hyx
 iamb-git
 iranian-fonts
 kjv-apocrypha
+ledger-live-bin
 linode-cli
 litecli
 lobster-git
 luajit-tiktoken-bin
 mangal-bin
 mars-mips
+modest
 mutt-wizard-git
 nuitka
 obs-pipewire-audio-capture-bin
