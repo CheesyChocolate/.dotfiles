@@ -90,6 +90,7 @@ export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
 export VAGRANT_ALIAS_FILE="$XDG_DATA_HOME/vagrant/aliases"
 export DOT_SAGE="$XDG_CONFIG_HOME/sage"
 export LEIN_HOME="$XDG_DATA_HOME/lein"
+export CIN_CONFIG="$XDG_CONFIG_HOME/bcast5"
 
 # private variables
 source "$XDG_CONFIG_HOME/shell/privateProfile"
