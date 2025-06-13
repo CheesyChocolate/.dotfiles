@@ -104,7 +104,7 @@ case "${ext}" in
 	tcl) tclsh "${file}" ;;
 	tex) latexmk "${file}" ;;
 	ts) tsc "${file}" && node "${base}.js" ;;
-	uml) plantuml "${file}" ;;
+	uml|puml) plantuml -enablestats "${file}" ;;
 	vala) valac "${file}" -o "${base}.out" && "${base}.out" ;;
 	vhdl) ghdl -a "${file}" && ghdl -e "${base##*/}" && ghdl -r "${base##*/}" ;;	# HACK: entity name must match filename
 	zig) zig run "${file}" ;;
