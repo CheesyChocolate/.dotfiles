@@ -13,6 +13,7 @@ alhp-mirrorlist
 alsa-firmware
 alsa-utils
 amd-ucode
+amdvlk
 android-tools
 appstream-glib
 arandr
@@ -199,6 +200,7 @@ go
 go-yq
 gobuster
 google-earth-pro
+google-gemini-cli
 goverlay
 gpart
 gparted
@@ -282,6 +284,7 @@ kicad-library-3d
 kimageformats
 kitty
 kotlin
+krita
 ldc
 ledger
 leiningen
@@ -289,6 +292,7 @@ lemon
 lf
 lftp
 lhasa
+lib32-amdvlk
 lib32-artix-archlinux-support
 lib32-giflib
 lib32-gst-plugins-base-libs
@@ -316,6 +320,7 @@ lib32-pipewire-v4l2
 lib32-v4l-utils
 lib32-vkd3d
 lib32-vulkan-mesa-layers
+lib32-vulkan-radeon
 lib32-vulkan-swrast
 libblockdev-smart
 libc++
@@ -495,6 +500,7 @@ osm-gps-map
 otf-firamono-nerd
 otf-libertinus
 otf-sora
+packet
 pacman-contrib
 pacman-static
 pacutils
@@ -756,6 +762,7 @@ valkey
 ventoy-bin
 virt-manager
 virt-viewer
+visual-studio-code-bin
 vkd3d
 vlc
 vnstat
@@ -823,6 +830,7 @@ xorg-xhost
 xorg-xinit
 xorg-xinput
 xorg-xkbcomp
+xorg-xkbutils
 xorg-xkill
 xorg-xrandr
 xorg-xrefresh
