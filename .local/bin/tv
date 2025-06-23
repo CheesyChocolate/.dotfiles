@@ -4,15 +4,19 @@ function usage() {
 	echo "Usage: tv"
 	echo "Open a tmux session for a project in ~/Templates"
 	echo "  -s        Simple mode. no tmux, only one lf window"
+	echo "  -p        path to project"
 	echo "  -h        Display this help message"
 	exit 1
 }
 
 # Parse arguments
-while getopts "sh" opt; do
+while getopts "shp:" opt; do
 	case $opt in
 	s)
 		simple_mode=true
+		;;
+	p)
+		selected="$OPTARG"
 		;;
 	h)
 		usage
@@ -39,30 +43,35 @@ function hydrate() {
 	fi
 }
 
-# Collect projects
-projects=()
-base_dirs=(${HOME}/Templates/*/*(/))
-for dir in $base_dirs; do
-	# Use -L to avoid following symlinks
-	if [[ -n "$(ls -LA $dir 2>/dev/null | grep -v '^\.')" ]] && [[ -z "$(find -L $dir -maxdepth 1 -type f -not -path "*/\.*" | head -1)" ]]; then
-		projects+=($dir/*(/N))
-	else
-		projects+=($dir)
-	fi
-done
+function select_project() {
+	# Collect projects
+	projects=()
+	base_dirs=(${HOME}/Templates/*/*(/))
+	for dir in $base_dirs; do
+		# Use -L to avoid following symlinks
+		if [[ -n "$(ls -LA $dir 2>/dev/null | grep -v '^\.')" ]] && [[ -z "$(find -L $dir -maxdepth 1 -type f -not -path "*/\.*" | head -1)" ]]; then
+			projects+=($dir/*(/N))
+		else
+			projects+=($dir)
+		fi
+	done
 
-# display creation using parameter expansion
-display_projects=("${(@)projects/#$HOME\/Templates\//}")
-selected_display=$(print -l "${display_projects[@]}" | fzf --preview "ls -la ${HOME}/Templates/{} | head -20" --preview-window=right:50%)
+	# display creation using parameter expansion
+	display_projects=("${(@)projects/#$HOME\/Templates\//}")
+	selected_display=$(print -l "${display_projects[@]}" | fzf --preview "ls -la ${HOME}/Templates/{} | head -20" --preview-window=right:50%)
 
-# Find the original path
-selected=""
-for i in {1..$#display_projects}; do
-	if [[ "${display_projects[$i]}" == "$selected_display" ]]; then
-		selected="${projects[$i]}"
-		break
-	fi
-done
+	# Find the original path
+	for i in {1..$#display_projects}; do
+		if [[ "${display_projects[$i]}" == "$selected_display" ]]; then
+			selected="${projects[$i]}"
+			break
+		fi
+	done
+}
+
+if [[ -z "$selected" ]]; then
+    select_project
+fi
 
 # Exit if no selection was made
 [[ -z "${selected}" ]] && exit 0
