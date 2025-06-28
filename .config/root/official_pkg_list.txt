@@ -408,8 +408,10 @@ logrotate
 lostfiles
 lshw
 lua-jsregexp
+lua-lanes
 lua-sec
 lua51
+luacheck
 luarocks
 lutris
 lv2-example-plugins
@@ -830,7 +832,6 @@ xorg-xhost
 xorg-xinit
 xorg-xinput
 xorg-xkbcomp
-xorg-xkbutils
 xorg-xkill
 xorg-xrandr
 xorg-xrefresh

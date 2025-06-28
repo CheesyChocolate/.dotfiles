@@ -122,6 +122,7 @@ python-fqdn
 python-gpgme
 python-gssapi
 python-hf-xet
+python-httpx-aiohttp
 python-hypothesis
 python-igraph
 python-imagecodecs
