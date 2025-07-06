@@ -1,5 +1,4 @@
 abook
-activate-linux-git
 amass-bin
 ani-cli-git
 blackarch-keyring
@@ -7,7 +6,6 @@ blackarch-mirrorlist
 blender-plugin-cad-sketcher-git
 bluetuith-bin
 cht.sh-git
-cursor-bin
 farbfeld
 findbrokenpkgs
 firefox-tridactyl-native-bin
@@ -34,7 +32,6 @@ obs-pipewire-audio-capture-bin
 oda-file-converter
 pam-gnupg-git
 pass-import
-phantomjs-git
 python-chembl-webresource-client
 python-javalang
 python-jupytext

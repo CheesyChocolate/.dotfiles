@@ -53,17 +53,14 @@ latte-integrale
 lib32-gamemode
 libappindicator-gtk3
 libgnome-keyring
-libgoom2
 liblas
 libmythes
 libsemigroups
-libtiger
 libvncserver
 libxnvctrl
 lilypond
-lirc
-live-media
 llvm18
+lua-lanes
 lvm2
 meson
 msolve
@@ -121,11 +118,11 @@ python-flax
 python-fqdn
 python-gpgme
 python-gssapi
-python-hf-xet
 python-httpx-aiohttp
 python-hypothesis
 python-igraph
 python-imagecodecs
+python-importlib_resources
 python-inquirerpy
 python-isoduration
 python-itsdangerous
@@ -165,6 +162,7 @@ python-pypubsub
 python-pyscipopt
 python-pytables
 python-pytest-xdist
+python-python-multipart
 python-pywavelets
 python-rfc3339-validator
 python-rfc3987
@@ -209,6 +207,7 @@ udisks2-btrfs
 unarchiver
 usbmuxd
 valgrind
+viskores
 vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver

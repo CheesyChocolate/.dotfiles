@@ -188,7 +188,6 @@ git-runit
 github-cli
 gitleaks
 glib2-docs
-glow
 gmic
 gnome-epub-thumbnailer
 gnome-keyring
@@ -222,6 +221,7 @@ gtkmm-4.0
 gvfs
 hashcat
 hashcat-utils
+haskell-tidal
 hcxkeys
 hcxtools
 helvum
@@ -408,7 +408,6 @@ logrotate
 lostfiles
 lshw
 lua-jsregexp
-lua-lanes
 lua-sec
 lua51
 luacheck
@@ -446,6 +445,7 @@ movit
 mpc
 mpd
 mpv
+msedit
 mtools
 mtr
 mumble
@@ -553,7 +553,6 @@ python-datasets
 python-entrypoints
 python-evdev
 python-geoip
-python-gradio
 python-graphviz
 python-hatch
 python-imageio-ffmpeg
@@ -648,6 +647,7 @@ shellcheck
 shfmt
 silk
 simple-mtpfs
+slack-electron
 slock
 smartmontools
 smlnj
@@ -840,7 +840,6 @@ xorg-xwayland
 xorg-xwininfo
 xournalpp
 xsimd
-xterm
 xwallpaper
 yamllint
 yarn
