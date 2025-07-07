@@ -93,6 +93,7 @@ if ! has_session "$session_name"; then
 	tmux new-window -t "$session_name:3" -n "git" -c "${selected}" "nvim -c MagitOnly"
 	tmux new-window -t "$session_name:4" -n "lf" -c "${selected}" "lf"
 	tmux new-window -t "$session_name:5" -n "AI" -c "${selected}" "gemini"
+	tmux new-window -t "$session_name:6" -n "Security" -c "${selected}" "\$SHELL -c \"echo 'Use <semgrep ci>, <snyk test>, or <gemini>'; exec \$SHELL\""
 	tmux select-window -t "$session_name:1"
 	hydrate "$session_name" "${selected}"
 fi
