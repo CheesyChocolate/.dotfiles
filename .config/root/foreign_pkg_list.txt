@@ -1,8 +1,6 @@
 abook
 amass-bin
 ani-cli-git
-blackarch-keyring
-blackarch-mirrorlist
 blender-plugin-cad-sketcher-git
 bluetuith-bin
 cht.sh-git
@@ -13,7 +11,6 @@ geforce-infinity-bin
 ghdl
 gnucobol
 gtk-theme-arc-gruvbox-git
-hq
 hyx
 iamb-git
 iranian-fonts
@@ -25,7 +22,6 @@ lobster-git
 luajit-tiktoken-bin
 mangal-bin
 mars-mips
-modest
 mutt-wizard-git
 nuitka
 obs-pipewire-audio-capture-bin

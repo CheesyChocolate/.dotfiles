@@ -7,7 +7,6 @@ avisynthplus
 bash-language-server
 benzene
 biber
-botan
 buckygen
 c-xsc
 ccache

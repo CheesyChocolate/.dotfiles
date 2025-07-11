@@ -58,6 +58,7 @@ bootlogd
 brave-bin
 btrfs-progs
 buildah
+bun-bin
 burpsuite
 cachyos-keyring
 cachyos-mirrorlist
@@ -174,6 +175,7 @@ gcc-ada
 gcc9
 gdu
 geckodriver
+gemini-cli
 geoip-database-extra
 geoipupdate
 ghc
@@ -199,7 +201,6 @@ go
 go-yq
 gobuster
 google-earth-pro
-google-gemini-cli
 goverlay
 gpart
 gparted
@@ -846,6 +847,7 @@ yarn
 yay-git
 yt-dlp
 yt-dlp-drop-in
+zaproxy
 zapzap
 zathura
 zbar
