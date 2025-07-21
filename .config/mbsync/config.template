@@ -1,0 +1,106 @@
+# vim: set filetype=bash :
+
+# 1. profile for google with app password
+IMAPStore email@example.com-remote
+Host imap.gmail.com
+Port 993
+User email@example.com
+PassCmd "pass Google.com/email/app_pass"
+AuthMechs LOGIN
+TLSType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore email@example.com-local
+Subfolders Verbatim
+Path /home/suren/.local/share/mail/email@example.com/
+Inbox /home/suren/.local/share/mail/email@example.com/INBOX
+
+Channel email@example.com
+Expunge Both
+Far :email@example.com-remote:
+Near :email@example.com-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+# 2. profile for google with oauth2
+IMAPStore email@example.com-remote
+Host imap.gmail.com
+Port 993
+User email@example.com
+PassCmd "oama renew email@example.com >/dev/null 2>&1 && oama access email@example.com"
+AuthMechs XOAUTH2
+TLSType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore email@example.com-local
+Subfolders Verbatim
+Path /home/suren/.local/share/mail/email@example.com/
+Inbox /home/suren/.local/share/mail/email@example.com/INBOX
+
+Channel email@example.com
+Expunge Both
+Far :email@example.com-remote:
+Near :email@example.com-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+# 3. profile for starttls
+IMAPStore email@example.com
+Host mail.artixlinux.org
+Port 143
+User email@example.com
+PassCmd "pass example.com/email/pass"
+AuthMechs LOGIN
+TLSType STARTTLS
+TLSVersions -1.3
+CertificateFile /home/suren/.local/share/certs/mail.artixlinux.org.pem
+
+MaildirStore email@example.com-local
+Subfolders Verbatim
+Path /home/suren/.local/share/mail/email@example.com/
+Inbox /home/suren/.local/share/mail/email@example.com/INBOX
+
+Channel email@example.com
+Expunge Both
+Far :email@example.com:
+Near :email@example.com-local:
+Patterns *
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+# 4. profile for classic imap
+IMAPStore email@example.com-remote
+Host mail.example.com
+Port 993
+User email@example.com
+PassCmd "pass example.com/email/pass"
+AuthMechs LOGIN
+TLSType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore email@example.com-local
+Subfolders Verbatim
+Path /home/suren/.local/share/mail/email@example.com/
+Inbox /home/suren/.local/share/mail/email@example.com/INBOX
+
+Channel email@example.com
+Expunge Both
+Far :email@example.com-remote:
+Near :email@example.com-local:
+Patterns * !"[Gmail]/All Mail" !"*fts-flatcurve*" !"*virtual*"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile

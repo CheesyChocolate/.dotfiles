@@ -4,6 +4,7 @@ ani-cli-git
 blender-plugin-cad-sketcher-git
 bluetuith-bin
 cht.sh-git
+cyrus-sasl-xoauth2-git
 farbfeld
 findbrokenpkgs
 firefox-tridactyl-native-bin
@@ -24,6 +25,7 @@ mangal-bin
 mars-mips
 mutt-wizard-git
 nuitka
+oama-bin
 obs-pipewire-audio-capture-bin
 oda-file-converter
 pam-gnupg-git

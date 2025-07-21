@@ -1,0 +1,53 @@
+# vim: set ft=bash :
+
+# 1. profile for google with app password
+account email@example.com
+host smtp.gmail.com
+port 587
+from email@example.com
+user email@example.com
+passwordeval "pass Google.com/email/app_pass"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/suren/.cache/msmtp/msmtp.log
+# tls_starttls
+
+# 2. profile for google with oauth2
+account email@example.com
+host smtp.gmail.com
+port 587
+from email@example.com
+user email@example.com
+passwordeval "oama renew email@example.com >/dev/null 2>&1 && oama access email@example.com"
+auth oauthbearer
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/suren/.cache/msmtp/msmtp.log
+# tls_starttls
+
+# 3. profile for starttls
+account email@example.com
+host mail.example.com
+port 587
+from email@example.com
+user email@example.com
+passwordeval "pass example.com/mail/pass"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/suren/.cache/msmtp/msmtp.log
+tls_starttls
+
+# 4. profile for classic imap
+account email@example.com
+host mail.example.com
+port 465
+from email@example.com
+user email@example.com
+passwordeval "pass example.com/email/pass"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/suren/.local/state/msmtp/msmtp.log
+tls_starttls off
