@@ -11,7 +11,7 @@ if [ "$status" = "Discharging" ]; then
 		[ "$(cat /sys/class/power_supply/BAT0/status)" = "Charging" ] || {
 			dunstify -u critical "Hibernating"
 			logger "Hibernating. Battery critically low. Battery status: ($status) $capacity%"
-			loginctl hibernate -i	# TODO: doesn't work with slock. when ran as cronjob. works when rans as script.
+			loginctl hibernate -i	# TODO: doesn't work with slock, when ran as cronjob. works when ran as script.
 		}
 	elif [ "$capacity" -lt 15 ]; then
 		dunstify -u critical "Battery critically low."

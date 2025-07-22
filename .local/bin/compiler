@@ -87,11 +87,13 @@ case "${ext}" in
 	php) php "${file}" ;;
 	ps1) pwsh "${file}" ;;
 	py) python "${file}" ;;
+	# py) nuitka --standalone --onefile --python-flag=-OO "${file}" ;;
 	rink) rink -f "${file}" ;;
 	[rR]) Rscript "${file}" ;;
 	[rR]md) Rscript -e "rmarkdown::render('${file}', quiet=TRUE)" ;;
 	rb) ruby "${file}" ;;
 	rs) cargo build && cargo run ;;
+	# rs) rustc "${file}" -o "${base}.out" && "${base}.out" ;;
 	sage) sage "${file}" ;;
 	sass) sassc -a "${file}" "${base}.css" ;;
 	scad) openscad -o "${base}.stl" "${file}" ;;
