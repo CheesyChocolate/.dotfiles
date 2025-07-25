@@ -68,7 +68,7 @@ cmd open ${{
 			lf -remote "send toggle"
 		done &
 		;;
-	audio/*|video/x-ms-asf) mpv --audio-display=no $f ;;
+	audio/*|video/x-ms-asf) mpv --audio-display=no --no-resume-playback $f ;;
 	video/*|application/vnd.rn-realmedia) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
 	application/vnd.sqlite3) litecli $fx ;;
 	application/pdf|application/vnd.djvu|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
@@ -86,7 +86,7 @@ cmd open ${{
 		txt|lua) $EDITOR $fx ;;
 		ghw) setsid -f gtkwave $f >/dev/null 2>&1 ;;
 		ts) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-		mp3) mpv --audio-display=no $f ;;
+		mp3) mpv --audio-display=no --no-resume-playback $f ;;
 		vp6) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
 		*) setsid -f zathura $fx >/dev/null 2>&1 ;;
 	   esac ;;
