@@ -28,6 +28,7 @@ ed
 espeak-ng
 f2fs-tools
 fig2dev
+fltk
 freeimage
 fricas
 fuse-overlayfs
@@ -43,6 +44,7 @@ gst-plugins-ugly
 harvid
 hunspell-en_us
 hyprland-protocols
+icedtea-web
 ipp-usb
 jmol
 jupyter-collaboration
@@ -147,7 +149,6 @@ python-pkgconfig
 python-polars
 python-pprofile
 python-psycopg2
-python-pyamg
 python-pycosat
 python-pycurl
 python-pydocstyle
@@ -162,7 +163,6 @@ python-pyscipopt
 python-pytables
 python-pytest-xdist
 python-python-multipart
-python-pywavelets
 python-rfc3339-validator
 python-rfc3987
 python-rope
@@ -207,6 +207,8 @@ unarchiver
 usbmuxd
 valgrind
 viskores
+vlc-plugin-freetype
+vlc-plugin-srt
 vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver

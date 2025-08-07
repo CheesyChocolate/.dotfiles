@@ -268,6 +268,7 @@ java-runtime-common
 jdk
 jdk-openjdk
 jdk17-openjdk
+jdk8-openjdk
 jedi-language-server
 jfsutils
 john
@@ -561,6 +562,7 @@ python-ipympl
 python-jwcrypto
 python-keras
 python-objgraph
+python-onnxruntime-opt-rocm
 python-openai
 python-opencv
 python-pip
@@ -571,6 +573,7 @@ python-pwntools
 python-pyaudio
 python-pydbus
 python-pygame
+python-pyjwt
 python-pylint-venv
 python-pyqt6-webengine
 python-pytorch-opt-rocm
@@ -674,6 +677,7 @@ subdl
 subversion
 swtpm
 sysfsutils
+syslinux
 tenacity
 tensorflow-opt
 termdown
@@ -740,7 +744,6 @@ tree-sitter-rust
 ts-node
 ttf-dejavu
 ttf-fantasque-nerd
-ttf-font-awesome
 ttf-icomoon-feather
 ttf-iosevka-nerd
 ttf-nerd-fonts-symbols-common
@@ -797,6 +800,8 @@ wireshark-qt
 wl-clipboard
 wmctrl
 wmname
+woeusb
+woff2-font-awesome
 wqy-zenhei
 wtype
 x11-ssh-askpass
