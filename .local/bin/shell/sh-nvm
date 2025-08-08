@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+# Source this script to set up the environment for nvm
+
+. /usr/share/nvm/init-nvm.sh
