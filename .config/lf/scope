@@ -39,8 +39,14 @@ case "$(file --dereference --brief --mime-type -- "$1")" in
 	text/html) lynx -width="$4" -display_charset=utf-8 -dump "$1" ;;
 	text/troff) man ./ "$1" | col -b ;;
 	application/vnd.openxmlformats-officedocument*) docx2txt "$1" - ;;
+	# clock sensitive files
+	*pem-file | *pkcs* | *-cert | *private-key)
+		echo "-----SENSITIVE FILE-----"
+		exit 0 ;;
 	text/* | */xml | application/json | application/javascript | application/x-ndjson | application/vnd* | application/postscript ) case "${1##*/}" in
-		env | *.env | *.env.* | wrangler.toml | .dev.vars) ;; # clock sensitive files
+		env | *.env | *.env.* | wrangler.toml | .dev.vars)
+			echo "-----SENSITIVE FILE-----"
+			exit 0 ;;
 		*) bat --terminal-width "$(($4-2))" -f "$1" ;;
 	esac ;;
 	audio/* )
