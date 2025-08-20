@@ -1,5 +1,6 @@
 64gram-desktop
 7zip
+abook
 acpi
 acpi_call-dkms
 acpid-runit
@@ -333,6 +334,7 @@ libconfig
 libgphoto2
 libgsf
 libgtop
+libguestfs
 libibus
 libindicator-gtk3
 libmilter
@@ -375,7 +377,6 @@ libretro-parallel-n64
 libretro-picodrive
 libretro-play
 libretro-ppsspp
-libretro-retrodream
 libretro-sameboy
 libretro-scummvm
 libretro-shaders-slang
@@ -471,6 +472,7 @@ networkmanager-runit
 networkmanager-strongswan
 networkmanager-vpnc
 newsboat
+nfs-utils
 nftables-runit
 nginx
 nim
@@ -538,6 +540,7 @@ podman
 polkit-gnome
 poppler
 powertop
+prettier
 profanity
 progress
 proton-ge-custom-bin
@@ -603,6 +606,7 @@ r2ghidra
 radeontop
 radvd
 rapidjson
+reaver
 rebuild-detector
 remmina
 remmina-plugin-anydesk-git

@@ -11,7 +11,6 @@ buckygen
 c-xsc
 ccache
 cgns
-cni-plugins
 coin-or-csdp
 coin-or-mp
 colord
@@ -26,7 +25,6 @@ dot2tex
 dsdp
 ed
 espeak-ng
-f2fs-tools
 fig2dev
 fltk
 freeimage
@@ -38,6 +36,7 @@ gcc-fortran
 glaze
 glib2-devel
 gnuplot
+gobject-introspection
 gst-libav
 gst-plugins-bad
 gst-plugins-ugly
@@ -62,14 +61,12 @@ libxnvctrl
 lilypond
 llvm18
 lua-lanes
-lvm2
 meson
 msolve
 mypy
 netcdf-cxx
 netcdf-fortran
 new-session-manager
-nilfs-utils
 nlohmann-json
 noto-fonts-cjk
 npm
@@ -191,12 +188,10 @@ sagemath-giac
 sane-airscan
 shared_meataxe
 sirocco
-sleuthkit
 slirp4netns
 sox
 speech-dispatcher
 steam-native-runtime
-strace
 swi-prolog
 texlab
 topcom
@@ -214,7 +209,6 @@ vscode-html-languageserver
 vscode-json-languageserver
 wdiff
 webkit2gtk
-xfsprogs
 xjadeo
 yapf
 zathura-cb

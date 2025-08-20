@@ -1,4 +1,3 @@
-abook
 amass-bin
 ani-cli-git
 blender-plugin-cad-sketcher-git
