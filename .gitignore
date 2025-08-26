@@ -24,6 +24,7 @@
 !.config/gh-copilot/
 !.config/ghostty/
 !.config/git/
+.config/git/work_configs/
 !.config/glow/
 !.config/gtk-2.0/
 !.config/gtk-3.0/
