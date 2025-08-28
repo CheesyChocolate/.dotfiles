@@ -28,3 +28,5 @@
 	defaultBranch = trunk
 [includeIf "gitdir:<home-directory-TODO>/Templates/work/<work-directory-TODO>/"]
 	path = <home-directory-TODO>/.config/git/work_configs/gitconfig-<work-directory-TODO>
+[color]
+	ui = auto
