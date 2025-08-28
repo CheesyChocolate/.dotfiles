@@ -73,6 +73,7 @@ npm
 nss-mdns
 opencl-clhpp
 openscad
+openslide
 openvr
 ospray
 ostra-cg

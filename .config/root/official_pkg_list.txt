@@ -32,6 +32,7 @@ ardour
 arduino-cli
 artix-archlinux-support
 artix-dark-theme
+artools-iso
 artools-pkg
 asciidoc
 asciinema
@@ -761,7 +762,7 @@ ttf-nerd-fonts-symbols-common
 turbo-base64
 typescript
 typst
-ueberzugpp
+ueberzug
 umockdev
 umu-launcher
 unace
