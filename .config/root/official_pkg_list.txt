@@ -15,6 +15,13 @@ alsa-firmware
 alsa-utils
 amd-ucode
 amdvlk
+android-emulator
+android-ndk
+android-platform
+android-sdk
+android-sdk-build-tools
+android-sdk-cmdline-tools-latest
+android-sdk-platform-tools
 android-tools
 appstream-glib
 arandr

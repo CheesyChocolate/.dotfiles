@@ -1,4 +1,5 @@
 amass-bin
+android-x86-64-system-image
 ani-cli-git
 blender-plugin-cad-sketcher-git
 bluetuith-bin
