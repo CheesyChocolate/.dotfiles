@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# toggle android development environment
+
+LOWER=/opt/android-sdk
+UPPER="$HOME/.local/share/android/.sdk/upper"
+WORK="$HOME/.local/share/android/.sdk/work"
+
+if [ -d "$ANDROID_HOME/tools" ]; then
+    echo "Disabling Android development environment..."
+    fusermount -u "$ANDROID_HOME"
+else
+    echo "Enabling Android development environment..."
+    fuse-overlayfs -o squash_to_uid=$(id -u),squash_to_gid=$(id -g),lowerdir=$LOWER,upperdir=$UPPER,workdir=$WORK $ANDROID_HOME
+fi
+
+# TODO: source profiles
