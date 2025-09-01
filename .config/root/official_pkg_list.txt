@@ -162,8 +162,6 @@ ffuf
 firefox
 firefox-tridactyl
 firejail
-firewalld
-firewalld-runit
 flatpak
 flickcurl
 flite
