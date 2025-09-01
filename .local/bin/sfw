@@ -1,0 +1,89 @@
+#!/bin/bash
+# Simple Firewall (sfw) - A wrapper for nftables.
+
+set -e
+
+# --- Configuration ---
+TABLE="inet"
+CHAIN="filter"
+TARGET_CHAIN="input"
+
+list_rules() {
+	sudo nft --handle list chain "$TABLE" "$CHAIN" "$TARGET_CHAIN"
+}
+
+insert_rule() {
+	local proto=$1
+	local dport=$2
+	sudo nft insert rule "$TABLE" "$CHAIN" "$TARGET_CHAIN" "${proto}" dport "${dport}" accept
+	echo "Added ${proto} '${dport}'"
+}
+
+remove_rule() {
+	local handle=$1
+	if ! [[ "$handle" =~ ^[0-9]+$ ]]; then
+		echo "Error: Handle must be a number." >&2
+		exit 1
+	fi
+	echo "Removing rule with handle '${handle}'..."
+	sudo nft delete rule "$TABLE" "$CHAIN" "$TARGET_CHAIN" handle "${handle}"
+}
+
+usage() {
+	echo "Usage: sfw {list|allow|remove} [options]"
+	echo
+	echo "Commands:"
+	echo "  list                      List current input rules with handles."
+	echo "  allow <port|service>      Allow a port/service for both TCP and UDP."
+	echo "  allow <port|service> tcp  Allow a port/service for TCP only."
+	echo "  allow <port|service> udp  Allow a port/service for UDP only."
+	echo "  remove <handle_number>      Remove a rule by its handle."
+	exit 1
+}
+
+if [[ -z "$1" ]]; then
+	usage
+fi
+
+COMMAND=$1
+shift
+
+case "$COMMAND" in
+list)
+	list_rules
+	;;
+
+allow)
+	if [[ -z "$1" ]]; then
+		echo "Error: 'allow' requires a port number or service name." >&2
+		usage
+	fi
+
+	PORT_OR_SERVICE=$1
+	PROTO=$2
+
+	if [[ -z "$PROTO" ]]; then
+		# Syntax: sfw allow <port|service>
+		insert_rule "tcp" "$PORT_OR_SERVICE"
+		insert_rule "udp" "$PORT_OR_SERVICE"
+	elif [[ "$PROTO" == "tcp" || "$PROTO" == "udp" ]]; then
+		# Syntax: sfw allow <port|service> <protocol>
+		insert_rule "$PROTO" "$PORT_OR_SERVICE"
+	else
+		echo "Error: Invalid protocol '${PROTO}'. Use 'tcp' or 'udp'." >&2
+		usage
+	fi
+	;;
+
+remove)
+	if [[ -z "$1" ]]; then
+		echo "Error: 'remove' requires a handle number." >&2
+	fi
+	remove_rule "$1"
+	;;
+
+*)
+	echo "Error: Unknown command '$COMMAND'." >&2
+	usage
+	;;
+esac
