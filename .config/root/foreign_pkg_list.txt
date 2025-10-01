@@ -9,7 +9,9 @@ farbfeld
 findbrokenpkgs
 firefox-tridactyl-native-bin
 geforce-infinity-bin
+gemini-cli-bin
 ghdl
+github-copilot
 gnucobol
 gtk-theme-arc-gruvbox-git
 hyx
@@ -17,6 +19,7 @@ iamb-git
 iranian-fonts
 kjv-apocrypha
 ledger-live-bin
+libreoffice-extension-writingtool
 linode-cli
 litecli
 lobster-git

@@ -69,7 +69,6 @@ netcdf-fortran
 new-session-manager
 nlohmann-json
 noto-fonts-cjk
-npm
 nss-mdns
 opencl-clhpp
 openscad
@@ -78,6 +77,7 @@ openvr
 ospray
 ostra-cg
 otf-font-awesome
+paraview-catalyst
 pari-elldata
 pari-galpol
 pari-seadata
@@ -171,6 +171,7 @@ python-socksio
 python-sqlalchemy
 python-statsmodels
 python-tensorflow-serving-api
+python-torchcodec
 python-truststore
 python-tzdata
 python-unidecode
@@ -201,7 +202,6 @@ udftools
 udisks2-btrfs
 unarchiver
 usbmuxd
-valgrind
 viskores
 vlc-plugin-freetype
 vlc-plugin-srt

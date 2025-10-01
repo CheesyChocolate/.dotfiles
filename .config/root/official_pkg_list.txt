@@ -182,7 +182,6 @@ gcc-ada
 gcc9
 gdu
 geckodriver
-gemini-cli
 geoip-database-extra
 geoipupdate
 ghc
@@ -303,6 +302,7 @@ lftp
 lhasa
 lib32-amdvlk
 lib32-artix-archlinux-support
+lib32-directx-headers
 lib32-giflib
 lib32-gst-plugins-base-libs
 lib32-gst-plugins-good
@@ -350,7 +350,6 @@ libnotify
 libpillowfight
 libportal-gtk4
 libportal-qt6
-libreoffice-extension-languagetool
 libreoffice-extension-texmaths
 libreoffice-fresh
 librepcb
@@ -400,7 +399,6 @@ libxdg-basedir
 libxinerama
 linux
 linux-firmware
-linux-hardened
 linux-hardened-headers
 linux-headers
 linux-lts
@@ -408,7 +406,6 @@ linux-lts-headers
 linux-lts515
 linux-lts515-headers
 linux-steam-integration
-linux-zen
 linux-zen-headers
 lldb
 llm-manager
@@ -512,6 +509,7 @@ osm-gps-map
 otf-firamono-nerd
 otf-libertinus
 otf-sora
+oxygen
 packet
 pacman-contrib
 pacman-static
@@ -545,6 +543,7 @@ pocl
 podman
 polkit-gnome
 poppler
+powershell-bin
 powertop
 prettier
 profanity
@@ -563,6 +562,7 @@ python-css-parser
 python-datasets
 python-entrypoints
 python-evdev
+python-freezegun
 python-geoip
 python-graphviz
 python-hatch
@@ -570,6 +570,7 @@ python-imageio-ffmpeg
 python-ipympl
 python-jwcrypto
 python-keras
+python-loguru
 python-objgraph
 python-onnxruntime-opt-rocm
 python-openai
@@ -585,6 +586,7 @@ python-pygame
 python-pyjwt
 python-pylint-venv
 python-pyqt6-webengine
+python-pytest-mock
 python-pytorch-opt-rocm
 python-pyvirtualdisplay
 python-pyxdg
@@ -612,6 +614,7 @@ r2ghidra
 radeontop
 radvd
 rapidjson
+rclone
 reaver
 rebuild-detector
 remmina
@@ -823,7 +826,10 @@ xdg-dbus-proxy
 xdg-user-dirs
 xdg-utils-cxx
 xdotool
+xlibre-xf86-input-evdev
+xlibre-xf86-input-keyboard
 xlibre-xf86-input-libinput
+xlibre-xf86-input-mouse
 xlibre-xf86-video-amdgpu
 xlibre-xf86-video-vesa
 xlibre-xserver
