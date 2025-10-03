@@ -17,7 +17,6 @@
     ],
     "lyrics_providers": [
         "genius",
-        "azlyrics",
         "musixmatch",
 	"synced"
     ],
