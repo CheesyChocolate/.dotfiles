@@ -30,3 +30,5 @@
 	path = <home-directory-TODO>/.config/git/work_configs/gitconfig-<work-directory-TODO>
 [color]
 	ui = auto
+[coderabbit]
+	machineId = <api-key-TODO>
