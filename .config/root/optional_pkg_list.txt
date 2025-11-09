@@ -1,4 +1,5 @@
 acsccid
+android-udev
 arch-wiki-docs
 artix-checkupdates
 artix-rebuild-order
@@ -10,6 +11,7 @@ biber
 buckygen
 c-xsc
 ccache
+cern-vdt
 cgns
 coin-or-csdp
 coin-or-mp
@@ -25,6 +27,7 @@ dot2tex
 dsdp
 ed
 espeak-ng
+fastjet
 fig2dev
 fltk
 freeimage
@@ -41,17 +44,19 @@ gst-libav
 gst-plugins-bad
 gst-plugins-ugly
 harvid
+hepmc
 hunspell-en_us
 hyprland-protocols
 icedtea-web
 ipp-usb
 jmol
 jupyter-collaboration
+jupyter-metakernel
 jupyterlab-widgets
 ladspa
 latte-integrale
+lhapdf
 lib32-gamemode
-libappindicator-gtk3
 libgnome-keyring
 liblas
 libmythes
@@ -99,8 +104,10 @@ pstoedit
 psutils
 pyright
 python-authlib
+python-av
 python-black
 python-blosc
+python-boto3
 python-bottleneck
 python-brotli
 python-cchardet
@@ -120,9 +127,8 @@ python-gssapi
 python-httpx-aiohttp
 python-hypothesis
 python-igraph
-python-imagecodecs
 python-importlib_resources
-python-inquirerpy
+python-ipyparallel
 python-isoduration
 python-itsdangerous
 python-jsonpointer
@@ -137,6 +143,7 @@ python-lxml-html-clean
 python-lz4
 python-mpi4py
 python-netcdf4
+python-onnxscript
 python-openpyxl
 python-pandas-datareader
 python-pdftotext
@@ -160,6 +167,7 @@ python-pypubsub
 python-pyscipopt
 python-pytables
 python-pytest-xdist
+python-pythia8
 python-python-multipart
 python-rfc3339-validator
 python-rfc3987
@@ -167,6 +175,7 @@ python-rope
 python-seaborn
 python-setproctitle
 python-smbprotocol
+python-snappy
 python-socksio
 python-sqlalchemy
 python-statsmodels
@@ -193,7 +202,6 @@ sirocco
 slirp4netns
 sox
 speech-dispatcher
-steam-native-runtime
 swi-prolog
 texlab
 topcom
@@ -201,7 +209,9 @@ typescript-language-server
 udftools
 udisks2-btrfs
 unarchiver
+unuran
 usbmuxd
+vc
 viskores
 vlc-plugin-freetype
 vlc-plugin-srt
@@ -209,9 +219,9 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 wdiff
-webkit2gtk
 xjadeo
 yapf
+yt-dlp-ejs
 zathura-cb
 zathura-djvu
 zathura-pdf-mupdf

@@ -1,4 +1,3 @@
-64gram-desktop
 7zip
 abook
 acpi
@@ -14,7 +13,6 @@ alhp-mirrorlist
 alsa-firmware
 alsa-utils
 amd-ucode
-amdvlk
 android-emulator
 android-ndk
 android-platform
@@ -64,7 +62,9 @@ bluez-runit
 bluez-utils
 bmon
 bootlogd
+brasero
 brave-bin
+breeze
 btrfs-progs
 buildah
 bun-bin
@@ -90,7 +90,6 @@ checksec
 chicken
 chkrootkit
 chntpw
-cinelerra-gg-git
 ckbcomp
 clamav
 clamav-runit
@@ -182,6 +181,7 @@ gcc-ada
 gcc9
 gdu
 geckodriver
+gemini-cli
 geoip-database-extra
 geoipupdate
 ghc
@@ -220,10 +220,6 @@ grub-btrfs
 gst-plugin-pipewire
 gst-plugin-va
 gstreamer-vaapi
-gtk-engine-murrine
-gtk-engines
-gtk2+extra
-gtkmm
 gtkmm-4.0
 gvfs
 hashcat
@@ -300,7 +296,6 @@ lemon
 lf
 lftp
 lhasa
-lib32-amdvlk
 lib32-artix-archlinux-support
 lib32-directx-headers
 lib32-giflib
@@ -308,8 +303,10 @@ lib32-gst-plugins-base-libs
 lib32-gst-plugins-good
 lib32-gtk2
 lib32-gtk3
+lib32-libappindicator
 lib32-libavc1394
 lib32-libcups
+lib32-libdbusmenu-gtk3
 lib32-libnm
 lib32-libpulse
 lib32-libudev0-shim
@@ -342,7 +339,7 @@ libgsf
 libgtop
 libguestfs
 libibus
-libindicator-gtk3
+libindicator
 libmilter
 libmodule
 libnfc
@@ -537,6 +534,7 @@ pipewire-x11-bell
 pipewire-zeroconf
 pkgfile
 plantuml
+playwright
 plocate
 plumber
 pocl
@@ -586,6 +584,7 @@ python-pygame
 python-pyjwt
 python-pylint-venv
 python-pyqt6-webengine
+python-pyrr
 python-pytest-mock
 python-pytorch-opt-rocm
 python-pyvirtualdisplay
@@ -621,7 +620,6 @@ remmina
 remmina-plugin-anydesk-git
 remmina-plugin-folder
 remmina-plugin-rustdesk
-remmina-plugin-teamviewer
 retroarch
 retroarch-assets-glui
 retroarch-assets-ozone
@@ -633,6 +631,7 @@ ripgrep-all
 rocm-ml-libraries
 rocm-ml-sdk
 rocm-opencl-sdk
+root
 rpi-imager
 rsm
 rsync-runit
@@ -774,6 +773,7 @@ unrar
 unzip
 uriparser
 urlwatch
+uutils-coreutils
 uv
 vagrant
 vala
@@ -826,12 +826,12 @@ xdg-dbus-proxy
 xdg-user-dirs
 xdg-utils-cxx
 xdotool
-xlibre-xf86-input-evdev
-xlibre-xf86-input-keyboard
-xlibre-xf86-input-libinput
-xlibre-xf86-input-mouse
-xlibre-xf86-video-amdgpu
-xlibre-xf86-video-vesa
+xlibre-input-evdev
+xlibre-input-keyboard
+xlibre-input-libinput
+xlibre-input-mouse
+xlibre-video-amdgpu
+xlibre-video-vesa
 xlibre-xserver
 xlibre-xserver-common
 xlibre-xserver-devel
@@ -874,6 +874,7 @@ zapzap
 zathura
 zbar
 zed
+zellij
 zig
 zip
 zmap
