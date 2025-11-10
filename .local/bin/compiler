@@ -76,6 +76,7 @@ case "${ext}" in
 			pandoc "${file}" ${pandoc_options} -o "${base}.pdf"
 		;;
 	ml) ocaml "${file}" ;;
+	# mmd) mmdc -w 4096 -H 2160 -i "${file}" -o "${base}.png" ;;
 	mmd) mmdc -i "${file}" -o "${base}.png" ;;
 	mom | ms) preconv "${file}" | refer -PS -e | groff -T pdf -m"${ext}" >"${base}.pdf" ;;
 	nim) nim compile --run "${file}" ;;
