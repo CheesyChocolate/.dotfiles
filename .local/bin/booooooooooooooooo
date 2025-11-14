@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo '{"x": [-2.5, 1.5], "dx": 0.05, "y": [-1.5, 1.5], "dy": 0.1}' |   jq -jr "{ \
+     ci: range(.y[0]; .y[1] + .dy; .dy), \
+     cr: range(.x[0]; .x[1]; .dx), \
+     k: 0, \
+     r: 0, \
+     i: 0, \
+   } | until(.r * .r + .i * .i > 4 or .k == 94; { \
+         cr,
+         ci,
+         k: (.k + 1),
+         r: (.r * .r - .i * .i + .cr),
+         i: (.r * .i * 2 + .ci) \
+       }) \
+   | [.k + 32] | implode"  | fold -w 80
