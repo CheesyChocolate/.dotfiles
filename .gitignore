@@ -119,6 +119,7 @@
 .local/*
 !.local/bin/
 .local/bin/private/
+.local/bin/coderabbit/
 !.local/share/
 .local/share/*
 !.local/share/applications/
