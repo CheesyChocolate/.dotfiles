@@ -130,6 +130,7 @@
 !.local/share/ollama/
 .local/share/ollama/*
 !.local/share/ollama/Modelfile-*
+!.local/share/pandoc/
 !.local/share/rustup/
 .local/share/rustup/*
 !.local/share/rustup/settings.toml
