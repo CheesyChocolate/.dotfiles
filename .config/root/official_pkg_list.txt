@@ -83,6 +83,7 @@ cfr
 chafa
 chaotic-keyring
 chaotic-mirrorlist
+chawan
 cheat
 check
 checkbashisms

@@ -220,6 +220,7 @@ vscode-html-languageserver
 vscode-json-languageserver
 wdiff
 xjadeo
+xorg-xset
 yapf
 yt-dlp-ejs
 zathura-cb
