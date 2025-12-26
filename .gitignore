@@ -67,6 +67,8 @@
 !.config/ncmpcpp/
 .config/ncmpcpp/*.log
 !.config/newsboat/
+!.config/nim/
+!.config/nimble/
 !.config/npm/
 !.config/nsxiv/
 !.config/nvim/
