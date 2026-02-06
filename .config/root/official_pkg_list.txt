@@ -1,4 +1,5 @@
 7zip
+aarch64-linux-gnu-gcc
 abook
 acpi
 acpi_call-dkms
@@ -38,7 +39,7 @@ aspell-en
 aspnet-runtime
 aubio
 avahi-runit
-aws-cli
+aws-cli-v2
 axel
 base
 base-devel
@@ -179,6 +180,11 @@ game-devices-udev
 gamemode
 gamescope
 gcc-ada
+gcc-d
+gcc-gcobol
+gcc-m2
+gcc-objc
+gcc-rust
 gcc9
 gdu
 geckodriver
@@ -195,6 +201,7 @@ git-filter-repo
 git-lfs
 git-runit
 github-cli
+github-copilot-cli
 gitleaks
 glib2-docs
 gmic
@@ -220,7 +227,6 @@ grub
 grub-btrfs
 gst-plugin-pipewire
 gst-plugin-va
-gstreamer-vaapi
 gtkmm-4.0
 gvfs
 hashcat
@@ -335,12 +341,18 @@ libc++abi
 libcgif
 libcgroup
 libconfig
+libgccjit
+libgcobol
+libgm2
+libgo
+libgphobos
 libgphoto2
 libgsf
 libgtop
 libguestfs
 libibus
 libindicator
+libitm
 libmilter
 libmodule
 libnfc
@@ -397,14 +409,11 @@ libxdg-basedir
 libxinerama
 linux
 linux-firmware
-linux-hardened-headers
 linux-headers
 linux-lts
 linux-lts-headers
 linux-lts515
 linux-lts515-headers
-linux-steam-integration
-linux-zen-headers
 lldb
 llm-manager
 llvm-julia
@@ -443,7 +452,6 @@ mkinitcpio-firmware
 monero
 monero-gui
 mono
-moodle-dl-git
 moreutils
 movit
 mpc
@@ -488,6 +496,7 @@ nsxiv
 ntfs-3g
 ntp
 ntp-runit
+nvchecker
 nvme-cli
 nvtop
 obs-studio
@@ -500,6 +509,7 @@ openbsd-netcat
 opencl-mesa
 openconnect
 openldap
+openresolv
 openssh-runit
 openssl-1.1
 optipng
@@ -559,8 +569,10 @@ python-awscrt
 python-cloudpickle
 python-css-parser
 python-datasets
+python-django
 python-entrypoints
 python-evdev
+python-fastparquet
 python-freezegun
 python-geoip
 python-graphviz
@@ -571,6 +583,7 @@ python-jwcrypto
 python-keras
 python-loguru
 python-objgraph
+python-odfpy
 python-onnxruntime-opt-rocm
 python-openai
 python-opencv
@@ -629,6 +642,9 @@ rink
 ripdrag-git
 ripgrep
 ripgrep-all
+riscv64-linux-gnu-binutils
+riscv64-linux-gnu-gcc
+riscv64-linux-gnu-glibc
 rocm-ml-libraries
 rocm-ml-sdk
 rocm-opencl-sdk
@@ -686,7 +702,6 @@ steam
 steamcmd
 streamlink
 stylua
-subdl
 subversion
 swtpm
 sysfsutils
@@ -763,7 +778,7 @@ ttf-nerd-fonts-symbols-common
 turbo-base64
 typescript
 typst
-ueberzug
+ueberzugpp
 umockdev
 umu-launcher
 unace
@@ -796,6 +811,7 @@ vulkan-tools
 vulscan
 wasm-pack
 waybar
+wdisplays
 webkitgtk-6.0
 webrtc-audio-processing
 weechat
@@ -803,6 +819,7 @@ wf-recorder
 whois
 wikiman
 wine-gecko
+wine-meta
 wine-mono
 wine-nine
 wine-staging
@@ -812,6 +829,7 @@ wireless-regdb
 wireshark-cli
 wireshark-qt
 wl-clipboard
+wlr-randr
 wmctrl
 wmname
 woeusb
@@ -832,7 +850,6 @@ xlibre-input-keyboard
 xlibre-input-libinput
 xlibre-input-mouse
 xlibre-video-amdgpu
-xlibre-video-vesa
 xlibre-xserver
 xlibre-xserver-common
 xlibre-xserver-devel
