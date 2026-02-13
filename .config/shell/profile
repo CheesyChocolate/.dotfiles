@@ -135,7 +135,7 @@ export BEMENU_OPTS="--binding vim --ignorecase --vim-esc-exits"
 	selected_wm=$(printf '%s\n' "DWM" "Hyprland" "BSOD" | fzf --height 40% --reverse --ansi --prompt 'Select Window Manager: ' --no-multi) &&
 	case "$selected_wm" in
 		DWM) exec startx "$XINITRC" ;;
-		Hyprland) exec Hyprland ;;	# TODO: https://forum.artixlinux.org/index.php/topic,5600.msg40424.html#msg40424
+		Hyprland) exec start-hyprland ;;	# TODO: https://forum.artixlinux.org/index.php/topic,5600.msg40424.html#msg40424
 		BSOD) exec bsod ;;
 	esac
 
