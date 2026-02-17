@@ -50,9 +50,9 @@
 		"exec": "$HOME/.local/bin/statusbar/sb-mailbox"
 	},
 	"mpd": {
-		"format": "{stateIcon}{artist} - {title} ",
-		"format-disconnected": "Disconnected ",
-		"format-stopped": "{consumeIcon}Stopped ",
+		"format": "{stateIcon}{artist} - {title} 🎵",
+		"format-disconnected": "Disconnected 🎵",
+		"format-stopped": "{consumeIcon}Stopped 🎵",
 		"interval": 10,
 		"state-icons": {
 			"paused": "⏸",
@@ -94,8 +94,8 @@
 		"format": "{icon}<span color='#e88939'>{temperatureC}°C</span>",
 		"format-icons": [
 			"🧊",
-			"🌡",
-			"🌡",
+			"❄️",
+			"🌡️",
 			"🔥"
 		]
 	},
