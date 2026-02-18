@@ -4,7 +4,60 @@
 # displays and lets user select one to use. User may also select "manual
 # selection" which opens arandr.
 
+# Select menu program based on session
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    menu_cmd="bemenu"
+else
+    menu_cmd="dmenu"
+fi
+
 twoscreen() { # If multi-monitor is selected and there are two screens.
+    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+        mirror=$(printf "no\\nyes" | $menu_cmd -i -p "Mirror displays?")
+        if [ "$mirror" = "yes" ]; then
+            external=$(echo "$screens" | $menu_cmd -i -p "Optimize resolution for:")
+            internal=$(echo "$screens" | grep -v "$external")
+            # Hyprland mirroring: monitor=NAME,resolution,position,scale,mirror,SOURCE
+            # Disable VRR on external monitor to prevent flickering
+            hyprctl keyword monitor "$external,1920x1080@60,auto,1,vrr,0"
+            hyprctl keyword monitor "$internal,preferred,auto,1,mirror,$external"
+        else
+            primary=$(echo "$screens" | $menu_cmd -i -p "Select primary display:")
+            secondary=$(echo "$screens" | grep -v ^"$primary"$)
+            direction=$(printf "left\\nright" | $menu_cmd -i -p "What side of $primary should $secondary be on?")
+            
+            # Get resolution of primary and secondary to calculate position
+            # Use jq to get width from availableModes if not active, or width property if active
+            get_width() {
+                mon=$1
+                # Always prefer the first available mode (native resolution) instead of active
+                # This ensures we get the true physical width even if currently mirrored/scaled down
+                # availableModes[0] is typically the preferred/highest resolution
+                raw_mode=$(hyprctl -j monitors all | jq -r ".[] | select(.name == \"$mon\") | .availableModes[0]")
+                w=$(echo "$raw_mode" | sed 's/x.*//')
+                
+                # Fallback to active width if availableModes fails or returns null/empty
+                if [ "$w" = "null" ] || [ -z "$w" ]; then
+                    w=$(hyprctl -j monitors all | jq -r ".[] | select(.name == \"$mon\") | .width")
+                fi
+                echo "$w"
+            }
+            
+            pri_width=$(get_width "$primary")
+            sec_width=$(get_width "$secondary")
+
+            # Disable VRR on all monitors when setting up multi-monitor
+            # Explicitly disable mirroring by setting mode without mirror parameter
+            if [ "$direction" = "left" ]; then
+                hyprctl keyword monitor "$secondary,preferred,0x0,1,vrr,0"
+                hyprctl keyword monitor "$primary,preferred,${sec_width}x0,1,vrr,0"
+            else
+                hyprctl keyword monitor "$primary,preferred,0x0,1,vrr,0"
+                hyprctl keyword monitor "$secondary,preferred,${pri_width}x0,1,vrr,0"
+            fi
+        fi
+        return
+    fi
 
     mirror=$(printf "no\\nyes" | dmenu -i -p "Mirror displays?")
     # Mirror displays using native resolution of external display and a scaled
@@ -39,6 +92,47 @@ twoscreen() { # If multi-monitor is selected and there are two screens.
     }
 
 morescreen() { # If multi-monitor is selected and there are more than two screens.
+    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+        primary=$(echo "$screens" | $menu_cmd -i -p "Select primary display:")
+        secondary=$(echo "$screens" | grep -v ^"$primary"$ | $menu_cmd -i -p "Select secondary display:")
+        direction=$(printf "left\\nright" | $menu_cmd -i -p "What side of $primary should $secondary be on?")
+        tertiary=$(echo "$screens" | grep -v ^"$primary"$ | grep -v ^"$secondary"$ | $menu_cmd -i -p "Select third display:")
+
+        # Redefine get_width here just in case
+        get_width() {
+            mon=$1
+            w=$(hyprctl -j monitors all | jq -r ".[] | select(.name == \"$mon\") | .width")
+            if [ "$w" = "0" ] || [ "$w" = "null" ]; then
+                w=$(hyprctl -j monitors all | jq -r ".[] | select(.name == \"$mon\") | .availableModes[0]" | sed 's/x.*//')
+            fi
+            echo "$w"
+        }
+
+        pri_width=$(get_width "$primary")
+        sec_width=$(get_width "$secondary")
+        ter_width=$(get_width "$tertiary")
+
+        # Logic: Tertiary is opposite side of Primary from Secondary.
+        # Primary in middle.
+        
+        if [ "$direction" = "left" ]; then
+            # Secondary | Primary | Tertiary
+            # S at 0, P at sec_width, T at sec_width + pri_width
+            hyprctl keyword monitor "$secondary,preferred,0x0,1,vrr,0"
+            hyprctl keyword monitor "$primary,preferred,${sec_width}x0,1,vrr,0"
+            # Bash arithmetic for position
+            pos_t=$((sec_width + pri_width))
+            hyprctl keyword monitor "$tertiary,preferred,${pos_t}x0,1,vrr,0"
+        else
+            # Tertiary | Primary | Secondary
+            # T at 0, P at ter_width, S at ter_width + pri_width
+            hyprctl keyword monitor "$tertiary,preferred,0x0,1,vrr,0"
+            hyprctl keyword monitor "$primary,preferred,${ter_width}x0,1,vrr,0"
+            pos_s=$((ter_width + pri_width))
+            hyprctl keyword monitor "$secondary,preferred,${pos_s}x0,1,vrr,0"
+        fi
+        return
+    fi
 	primary=$(echo "$screens" | dmenu -i -p "Select primary display:")
 	secondary=$(echo "$screens" | grep -v ^"$primary"$ | dmenu -i -p "Select secondary display:")
 	direction=$(printf "left\\nright" | dmenu -i -p "What side of $primary should $secondary be on?")
@@ -53,30 +147,60 @@ multimon() { # Multi-monitor handler.
 	esac ;}
 
 onescreen() { # If only one output available or chosen.
+    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+        # Enable selected monitor, disable VRR to prevent flickering
+        hyprctl keyword monitor "$1,preferred,0x0,1,vrr,0"
+        for mon in $screens; do
+            if [ "$mon" != "$1" ]; then
+                hyprctl keyword monitor "$mon,disable"
+            fi
+        done
+        return
+    fi
 	xrandr --output "$1" --primary --auto --scale 1.0x1.0 $(echo "$allposs" | grep -v "\b$1" | awk '{print "--output", $1, "--off"}' | paste -sd ' ' -)
 	}
 
 postrun() { # Stuff to run to clean up.
 	setbg		# Fix background if screen size/arangement has changed.
 	{ killall dunst ; setsid -f dunst ;} >/dev/null 2>&1 # Restart dunst to ensure proper location on screen
+    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+        # Restart waybar to adapt to new monitor layout
+        { killall waybar ; setsid -f waybar ;} >/dev/null 2>&1
+    fi
 	}
 
-# Get all possible displays
-allposs=$(xrandr -q | grep "connected")
-
-# Get all connected screens.
-screens=$(echo "$allposs" | awk '/ connected/ {print $1}')
-
-# If there's only one screen
-[ "$(echo "$screens" | wc -l)" -lt 2 ] &&
-	{ onescreen "$screens"; postrun; notify-send "💻 Only one screen detected." "Using it in its optimal settings...";  exit ;}
-
 # Get user choice including multi-monitor and manual selection:
-chosen=$(printf "%s\\nmulti-monitor\\nmanual selection" "$screens" | dmenu -i -p "Select display arangement:") &&
-case "$chosen" in
-	"manual selection") arandr ; exit ;;
-	"multi-monitor") multimon ;;
-	*) onescreen "$chosen" ;;
-esac
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    # Get all connected screens.
+    screens=$(hyprctl -j monitors all | jq -r '.[] | .name')
+
+    # If there's only one screen
+    [ "$(echo "$screens" | wc -l)" -lt 2 ] &&
+        { onescreen "$screens"; postrun; notify-send "💻 Only one screen detected." "Using it in its optimal settings...";  exit ;}
+
+    chosen=$(printf "%s\\nmulti-monitor" "$screens" | $menu_cmd -i -p "Select display arangement:") &&
+    case "$chosen" in
+        "multi-monitor") multimon ;;
+        *) onescreen "$chosen" ;;
+    esac
+else
+    # Get all possible displays
+    allposs=$(xrandr -q | grep "connected")
+
+    # Get all connected screens.
+    screens=$(echo "$allposs" | awk '/ connected/ {print $1}')
+
+    # If there's only one screen
+    [ "$(echo "$screens" | wc -l)" -lt 2 ] &&
+        { onescreen "$screens"; postrun; notify-send "💻 Only one screen detected." "Using it in its optimal settings...";  exit ;}
+
+    # Get user choice including multi-monitor and manual selection:
+    chosen=$(printf "%s\\nmulti-monitor\\nmanual selection" "$screens" | dmenu -i -p "Select display arangement:") &&
+    case "$chosen" in
+        "manual selection") arandr ; exit ;;
+        "multi-monitor") multimon ;;
+        *) onescreen "$chosen" ;;
+    esac
+fi
 
 postrun
