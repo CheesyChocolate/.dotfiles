@@ -5,12 +5,23 @@
 # edit value of settemp to your desired color temperature (minimum is 700)
 
 settemp="2700"
-colortemp="$(xsct | cut -d' ' -f5)"
 
-if [ "$colortemp" -ge "6500" ]; then
-	notify-send "🌙 Night Light Enabled (${settemp}K)"
-	xsct $settemp
+if command -v hyprctl &> /dev/null; then
+	colortemp="$(hyprctl hyprsunset temperature)"
+	if [ "$colortemp" -ge "6500" ]; then
+		notify-send "🌙 Night Light Enabled (${settemp}K)"
+		hyprctl hyprsunset temperature $settemp
+	else
+		notify-send "☀️ Night Light Disabled"
+		hyprctl hyprsunset temperature 6500
+	fi
 else
-	notify-send "☀️ Night Light Disabled"
-	xsct 0
+	colortemp="$(xsct | cut -d' ' -f5)"
+	if [ "$colortemp" -ge "6500" ]; then
+		notify-send "🌙 Night Light Enabled (${settemp}K)"
+		xsct $settemp
+	else
+		notify-send "☀️ Night Light Disabled"
+		xsct 0
+	fi
 fi
