@@ -13,7 +13,13 @@ password_files=( "$prefix"/**/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
-password=$(printf '%s\n' "${password_files[@]}" | dmenu "$@")
+if [[ -n $WAYLAND_DISPLAY ]]; then
+	menu=bemenu
+else
+	menu=dmenu
+fi
+
+password=$(printf '%s\n' "${password_files[@]}" | $menu "$@")
 
 [[ -n $password ]] || exit
 
@@ -25,6 +31,10 @@ fi
 if [[ $typeit -eq 0 ]]; then
 	pass $pass_cmd -c "$password" 2>/dev/null
 else
-	pass $pass_cmd "$password" | { IFS= read -r pass; printf %s "$pass"; } |
-		xdotool type --clearmodifiers --file -
+	if [[ -n $WAYLAND_DISPLAY ]]; then
+		pass $pass_cmd "$password" | head -n 1 | tr -d '\n' | wtype -
+	else
+		pass $pass_cmd "$password" | { IFS= read -r pass; printf %s "$pass"; } |
+			xdotool type --clearmodifiers --file -
+	fi
 fi
