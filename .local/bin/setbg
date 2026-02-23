@@ -40,9 +40,17 @@ fi
 # check using x11 or wayland
 SESSION_TYPE=$(loginctl show-session self -p Type --value)
 if [ "$SESSION_TYPE" = "wayland" ]; then
-	hyprctl hyprpaper reload ,"$bgloc"
+    # Use readlink to get the actual image path, not the symlink
+    # hyprpaper handles real paths better
+    real_bg="$(readlink -f "$bgloc")"
+
+    hyprctl hyprpaper unload all >/dev/null 2>&1
+    hyprctl hyprpaper preload "$real_bg" >/dev/null 2>&1
+    for monitor in $(hyprctl monitors | grep "Monitor" | awk '{print $2}'); do
+        hyprctl hyprpaper wallpaper "$monitor,$real_bg" >/dev/null 2>&1
+    done
 else
-	xwallpaper --zoom "$bgloc"
-	# If running, dwm hit the key to refresh the color scheme.
-	pidof dwm >/dev/null && xdotool key super+F5
+    xwallpaper --zoom "$bgloc"
+    # If running, dwm hit the key to refresh the color scheme.
+    pidof dwm >/dev/null && xdotool key super+F5
 fi
