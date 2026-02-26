@@ -62,11 +62,20 @@ cmd open ${{
 	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
 	image/svg+xml) display -- $f ;;
 	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|heic\|webp\|avif\|tif\|ico\)\(_large\)*$" |
-		setsid -f nsxiv -aio 2>/dev/null | while read -r file; do
-			[ -z "$file" ] && continue
-			lf -remote "send select \"$file\""
-			lf -remote "send toggle"
-		done &
+
+		if [ -n "$WAYLAND_DISPLAY" ]; then
+			setsid -f swayimg -aio 2>/dev/null | while read -r file; do
+				[ -z "$file" ] && continue
+				lf -remote "send select \"$file\""
+				lf -remote "send toggle"
+			done &
+		else
+			setsid -f nsxiv -aio 2>/dev/null | while read -r file; do
+				[ -z "$file" ] && continue
+				lf -remote "send select \"$file\""
+				lf -remote "send toggle"
+			done &
+		fi
 		;;
 	audio/*|video/x-ms-asf) mpv --audio-display=no --no-resume-playback $f ;;
 	video/*|application/vnd.rn-realmedia) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
