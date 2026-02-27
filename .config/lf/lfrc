@@ -109,7 +109,7 @@ cmd open ${{
 cmd mkdir $mkdir -p "$@"
 
 # Share any file 256MiB limit
-cmd shareLink $curl -F"file=@$fx" https://0x0.st | xclip -selection clipboard
+cmd shareLink $curl -F"file=@$fx" https://0x0.st | unified-clipboard
 
 cmd ripdrag $setsid -f ripdrag --and-exit --disable-thumbnails --all --no-click $fx
 
@@ -303,7 +303,7 @@ map V push :!nvim<space>
 
 map W $setsid -f $TERMINAL >/dev/null 2>&1
 
-map Y $printf "%s" "$fx" | xclip -selection clipboard
+map Y $printf "%s" "$fx" | unified-clipboard
 
 map <c-l> :unselect; clear
 
