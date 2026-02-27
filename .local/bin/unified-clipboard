@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SESSION_TYPE=$(loginctl show-session self -p Type --value)
+if [ "$SESSION_TYPE" = "wayland" ]; then
+	wl-copy
+else
+	xclip -selection clipboard
+fi
