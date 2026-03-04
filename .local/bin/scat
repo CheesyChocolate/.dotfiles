@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]; then
+	echo "Usage: scat <file>"
+	exit 1
+fi
+
+file=$1
+
+if [ ! -f "$file" ]; then
+	echo "File not found: $file"
+	exit 1
+fi
+
+# check file type
+file_type=$(file -b --mime-type "$file")
+
+echo "-----SENSITIVE FILE-----"
+
+case "$file_type" in
+*pem-file | *pkcs* | *-cert | *private-key*)
+	echo "A key or certificate file. Contents are hidden for security reasons."
+	;;
+text/* | */xml | application/json | application/javascript | application/x-ndjson | application/vnd* | application/postscript) case "${1##*/}" in
+	env | *.env | *.env.* | wrangler.toml | .dev.vars)
+		# replace sensetive data with "****"
+		sed -E 's/([A-Z_]+)=.*/\1=****/g' "$file"
+		;;
+	*)
+		cat "$file"
+		;;
+	esac ;;
+*)
+	echo "Unsupported file type: $file_type"
+	;;
+esac
