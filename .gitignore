@@ -94,6 +94,7 @@
 .config/shell/privateProfile
 !.config/spicy/
 !.config/streamlink/
+!.config/swayimg/
 !.config/swaylock/
 !.config/tmux/
 !.config/tridactyl/

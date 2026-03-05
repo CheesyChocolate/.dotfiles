@@ -1,0 +1,16 @@
+# vim: filetype=dosini
+
+[info]
+
+show = no
+
+[keys.viewer]
+
+Shift+n = first_file
+Shift+p = last_file
+n = next_file
+p = previous_file
+h = step_left 10
+j = step_down 10
+k = step_up 10
+l = step_right 10
