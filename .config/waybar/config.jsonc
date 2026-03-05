@@ -15,6 +15,7 @@
 	],
 	"modules-right": [
 		"privacy",
+		"custom/artix-updates",
 		"custom/updates",
 		"temperature",
 		"custom/mail",
@@ -47,7 +48,8 @@
 	"custom/mail": {
 		"format": "{}",
 		"interval": 30,
-		"exec": "$HOME/.local/bin/statusbar/sb-mailbox"
+		"exec": "$HOME/.local/bin/statusbar/sb-mailbox",
+		"on-click": "kitty -e neomutt"
 	},
 	"mpd": {
 		"format": "{stateIcon}{artist} - {title} 🎵",
@@ -83,6 +85,13 @@
 			}
 		]
 	},
+	"custom/artix-updates": {
+		"format": "{}",
+		"interval": 72000,
+		"exec": "sb-artixpkg",
+		"on-click": "kitty -e artix-checkupdates -fmn",
+		"return-type": "string"
+	},
 	"hyprland/language": {
 		"format": "⌨️{}",
 		"format-en": "us",
@@ -109,9 +118,9 @@
 		"on-scroll-down": "hyprctl dispatch workspace e-1"
 	},
 	"custom/updates": {
-		"format": "📦{} ",
+		"format": "{}",
 		"interval": 72000,
-		"exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'", // # of updates and tooltip details
+		"exec": "sb-pacpackages",
 		"exec-if": "exit 0", // always run; consider advanced run conditions
 		"on-click": "kitty -e sudo yay -Syu",
 		"signal": 8
@@ -151,8 +160,7 @@
 			"🔅",
 			"🔆"
 		],
-		// TODO: the command is a daemon, write a script to toggle
-		// "on-click": "hyprsunset"
+		"on-click": "nightlight",
 	},
 	"battery": {
 		"interval": 60,
@@ -173,7 +181,7 @@
 	"wireplumber": {
 		"format": "{icon}{volume}%",
 		"format-muted": "🔇",
-		"on-click": "helvum",
+		"on-click": "kitty -e pulsemixer",
 		"max-volume": 150,
 		"scroll-step": 0.2,
 		"format-icons": [
