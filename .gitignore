@@ -113,6 +113,7 @@
 .config/zed/*
 !.config/zed/settings.json
 !.config/zsh/
+.config/zsh/.zcompdump
 !.config/linux-steam-integration.conf
 !.config/mimeapps.list
 !.config/user-dirs.dirs
