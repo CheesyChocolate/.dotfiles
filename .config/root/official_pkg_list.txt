@@ -308,7 +308,6 @@ lib32-directx-headers
 lib32-giflib
 lib32-gst-plugins-base-libs
 lib32-gst-plugins-good
-lib32-gtk2
 lib32-gtk3
 lib32-libappindicator
 lib32-libavc1394
@@ -316,7 +315,6 @@ lib32-libcups
 lib32-libdbusmenu-gtk3
 lib32-libnm
 lib32-libpulse
-lib32-libudev0-shim
 lib32-libva
 lib32-libvdpau
 lib32-libxcomposite
@@ -398,7 +396,6 @@ libretro-shaders-slang
 libretro-snes9x
 libretro-yabause
 librewolf
-libudev0-shim
 libultrahdr
 libunrar
 libvips
@@ -511,7 +508,6 @@ openconnect
 openldap
 openresolv
 openssh-runit
-openssl-1.1
 optipng
 osm-gps-map
 otf-firamono-nerd
@@ -703,6 +699,7 @@ steamcmd
 streamlink
 stylua
 subversion
+swayimg
 swtpm
 sysfsutils
 syslinux
@@ -712,6 +709,7 @@ termdown
 terminus-font
 termshark
 tesseract-data-ara
+tesseract-data-eng
 tesseract-data-enm
 tesseract-data-equ
 tesseract-data-fas
@@ -885,6 +883,7 @@ xwallpaper
 yamllint
 yarn
 yay-git
+yazi
 yt-dlp
 yt-dlp-drop-in
 zaproxy

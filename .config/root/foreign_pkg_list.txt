@@ -23,9 +23,11 @@ iamb-git
 iranian-fonts
 kjv-apocrypha
 ledger-live-bin
+lib32-gtk2
+lib32-libudev0-shim
 libreoffice-extension-writingtool
+libudev0-shim
 linode-cli
-linux-steam-integration
 lobster-git
 luajit-tiktoken-bin
 mangal-bin

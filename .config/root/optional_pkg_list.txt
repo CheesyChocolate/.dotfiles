@@ -26,9 +26,7 @@ docker-buildx
 dot2tex
 dsdp
 espeak-ng
-fastjet
 fig2dev
-fltk
 freeimage
 fricas
 fuse-overlayfs
@@ -43,7 +41,6 @@ gst-libav
 gst-plugins-bad
 gst-plugins-ugly
 harvid
-hepmc
 hunspell-en_us
 hyprland-protocols
 icedtea-web
@@ -54,9 +51,9 @@ jupyter-metakernel
 jupyterlab-widgets
 ladspa
 latte-integrale
-lhapdf
 lib32-gamemode
 lib32-libdecor
+lib32-libsamplerate
 libgnome-keyring
 liblas
 libmythes
@@ -104,6 +101,7 @@ podman-compose
 pstoedit
 psutils
 pyright
+pythia8
 python-authlib
 python-av
 python-awesomeversion
@@ -119,6 +117,7 @@ python-database-cubic-hecke
 python-database-knotinfo
 python-debugpy
 python-distributed
+python-duckdb
 python-ecos
 python-email-validator
 python-fastnumbers
@@ -144,6 +143,7 @@ python-krb5
 python-libarchive-c
 python-librosa
 python-linkify-it-py
+python-lockfile
 python-lsp-server
 python-lxml-html-clean
 python-lz4
@@ -176,7 +176,6 @@ python-pypubsub
 python-pyscipopt
 python-pytables
 python-pytest-xdist
-python-pythia8
 python-python-multipart
 python-rfc3339-validator
 python-rfc3987
@@ -190,7 +189,6 @@ python-socksio
 python-sqlalchemy
 python-statsmodels
 python-strawberry-graphql
-python-tensorflow-serving-api
 python-torchcodec
 python-truststore
 python-tzdata
@@ -207,6 +205,7 @@ qemu-user-static-binfmt
 qt5-location
 qt5-tools
 regina
+resvg
 rhino
 rubiks
 ruby-stdlib
@@ -235,6 +234,7 @@ vscode-html-languageserver
 vscode-json-languageserver
 wdiff
 xjadeo
+xorg-fonts-misc
 xorg-xset
 yapf
 zathura-cb
