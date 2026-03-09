@@ -2,3 +2,7 @@
 if [ -n "$FIFO_UEBERZUG" ]; then
 	printf '{"action": "remove", "identifier": "PREVIEW"}\n' > "$FIFO_UEBERZUG"
 fi
+
+if [ "$TERM" = "xterm-kitty" ]; then
+	kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
+fi

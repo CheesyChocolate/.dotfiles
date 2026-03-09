@@ -8,6 +8,9 @@ IFS="$(printf '%b_' '\n')"; IFS="${IFS%_}"
 image() {
 	if [ -f "$1" ] && [ -n "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && command -V ueberzug >/dev/null 2>&1; then
 		printf '{"action": "add", "identifier": "PREVIEW", "x": "%s", "y": "%s", "width": "%s", "height": "%s", "scaler": "contain", "path": "%s"}\n' "$4" "$5" "$(($2-1))" "$(($3-1))" "$1" > "$FIFO_UEBERZUG"
+	elif [ -f "$1" ] && [ -n "$DISPLAY" ] && [ "$TERM" = "xterm-kitty" ]; then
+		kitty +kitten icat --silent --stdin no --transfer-mode file --place "${2}x${3}@${4}x${5}" "$1" < /dev/null > /dev/tty
+		exit 1
 	else
 		mediainfo "$6"
 	fi
