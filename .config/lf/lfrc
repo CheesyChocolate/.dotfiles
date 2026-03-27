@@ -64,7 +64,7 @@ cmd open ${{
 	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|heic\|webp\|avif\|tif\|ico\)\(_large\)*$" |
 
 		if [ -n "$WAYLAND_DISPLAY" ]; then
-			setsid -f swayimg -aio 2>/dev/null | while read -r file; do
+			setsid -f swayimg "$f" $(rotdir $f) 2>/dev/null | while read -r file; do
 				[ -z "$file" ] && continue
 				lf -remote "send select \"$file\""
 				lf -remote "send toggle"
