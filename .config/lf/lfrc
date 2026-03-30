@@ -77,7 +77,7 @@ cmd open ${{
 			done &
 		fi
 		;;
-	audio/*|video/x-ms-asf) mpv --audio-display=no --no-resume-playback $f ;;
+	audio/*|video/x-ms-asf|video/3gpp) mpv --audio-display=no --no-resume-playback $f ;;
 	video/*|application/vnd.rn-realmedia) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
 	application/vnd.sqlite3) litecli $fx ;;
 	application/pdf|application/vnd.djvu|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
