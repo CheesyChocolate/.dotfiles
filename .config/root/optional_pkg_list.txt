@@ -1,5 +1,6 @@
 acsccid
 android-udev
+appmenu-gtk-module
 arch-wiki-docs
 artix-checkupdates
 artix-rebuild-order
@@ -25,15 +26,13 @@ ditaa
 docker-buildx
 dot2tex
 dsdp
-espeak-ng
+ffmpeg4.4
 fig2dev
 freeimage
 fricas
 fuse-overlayfs
 gap-packages
-gavl
 gcc-fortran
-glaze
 glib2-devel
 gnuplot
 gobject-introspection
@@ -49,6 +48,7 @@ jmol
 jupyter-collaboration
 jupyter-metakernel
 jupyterlab-widgets
+kwayland-integration
 ladspa
 latte-integrale
 lib32-gamemode
@@ -63,6 +63,8 @@ libvncserver
 libxnvctrl
 lilypond
 llvm18
+llvm21
+lua-filesystem
 lua-lanes
 meson
 msolve
@@ -70,9 +72,9 @@ mypy
 netcdf-cxx
 netcdf-fortran
 new-session-manager
-nlohmann-json
 noto-fonts-cjk
 nss-mdns
+opencamlib
 opencl-clhpp
 openscad
 openslide
@@ -80,6 +82,7 @@ openvr
 ospray
 ostra-cg
 otf-font-awesome
+packagekit-qt6
 paraview-catalyst
 pari-elldata
 pari-galpol
@@ -99,7 +102,6 @@ plantri
 plantuml-ascii-math
 podman-compose
 pstoedit
-psutils
 pyright
 pythia8
 python-authlib
@@ -110,7 +112,6 @@ python-blosc
 python-boto3
 python-bottleneck
 python-brotli
-python-cchardet
 python-cvxpy
 python-cylp
 python-database-cubic-hecke
@@ -121,6 +122,7 @@ python-duckdb
 python-ecos
 python-email-validator
 python-fastnumbers
+python-faust-cchardet
 python-flake8
 python-flax
 python-fqdn
@@ -140,6 +142,7 @@ python-jupymake
 python-jupyter-server-terminals
 python-khoca
 python-krb5
+python-ladybug-core
 python-libarchive-c
 python-librosa
 python-linkify-it-py
@@ -159,7 +162,6 @@ python-pint
 python-pkgconfig
 python-polars
 python-pprofile
-python-priority
 python-psycopg2
 python-pycosat
 python-pydocstyle
@@ -174,6 +176,7 @@ python-pynormaliz
 python-pyopenssl
 python-pypubsub
 python-pyscipopt
+python-pysmbc
 python-pytables
 python-pytest-xdist
 python-python-multipart
@@ -191,6 +194,7 @@ python-statsmodels
 python-strawberry-graphql
 python-torchcodec
 python-truststore
+python-twisted
 python-tzdata
 python-unidecode
 python-uri-template
@@ -202,8 +206,8 @@ python-xlrd
 python-xlwt
 python-yara
 qemu-user-static-binfmt
-qt5-location
 qt5-tools
+quota-tools
 regina
 resvg
 rhino

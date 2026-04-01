@@ -6,13 +6,11 @@ blender-plugin-cad-sketcher-git
 bluetuith-bin
 boomer-git
 cht.sh-git
-cinelerra-gg-git
 clion
 clion-jre
 cyrus-sasl-xoauth2-git
 farbfeld
 findbrokenpkgs
-firefox-tridactyl-native-bin
 geforce-infinity-bin
 ghdl
 gnucobol
@@ -27,6 +25,7 @@ lib32-gtk2
 lib32-libudev0-shim
 libreoffice-extension-writingtool
 libudev0-shim
+linear-desktop-bin
 linode-cli
 lobster-git
 luajit-tiktoken-bin
@@ -44,6 +43,7 @@ python-chembl-webresource-client
 python-javalang
 python-jupytext
 python-npx
+python-pptx
 python-pygad
 remmina-plugin-rdesktop
 remmina-plugin-ultravnc
@@ -60,7 +60,6 @@ svkbd-git
 task-spooler
 urlview-xdg-git
 weathr-bin
-weechat-notify-send-git
 wl_shimeji-git
 wordlists
 xinput-toggle
