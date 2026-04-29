@@ -6,7 +6,7 @@
 # to clean up.
 
 # Adds all directories in `~/.local/bin` to $PATH
-export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
+export PATH="$(find ~/.local/bin -type d | paste -sd ':' -):$PATH"
 
 unsetopt PROMPT_SP 2>/dev/null
 
