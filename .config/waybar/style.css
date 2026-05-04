@@ -81,7 +81,7 @@ window#waybar {
 }
 
 #battery.warning:not(.charging) {
-	background-color: #ff8700;
+	background-color: #ffffff;
 	color: #1b1d1e;
 }
 #battery.critical:not(.charging) {
