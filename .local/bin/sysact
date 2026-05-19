@@ -30,12 +30,14 @@ fi
 if [ $WM = "Hyprland" ]; then
 	case "$(printf "🔒 lock\n🚪 leave $WM\n♻️ renew $WM\n🐻 hibernate\n🔃 reboot\n🖥️shutdown\n💤 sleep\n📺 display off" | bemenu -i -p 'Action: ')" in
 		'🔒 lock') hyprlock ;;
-		"🚪 leave $WM") hyprctl dispatch exit ;;
+		"🚪 leave $WM") hyprshutdown ;;
 		"♻️ renew $WM") hyprctl reload ;;
 		'🐻 hibernate') hyprlock & $ctl hibernate -i ;;
 		'💤 sleep') hyprlock & $ctl suspend -i ;;
 		'🔃 reboot') $ctl reboot -i ;;
 		'🖥️shutdown') $ctl poweroff -i ;;
+		# '🔃 reboot') hyprctl dispatch exec hyprshutdown -t $ctl reboot -i ;;
+		# '🖥️shutdown') hyprctl dispatch exec hyprshutdown -t $ctl poweroff -i ;;
 		'📺 display off') hyprctl dispatch dpms off ;;
 		*) exit 1 ;;
 	esac
