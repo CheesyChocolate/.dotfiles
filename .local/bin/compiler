@@ -27,6 +27,7 @@ case "${ext}" in
 	bas) fbc "${file}" && "${base}" ;;
 	bash) bash "${file}" ;;
 	c) cc "${file}" -o "${base}.out" && "${base}.out" ;;
+	c3) c3c compile-run "${file}" ;;
 	clj | cljc) clojure -M "${file}" ;;
 	cob) cobc -x -O2 -o "${base}.out" "${file}" && "${base}.out" ;;
 	cpp) g++ "${file}" -o "${base}.out" && "${base}.out" ;;
