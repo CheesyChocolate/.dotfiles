@@ -33,6 +33,7 @@
 .config/hexchat/*
 !.config/hexchat/colors.conf
 !.config/htop/
+.config/htop/htop_history
 !.config/hypr/
 !.config/iamb/
 .config/iamb/*
