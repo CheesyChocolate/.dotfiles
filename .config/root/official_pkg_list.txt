@@ -416,7 +416,6 @@ libretro-beetle-supergrafx
 libretro-blastem
 libretro-bsnes
 libretro-bsnes-hd
-libretro-bsnes2014
 libretro-core-info
 libretro-desmume
 libretro-dolphin
@@ -425,7 +424,6 @@ libretro-gambatte
 libretro-genesis-plus-gx
 libretro-kronos
 libretro-mame
-libretro-mame2016
 libretro-melonds
 libretro-mesen
 libretro-mesen-s
@@ -451,6 +449,7 @@ libvirt-storage-gluster
 libvirt-storage-iscsi-direct
 libxdg-basedir
 libxinerama
+lilv-tools
 linux
 linux-firmware
 linux-headers
@@ -646,6 +645,7 @@ python-cloudpickle
 python-css-parser
 python-datasets
 python-django
+python-docx
 python-entrypoints
 python-evdev
 python-faker
@@ -668,6 +668,7 @@ python-pip
 python-pipx
 python-poetry
 python-poetry-plugin-up
+python-pptx
 python-pwntools
 python-pyaudio
 python-pydbus
@@ -753,6 +754,7 @@ schedtool
 screenkey
 scx-scheds
 sddm-kcm
+seahorse
 seatd-runit
 shellcheck
 shfmt

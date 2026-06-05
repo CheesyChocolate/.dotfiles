@@ -6,8 +6,6 @@ blender-plugin-cad-sketcher-git
 bluetuith-bin
 boomer-git
 cht.sh-git
-clion
-clion-jre
 cyrus-sasl-xoauth2-git
 farbfeld
 findbrokenpkgs
@@ -24,6 +22,8 @@ ledger-live-bin
 lib32-gtk2
 lib32-libudev0-shim
 libreoffice-extension-writingtool
+libretro-bsnes2014
+libretro-mame2016
 libudev0-shim
 linear-desktop-bin
 linode-cli
@@ -43,7 +43,6 @@ python-chembl-webresource-client
 python-javalang
 python-jupytext
 python-npx
-python-pptx
 python-pygad
 remmina-plugin-rdesktop
 remmina-plugin-ultravnc

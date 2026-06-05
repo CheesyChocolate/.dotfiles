@@ -35,7 +35,6 @@ gap-packages
 gcc-fortran
 glib2-devel
 gnuplot
-gobject-introspection
 gst-libav
 gst-plugins-bad
 gst-plugins-ugly
@@ -92,6 +91,7 @@ perl-file-homedir
 perl-io-compress-brotli
 perl-ipc-system-simple
 perl-json-xs
+perl-libintl-perl
 perl-lwp-useragent-cached
 perl-parallel-forkmanager
 perl-tk
@@ -193,12 +193,12 @@ python-sqlalchemy
 python-statsmodels
 python-strawberry-graphql
 python-torchcodec
-python-truststore
 python-twisted
 python-tzdata
 python-unidecode
 python-uri-template
 python-watchdog
+python-watchfiles
 python-webcolors
 python-whatthepatch
 python-xarray
@@ -211,6 +211,7 @@ quota-tools
 regina
 resvg
 rhino
+rtkit
 rubiks
 ruby-stdlib
 sagemath-giac
