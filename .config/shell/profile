@@ -12,8 +12,8 @@ unsetopt PROMPT_SP 2>/dev/null
 
 # Default programs:
 export EDITOR="nvim"
-export TERMINAL="st"
-export TERMINAL_PROG="st"
+export TERMINAL="kitty"
+export TERMINAL_PROG="kitty"
 export BROWSER="librewolf"
 
 # Change the default crypto/weather monitor sites.
@@ -133,7 +133,7 @@ export BEMENU_OPTS="--ignorecase --no-overlap"
 [ "$(tty)" = "/dev/tty1" ] && [ -z "$DISPLAY" ] &&
 	selected_wm=$(printf '%s\n' "DWM" "Hyprland" "BSOD" | fzf --height 40% --reverse --ansi --prompt 'Select Window Manager: ' --no-multi) &&
 	case "$selected_wm" in
-		DWM) exec startx "$XINITRC" ;;
+		DWM) export TERMINAL=st && export TERMINAL_PROG=st && exec startx "$XINITRC" ;;
 		Hyprland) exec start-hyprland ;;	# TODO: https://forum.artixlinux.org/index.php/topic,5600.msg40424.html#msg40424
 		BSOD) exec bsod ;;
 	esac
