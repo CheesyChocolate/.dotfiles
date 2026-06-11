@@ -91,6 +91,10 @@ export VAGRANT_ALIAS_FILE="$XDG_DATA_HOME/vagrant/aliases"
 export DOT_SAGE="$XDG_CONFIG_HOME/sage"
 export LEIN_HOME="$XDG_DATA_HOME/lein"
 export CIN_CONFIG="$XDG_CONFIG_HOME/bcast5"
+export AZURE_CONFIG_DIR="$XDG_DATA_HOME/azure"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+export NIMBLE_DIR="$XDG_DATA_HOME/nimble"
+export PIPX_BIN_DIR="$HOME/.local/bin/pipx"
 
 # private variables
 source "$XDG_CONFIG_HOME/shell/privateProfile"
