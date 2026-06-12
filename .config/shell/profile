@@ -135,10 +135,11 @@ export BEMENU_OPTS="--ignorecase --no-overlap"
 
 # Start graphical server on user's current tty if not already running.
 [ "$(tty)" = "/dev/tty1" ] && [ -z "$DISPLAY" ] &&
-	selected_wm=$(printf '%s\n' "DWM" "Hyprland" "BSOD" | fzf --height 40% --reverse --ansi --prompt 'Select Window Manager: ' --no-multi) &&
+	selected_wm=$(printf '%s\n' "Hyprland" "DWM" "KDE" "BSOD" | fzf --height 40% --reverse --ansi --prompt 'Select Window Manager: ' --no-multi) &&
 	case "$selected_wm" in
 		DWM) export TERMINAL=st && export TERMINAL_PROG=st && exec startx "$XINITRC" ;;
 		Hyprland) exec start-hyprland ;;	# TODO: https://forum.artixlinux.org/index.php/topic,5600.msg40424.html#msg40424
+		KDE) exec /usr/lib/plasma-dbus-run-session-if-needed startplasma-wayland ;;
 		BSOD) exec bsod ;;
 	esac
 
