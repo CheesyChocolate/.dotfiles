@@ -23,6 +23,9 @@ export XDG_SESSION_TYPE="x11"
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
 dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 
+# Wait for the socket to be ready before updating environment
+until [ -S "$XDG_RUNTIME_DIR/bus" ]; do sleep 0.1; done
+
 # Launching gnome-keyring-daemon outside desktop environments
 dbus-update-activation-environment --all
 
