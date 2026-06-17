@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Run a local chat model via ollama. Use -s for the small/fast model.
+
+model="llama3.2:3b"
+
+while getopts "s" o; do case "${o}" in
+	s) model="tinyllama" ;;
+	*)
+		echo "Usage: $0 [-s]"
+		exit 1
+		;;
+esac done
+
+nice -n 19 ollama serve >/dev/null 2>&1 &
+sleep 1
+ollama run "$model"
+killall ollama
