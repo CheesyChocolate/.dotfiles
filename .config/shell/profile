@@ -14,6 +14,7 @@ unsetopt PROMPT_SP 2>/dev/null
 export EDITOR="nvim"
 export TERMINAL="kitty"
 export TERMINAL_PROG="kitty"
+[ -n "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && export TERMINAL=st && export TERMINAL_PROG=st
 export BROWSER="librewolf"
 
 # Change the default crypto/weather monitor sites.
@@ -137,7 +138,7 @@ export BEMENU_OPTS="--ignorecase --no-overlap"
 [ "$(tty)" = "/dev/tty1" ] && [ -z "$DISPLAY" ] &&
 	selected_wm=$(printf '%s\n' "Hyprland" "DWM" "KDE" "BSOD" | fzf --height 40% --reverse --ansi --prompt 'Select Window Manager: ' --no-multi) &&
 	case "$selected_wm" in
-		DWM) export TERMINAL=st && export TERMINAL_PROG=st && exec startx "$XINITRC" ;;
+		DWM) exec startx "$XINITRC" ;;
 		Hyprland) exec start-hyprland ;;	# TODO: https://forum.artixlinux.org/index.php/topic,5600.msg40424.html#msg40424
 		KDE) exec /usr/lib/plasma-dbus-run-session-if-needed startplasma-wayland ;;
 		BSOD) exec bsod ;;
