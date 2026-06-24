@@ -6,7 +6,7 @@
 
 settemp="2700"
 
-if command -v hyprctl &> /dev/null; then
+if [ $WM = "Hyprland" ]; then
 	colortemp="$(hyprctl hyprsunset temperature)"
 	if [ "$colortemp" -ge "6500" ]; then
 		notify-send "🌙 Night Light Enabled (${settemp}K)"
