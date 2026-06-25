@@ -33,6 +33,7 @@ fricas
 fuse-overlayfs
 gap-packages
 gcc-fortran
+glaze
 glib2-devel
 gnuplot
 gst-libav
@@ -111,7 +112,6 @@ python-better-exceptions
 python-blosc
 python-boto3
 python-bottleneck
-python-brotli
 python-cvxpy
 python-cylp
 python-database-cubic-hecke
@@ -148,8 +148,8 @@ python-librosa
 python-linkify-it-py
 python-lockfile
 python-lsp-server
-python-lxml-html-clean
 python-lz4
+python-markdownify
 python-mpi4py
 python-netcdf4
 python-onnxscript
@@ -180,6 +180,7 @@ python-pysmbc
 python-pytables
 python-pytest-xdist
 python-python-multipart
+python-readability-lxml
 python-rfc3339-validator
 python-rfc3987
 python-rope

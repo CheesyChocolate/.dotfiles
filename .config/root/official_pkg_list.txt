@@ -118,6 +118,7 @@ cpio
 cronie-runit
 crunch
 cups-runit
+curl-impersonate
 cvs
 cyberchef-electron
 cython
@@ -984,6 +985,7 @@ zathura
 zbar
 zed
 zellij
+zerotier-one
 zig
 zip
 zmap
