@@ -2,5 +2,4 @@
 
 # Source this script to set up the environment for fnm
 
-# TODO:
-# fnm env --use-on-cd --shell zsh
+eval "$(fnm env --use-on-cd --shell zsh)"
