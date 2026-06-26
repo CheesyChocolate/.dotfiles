@@ -22,8 +22,6 @@ ledger-live-bin
 lib32-gtk2
 lib32-libudev0-shim
 libreoffice-extension-writingtool
-libretro-bsnes2014
-libretro-mame2016
 libudev0-shim
 linear-desktop-bin
 linode-cli

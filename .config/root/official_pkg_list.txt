@@ -493,6 +493,7 @@ metasploit
 micromamba-bin
 microsoft-gsl
 milou
+miniserve
 mission-center
 mkinitcpio-firmware
 monero
@@ -552,6 +553,7 @@ ocaml
 ocean-sound-theme
 octave
 odin
+odinfmt
 odt2txt
 ollama-rocm
 onboard
