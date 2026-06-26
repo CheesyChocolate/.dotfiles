@@ -15,6 +15,8 @@ else
 fi
 
 # not set by default
+export TERMINAL=st
+export TERMINAL_PROG=st
 export XDG_CURRENT_DESKTOP="dwm"
 export XDG_SESSION_DESKTOP="dwm"
 export XDG_SESSION_TYPE="x11"
