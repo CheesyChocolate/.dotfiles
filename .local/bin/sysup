@@ -1,0 +1,26 @@
+#!/bin/sh
+
+session="update"
+
+if tmux has-session -t "$session" 2>/dev/null; then
+	exec tmux attach-session -t "$session"
+fi
+
+runner() {
+	cmd="$1"
+	printf '%s; exec %s' "$cmd" "${SHELL:-/bin/sh}"
+}
+
+tmux new-session  -d -s "$session" -n yay      "$(runner 'yay')"
+tmux new-window   -t "$session"    -n pipx     "$(runner 'pipx upgrade-all --include-injected')"
+tmux new-window   -t "$session"    -n npm      "$(runner 'npm ls -g --depth=0 --json | jq -r ".dependencies | keys[]" | sed "s/\$/@latest/" | xargs npm install -g')"
+tmux new-window   -t "$session"    -n flatpak  "$(runner 'flatpak update')"
+tmux new-window   -t "$session"    -n rustup   "$(runner 'rustup update')"
+tmux new-window   -t "$session"    -n mamba    "$(runner 'micromamba update --all')"
+tmux new-window   -t "$session"    -n node     "$(runner '. $HOME/.local/bin/shell/sh-nvm && nvm install --lts --reinstall-packages-from=current --latest-npm --default')"
+tmux new-window   -t "$session"    -n fnm      "$(runner '. $HOME/.local/bin/shell/sh-fnm && fnm install lts-latest && fnm default lts-latest')"
+tmux new-window   -t "$session"    -n neovim   "nvim"
+
+tmux select-window -t "$session:yay"
+
+exec tmux attach-session -t "$session"
