@@ -28,7 +28,11 @@
 	defaultBranch = trunk
 [includeIf "gitdir:<home-directory-TODO>/Templates/work/<work-directory-TODO>/"]
 	path = <home-directory-TODO>/.config/git/work_configs/gitconfig-<work-directory-TODO>
+[includeIf "gitdir:<home-directory-TODO>/Templates/artools-workspace/"]
+	path = <home-directory-TODO>/.config/git/work_configs/gitconfig-artix
 [color]
 	ui = auto
 [coderabbit]
 	machineId = <api-key-TODO>
+[core]
+	excludesfile = <home-directory-TODO>/.config/git/.gitignore
