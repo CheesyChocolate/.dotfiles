@@ -104,8 +104,7 @@ ckbcomp
 clamav
 clamav-runit
 claude-code
-claude-cowork-service
-claude-desktop-bin
+claude-desktop
 cli11
 clinfo
 cliphist
@@ -147,6 +146,7 @@ docker-compose
 docker-runit
 doctl
 docx2txt
+dolphin
 dosbox
 dosfstools
 dotnet-sdk
@@ -562,11 +562,13 @@ openbsd-netcat
 opencl-mesa
 openconnect
 openldap
+openocd
 openresolv
 openssh-runit
 optipng
 osm-gps-map
 otf-firamono-nerd
+otf-latin-modern
 otf-libertinus
 otf-sora
 oxygen
@@ -635,7 +637,6 @@ print-manager
 printer-support
 profanity
 progress
-proton-ge-custom-bin
 protontricks-git
 proxytunnel
 ptunnel
@@ -659,6 +660,7 @@ python-graphviz
 python-hatch
 python-imageio-ffmpeg
 python-ipympl
+python-javalang
 python-jwcrypto
 python-keras
 python-loguru
@@ -716,12 +718,12 @@ remmina
 remmina-plugin-anydesk-git
 remmina-plugin-folder
 remmina-plugin-rustdesk
+reptyr
 retroarch
 retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
 rink
-ripdrag-git
 ripgrep
 ripgrep-all
 riscv64-linux-gnu-binutils
@@ -730,6 +732,7 @@ riscv64-linux-gnu-glibc
 rocm-ml-libraries
 rocm-ml-sdk
 rocm-opencl-sdk
+rocm-openmp
 root
 rpi-imager
 rsm
@@ -769,6 +772,7 @@ smartmontools
 smlnj
 snapper
 sniffnet
+snyk
 socat
 socklog
 sof-firmware
@@ -780,6 +784,7 @@ sqlite-analyzer
 sqlmap
 ssh-tpm-agent
 sshfs
+sshpass
 sshuttle
 ssllabs-scan
 steam
@@ -872,7 +877,7 @@ umockdev
 umu-launcher
 unace
 unclutter
-ungoogled-chromium
+ungoogled-chromium-bin
 universal-android-debloater-bin
 unrar
 unzip
@@ -969,6 +974,7 @@ xorg-xkill
 xorg-xrandr
 xorg-xrefresh
 xorg-xsetroot
+xorg-xvinfo
 xorg-xwayland
 xorg-xwininfo
 xournalpp
