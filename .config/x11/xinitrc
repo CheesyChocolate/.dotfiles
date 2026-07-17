@@ -28,8 +28,9 @@ dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 # Wait for the socket to be ready before updating environment
 until [ -S "$XDG_RUNTIME_DIR/bus" ]; do sleep 0.1; done
 
-# Launching gnome-keyring-daemon outside desktop environments
 dbus-update-activation-environment --all
 
+dbus-update-activation-environment GNOME_KEYRING_CONTROL
+
 # TODO: replace with ssh-tpm-agent
-dbus-launch ssh-agent dwm
+ssh-agent dwm
