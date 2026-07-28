@@ -4,11 +4,20 @@
 # When clicked, brings up `neomutt`.
 
 case $BLOCK_BUTTON in
-	1) setsid -f "$TERMINAL" -e neomutt ;;
+	1) maildir="${XDG_DATA_HOME:-$HOME/.local/share}/mail"
+	   msg=""
+	   for account in "$maildir"/*/; do
+	       name="${account%/}"
+	       name="${name##*/}"
+	       count="$(find "$account"[Ii][Nn][Bb][Oo][Xx]/new/ -type f 2>/dev/null | wc -l)"
+	       [ "$count" -gt 0 ] && msg="${msg}${name}: ${count}\n"
+	   done
+	   [ -z "$msg" ] && msg="No unread mail"
+	   notify-send "📬 Unread mail" "$(printf '%b' "$msg")" ;;
 	2) setsid -f mw -Y >/dev/null ;;
 	3) notify-send "📬 Mail module" "\- Shows unread mail
 - Shows 🔃 if syncing mail
-- Left click opens neomutt
+- Left click shows unread per account
 - Middle click syncs mail" ;;
 	6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
