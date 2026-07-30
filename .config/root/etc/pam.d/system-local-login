@@ -6,3 +6,6 @@ password  include   system-login
 session   include   system-login
 auth      optional  pam_gnupg.so store-only
 session   optional  pam_gnupg.so
+-auth     optional  pam_gnome_keyring.so
+-password optional  pam_gnome_keyring.so  use_authtok
+-session  optional  pam_gnome_keyring.so  auto_start

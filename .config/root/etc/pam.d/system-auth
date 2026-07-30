@@ -8,7 +8,6 @@ auth       [default=die]               pam_faillock.so      authfail
 auth       optional                    pam_permit.so
 auth       required                    pam_env.so
 auth       required                    pam_faillock.so      authsucc
-auth       optional                    pam_gnome_keyring.so
 # If you drop the above call to pam_faillock.so the lock will be done also
 # on non-consecutive authentication failures.
 
@@ -22,4 +21,3 @@ password   optional                    pam_permit.so
 session    required                    pam_limits.so
 session    required                    pam_unix.so
 session    optional                    pam_permit.so
-session    optional                    pam_gnome_keyring.so auto_start
