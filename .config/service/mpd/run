@@ -1,0 +1,7 @@
+#!/bin/sh
+exec 2>&1
+
+# Wait for the pipewire daemon (native pipewire audio_output in mpd.conf).
+sv check "$HOME/.config/service/pipewire" >/dev/null || exit 1
+
+exec mpd --no-daemon

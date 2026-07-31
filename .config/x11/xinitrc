@@ -21,16 +21,11 @@ export XDG_CURRENT_DESKTOP="dwm"
 export XDG_SESSION_DESKTOP="dwm"
 export XDG_SESSION_TYPE="x11"
 
-# D-Bus:
-export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
-dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
-
-# Wait for the socket to be ready before updating environment
-until [ -S "$XDG_RUNTIME_DIR/bus" ]; do sleep 0.1; done
-
+# D-Bus (session bus is supervised by userspawn-runit):
 dbus-update-activation-environment --all
 
-dbus-update-activation-environment GNOME_KEYRING_CONTROL
+# attach to gnome-keyring-daemon started by PAM on login
+gnome-keyring-daemon --start --components=secrets,ssh,pkcs11 &
 
-# TODO: replace with ssh-tpm-agent
-ssh-agent dwm
+# ssh-agent is supervised by userspawn-runit. SSH_AUTH_SOCK exported in shell/profile
+exec dwm

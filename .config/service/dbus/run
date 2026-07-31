@@ -1,0 +1,14 @@
+#!/bin/sh
+exec 2>&1
+set -e
+
+envdir="${XDG_RUNTIME_DIR}/runit/env"
+addr="unix:path=${XDG_RUNTIME_DIR}/bus"
+
+if [ ! -d "$envdir" ]; then
+    echo "dbus-runit: ${envdir} not found, per-user runit environment not initialized (e.g. userspawn-runit)" >&2
+    exit 1
+fi
+
+echo "$addr" > "$envdir/DBUS_SESSION_BUS_ADDRESS"
+exec dbus-daemon --session --nofork --nopidfile --address="$addr"

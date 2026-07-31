@@ -134,6 +134,12 @@ _JAVA_OPTIONS="$_JAVA_OPTIONS --enable-native-access=ALL-UNNAMED -Djdk.xml.total
 
 [ ! -f "$XDG_CONFIG_HOME/shell/shortcutrc" ] && setsid -f shortcuts >/dev/null 2>&1
 
+# Per-user runit services (dbus, ssh-agent) write their env here on login.
+[ -f "${XDG_RUNTIME_DIR}/runit/env/DBUS_SESSION_BUS_ADDRESS" ] &&
+	export DBUS_SESSION_BUS_ADDRESS="$(cat "${XDG_RUNTIME_DIR}/runit/env/DBUS_SESSION_BUS_ADDRESS")"
+[ -f "${XDG_RUNTIME_DIR}/runit/env/SSH_AUTH_SOCK" ] &&
+	export SSH_AUTH_SOCK="$(cat "${XDG_RUNTIME_DIR}/runit/env/SSH_AUTH_SOCK")"
+
 # Start graphical server on user's current tty if not already running.
 [ "$(tty)" = "/dev/tty1" ] && [ -z "$DISPLAY" ] &&
 	selected_wm=$(printf '%s\n' "Hyprland" "DWM" "KDE" "BSOD" | fzf --height 40% --reverse --ansi --prompt 'Select Window Manager: ' --no-multi) &&

@@ -883,6 +883,7 @@ unrar
 unzip
 uriparser
 urlwatch
+userspawn-runit
 uutils-coreutils
 uv
 vagrant

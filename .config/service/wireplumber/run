@@ -1,0 +1,6 @@
+#!/bin/sh
+exec 2>&1
+
+sv check "$HOME/.config/service/pipewire" >/dev/null || exit 1
+
+exec wireplumber

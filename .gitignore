@@ -92,6 +92,8 @@
 .config/retroarch/*
 !.config/retroarch/retroarch.cfg
 !.config/root/
+!.config/service/
+.config/service/*/supervise/
 !.config/shell/
 .config/shell/privateProfile
 !.config/spicy/
