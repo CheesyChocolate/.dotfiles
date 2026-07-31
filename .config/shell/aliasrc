@@ -11,6 +11,9 @@ for command in mount umount sv rsm pacman updatedb su shutdown poweroff reboot ;
 	alias $command="sudo $command"
 done; unset command
 
+# userspawn-runit per-user services live in ~/.config/service, also no sudo
+alias rsmu="\rsm -d $XDG_CONFIG_HOME/service"
+
 # pass aliases to sudo
 alias sudo='sudo '
 
