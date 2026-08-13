@@ -1,6 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
 # This script is the SUDO_ASKPASS variable, meaning that it will be used as a
 # password prompt if needed.
 
-dmenu -fn Monospace-18 -P -p "$1" <&- && echo
+sudo_pid=$PPID
+cwd=${PWD/#$HOME/\~}
+cmd=$(tr '\0' '\n' < "/proc/$sudo_pid/cmdline" 2>/dev/null | tail -n +2 | tr '\n' ' ')
+
+export SUDO_PROMPT="sudo for [${cwd:-?}] ${cmd:-sudo}: "
+
+dmenu -fn Monospace-18 -P -p "$SUDO_PROMPT" <&-
