@@ -7,6 +7,7 @@ bluetuith-bin
 boomer-git
 cheatengine-bin
 cht.sh-git
+coderabbit
 cyrus-sasl-xoauth2-git
 farbfeld
 findbrokenpkgs
@@ -33,7 +34,6 @@ moodle-dl-git
 mutt-wizard-git
 nuitka
 oama-bin
-obs-pipewire-audio-capture-bin
 oda-file-converter
 pam-gnupg-git
 pass-import
@@ -46,6 +46,7 @@ remmina-plugin-rdesktop
 remmina-plugin-ultravnc
 remmina-plugin-url
 ripdrag-git
+rtk-bin
 samrewritten-git
 sc-im-git
 sent-git
@@ -60,6 +61,7 @@ weathr-bin
 wl_shimeji-git
 wordlists
 xinput-toggle
+xmedcon
 xsct
 zaread-git
 zsh-fast-syntax-highlighting-git
