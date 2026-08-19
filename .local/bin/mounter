@@ -83,8 +83,8 @@ case "$chosen" in
 		attemptmount || getmount
 		case "${parttype##* }" in
 			vfat) sudo -A mount -t vfat "$chosen" "$mp" -o rw,umask=0000 ;;
-			btrfs) sudo -A mount "$chosen" "$mp" ;;
-			*) sudo -A mount "$chosen" "$mp" -o uid="$(id -u)",gid="$(id -g)" ;;
+			ntfs|exfat) sudo -A mount "$chosen" "$mp" -o uid="$(id -u)",gid="$(id -g)" ;;
+			*) sudo -A mount "$chosen" "$mp" && sudo -A chown "$(id -u)":"$(id -g)" "$mp" ;;
 		esac
 		notify-send "💾Drive Mounted." "$chosen mounted to $mp."
 		;;
