@@ -5,15 +5,11 @@
 # The assumption of this script is that all otp passwords are stored with the
 # suffix `-otp`. This script automatically appends newly added otps as such.
 
-# For OTP passwords to be generated properly, it is important for the local
-# computer to have its time properly synced. This can be done with the command
-# below which requires the package `ntp`.
-
 ifinstalled pass pass-otp || exit 1
 
 dir="${PASSWORD_STORE_DIR}"
 
-choice="$({ echo "🆕add" ; echo "🕙sync-time" ; find "$dir" -type f -iname '*-otp.gpg' ;} | sed "s|^$dir/||;s|-otp.gpg$||" | dmenu -p "Pick a 2FA:")"
+choice="$({ echo "🆕add" ; find "$dir" -type f -iname '*-otp.gpg' ;} | sed "s|^$dir/||;s|-otp.gpg$||" | dmenu -p "Pick a 2FA:")"
 
 case $choice in
 	🆕add )
@@ -40,6 +36,9 @@ case $choice in
 			notify-send "No OTP data found." "Try to scan the image again more precisely."
 		fi
 		;;
+	# keeping for reference, but no longer in choice menu since it can
+	# freeze the session, also this errors out always since ntpd service is
+	# running
 	🕙sync-time )
 		ifinstalled ntp || exit 1
 		notify-send -u low "🕙 Synchronizing Time..." "Synching time with remote NTP servers..."
