@@ -26,9 +26,10 @@ case $choice in
 		info="${info#QR-Code:}"
 
 		if echo "$info" | pass otp insert "$otp"; then
-			while true ; do
-				export name="$(echo | dmenu -p "Give this One Time Password a one-word name:")"
-				echo "$name" | grep -q -- "^[A-z0-9-]\+$" && break
+			while [ "${num:-0}" -lt 3 ] ; do
+				export name="$(prinf | dmenu -p "Give this One Time Password a one-word name:")"
+				echo "$name" | grep -q -- "^[A-Za-z0-9-]\+$" && break
+				num="$((num + 1))"
 			done
 			pass mv "$otp" "$name-otp"
 			notify-send "Successfully added." "$name-otp has been created."
