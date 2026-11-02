@@ -97,6 +97,7 @@
 !.config/service
 !.config/shell/
 .config/shell/privateProfile
+.config/git/private
 !.config/spicy/
 !.config/streamlink/
 !.config/swayimg/
