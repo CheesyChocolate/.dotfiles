@@ -1,0 +1,78 @@
+#!/bin/sh
+
+# Extreme power-saving / silent profile, on demand.
+# usage: coolmode [on|off|status]
+#   on     quiet profile, powersave + EPP power, turbo off, CPU capped, threads offlined,
+#          GPU lowest clock, PCIe ASPM powersupersave, display at 48 Hz
+#   off    bring all threads back, lift the cap, GPU back to auto, display back to 60 Hz,
+#          then let tlp re-apply its AC/BAT profile (incl. ASPM)
+#   status show the current values (no sudo needed)
+# Overrides: COOLMODE_MAX_KHZ=1000000 (freq cap), COOLMODE_THREADS=2 (threads kept online;
+# siblings are paired 0-1, 2-3, ..., so keep an even number)
+# Note: tlp re-applies its own settings when the charger is plugged/unplugged,
+# which ends coolmode. Run `coolmode on` again afterwards.
+
+max_khz="${COOLMODE_MAX_KHZ:-1120000}"
+keep="${COOLMODE_THREADS:-4}"
+cpu=/sys/devices/system/cpu
+profile=/sys/firmware/acpi/platform_profile
+aspm=/sys/module/pcie_aspm/parameters/policy
+panel=eDP
+
+status() {
+	echo "profile:  $(cat $profile)"
+	echo "governor: $(cat $cpu/cpu0/cpufreq/scaling_governor)"
+	echo "epp:      $(cat $cpu/cpu0/cpufreq/energy_performance_preference)"
+	echo "boost:    $(cat $cpu/cpufreq/boost)"
+	echo "threads:  $(cat $cpu/online)"
+	echo "freq:     $(($(cat $cpu/cpu0/cpufreq/scaling_min_freq) / 1000))-$(($(cat $cpu/cpu0/cpufreq/scaling_max_freq) / 1000)) MHz"
+	echo "gpu dpm:  $(cat /sys/class/drm/card*/device/power_dpm_force_performance_level | head -1)"
+	echo "aspm:     $(sed 's/.*\[\(.*\)\].*/\1/' $aspm)"
+	echo "refresh:  $(xrandr 2>/dev/null | awk '/^'$panel' /{f=1;next} f&&/\*/{for(i=2;i<=NF;i++)if($i~/\*/){print $i;exit}}')"
+	sensors 2>/dev/null | grep -E "Tctl"
+}
+
+case "${1:-status}" in
+on)
+	sudo sh -c "
+		echo quiet > $profile
+		echo 0 > $cpu/cpufreq/boost
+		echo powersupersave > $aspm
+		for c in $cpu/cpu[0-9]*/cpufreq; do
+			echo powersave > \$c/scaling_governor
+			echo power > \$c/energy_performance_preference
+			echo $max_khz > \$c/scaling_max_freq
+		done
+		for g in /sys/class/drm/card*/device/power_dpm_force_performance_level; do
+			echo low > \$g
+		done
+		for c in $cpu/cpu[1-9]*; do
+			[ \"\${c##*cpu}\" -ge $keep ] && echo 0 > \$c/online
+		done
+	" || exit 1
+	xrandr --output $panel --rate 48
+	status
+	;;
+off)
+	sudo sh -c "
+		for c in $cpu/cpu[1-9]*/online; do
+			echo 1 > \$c
+		done
+		for c in $cpu/cpu[0-9]*/cpufreq; do
+			cat \$c/cpuinfo_max_freq > \$c/scaling_max_freq
+			cat \$c/amd_pstate_lowest_nonlinear_freq > \$c/scaling_min_freq
+		done
+		for g in /sys/class/drm/card*/device/power_dpm_force_performance_level; do
+			echo auto > \$g
+		done
+		tlp start
+	" || exit 1
+	xrandr --output $panel --rate 60
+	status
+	;;
+status) status ;;
+*)
+	echo "usage: coolmode [on|off|status]" >&2
+	exit 1
+	;;
+esac
