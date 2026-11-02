@@ -59,6 +59,7 @@ subdl
 svkbd-git
 task-spooler
 trustsight
+unity-cli-bin
 urlview-xdg-git
 weathr-bin
 wl_shimeji-git
