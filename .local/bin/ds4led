@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# Re-applies the minimum-brightness lightbar color of every connected DualShock 4.
+# Needed because apps that use hidraw directly (e.g. GeForce NOW) override the color.
+# Keep the colors in sync with /etc/udev/rules.d/99-ds4-led.rules.
+
+for red in /sys/class/leds/input*:red; do
+	[ -e "$red" ] || continue
+	base=${red%:red}
+	uevent=$(readlink -f "$red/device")/uevent
+	grep -q 'HID_ID=0005:0000054C:\(000005C4\|000009CC\)' "$uevent" 2>/dev/null || continue
+
+	case $(sed -n 's/^HID_UNIQ=//p' "$uevent") in
+		a4:15:66:ca:5e:b6) r=2 g=1 b=0 ;; # ds-1, orange
+		a0:5a:5f:ae:f8:d1) r=0 g=1 b=0 ;; # ds-2, green
+		*) r=0 g=0 b=1 ;;                 # any other DS4, blue
+	esac
+
+	# Writing 0 first makes sure a new output report is sent even if the value is unchanged.
+	for c in red green blue; do echo 0 > "$base:$c/brightness"; done
+	echo "$r" > "$base:red/brightness"
+	echo "$g" > "$base:green/brightness"
+	echo "$b" > "$base:blue/brightness"
+done
