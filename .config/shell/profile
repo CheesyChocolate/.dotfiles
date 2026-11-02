@@ -104,6 +104,8 @@ source "$XDG_CONFIG_HOME/shell/privateProfile"
 export GPG_TTY="$(tty)"
 export DICS="/usr/share/stardict/dic/"
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
+export SSH_ASKPASS="$HOME/.local/bin/dmenusshpass"
+export SSH_ASKPASS_REQUIRE=prefer
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export LESS="R"
 export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
