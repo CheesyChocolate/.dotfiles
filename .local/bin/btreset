@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# The Bluetooth half of the RTL8821CE sometimes hangs at boot and never
+# enumerates on USB (descriptor read error -32 / -71), leaving no controller.
+# Re-authorizing the internal hub it sits behind power-cycles it back to life.
+
+hub_id="05e3:0610"
+
+hub=""
+for d in /sys/bus/usb/devices/*; do
+	[ -f "$d/idVendor" ] || continue
+	[ "$(cat "$d/idVendor"):$(cat "$d/idProduct")" = "$hub_id" ] && hub="$d" && break
+done
+[ -z "$hub" ] && echo "btreset: hub $hub_id not found" >&2 && exit 1
+
+echo 0 | sudo tee "$hub/authorized" >/dev/null || exit 1
+sleep 2
+echo 1 | sudo tee "$hub/authorized" >/dev/null || exit 1
+
+# Wait for the controller to register.
+i=0
+while [ "$i" -lt 10 ]; do
+	timeout 2 bluetoothctl show 2>/dev/null | grep -q '^Controller' && {
+		bluetoothctl power on >/dev/null
+		echo "btreset: controller is back"
+		exit 0
+	}
+	sleep 1
+	i=$((i + 1))
+done
+echo "btreset: no controller after reset; try a full shutdown" >&2
+exit 1
