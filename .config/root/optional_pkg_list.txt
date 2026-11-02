@@ -1,13 +1,16 @@
 acsccid
 android-udev
 arch-wiki-docs
+aria2
 artix-checkupdates
 artix-rebuild-order
 aspnet-targeting-pack
+avahi-bookmarks
 avisynthplus
 bash-language-server
 benzene
 biber
+botan
 buckygen
 c-xsc
 ccache
@@ -36,7 +39,6 @@ fricas
 fuse-overlayfs
 gap-packages
 gcc-fortran
-glaze
 glib2-devel
 gnuplot
 gst-libav
@@ -45,7 +47,6 @@ gst-plugins-bad
 gst-plugins-ugly
 harvid
 hunspell-en_us
-hyprland-protocols
 icedtea-web
 ipp-usb
 jmol
@@ -61,16 +62,18 @@ konsole
 kwayland-integration
 ladspa
 latte-integrale
-lib32-fluidsynth
 lib32-gamemode
+lib32-lapack
 lib32-libdecor
 lib32-libsamplerate
+lib32-libwebp
 libgnome-keyring
 liblas
 libldm
 libmythes
 liboggz
 libsemigroups
+libtiff5
 libvncserver
 libxnvctrl
 lilypond
@@ -78,10 +81,10 @@ llvm18
 llvm21
 lrzip
 lsscsi
+lttng-ust2.12
 lua-filesystem
 lua-lanes
 lvm2
-meson
 msolve
 mypy
 netcdf-cxx
@@ -162,7 +165,6 @@ python-ladybug-core
 python-libarchive-c
 python-librosa
 python-linkify-it-py
-python-lockfile
 python-lsp-server
 python-lz4
 python-markdownify
@@ -182,7 +184,6 @@ python-pprofile
 python-psycopg2
 python-pycosat
 python-pydocstyle
-python-pygit2
 python-pyicu
 python-pyinotify
 python-pykerberos
@@ -190,7 +191,6 @@ python-pymad
 python-pymongo
 python-pymysql
 python-pynormaliz
-python-pyopenssl
 python-pypubsub
 python-pyqt5
 python-pyscipopt
@@ -204,7 +204,6 @@ python-rfc3339-validator
 python-rfc3987
 python-rope
 python-seaborn
-python-service-identity
 python-setproctitle
 python-smbprotocol
 python-snappy
@@ -227,6 +226,7 @@ python-xlwt
 python-yara
 qemu-user-static-binfmt
 qt5-tools
+qt6-scxml
 quota-tools
 regina
 resvg
@@ -236,6 +236,7 @@ rubiks
 ruby-stdlib
 sagemath-giac
 sane-airscan
+sdl_image
 shared_meataxe
 sirocco
 sox

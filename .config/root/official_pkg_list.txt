@@ -9,6 +9,7 @@ adobe-source-han-sans-jp-fonts
 adwaita-qt5-git
 adwaita-qt6-git
 afl++
+age
 alhp-keyring
 alhp-mirrorlist
 alsa-firmware
@@ -40,6 +41,7 @@ aspell-en
 aspnet-runtime
 aubio
 aurorae
+aurscan-bin
 avahi-runit
 avrdude
 aws-cli-v2
@@ -128,12 +130,14 @@ dart
 dash
 ddcutil
 debuginfod
+deckcraft
 delve
 dhcpcd
 dialog
 diffpdf
 digital
 direnv
+discord
 discover
 distrobox
 djvulibre
@@ -156,6 +160,8 @@ doxygen
 dpkg
 dunst
 dxvk-mingw-git
+earlyoom
+earlyoom-runit
 easy-rsa
 efibootmgr
 egl-wayland
@@ -206,7 +212,6 @@ gcc-rust
 gcc9
 gdu
 geckodriver
-gemini-cli
 geoip-database-extra
 geoipupdate
 ghc
@@ -241,6 +246,7 @@ gptfdisk
 gpu-screen-recorder
 gpu-screen-recorder-ui
 gradle
+gridcraft
 grim
 grimblast-git
 groovy
@@ -255,6 +261,7 @@ hashcat-utils
 haskell-tidal
 hcxkeys
 hcxtools
+helm
 helvum
 heroic-games-launcher-git
 hexchat
@@ -271,6 +278,7 @@ hyprland
 hyprlock
 hyprpaper
 hyprpicker
+hyprpm
 hyprpolkitagent
 hyprshutdown
 hyprsunset
@@ -323,6 +331,7 @@ kicad
 kicad-library
 kicad-library-3d
 kimageformats
+kind
 kinfocenter
 kio-extras
 kitty
@@ -336,6 +345,7 @@ kscreen
 kscreenlocker
 ksshaskpass
 ksystemstats
+kubectl
 kwallet-pam
 kwayland
 kwin
@@ -372,6 +382,7 @@ lib32-opencl-mesa
 lib32-pipewire
 lib32-pipewire-jack
 lib32-pipewire-v4l2
+lib32-sdl2
 lib32-v4l-utils
 lib32-vkd3d
 lib32-vulkan-mesa-layers
@@ -550,16 +561,15 @@ nvchecker
 nvme-cli
 nvtop
 obs-studio
-obs-studio-plugin-browser
 ocaml
 ocean-sound-theme
 octave
 odin
 odinfmt
 odt2txt
+offload
 ollama-rocm
 onboard
-openai-codex
 openbsd-netcat
 opencl-mesa
 openconnect
@@ -585,6 +595,7 @@ passt
 patool
 pax-utils
 pcsc-tools
+pdfcraft
 pentbox
 perl-authen-sasl
 perl-inc-latest
@@ -646,7 +657,9 @@ pulsemixer
 pwndbg
 pyenv
 pypy
+python-aioquic
 python-awscrt
+python-bidict
 python-cloudpickle
 python-css-parser
 python-datasets
@@ -725,6 +738,8 @@ qt6-serialbus
 qt6ct
 qt6gtk2
 quickemu-git
+r-desolve
+r-plotly
 r2ghidra
 radeontop
 radvd
@@ -795,6 +810,7 @@ socat
 socklog
 sof-firmware
 solvespace
+sops
 soundcloud-dl-git
 spectacle
 sqlite-analyzer
@@ -814,7 +830,9 @@ swtpm
 sysfsutils
 syslinux
 system-config-printer
+systembus-notify
 systemsettings
+tar-scripts
 tcpdump
 tenacity
 tensorflow-opt
@@ -867,6 +885,7 @@ texlive-xetex
 tigervnc
 timidity++
 tinycompress
+tinyxxd
 tldr
 tlp
 tlp-rdw
@@ -890,11 +909,13 @@ turbo-base64
 typescript
 typst
 ueberzugpp
+uefitool-ng-git
 umockdev
 umu-launcher
 unace
 unclutter
 ungoogled-chromium-bin
+unityhub
 universal-android-debloater-bin
 unrar
 unzip
@@ -949,6 +970,7 @@ wmctrl
 wmname
 woeusb
 woff2-font-awesome
+wordcraft
 wqy-zenhei
 wtype
 x11-ssh-askpass

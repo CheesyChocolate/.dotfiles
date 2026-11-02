@@ -5,10 +5,12 @@ ani-cli-git
 blender-plugin-cad-sketcher-git
 bluetuith-bin
 boomer-git
+boosteroid
 cheatengine-bin
 cht.sh-git
 coderabbit
 cyrus-sasl-xoauth2-git
+darling-bin
 farbfeld
 findbrokenpkgs
 ghdl
@@ -28,7 +30,7 @@ linear-desktop-bin
 linode-cli
 lobster-git
 luajit-tiktoken-bin
-mangal-bin
+manga-tui
 mars-mips
 moodle-dl-git
 mutt-wizard-git
@@ -56,6 +58,7 @@ stig-git
 subdl
 svkbd-git
 task-spooler
+trustsight
 urlview-xdg-git
 weathr-bin
 wl_shimeji-git
