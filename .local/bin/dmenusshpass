@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# SSH_ASKPASS helper: shows ssh's own prompt (key name or host) in dmenu.
+# Input is masked by dmenu -P and printed to stdout for ssh to read.
+
+dmenu -fn Monospace-18 -P -p "${1:-ssh passphrase:} " <&-
