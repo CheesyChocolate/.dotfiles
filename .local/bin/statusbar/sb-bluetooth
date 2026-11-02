@@ -16,7 +16,10 @@ if bluetoothctl show | grep -q 'Powered: yes'; then
         i=0; while IFS= read -r device; do
             	if bluetoothctl info "$device" | grep -q 'Connected: yes'; then
                 	battery=$(bluetoothctl info "$device" | grep 'Battery Percentage' | grep -o '([0-9]*)' | tr -d '()')
-                	label="${battery:+$battery%}"
+                	[ -z "$battery" ] &&
+                    		battery=$(cat "/sys/class/power_supply/ps-controller-battery-$(echo "$device" | tr 'A-F' 'a-f')/capacity" 2>/dev/null)
+                	alias=$(bluetoothctl info "$device" | sed -n 's/^[[:space:]]*Alias: //p')
+                	label="$alias${battery:+ $battery%}"
 
                 	[ $i = 0 ] &&
                     		printf "%s" "$label" ||
