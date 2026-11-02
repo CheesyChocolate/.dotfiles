@@ -25,7 +25,7 @@ export XDG_SESSION_TYPE="x11"
 dbus-update-activation-environment --all
 
 # attach to gnome-keyring-daemon started by PAM on login
-gnome-keyring-daemon --start --components=secrets,ssh,pkcs11 &
+gnome-keyring-daemon --start --components=secrets,pkcs11 &
 
 # ssh-agent is supervised by userspawn-runit. SSH_AUTH_SOCK exported in shell/profile
 exec dwm
