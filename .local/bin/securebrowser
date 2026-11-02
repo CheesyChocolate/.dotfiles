@@ -1,0 +1,91 @@
+#!/bin/sh
+# securebrowser: run a browser whose data lives only inside a LUKS vault.
+# usage: securebrowser init [size]   create the vault (default 4G)
+#        securebrowser grow <size>   enlarge the vault to a new total size
+#        securebrowser [url...]      unlock, run the browser, lock again
+
+set -eu
+
+vault_dir="${XDG_DATA_HOME:-$HOME/.local/share}/securebrowser"
+vault="$vault_dir/vault.img"
+name="securebrowser-$(id -u)"
+mnt="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/securebrowser"
+browser="${SECUREBROWSER_BIN:-firefox}"
+
+die() { printf 'securebrowser: %s\n' "$*" >&2; exit 1; }
+
+init() {
+	size="${1:-4G}"
+	[ -e "$vault" ] && die "vault already exists: $vault"
+	mkdir -p "$vault_dir"
+	chmod 700 "$vault_dir"
+	# fallocate (not sparse) so the file size does not leak real usage
+	fallocate -l "$size" "$vault"
+	chmod 600 "$vault"
+	sudo cryptsetup luksFormat --type luks2 "$vault"
+	sudo cryptsetup open "$vault" "$name"
+	sudo mkfs.ext4 -q -L securebrowser "/dev/mapper/$name"
+	mkdir -p "$mnt"
+	sudo mount -o nosuid,nodev "/dev/mapper/$name" "$mnt"
+	sudo chown "$(id -u):$(id -g)" "$mnt"
+	mkdir -p "$mnt/home"
+	sudo umount "$mnt"
+	sudo cryptsetup close "$name"
+	echo "vault created: $vault"
+}
+
+grow() {
+	size="${1:-}"
+	[ -n "$size" ] || die "usage: securebrowser grow <new total size, e.g. 10G>"
+	[ -e "$vault" ] || die "no vault, run: securebrowser init"
+	[ -e "/dev/mapper/$name" ] && die "vault is open, close the browser first"
+	cur=$(stat -c %s "$vault")
+	new=$(numfmt --from=iec "$size")
+	[ "$new" -gt "$cur" ] || die "new size must be larger than current ($(numfmt --to=iec "$cur"))"
+	fallocate -l "$size" "$vault"
+	sudo cryptsetup open "$vault" "$name"
+	sudo cryptsetup resize "$name"
+	sudo e2fsck -f -p "/dev/mapper/$name"
+	sudo resize2fs "/dev/mapper/$name"
+	sudo cryptsetup close "$name"
+	echo "vault grown to $size"
+}
+
+case "${1:-}" in
+init) shift; init "$@"; exit ;;
+grow) shift; grow "$@"; exit ;;
+esac
+
+[ -e "$vault" ] || die "no vault, run: securebrowser init"
+command -v "$browser" >/dev/null || die "browser not found: $browser"
+
+if awk 'NR>1' /proc/swaps | grep -q .; then
+	echo "securebrowser: warning: swap is active, make sure it is encrypted" >&2
+fi
+
+lock() {
+	rm -rf "${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/lf-secure"
+	if mountpoint -q "$mnt"; then sudo umount "$mnt"; fi
+	if [ -e "/dev/mapper/$name" ]; then sudo cryptsetup close "$name"; fi
+	return 0
+}
+trap lock EXIT INT TERM
+
+sudo cryptsetup open "$vault" "$name"
+mkdir -p "$mnt"
+sudo mount -o nosuid,nodev "/dev/mapper/$name" "$mnt"
+
+rundir="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+
+# The browser sees the vault as $HOME; /tmp, /var/tmp and /dev/shm are RAM only.
+# /tmp is masked, so the X11 socket is bound back in afterwards.
+x11=
+[ -d /tmp/.X11-unix ] && x11=1
+
+bwrap --die-with-parent --unshare-pid --unshare-ipc \
+	--ro-bind / / --dev-bind /dev /dev --proc /proc \
+	--tmpfs /tmp --tmpfs /var/tmp --tmpfs /dev/shm \
+	--tmpfs "$HOME" --bind "$mnt/home" "$HOME" \
+	--bind "$rundir" "$rundir" \
+	${x11:+--ro-bind /tmp/.X11-unix /tmp/.X11-unix} \
+	-- "$browser" --no-remote "$@" || true
