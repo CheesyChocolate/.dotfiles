@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+# gitdiffpdf: render a combined git diff across commits as a delta-style PDF.
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+Usage: gitdiffpdf [-o out.pdf] [-w width] <A..B | commit | A B> [-- pathspec...]
+
+  A..B     net diff from A (exclusive) to B, like git. Use A^..B to include A.
+  commit   changes of that single commit
+  A B      same as A..B
+
+Default output: diff_<A>_<B>.pdf in the current directory.
+EOF
+  exit "${1:-0}"
+}
+
+out="" width=110
+while getopts "o:w:h" o; do
+  case $o in
+    o) out=$OPTARG ;;
+    w) width=$OPTARG ;;
+    h) usage ;;
+    *) usage 1 ;;
+  esac
+done
+shift $((OPTIND - 1))
+
+args=() paths=()
+while (($#)); do
+  if [[ $1 == -- ]]; then shift; paths=("$@"); break; fi
+  args+=("$1"); shift
+done
+
+for t in git delta aha chromium; do
+  command -v "$t" >/dev/null || { echo "gitdiffpdf: missing $t" >&2; exit 1; }
+done
+git rev-parse --git-dir >/dev/null
+
+case ${#args[@]} in
+  1)
+    if [[ ${args[0]} == *..* ]]; then
+      from=${args[0]%%..*} to=${args[0]##*..}
+    else
+      from=${args[0]}^ to=${args[0]}
+    fi ;;
+  2) from=${args[0]} to=${args[1]} ;;
+  *) usage 1 ;;
+esac
+to=${to:-HEAD}
+
+a=$(git rev-parse --short "$from") b=$(git rev-parse --short "$to")
+: "${out:=diff_${a}_${b}.pdf}"
+
+tmp=$(mktemp -d)
+trap 'rm -rf "$tmp"' EXIT
+
+git diff "$from" "$to" -- "${paths[@]}" \
+  | delta --light --minus-emph-style "bold white #d1242f" --plus-emph-style "bold white #1a7f37" --paging=never --width="$width" --true-color=always >"$tmp/d.ansi"
+[[ -s $tmp/d.ansi ]] || { echo "gitdiffpdf: empty diff" >&2; exit 1; }
+
+{
+  echo '<html><head><meta charset="utf-8"><style>@page{size:A4 landscape;margin:0}html,body{background:#fff;margin:0}pre{padding:8mm;margin:0;font-size:8.5px;line-height:1.3;white-space:pre-wrap;word-break:break-word;font-family:"DejaVu Sans Mono",monospace;color:#222}</style></head><body><pre>'
+  aha --no-header <"$tmp/d.ansi"
+  echo '</pre></body></html>'
+} >"$tmp/d.html"
+
+chromium --headless --no-sandbox --disable-gpu --no-pdf-header-footer \
+  --print-to-pdf="$(realpath -m "$out")" "$tmp/d.html" >/dev/null 2>&1
+echo "$out"
