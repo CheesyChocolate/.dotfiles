@@ -95,6 +95,10 @@ export CIN_CONFIG="$XDG_CONFIG_HOME/bcast5"
 export AZURE_CONFIG_DIR="$XDG_DATA_HOME/azure"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export NIMBLE_DIR="$XDG_DATA_HOME/nimble"
+export MAVEN_ARGS="-s $XDG_CONFIG_HOME/maven/settings.xml"
+export MAMBA_ROOT_PREFIX="$XDG_DATA_HOME/mamba"
+export KUBECONFIG="$XDG_CONFIG_HOME/kube/config"
+export KUBECACHEDIR="$XDG_CACHE_HOME/kube"
 export PIPX_BIN_DIR="$HOME/.local/bin/pipx"
 
 # private variables
