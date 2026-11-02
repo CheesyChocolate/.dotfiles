@@ -36,3 +36,7 @@
 	machineId = <api-key-TODO>
 [core]
 	excludesfile = <home-directory-TODO>/.config/git/.gitignore
+[include]
+	path = private
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
